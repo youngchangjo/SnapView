@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SnapView | FAST • LIGHT • MAC-NATIVE VIEWER</title>
+    <meta name="description" content="SnapView is a lightweight, instant Mac image viewer built for fast decisions.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Syne:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="bg-orb orb-1" aria-hidden="true"></div>
+    <div class="bg-orb orb-2" aria-hidden="true"></div>
+
+    <main class="page">
+        <header class="topbar">
+            <a class="brand" href="#top" aria-label="SnapView home">
+                <img src="assets/images/snapview-icon.png" alt="SnapView icon">
+                <span>SnapView</span>
+            </a>
+
+            <nav class="nav" aria-label="Primary">
+                <a href="#workflow">Workflow</a>
+                <a href="#proof">Features</a>
+                <a href="#specs">Specifications</a>
+            </nav>
+
+            <div class="lang-switch" role="group" aria-label="Language">
+                <button type="button" data-set-lang="ko">KO</button>
+                <button type="button" data-set-lang="en">EN</button>
+            </div>
+        </header>
+
+        <section id="top" class="hero reveal">
+            <div class="hero-copy">
+                <p class="eyebrow" data-lang="ko">FAST • LIGHT • MAC-NATIVE VIEWER</p>
+                <p class="eyebrow" data-lang="en" hidden>FAST • LIGHT • MAC-NATIVE VIEWER</p>
+
+                <h1 data-lang="ko">가볍게 열고,<br>빠르게 고르다.</h1>
+                <h1 data-lang="en" hidden>Open instantly.<br>Decide faster.</h1>
+
+                <p class="lead" data-lang="ko">SnapView는 생각의 속도로 사진을 넘기는 초경량 이미지 뷰어예요. 가져오기 대기 없이 바로 열고, 키보드로 휙휙 고르고,
+                    필요하면 근거까지 확인합니다. 무료로요.</p>
+                <p class="lead" data-lang="en" hidden>SnapView is a lightweight, instant Mac image viewer built for fast
+                    decisions—no import wait loops. Fly through shots, make calls with confidence, and keep your flow.
+                    Free.</p>
+
+                <p class="sub-lead"
+                    style="font-size: 16px; color: var(--accent-blue); margin-bottom: 40px; font-weight: 500;"
+                    data-lang="ko">기본 미리보기보다 강력하고, 무거운 편집툴보다 가볍습니다.</p>
+                <p class="sub-lead"
+                    style="font-size: 16px; color: var(--accent-blue); margin-bottom: 40px; font-weight: 500;"
+                    data-lang="en" hidden>More capable than Preview. Lighter than heavyweight editors.</p>
+
+                <div class="hero-actions">
+                    <a class="btn btn-primary"
+                        href="https://github.com/youngchangjo/SnapView/releases/latest/download/SnapView.dmg"
+                        rel="noreferrer" data-lang="ko">Free Download (Beta)</a>
+                    <a class="btn btn-primary"
+                        href="https://github.com/youngchangjo/SnapView/releases/latest/download/SnapView.dmg"
+                        rel="noreferrer" data-lang="en" hidden>Free Download (Beta)</a>
+                    <a class="btn btn-ghost" href="#workflow" data-lang="ko">워크플로우 살펴보기</a>
+                    <a class="btn btn-ghost" href="#workflow" data-lang="en" hidden>See the Workflow</a>
+                </div>
+            </div>
+
+            <figure class="hero-media" data-float>
+                <img src="assets/images/hero.png" alt="SnapView hero view">
+            </figure>
+        </section>
+
+        <section id="workflow" class="story-grid">
+
+            <!-- Feature 1: Main View (New) -->
+            <article class="story-card reveal">
+                <div class="card-copy">
+                    <h2 data-lang="ko">1. 빠르고 간결한 기본 사진 뷰어</h2>
+                    <h2 data-lang="en" hidden>1. Fast and concise basic photo viewer</h2>
+
+                    <p data-lang="ko">복잡한 기능은 숨기고, 사진 감상에 필요한 최소한의 정보만 남겼습니다. macOS의 '미리보기(Spacebar)'보다 훨씬 빠르고 유연하게, 대량의
+                        사진을 쾌적하게 넘겨볼 수 있습니다.</p>
+                    <p data-lang="en" hidden>Hides complexity, keeping only essentials for viewing. Faster and more
+                        flexible than macOS Preview, designed for breezy browsing of massive collections.</p>
+                </div>
+                <img src="assets/images/web_mainview.png" alt="SnapView Intro/Main view">
+            </article>
+
+            <!-- Feature 2: Grid -->
+            <article class="story-card reveal reverse">
+                <div class="card-copy">
+                    <h2 data-lang="ko">2. 그리드로 수백 장을 한 번에 훑기</h2>
+                    <h2 data-lang="en" hidden>2. Grid: browse hundreds at a glance</h2>
+
+                    <p data-lang="ko">Grid View는 사진을 “정리”하기 위한 화면이 아니라, 많은 이미지를 빠르게 탐색하기 위한 화면이에요. 한 화면에서 전체를 훑고, 원하는
+                        컷으로
+                        즉시 점프하고, 흐름이 끊기기 전에 다음 판단으로 넘어가게 만듭니다.</p>
+                    <p data-lang="en" hidden>Grid View isn’t about organizing—it’s about fast browsing. Scan wide, jump
+                        to any frame instantly, and keep moving before your momentum breaks.</p>
+                </div>
+                <img src="assets/images/web_gridview.png" alt="SnapView grid view">
+            </article>
+
+            <!-- Feature 3: Filmstrip -->
+            <article class="story-card reveal">
+                <div class="card-copy">
+                    <h2 data-lang="ko">3. 필름스트립으로 흐름 끊김 없이 쭉 보기</h2>
+                    <h2 data-lang="en" hidden>3. Filmstrip: stay in flow, scroll through</h2>
+
+                    <p data-lang="ko">Filmstrip은 가장 익숙한 방식의 연속 탐색 뷰예요. 한 장씩 빠르게 넘기며 전체 흐름을 파악하고, 순간적으로 “이건 남긴다/이건 버린다”를
+                        처리합니다. 빠르게 보고, 빠르게 결정하는 SnapView의 기본기입니다.</p>
+                    <p data-lang="en" hidden>Filmstrip is the classic continuous browsing view—fast, familiar, and
+                        frictionless. Flip through images, keep your rhythm, and make quick keep/reject calls as you go.
+                    </p>
+                </div>
+                <img src="assets/images/web_filmstrip.png" alt="SnapView filmstrip view">
+            </article>
+
+            <!-- Feature 4: Manage -->
+            <article class="story-card reveal reverse">
+                <div class="card-copy">
+                    <h2 data-lang="ko">4. 정리는 필요할 때만, Manage로 깔끔하게</h2>
+                    <h2 data-lang="en" hidden>4. Organize only when you need it—Manage</h2>
+
+                    <p data-lang="ko">Manage Mode는 그 결과를 다음 작업으로 넘기기 좋게 정리해주는 보너스예요.
+                        별점/플래그/컬러 라벨/필터로 마무리까지 매끈하게 끝냅니다.</p>
+                    <p data-lang="en" hidden>SnapView’s job is fast viewing and faster decisions. Manage Mode is the
+                        bonus: tidy up picks with ratings, flags, labels, and filters—ready for the next step.</p>
+                </div>
+                <img src="assets/images/web_managemode.png" alt="SnapView manage mode">
+            </article>
+        </section>
+
+        <!-- Feature: Quick Check -->
+        <section id="proof" class="proof-band reveal">
+            <div class="proof-copy">
+                <h2 data-lang="ko">감이 아니라, 근거로 고르기</h2>
+                <h2 data-lang="en" hidden>Decide with evidence, not vibes</h2>
+
+                <p data-lang="ko">Quick Check는 “왜 이 컷이 좋은지/위험한지”를 점수와 근거로 즉시 보여주는 SnapView의 핵심이에요. 손떨림/클리핑/노이즈/초점 신뢰도 같은
+                    신호를 한 번에 확인하고, 망설임 없이 통과·보류·채택을 결정합니다.</p>
+                <p data-lang="en" hidden>Quick Check makes selection rationale visible in-context—scores, confidence,
+                    and
+                    key warnings at a glance. Check shake risk, clipping, noise, and focus confidence—then
+                    pass/hold/select without hesitation.</p>
+
+                <ul>
+                    <li data-lang="ko">유사 컷 비교 → 즉시 확정</li>
+                    <li data-lang="en" hidden>Compare duplicates → commit instantly</li>
+                    <li data-lang="ko">AI 후보 추천으로 시간 단축</li>
+                    <li data-lang="en" hidden>AI-assisted candidates reduce time</li>
+                    <li data-lang="ko">“자동 선택 + 최종 확인” 워크플로우</li>
+                    <li data-lang="en" hidden>Practical flow: auto-pick + final review</li>
+                </ul>
+            </div>
+            <img src="assets/images/quickcheck.png" alt="SnapView quick check panel">
+        </section>
+
+        <!-- Feature: Compare (Restyled) -->
+        <section class="proof-band reveal" style="background: transparent;">
+            <div class="proof-copy">
+                <h2 data-lang="ko">Compare로 베스트컷 확정</h2>
+                <h2 data-lang="en" hidden>Lock the best shot in Compare</h2>
+
+                <p data-lang="ko">Compare Mode는 유사 컷을 한 화면에서 정면 비교하고, 최종 베스트컷을 확정하는 구간이에요. AI가 먼저 후보를 추려주고, 사용자는 마지막 결정만
+                    하면 됩니다. “고르는 일”이 더 짧아지고, 더 확신 있게 끝나요.</p>
+                <p data-lang="en" hidden>Compare Mode is where near-identical frames face off—and you finalize the
+                    winner. AI can pre-select candidates, so you focus on the final call.
+                    Less time sorting, more confidence finishing.</p>
+
+                <ul>
+                    <li data-lang="ko">유사 컷 정면 비교</li>
+                    <li data-lang="en" hidden>Side-by-side comparison</li>
+                    <li data-lang="ko">AI 자동 추천</li>
+                    <li data-lang="en" hidden>AI smart suggestions</li>
+                    <li data-lang="ko">원키로 즉시 확정</li>
+                    <li data-lang="en" hidden>Instant one-key selection</li>
+                </ul>
+            </div>
+            <img src="assets/images/comparemode.png" alt="SnapView compare mode"
+                style="max-width: 900px; width: 100%; border-radius: 12px; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);">
+        </section>
+
+        <!-- Technical Specs Section -->
+        <section id="specs" class="specs-section reveal">
+            <h3 data-lang="ko">지원 사양</h3>
+            <h3 data-lang="en" hidden>Specifications</h3>
+
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <span class="spec-label">OS</span>
+                    <span class="spec-value">macOS 14.0 Sonoma+ (Apple Silicon)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Formats</span>
+                    <span class="spec-value">
+                        RAW (ARW, CR2, CR3, NEF, NRW, DNG, RAF, ORF, RW2, PEF, SRW)<br>
+                        JPG, PNG, GIF, BMP, WEBP, HEIC, HEIF, TIFF
+                    </span>
+                    <span class="spec-sub"
+                        style="font-size: 22px; color: var(--text-primary); font-weight: 800; display:block; margin-top:16px; letter-spacing: 0.5px;">+
+                        ZIP Archives</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Performance</span>
+                    <span class="spec-value">Metal Accelerated, Zero-Import Delay</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="closing reveal">
+            <h2 data-lang="ko">사진 고르는 시간, 이제 “쾌적”이 기본입니다.</h2>
+            <h2 data-lang="en" hidden>Culling can be calm—and fast.</h2>
+
+            <p style="margin-top: 10px; color: var(--text-secondary);" data-lang="ko">가볍고 빠른 뷰어 + 근거 기반 선별. 그리고 무료.
+            </p>
+            <p style="margin-top: 10px; color: var(--text-secondary);" data-lang="en" hidden>Lightweight viewer speed +
+                evidence-driven picks. And free.</p>
+
+            <div class="hero-actions" style="margin-top: 40px;">
+                <a class="btn btn-primary"
+                    href="https://github.com/youngchangjo/SnapView/releases/latest/download/SnapView.dmg"
+                    rel="noreferrer" data-lang="ko">Free Download (Beta)</a>
+                <a class="btn btn-primary"
+                    href="https://github.com/youngchangjo/SnapView/releases/latest/download/SnapView.dmg"
+                    rel="noreferrer" data-lang="en" hidden>Free Download (Beta)</a>
+                <a class="btn btn-ghost" href="mailto:sunset@snapworkslab.com">sunset@snapworkslab.com</a>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-left">
+                <span>SnapView by SnapWorks Lab</span>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

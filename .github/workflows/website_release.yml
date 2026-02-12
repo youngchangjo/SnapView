@@ -1,0 +1,78 @@
+name: SnapView Website Release
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - "website/**"
+      - ".github/workflows/website_release.yml"
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Deployment environment"
+        required: true
+        default: "production"
+        type: choice
+        options:
+          - production
+          - preview
+      branch:
+        description: "Pages branch name override (optional)"
+        required: false
+        type: string
+
+concurrency:
+  group: website-release-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Resolve deployment branch
+        id: vars
+        shell: bash
+        run: |
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            ENVIRONMENT="${{ github.event.inputs.environment }}"
+            BRANCH_INPUT="${{ github.event.inputs.branch }}"
+          else
+            ENVIRONMENT="production"
+            BRANCH_INPUT=""
+          fi
+
+          if [[ -n "$BRANCH_INPUT" ]]; then
+            DEPLOY_BRANCH="$BRANCH_INPUT"
+          elif [[ "$ENVIRONMENT" == "production" ]]; then
+            DEPLOY_BRANCH="main"
+          else
+            DEPLOY_BRANCH="${GITHUB_REF_NAME}"
+          fi
+
+          echo "environment=$ENVIRONMENT" >> "$GITHUB_OUTPUT"
+          echo "deploy_branch=$DEPLOY_BRANCH" >> "$GITHUB_OUTPUT"
+
+      - name: Deploy website to Cloudflare Pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          PROJECT_NAME: ${{ secrets.CF_PAGES_PROJECT_NAME }}
+        run: |
+          if [[ -z "$PROJECT_NAME" ]]; then
+            echo "CF_PAGES_PROJECT_NAME secret is required."
+            exit 1
+          fi
+
+          npx wrangler@4 pages deploy website \
+            --project-name "$PROJECT_NAME" \
+            --branch "${{ steps.vars.outputs.deploy_branch }}"
