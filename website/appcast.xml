@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+     xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>SnapView Appcast</title>
+    <link>https://github.com/youngchangjo/SnapView/releases</link>
+    <description>SnapView updates</description>
+    <language>en</language>
+    <item>
+      <title>Version 0.9.10</title>
+      <pubDate>Fri, 13 Feb 2026 08:56:43 +0000</pubDate>
+      <sparkle:version>1</sparkle:version>
+      <sparkle:shortVersionString>0.9.10</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>15.5</sparkle:minimumSystemVersion>
+      <description><![CDATA[
+        SnapView 0.9.10 release.
+      ]]></description>
+      <sparkle:releaseNotesLink>https://github.com/youngchangjo/SnapView/releases/tag/v0.9.10</sparkle:releaseNotesLink>
+      <enclosure
+        url="https://github.com/youngchangjo/SnapView/releases/download/v0.9.10/SnapView.dmg"
+        sparkle:version="1"
+        sparkle:shortVersionString="0.9.10"
+        sparkle:edSignature="jIOcj+rWCMSNCmXIypuGtHylueC/SkR5JbMnkcy+wTi29O+UeeGq8AEk4JmyhVd9UdqjYUApzRRc2JLyhpVmAQ=="
+        length="3859393"
+        type="application/octet-stream" />
+    </item>
+  </channel>
+</rss>
