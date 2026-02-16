@@ -2,7 +2,7 @@
 
 Fast image viewer for macOS focused on real-world photo culling workflow.
 
-Current Version: `v0.9.9`
+Current Version: `v0.9.11`
 
 ## Download
 
@@ -26,7 +26,7 @@ Current Version: `v0.9.9`
 
 ## Beta Notice (Important)
 
-SnapView is currently a beta build, and Apple Developer notarization/registration is not fully completed yet.  
+SnapView is currently a beta build, and Apple Developer notarization/registration is not fully completed yet.
 Because of this, macOS may block launch on first run.
 
 If launch is blocked:
@@ -49,7 +49,7 @@ If launch is blocked:
 
 실사용 사진 선별 워크플로우에 맞춘 macOS용 고속 이미지 뷰어입니다.
 
-현재 버전: `v0.9.9`
+현재 버전: `v0.9.11`
 
 ## 다운로드
 
@@ -73,7 +73,7 @@ If launch is blocked:
 
 ## 베타 버전 안내 (중요)
 
-SnapView는 현재 베타 버전이며, Apple Developer 공증/등록이 아직 완전히 완료되지 않았습니다.  
+SnapView는 현재 베타 버전이며, Apple Developer 공증/등록이 아직 완전히 완료되지 않았습니다.
 이로 인해 macOS에서 첫 실행 시 앱 실행이 차단될 수 있습니다.
 
 실행이 차단되면 아래 순서로 진행해 주세요.
