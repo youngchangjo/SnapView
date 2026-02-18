@@ -2,7 +2,7 @@
 
 Fast image viewer for macOS focused on real-world photo culling workflow.
 
-Current Version: `v0.9.11`
+Current Version: `v0.9.12`
 
 ## Download
 
@@ -24,17 +24,10 @@ Current Version: `v0.9.11`
 3. Drag `SnapView.app` to `Applications`.
 4. Launch SnapView from `Applications`.
 
-## Beta Notice (Important)
+## Security / Trust
 
-SnapView is currently a beta build, and Apple Developer notarization/registration is not fully completed yet.
-Because of this, macOS may block launch on first run.
-
-If launch is blocked:
-
-1. Open `System Settings > Privacy & Security`.
-2. Find the message saying SnapView was blocked.
-3. Click `Open Anyway`.
-4. Launch SnapView again, then confirm in the warning dialog.
+SnapView release builds are signed with Apple Developer ID and notarized.
+Standard DMG install flow should work without manual "Open Anyway" override.
 
 ## Supported Formats (Summary)
 
@@ -49,7 +42,7 @@ If launch is blocked:
 
 실사용 사진 선별 워크플로우에 맞춘 macOS용 고속 이미지 뷰어입니다.
 
-현재 버전: `v0.9.11`
+현재 버전: `v0.9.12`
 
 ## 다운로드
 
@@ -71,17 +64,10 @@ If launch is blocked:
 3. `SnapView.app`을 `Applications`로 드래그합니다.
 4. `Applications`에서 SnapView를 실행합니다.
 
-## 베타 버전 안내 (중요)
+## 보안 / 신뢰
 
-SnapView는 현재 베타 버전이며, Apple Developer 공증/등록이 아직 완전히 완료되지 않았습니다.
-이로 인해 macOS에서 첫 실행 시 앱 실행이 차단될 수 있습니다.
-
-실행이 차단되면 아래 순서로 진행해 주세요.
-
-1. `시스템 설정 > 개인정보 보호 및 보안`으로 이동
-2. SnapView 차단 메시지 확인
-3. `그래도 열기` 클릭
-4. 앱을 다시 실행하고 경고 창에서 실행 허용
+SnapView 릴리즈 빌드는 Apple Developer ID 서명 + 공증(notarization) 완료 상태입니다.
+일반적인 DMG 설치 흐름에서 수동 `그래도 열기` 없이 실행되는 것을 기준으로 배포합니다.
 
 ## 지원 포맷 (요약)
 
