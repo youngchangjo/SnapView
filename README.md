@@ -2,7 +2,7 @@
 
 Fast image viewer for macOS focused on real-world photo culling workflow.
 
-Current Version: `v0.9.13`
+Current Version: `v0.9.14`
 
 ## Download
 
@@ -14,6 +14,7 @@ Current Version: `v0.9.13`
 - Fast folder/ZIP image browsing
 - Quick Check quality diagnosis (score + reasons)
 - Compare mode with best-shot recommendation
+- Duplicate mode (Exact 95%) for exact-file cleanup
 - Rating / Pick / Reject / Color Label workflow
 - Keyboard-first culling flow
 
@@ -42,7 +43,7 @@ Standard DMG install flow should work without manual "Open Anyway" override.
 
 실사용 사진 선별 워크플로우에 맞춘 macOS용 고속 이미지 뷰어입니다.
 
-현재 버전: `v0.9.13`
+현재 버전: `v0.9.14`
 
 ## 다운로드
 
@@ -54,6 +55,7 @@ Standard DMG install flow should work without manual "Open Anyway" override.
 - 폴더/ZIP 이미지 고속 탐색
 - Quick Check 품질 진단(점수 + 근거)
 - Compare 모드 베스트샷 추천
+- 중복사진정리(Exact 95%) 기반 동일 파일 정리
 - 별점 / Pick / Reject / 컬러라벨 선별 워크플로우
 - 키보드 중심 선별 흐름
 
