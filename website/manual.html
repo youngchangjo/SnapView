@@ -182,6 +182,7 @@
                     <li>비교가 필요하면 <img src="assets/icons/compare.svg" class="inline-icon" alt=""> <code>C</code>로 Compare
                         모드에서 1~4장 비교합니다.</li>
                     <li><code>Delete</code>로 삭제하거나 <code>Cmd+C</code>로 복사해 정리합니다.</li>
+                    <li>완전히 동일한 파일 정리는 <code>Cmd+Shift+D</code>로 중복사진정리에서 처리합니다.</li>
                 </ol>
 
                 <h2>5. 화면 구성 이해하기</h2>
@@ -235,6 +236,14 @@
                     <li>별점/플래그/컬러 라벨을 적용하고 필터링해 결과를 정돈합니다.</li>
                 </ul>
 
+                <h3>6.5 중복사진정리 Duplicate (<code>Cmd+Shift+D</code>)</h3>
+                <ul>
+                    <li>현재 소스에서 <strong>완전히 동일한 파일</strong>만 그룹으로 보여줍니다.</li>
+                    <li>그룹이 4장 이하면 중앙 영역에서 바로 비교하고, 5장 이상이면 하단 스트립이 추가로 표시됩니다.</li>
+                    <li>우측 패널에서 <code>현재이미지 병합</code> / <code>중복사진 일괄 정리</code> / <code>삭제 되돌리기</code>를 수행합니다.</li>
+                    <li><code>삭제 되돌리기(⌘Z)</code>는 중복 모드에서 수행한 최근 삭제 트랜잭션만 복원합니다.</li>
+                </ul>
+
                 <h2>7. 선별 도구 (가장 많이 쓰는 기능)</h2>
 
                 <h3>7.1 별점</h3>
@@ -284,12 +293,21 @@
                     <li>확대해서 디테일까지 확인할 수 있습니다.</li>
                 </ul>
 
+                <h3>8.3 중복사진정리</h3>
+                <ul>
+                    <li><code>Cmd+Shift+D</code>: 중복 모드 진입 (모드 내에서는 재스캔)</li>
+                    <li><code>Shift+D</code> 또는 <code>ESC</code>: 중복 모드 종료</li>
+                    <li><code>←</code> / <code>→</code>: 이전/다음 중복 그룹 이동</li>
+                    <li><code>P</code>: 현재 이미지를 기준이미지(Keep)로 지정</li>
+                    <li>우측 패널 하단에서 마지막 삭제를 <code>Cmd+Z</code>로 되돌릴 수 있습니다.</li>
+                </ul>
+
                 <h2>9. ZIP 파일 사용 시 주의점</h2>
                 <ul>
                     <li>ZIP 내부 이미지도 일반 폴더처럼 탐색할 수 있습니다.</li>
                     <li>ZIP은 구조 특성상 폴더보다 느릴 수 있습니다.</li>
-                    <li>ZIP 환경에서는 일부 정리 기능 제약이 있을 수 있습니다.</li>
-                    <li>문서 기준으로 별점 저장은 ZIP에서 제한됩니다.</li>
+                    <li>ZIP 환경에서는 일부 정리 기능 제약이 있을 수 있습니다. (별점, 복사, 붙여넣기, 삭제 제한)</li>
+                    <li>중복사진정리에서 ZIP 항목은 스캔은 가능하지만 삭제 단계에서 자동 건너뜀 처리될 수 있습니다.</li>
                 </ul>
 
                 <h2>10. 성능을 높이는 방법</h2>
@@ -307,6 +325,7 @@
                 <ul>
                     <li>뷰 전환: <code>Q / W / E / R</code></li>
                     <li>비교 모드: <code>C</code></li>
+                    <li>중복사진정리: <code>Cmd+Shift+D</code> (진입/재스캔), <code>Shift+D</code> (종료)</li>
                     <li>이동: <code>좌/우</code>, 처음/끝 <code>상/하</code></li>
                     <li>점프 이동: <code>Cmd+좌/우</code>(10장), <code>Cmd+Shift+좌/우</code>(50장)</li>
                     <li>줌: <code>=</code> / <code>-</code>, Fit <code>0</code>, 100% <code>9</code></li>
@@ -345,6 +364,15 @@
                     <li>별점/플래그로 선택 결과를 만든 뒤 Manage(<img src="assets/icons/view-manage.svg" class="inline-icon" alt="">
                         <code>R</code>)에서 필터로 점검합니다.
                     </li>
+                </ol>
+
+                <h3>12.3 중복사진 정리 워크플로우</h3>
+                <ol>
+                    <li><code>Cmd+Shift+D</code>로 중복사진정리 모드에 진입합니다.</li>
+                    <li>좌측 그룹 리스트에서 용량이 큰 그룹부터 선택합니다.</li>
+                    <li><code>P</code>로 기준이미지를 지정한 뒤, 카드 <code>X</code> 또는 우측 <code>현재이미지 병합</code>으로 정리합니다.</li>
+                    <li>여러 그룹을 한 번에 정리할 때는 <code>중복사진 일괄 정리</code>를 사용합니다.</li>
+                    <li>방금 삭제를 되돌려야 하면 즉시 <code>Cmd+Z</code>를 사용합니다.</li>
                 </ol>
 
                 <h2>13. 문제 해결 (FAQ)</h2>
@@ -432,8 +460,12 @@
                     <li>Switch view modes with <code>Q/W/E/R</code>.</li>
                     <li>Navigate using <code>Left/Right Arrow</code> keys.</li>
                     <li>Rate good shots with <code>1~5</code>, or mark unwanted ones with <code>X</code> (Reject).</li>
-                    <li>If you need to compare, press <code>C</code> for Compare Mode (1-4 images).</li>
+                    <li>If you need to compare, press <img src="assets/icons/compare.svg" class="inline-icon" alt="">
+                        <code>C</code> for Compare Mode (1-4 images).
+                    </li>
                     <li>Use <code>Delete</code> to remove or <code>Cmd+C</code> to copy and organize.</li>
+                    <li>For exact file duplicates, press <code>Cmd+Shift+D</code> to use the Duplicate cleanup feature.
+                    </li>
                 </ol>
 
                 <h2>5. Understanding the Interface</h2>
@@ -483,6 +515,18 @@
                 <ul>
                     <li>Use when organizing with Folder/Filter/Selection views.</li>
                     <li>Apply Ratings/Flags/Color Labels and filter to tidy up results.</li>
+                </ul>
+
+                <h3>6.5 Duplicate (<code>Cmd+Shift+D</code>)</h3>
+                <ul>
+                    <li>Shows only <strong>exact file duplicates</strong> in the current source as groups.</li>
+                    <li>Compare directly in the main area for 4 or fewer images; a bottom strip appears for 5 or more.
+                    </li>
+                    <li>Use <code>Merge to Current Image</code> / <code>Batch Clean Duplicates</code> /
+                        <code>Undo Delete</code> in the right panel.
+                    </li>
+                    <li><code>Undo Delete (⌘Z)</code> only restores the most recent deletion transaction performed in
+                        Duplicate mode.</li>
                 </ul>
 
                 <h2>7. Culling Tools (Most Used Features)</h2>
@@ -535,12 +579,23 @@
                     <li>Zoom in to check details.</li>
                 </ul>
 
+                <h3>8.3 Duplicate</h3>
+                <ul>
+                    <li><code>Cmd+Shift+D</code>: Enter Duplicate mode (or rescan while in mode).</li>
+                    <li><code>Shift+D</code> or <code>ESC</code>: Exit Duplicate mode.</li>
+                    <li><code>←</code> / <code>→</code>: Move to previous/next duplicate group.</li>
+                    <li><code>P</code>: Set the current image as the Reference Image (Keep).</li>
+                    <li>You can undo the last delete using <code>Cmd+Z</code> at the bottom of the right panel.</li>
+                </ul>
+
                 <h2>9. Notes on ZIP Files</h2>
                 <ul>
                     <li>You can browse images inside ZIPs just like folders.</li>
                     <li>ZIPs may be slower than folders due to their structure.</li>
-                    <li>Some organization features may be limited in ZIP environments.</li>
-                    <li>Saving ratings to files is restricted in ZIPs.</li>
+                    <li>Some organization features may be limited in ZIP environments. (e.g. Ratings, copy, paste, and
+                        delete are restricted)</li>
+                    <li>In the Duplicate tool, ZIP items can be scanned but may be automatically skipped during
+                        deletion.</li>
                 </ul>
 
                 <h2>10. Performance Tips</h2>
@@ -551,7 +606,8 @@
                         <code>I</code>, <img src="assets/icons/quickcheck.svg" class="inline-icon" alt="">
                         <code>K</code>, <img src="assets/icons/histogram.svg" class="inline-icon" alt="">
                         <code>H</code>) and close
-                        unused panels.</li>
+                        unused panels.
+                    </li>
                     <li>On slow external drives, organize in smaller folders first.</li>
                 </ol>
 
@@ -559,6 +615,7 @@
                 <ul>
                     <li>View Switch: <code>Q / W / E / R</code></li>
                     <li>Compare Mode: <code>C</code></li>
+                    <li>Duplicate: <code>Cmd+Shift+D</code> (Enter/Rescan), <code>Shift+D</code> (Exit)</li>
                     <li>Move: <code>Arrows</code>, First/Last <code>Up/Down</code></li>
                     <li>Jump: <code>Cmd+Arrow</code> (10), <code>Cmd+Shift+Arrow</code> (50)</li>
                     <li>Zoom: <code>=</code> / <code>-</code>, Fit <code>0</code>, 100% <code>9</code></li>
@@ -598,6 +655,17 @@
                     </li>
                     <li>After Rating/Flagging, check results with filters in Manage (<img
                             src="assets/icons/view-manage.svg" class="inline-icon" alt=""> <code>R</code>).</li>
+                </ol>
+
+                <h3>12.3 Duplicate Photo Cleanup Workflow</h3>
+                <ol>
+                    <li>Enter Duplicate mode with <code>Cmd+Shift+D</code>.</li>
+                    <li>Select the largest capacity groups first from the left group list.</li>
+                    <li>Set a reference image with <code>P</code>, then cull using the card <code>X</code> or
+                        <code>Merge to Current Image</code>.
+                    </li>
+                    <li>To organize multiple groups at once, use <code>Batch Clean Duplicates</code>.</li>
+                    <li>If you need to revert a deletion, use <code>Cmd+Z</code> immediately.</li>
                 </ol>
 
                 <h2>13. Troubleshooting (FAQ)</h2>
