@@ -302,7 +302,55 @@
                     <li>우측 패널 하단에서 마지막 삭제를 <code>Cmd+Z</code>로 되돌릴 수 있습니다.</li>
                 </ul>
 
-                <h2>9. ZIP 파일 사용 시 주의점</h2>
+                <h2>9. 설정과 동작 이해하기</h2>
+
+                <h3>9.1 디코딩 모드</h3>
+                <ul>
+                    <li><code>속도 우선</code>: 빠른 탐색이 우선입니다. 기본적으로 더 작은 리사이즈 이미지를 먼저 보여줍니다.</li>
+                    <li><code>보통</code>: 일반적인 추천값입니다. 기본은 리사이즈 이미지로 보고, 확대할 때 필요한 해상도로 점진적으로 올립니다.</li>
+                    <li><code>화질 최우선</code>: 가능한 한 높은 해상도를 우선합니다. 화질 확인이 중요할 때 적합합니다.</li>
+                    <li>디코딩 모드는 체감 속도와 메모리 사용량에 직접 영향을 줍니다. 대량 폴더나 느린 저장장치에서는 <code>속도 우선</code> 또는 <code>보통</code>이 더 안정적입니다.</li>
+                </ul>
+
+                <h3>9.2 빠른 키보드 이동 프리뷰</h3>
+                <ul>
+                    <li><code>Off</code>: 빠른 이동 중 프리뷰를 쓰지 않습니다.</li>
+                    <li><code>Auto</code>: 일반적인 추천값입니다. 상황에 따라 프리뷰를 사용해 이동 체감을 부드럽게 만듭니다.</li>
+                    <li><code>Aggressive</code>: 빠른 연속 이동에서 프리뷰를 더 적극적으로 사용합니다.</li>
+                    <li>이 설정은 연속 이동 체감에 영향을 주며, 사진을 한 장씩 천천히 보는 경우보다 빠르게 넘길 때 차이가 큽니다.</li>
+                </ul>
+
+                <h3>9.3 정보 오버레이 토글</h3>
+                <ul>
+                    <li><img src="assets/icons/info.svg" class="inline-icon" alt=""> <code>I</code>: 파일 정보/EXIF 표시</li>
+                    <li><img src="assets/icons/histogram.svg" class="inline-icon" alt=""> <code>H</code>: 히스토그램 토글</li>
+                    <li><img src="assets/icons/quickcheck.svg" class="inline-icon" alt=""> <code>K</code>: Quick Check 세트 토글 (점검에 필요한 패널 한 번에 여닫기)</li>
+                </ul>
+
+                <h3>9.4 하위 폴더 이미지 포함</h3>
+                <ul>
+                    <li>설정에서 <code>하위 폴더 이미지 포함</code>을 켜면 현재 폴더뿐 아니라 하위 폴더의 이미지도 함께 탐색합니다.</li>
+                    <li>라이브러리 범위가 넓어져 편리하지만, 큰 폴더에서는 초기 스캔 범위와 결과 개수가 달라질 수 있습니다.</li>
+                </ul>
+
+                <h3>9.5 별점 후 자동 이동</h3>
+                <ul>
+                    <li><code>별점 후 자동 이동</code>을 켜면 별점을 준 뒤 자동으로 다음 사진으로 넘어갑니다.</li>
+                    <li>빠른 1차 선별에서는 매우 유용하고, 세밀하게 비교할 때는 끄는 편이 좋습니다. <code>Cmd+A</code>로도 토글할 수 있습니다.</li>
+                </ul>
+
+                <h3>9.6 화면 맨위 고정</h3>
+                <ul>
+                    <li>다른 앱과 함께 비교하거나 Finder/Lightroom과 번갈아 볼 때 유용합니다.</li>
+                    <li><code>Cmd+Shift+T</code>로 빠르게 켜고 끌 수 있습니다.</li>
+                </ul>
+
+                <h3>9.7 Pro JPG / ZIP 해상도</h3>
+                <ul>
+                    <li>Pro 레이아웃에서는 일반 디코딩 모드와 별도로 <code>Pro JPG 해상도</code>, <code>Pro ZIP 해상도</code> 설정이 적용될 수 있습니다.</li>
+                </ul>
+
+                <h2>10. ZIP 파일 사용 시 주의점</h2>
                 <ul>
                     <li>ZIP 내부 이미지도 일반 폴더처럼 탐색할 수 있습니다.</li>
                     <li>ZIP은 구조 특성상 폴더보다 느릴 수 있습니다.</li>
@@ -310,7 +358,7 @@
                     <li>중복사진정리에서 ZIP 항목은 스캔은 가능하지만 삭제 단계에서 자동 건너뜀 처리될 수 있습니다.</li>
                 </ul>
 
-                <h2>10. 성능을 높이는 방법</h2>
+                <h2>11. 성능을 높이는 방법</h2>
                 <ol>
                     <li>대용량/ZIP 탐색이 느리면 디코딩 모드를 <code>속도 우선</code>으로 변경합니다.</li>
                     <li>그리드에서는 썸네일 크기를 적당히 줄여 한 화면 밀도를 높입니다.</li>
@@ -321,7 +369,7 @@
                     <li>느린 외장 저장장치에서는 먼저 작은 폴더 단위로 정리합니다.</li>
                 </ol>
 
-                <h2>11. 자주 쓰는 단축키 요약</h2>
+                <h2>12. 자주 쓰는 단축키 요약</h2>
                 <ul>
                     <li>뷰 전환: <code>Q / W / E / R</code></li>
                     <li>비교 모드: <code>C</code></li>
@@ -335,12 +383,14 @@
                     <li>선별: <code>1~5</code>, <code>0</code>, <code>P</code>, <code>X</code>, <code>U</code>,
                         <code>Cmd+1~6</code>
                     </li>
+                    <li>화면/기타: <code>Enter</code> (전체화면), <code>Cmd+Shift+T</code> (맨위 고정)</li>
+                    <li>선택: <code>Cmd+A</code> (Main=자동이동 토글, Grid/Manage=전체 선택)</li>
                     <li>작업: <code>Cmd+C</code>, <code>Cmd+V</code>, <code>Delete</code>, <code>Cmd+O</code></li>
                 </ul>
 
-                <h2>12. 추천 워크플로우 (실전)</h2>
+                <h2>13. 추천 워크플로우 (실전)</h2>
 
-                <h3>12.1 여행/일상 사진 빠른 정리</h3>
+                <h3>13.1 여행/일상 사진 빠른 정리</h3>
                 <ol>
                     <li>Grid(<img src="assets/icons/view-grid.svg" class="inline-icon" alt=""> <code>Q</code>)에서 전체를
                         훑습니다.</li>
@@ -356,7 +406,7 @@
                     <li>최종 선택본을 복사/이동해 보관 폴더로 정리합니다.</li>
                 </ol>
 
-                <h3>12.2 RAW+JPG 혼합 촬영 정리</h3>
+                <h3>13.2 RAW+JPG 혼합 촬영 정리</h3>
                 <ol>
                     <li>폴더를 열고 빠르게 탐색합니다.</li>
                     <li>Quick Check(<img src="assets/icons/quickcheck.svg" class="inline-icon" alt=""> <code>K</code>)로
@@ -366,7 +416,7 @@
                     </li>
                 </ol>
 
-                <h3>12.3 중복사진 정리 워크플로우</h3>
+                <h3>13.3 중복사진 정리 워크플로우</h3>
                 <ol>
                     <li><code>Cmd+Shift+D</code>로 중복사진정리 모드에 진입합니다.</li>
                     <li>좌측 그룹 리스트에서 용량이 큰 그룹부터 선택합니다.</li>
@@ -375,7 +425,7 @@
                     <li>방금 삭제를 되돌려야 하면 즉시 <code>Cmd+Z</code>를 사용합니다.</li>
                 </ol>
 
-                <h2>13. 문제 해결 (FAQ)</h2>
+                <h2>14. 문제 해결 (FAQ)</h2>
 
                 <h3>Q1. 앱이 열리지만 파일이 안 보입니다</h3>
                 <ul>
@@ -402,10 +452,23 @@
                     <li>개발 빌드 사용 시 클린 빌드 후 다시 실행합니다.</li>
                 </ul>
 
-                <h2>14. 업데이트</h2>
+                <h2>15. 업데이트</h2>
                 <ul>
                     <li>앱 메뉴에서 <code>업데이트 확인(Check for Updates)</code>를 실행할 수 있습니다.</li>
                     <li>최신 릴리즈는 <code>SnapView.dmg</code> 기준으로 배포됩니다.</li>
+                </ul>
+
+                <h2>16. 데이터/안전 관련 참고</h2>
+                <ul>
+                    <li>SnapView는 빠른 보기/선별 중심 도구입니다.</li>
+                    <li>삭제/즉시 삭제 전에는 선택 항목을 한 번 더 확인하세요.</li>
+                    <li>중요한 작업 전에는 원본 백업을 권장합니다.</li>
+                </ul>
+
+                <h2>17. 문서 버전</h2>
+                <ul>
+                    <li>기준 버전: <code>v0.9.15</code></li>
+                    <li>이 문서는 초보자 온보딩용이며, 기능 변경 시 함께 업데이트되어야 합니다.</li>
                 </ul>
             </div>
 
@@ -588,7 +651,55 @@
                     <li>You can undo the last delete using <code>Cmd+Z</code> at the bottom of the right panel.</li>
                 </ul>
 
-                <h2>9. Notes on ZIP Files</h2>
+                <h2>9. Understanding Settings and Behavior</h2>
+
+                <h3>9.1 Decoding Mode</h3>
+                <ul>
+                    <li><code>Speed Priority</code>: Prioritizes fast navigation. Initially displays smaller resized images.</li>
+                    <li><code>Normal</code>: The recommended default. Starts with a resized image and progressively scales up to required resolution when zooming.</li>
+                    <li><code>Quality Priority</code>: Prioritizes the highest resolution possible. Best when checking image quality details is critical.</li>
+                    <li>This setting directly impacts perceived speed and memory usage. <code>Speed Priority</code> or <code>Normal</code> is more stable for large folders or slow storage.</li>
+                </ul>
+
+                <h3>9.2 Fast Keyboard Navigation Preview</h3>
+                <ul>
+                    <li><code>Off</code>: Does not use previews during rapid navigation.</li>
+                    <li><code>Auto</code>: Recommended default. Dynamically uses previews to smooth out the transition when moving quickly between shots.</li>
+                    <li><code>Aggressive</code>: Uses previews more proactively during rapid consecutive navigation.</li>
+                    <li>This mainly affects navigation feel when holding down arrow keys, rather than browsing slowly photo by photo.</li>
+                </ul>
+
+                <h3>9.3 Info Overlay Toggles</h3>
+                <ul>
+                    <li><img src="assets/icons/info.svg" class="inline-icon" alt=""> <code>I</code>: File Info/EXIF overlay</li>
+                    <li><img src="assets/icons/histogram.svg" class="inline-icon" alt=""> <code>H</code>: Toggle Histogram</li>
+                    <li><img src="assets/icons/quickcheck.svg" class="inline-icon" alt=""> <code>K</code>: Toggle Quick Check set (opens necessary assessment panels at once)</li>
+                </ul>
+
+                <h3>9.4 Include Subfolder Images</h3>
+                <ul>
+                    <li>Toggling <code>Include Subfolder Images</code> in preferences will scan not just the current folder, but all images in subfolders.</li>
+                    <li>Convenient for wider library scopes, but initial scan time and total image count will change on large directory trees.</li>
+                </ul>
+
+                <h3>9.5 Auto Advance After Rating</h3>
+                <ul>
+                    <li>When enabled, giving a rating automatically skips to the next photo.</li>
+                    <li>Extremely useful for fast initial culling, but better turned off when doing careful side-by-side comparisons. Toggle instantly with <code>Cmd+A</code> in Main View.</li>
+                </ul>
+
+                <h3>9.6 Always On Top</h3>
+                <ul>
+                    <li>Useful when comparing alongside other apps like Finder or Lightroom.</li>
+                    <li>Toggle quickly with <code>Cmd+Shift+T</code>.</li>
+                </ul>
+
+                <h3>9.7 Pro JPG / ZIP Resolution</h3>
+                <ul>
+                    <li>In Pro layouts, specific <code>Pro JPG Resolution</code> and <code>Pro ZIP Resolution</code> settings may apply independently of the general decoding mode.</li>
+                </ul>
+
+                <h2>10. Notes on ZIP Files</h2>
                 <ul>
                     <li>You can browse images inside ZIPs just like folders.</li>
                     <li>ZIPs may be slower than folders due to their structure.</li>
@@ -598,7 +709,7 @@
                         deletion.</li>
                 </ul>
 
-                <h2>10. Performance Tips</h2>
+                <h2>11. Performance Tips</h2>
                 <ol>
                     <li>If large files/ZIPs are slow, change Decoding Mode to <code>Speed Priority</code>.</li>
                     <li>In Grid, reduce thumbnail size to increase density on one screen.</li>
@@ -611,7 +722,7 @@
                     <li>On slow external drives, organize in smaller folders first.</li>
                 </ol>
 
-                <h2>11. Shortcuts Summary</h2>
+                <h2>12. Shortcuts Summary</h2>
                 <ul>
                     <li>View Switch: <code>Q / W / E / R</code></li>
                     <li>Compare Mode: <code>C</code></li>
@@ -626,12 +737,14 @@
                     <li>Cull: <code>1~5</code>, <code>0</code>, <code>P</code>, <code>X</code>, <code>U</code>,
                         <code>Cmd+1~6</code>
                     </li>
+                    <li>Screen Options: <code>Enter</code> (Full Screen), <code>Cmd+Shift+T</code> (Always On Top)</li>
+                    <li>Selection: <code>Cmd+A</code> (Main=Toggle Auto Advance, Grid/Manage=Select All)</li>
                     <li>Actions: <code>Cmd+C</code>, <code>Cmd+V</code>, <code>Delete</code>, <code>Cmd+O</code></li>
                 </ul>
 
-                <h2>12. Recommended Workflow</h2>
+                <h2>13. Recommended Workflow</h2>
 
-                <h3>12.1 Quick Organization for Travel/Daily</h3>
+                <h3>13.1 Quick Organization for Travel/Daily</h3>
                 <ol>
                     <li>Scan everything in Grid (<img src="assets/icons/view-grid.svg" class="inline-icon" alt="">
                         <code>Q</code>).
@@ -647,7 +760,7 @@
                     <li>Copy/Move final selections to an archival folder.</li>
                 </ol>
 
-                <h3>12.2 RAW+JPG Hybrid Workflow</h3>
+                <h3>13.2 RAW+JPG Hybrid Workflow</h3>
                 <ol>
                     <li>Open folder for quick browsing.</li>
                     <li>Use Quick Check (<img src="assets/icons/quickcheck.svg" class="inline-icon" alt="">
@@ -657,7 +770,7 @@
                             src="assets/icons/view-manage.svg" class="inline-icon" alt=""> <code>R</code>).</li>
                 </ol>
 
-                <h3>12.3 Duplicate Photo Cleanup Workflow</h3>
+                <h3>13.3 Duplicate Photo Cleanup Workflow</h3>
                 <ol>
                     <li>Enter Duplicate mode with <code>Cmd+Shift+D</code>.</li>
                     <li>Select the largest capacity groups first from the left group list.</li>
@@ -668,7 +781,7 @@
                     <li>If you need to revert a deletion, use <code>Cmd+Z</code> immediately.</li>
                 </ol>
 
-                <h2>13. Troubleshooting (FAQ)</h2>
+                <h2>14. Troubleshooting (FAQ)</h2>
 
                 <h3>Q1. App opens but no files are visible</h3>
                 <ul>
@@ -695,10 +808,23 @@
                     <li>If using a dev build, clean build and relaunch.</li>
                 </ul>
 
-                <h2>14. Updates</h2>
+                <h2>15. Updates</h2>
                 <ul>
                     <li>Use <code>Check for Updates</code> in the app menu.</li>
                     <li>Latest releases are distributed via <code>SnapView.dmg</code>.</li>
+                </ul>
+
+                <h2>16. Data & Safety Notes</h2>
+                <ul>
+                    <li>SnapView is designed as a fast viewing and culling tool.</li>
+                    <li>Always double-check your selection before performing a Delete or Immediate Delete.</li>
+                    <li>We highly recommend keeping original backups before major organizing tasks.</li>
+                </ul>
+
+                <h2>17. Document Version</h2>
+                <ul>
+                    <li>Base version: <code>v0.9.15</code></li>
+                    <li>This manual serves as starter onboarding and should be updated alongside major feature changes.</li>
                 </ul>
             </div>
         </section>
