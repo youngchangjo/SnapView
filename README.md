@@ -2,12 +2,12 @@
 
 Fast macOS image viewer for real photo culling work.
 
-Current Version: `v0.9.19`
+Current Version: `v0.9.20`
 
 ## Download
 
 - Latest release: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
-- Install package: open the latest release page and download `SnapView-0.9.19.dmg`
+- Install package: open the latest release page and download `SnapView-0.9.20.dmg`
 
 ## Why SnapView
 
@@ -63,7 +63,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 ## Install
 
 1. Download the latest DMG from [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest).
-2. Open `SnapView-0.9.19.dmg`.
+2. Open `SnapView-0.9.20.dmg`.
 3. Drag `SnapView.app` into `Applications`.
 4. Launch SnapView from `Applications`.
 
@@ -92,12 +92,12 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 
 실사용 사진 선별 작업에 맞춘 macOS용 고속 이미지 뷰어입니다.
 
-현재 버전: `v0.9.19`
+현재 버전: `v0.9.20`
 
 ## 다운로드
 
 - 최신 릴리즈: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
-- 설치 파일: 최신 릴리즈 페이지에서 `SnapView-0.9.19.dmg`를 다운로드해 설치합니다
+- 설치 파일: 최신 릴리즈 페이지에서 `SnapView-0.9.20.dmg`를 다운로드해 설치합니다
 
 ## 왜 SnapView인가요
 
@@ -153,7 +153,7 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 ## 설치 방법
 
 1. [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)에서 최신 DMG를 다운로드합니다.
-2. `SnapView-0.9.19.dmg`를 엽니다.
+2. `SnapView-0.9.20.dmg`를 엽니다.
 3. `SnapView.app`을 `Applications`로 드래그합니다.
 4. `Applications`에서 SnapView를 실행합니다.
 
