@@ -2,12 +2,21 @@
 
 Fast macOS image viewer for real photo culling work.
 
-Current Version: `v0.9.22`
+Current Version: `v0.10.0`
 
 ## Download
 
 - Latest release: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
-- Install package: open the latest release page and download `SnapView-0.9.22.dmg`
+- Install package: open the latest release page and download `SnapView-0.10.0.dmg`
+
+## What's New In v0.10.0
+
+- Fullscreen slideshow v1 from the current browsing scope, with return-to-context behavior when you exit.
+- A simplified slideshow HUD that shows the actual speed and transition values first, plus icon toggles for loop, shuffle, and small-image scale-to-fit.
+- Explicit slideshow transition choices: `Hard Cut`, `Crossfade`, and `Fade to Black`.
+- More reliable slideshow crossfades when the next frame is already cached, with a graceful hard-cut fallback when it is not.
+- Small images now scale up to fit fullscreen by default during slideshow, with a quick HUD/menu toggle back to 100% size.
+- Reopen flows now prefer the visible main window after `Cmd+W`, and the titlebar chrome is aligned more closely with native macOS window surfaces.
 
 ## Why SnapView
 
@@ -63,7 +72,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 ## Install
 
 1. Download the latest DMG from [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest).
-2. Open `SnapView-0.9.22.dmg`.
+2. Open `SnapView-0.10.0.dmg`.
 3. Drag `SnapView.app` into `Applications`.
 4. Launch SnapView from `Applications`.
 
@@ -92,12 +101,21 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 
 실사용 사진 선별 작업에 맞춘 macOS용 고속 이미지 뷰어입니다.
 
-현재 버전: `v0.9.22`
+현재 버전: `v0.10.0`
 
 ## 다운로드
 
 - 최신 릴리즈: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
-- 설치 파일: 최신 릴리즈 페이지에서 `SnapView-0.9.22.dmg`를 다운로드해 설치합니다
+- 설치 파일: 최신 릴리즈 페이지에서 `SnapView-0.10.0.dmg`를 다운로드해 설치합니다
+
+## v0.10.0 주요 변경
+
+- 현재 보고 있는 범위를 그대로 재생하고 종료 후 원래 맥락으로 돌아오는 `전체화면 슬라이드쇼 v1`
+- `3초`, `크로스페이드`, `하드 컷`처럼 현재 값이 먼저 보이는 슬라이드쇼 HUD와 `루프` / `셔플` / `작은 이미지 확대` 원형 아이콘 토글
+- 슬라이드쇼 전환 옵션 `하드 컷` / `크로스페이드` / `블랙 페이드`
+- 다음 프레임이 준비된 경우 애니메이션을 최대한 유지하는 `크로스페이드` 보강과, 준비가 늦을 때의 자연스러운 하드 컷 fallback
+- 작은 이미지는 슬라이드쇼 전체화면에서 기본적으로 화면에 맞게 확대하고, 필요하면 HUD/명령 메뉴에서 바로 100% 표시로 되돌릴 수 있음
+- `Cmd+W` 뒤 Finder/드롭 재열기 시 보이는 메인 창을 우선 복구하는 단일 창 흐름 유지, 그리고 macOS 기본 chrome에 더 가까워진 타이틀바 표면 정리
 
 ## 왜 SnapView인가요
 
@@ -153,7 +171,7 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 ## 설치 방법
 
 1. [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)에서 최신 DMG를 다운로드합니다.
-2. `SnapView-0.9.22.dmg`를 엽니다.
+2. `SnapView-0.10.0.dmg`를 엽니다.
 3. `SnapView.app`을 `Applications`로 드래그합니다.
 4. `Applications`에서 SnapView를 실행합니다.
 
