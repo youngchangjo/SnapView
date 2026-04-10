@@ -2,21 +2,21 @@
 
 Fast macOS image viewer for real photo culling work.
 
-Current Version: `v0.10.0`
+Current Version: `v0.10.1`
 
 ## Download
 
 - Latest release: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
-- Install package: open the latest release page and download `SnapView-0.10.0.dmg`
+- Install package: open the latest release page and download `SnapView-0.10.1.dmg`
 
-## What's New In v0.10.0
+## What's New In v0.10.1
 
-- Fullscreen slideshow v1 from the current browsing scope, with return-to-context behavior when you exit.
-- A simplified slideshow HUD that shows the actual speed and transition values first, plus icon toggles for loop, shuffle, and small-image scale-to-fit.
-- Explicit slideshow transition choices: `Hard Cut`, `Crossfade`, and `Fade to Black`.
-- More reliable slideshow crossfades when the next frame is already cached, with a graceful hard-cut fallback when it is not.
-- Small images now scale up to fit fullscreen by default during slideshow, with a quick HUD/menu toggle back to 100% size.
-- Reopen flows now prefer the visible main window after `Cmd+W`, and the titlebar chrome is aligned more closely with native macOS window surfaces.
+- A new `Appearance Mode` setting in General lets you choose `System`, `Light`, or `Dark`, and both the main window and Settings window follow the same choice.
+- Light mode surfaces across Main, Grid, Filmstrip, and Manage now use a muted desktop-gray palette instead of falling back to dark-looking content backgrounds or stark white panels.
+- Reject badges are now easier to spot in the main image overlay and are shown by default in Grid and Filmstrip thumbnails alongside Pick.
+- Rapid `Cmd+Delete` passes now refresh the next image reliably even when the same visible slot is reused.
+- A canvas-attach crash path during drag/open reattachment was defused by deferring state clearing out of the active SwiftUI/AppKit update pass.
+- The `Could not open image` failure overlay now includes an explicit dismiss action and `Esc` support, so the warning can be cleared without changing selection.
 
 ## Why SnapView
 
@@ -72,7 +72,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 ## Install
 
 1. Download the latest DMG from [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest).
-2. Open `SnapView-0.10.0.dmg`.
+2. Open `SnapView-0.10.1.dmg`.
 3. Drag `SnapView.app` into `Applications`.
 4. Launch SnapView from `Applications`.
 
@@ -101,21 +101,21 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 
 실사용 사진 선별 작업에 맞춘 macOS용 고속 이미지 뷰어입니다.
 
-현재 버전: `v0.10.0`
+현재 버전: `v0.10.1`
 
 ## 다운로드
 
 - 최신 릴리즈: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
-- 설치 파일: 최신 릴리즈 페이지에서 `SnapView-0.10.0.dmg`를 다운로드해 설치합니다
+- 설치 파일: 최신 릴리즈 페이지에서 `SnapView-0.10.1.dmg`를 다운로드해 설치합니다
 
-## v0.10.0 주요 변경
+## v0.10.1 주요 변경
 
-- 현재 보고 있는 범위를 그대로 재생하고 종료 후 원래 맥락으로 돌아오는 `전체화면 슬라이드쇼 v1`
-- `3초`, `크로스페이드`, `하드 컷`처럼 현재 값이 먼저 보이는 슬라이드쇼 HUD와 `루프` / `셔플` / `작은 이미지 확대` 원형 아이콘 토글
-- 슬라이드쇼 전환 옵션 `하드 컷` / `크로스페이드` / `블랙 페이드`
-- 다음 프레임이 준비된 경우 애니메이션을 최대한 유지하는 `크로스페이드` 보강과, 준비가 늦을 때의 자연스러운 하드 컷 fallback
-- 작은 이미지는 슬라이드쇼 전체화면에서 기본적으로 화면에 맞게 확대하고, 필요하면 HUD/명령 메뉴에서 바로 100% 표시로 되돌릴 수 있음
-- `Cmd+W` 뒤 Finder/드롭 재열기 시 보이는 메인 창을 우선 복구하는 단일 창 흐름 유지, 그리고 macOS 기본 chrome에 더 가까워진 타이틀바 표면 정리
+- 설정 > 일반에 `화면 모드`를 추가해 `시스템 / 라이트 / 다크`를 직접 선택할 수 있고, 메인 창과 설정 창이 같은 appearance를 따르도록 정리
+- 메인 / 그리드 / 필름스트립 / 관리뷰의 라이트 모드를 순백색 대신 눌린 회색 유리 톤으로 정리해, 밝기와 가독성은 확보하면서도 화면이 과하게 번쩍이지 않도록 조정
+- 메인 표시 이미지의 `Reject` 배지를 보강하고, 그리드 / 필름스트립 썸네일 기본 플래그 표시를 `Pick + Reject`로 올려 선별 상태가 더 빨리 보이도록 정리
+- `Cmd+Delete` 연속 삭제 뒤 다음 사진이 같은 슬롯으로 당겨져도 프리뷰가 즉시 갱신되도록 same-index refresh 경로를 보강
+- 메인 캔버스 attach 중 상태 clear 재진입으로 AppKit constraint 예외가 날 수 있던 종료 경로를 완화
+- `이미지를 열지 못했습니다` 오버레이에 `닫기` 버튼과 `Esc dismiss`를 추가해 현재 선택을 바꾸지 않고 안내만 내릴 수 있게 정리
 
 ## 왜 SnapView인가요
 
@@ -171,7 +171,7 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 ## 설치 방법
 
 1. [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)에서 최신 DMG를 다운로드합니다.
-2. `SnapView-0.10.0.dmg`를 엽니다.
+2. `SnapView-0.10.1.dmg`를 엽니다.
 3. `SnapView.app`을 `Applications`로 드래그합니다.
 4. `Applications`에서 SnapView를 실행합니다.
 
