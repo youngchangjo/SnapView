@@ -19,6 +19,26 @@ Current Version: `v0.10.1`
 - A canvas-attach crash path during drag/open reattachment was defused by deferring state clearing out of the active SwiftUI/AppKit update pass.
 - The `Could not open image` failure overlay now includes an explicit dismiss action and `Esc` support, so the warning can be cleared without changing selection.
 
+## Screenshots
+
+![SnapView overview](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/hero.png)
+
+| Main View | Grid View |
+| --- | --- |
+| ![SnapView Main View](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/web_mainview.png) | ![SnapView Grid View](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/web_gridview.png) |
+
+| Filmstrip View | Manage View |
+| --- | --- |
+| ![SnapView Filmstrip View](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/web_filmstrip.png) | ![SnapView Manage View](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/web_managemode.png) |
+
+| Quick Check | Compare Mode |
+| --- | --- |
+| ![SnapView Quick Check](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/quickcheck.png) | ![SnapView Compare Mode](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/comparemode.png) |
+
+| Duplicate Mode |
+| --- |
+| ![SnapView Duplicate Mode](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/duplicatemode.png) |
+
 ## Why SnapView
 
 SnapView is built for the part after import: checking sharpness, comparing near-duplicates, rating selects, and moving through folders quickly without waiting for a catalog app.
@@ -109,6 +129,8 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 - 최신 릴리즈: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
 - 설치 파일: 최신 릴리즈 페이지에서 `SnapView-0.10.1.dmg`를 다운로드해 설치합니다
 - 공식 사이트: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
+
+스크린샷은 위 `Screenshots` 섹션에서 바로 확인할 수 있습니다.
 
 ## v0.10.1 주요 변경
 
