@@ -1,8 +1,18 @@
+<a id="english"></a>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/snapview-icon.png" alt="SnapView app icon" width="128">
+</p>
+
 # SnapView
 
 Fast macOS image viewer for real photo culling work.
 
 Current Version: `v0.10.1`
+
+Language: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
+
+Release Notes: [Public Release Notes](https://github.com/youngchangjo/SnapView/blob/main/RELEASE_NOTES.md) | [GitHub Releases](https://github.com/youngchangjo/SnapView/releases)
 
 ## Download
 
@@ -38,6 +48,8 @@ Current Version: `v0.10.1`
 | Duplicate Mode |
 | --- |
 | ![SnapView Duplicate Mode](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/duplicatemode.png) |
+
+Detailed release notes from `v0.10.0` onward are available in the separate [Public Release Notes](https://github.com/youngchangjo/SnapView/blob/main/RELEASE_NOTES.md) document.
 
 ## Why SnapView
 
@@ -118,11 +130,17 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 
 ---
 
+<a id="korean"></a>
+
 # SnapView
 
 실사용 사진 선별 작업에 맞춘 macOS용 고속 이미지 뷰어입니다.
 
 현재 버전: `v0.10.1`
+
+언어: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
+
+릴리즈 노트: [공개 릴리즈 노트](https://github.com/youngchangjo/SnapView/blob/main/RELEASE_NOTES.md) | [GitHub Releases](https://github.com/youngchangjo/SnapView/releases)
 
 ## 다운로드
 
@@ -131,6 +149,8 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 - 공식 사이트: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
 
 스크린샷은 위 `Screenshots` 섹션에서 바로 확인할 수 있습니다.
+
+`v0.10.0`부터의 상세 변경 이력은 별도 문서인 [공개 릴리즈 노트](https://github.com/youngchangjo/SnapView/blob/main/RELEASE_NOTES.md)에서 확인할 수 있습니다.
 
 ## v0.10.1 주요 변경
 
