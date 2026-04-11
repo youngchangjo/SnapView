@@ -8,6 +8,7 @@ Current Version: `v0.10.1`
 
 - Latest release: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
 - Install package: open the latest release page and download `SnapView-0.10.1.dmg`
+- Official website: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
 
 ## What's New In v0.10.1
 
@@ -107,6 +108,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 
 - 최신 릴리즈: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
 - 설치 파일: 최신 릴리즈 페이지에서 `SnapView-0.10.1.dmg`를 다운로드해 설치합니다
+- 공식 사이트: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
 
 ## v0.10.1 주요 변경
 
