@@ -31,6 +31,7 @@
                 <a href="#workflow">Features</a>
                 <a href="#specs">Specs</a>
                 <a href="manual.html">Manual</a>
+                <a href="release_notes.html">Release Notes</a>
             </nav>
 
             <div class="lang-switch" role="group" aria-label="Language">
@@ -291,8 +292,8 @@
 
         <!-- Technical Specs Section -->
         <section id="specs" class="specs-section reveal">
-            <h3 data-lang="ko">지원 사양</h3>
-            <h3 data-lang="en" hidden>Specifications</h3>
+            <h3 data-lang="ko">지원 사양 및 기능</h3>
+            <h3 data-lang="en" hidden>Specifications & Features</h3>
 
             <div class="specs-grid">
                 <div class="spec-item">
@@ -313,6 +314,43 @@
                 <div class="spec-item">
                     <span class="spec-label">Performance</span>
                     <span class="spec-value">Metal Accelerated, Zero-Import Delay</span>
+                </div>
+                <!-- Add Features Section -->
+                <div class="spec-item" style="grid-column: 1 / -1; margin-top: 24px;">
+                    <span class="spec-label" data-lang="ko">주요 기능</span>
+                    <span class="spec-label" data-lang="en" hidden>Key Features</span>
+                    <ul style="color: var(--text-secondary); line-height: 1.8; margin-top: 12px; font-size: 16px; display: inline-block; text-align: left;">
+                        <li data-lang="ko"><strong style="color: var(--accent-blue);">가져오기(Import)</strong> 및 무거운 <strong style="color: var(--accent-blue);">카탈로그 파일 생성 없음</strong></li>
+                        <li data-lang="en" hidden><strong style="color: var(--accent-blue);">No import</strong> process or heavy <strong style="color: var(--accent-blue);">catalog generation</strong></li>
+                        <li data-lang="ko"><strong style="color: var(--accent-blue);">초고속 디렉토리 기반 탐색</strong> 및 키보드 프리뷰 이동</li>
+                        <li data-lang="en" hidden><strong style="color: var(--accent-blue);">Ultra-fast directory browsing</strong> & predictive keyboard navigation</li>
+                        <li data-lang="ko">압축 해제 없이 <strong style="color: var(--accent-blue);">ZIP 파일 실시간 탐색</strong> (Direct ZIP Browsing)</li>
+                        <li data-lang="en" hidden>Browse <strong style="color: var(--accent-blue);">ZIP archives in real-time</strong> without extracting</li>
+                        <li data-lang="ko">목적에 맞게 전환하는 <strong style="color: var(--accent-blue);">4가지 뷰 모드</strong> (Main / Grid / Filmstrip / Manage)</li>
+                        <li data-lang="en" hidden><strong style="color: var(--accent-blue);">4 Versatile View Modes</strong> (Main / Grid / Filmstrip / Manage)</li>
+                        <li data-lang="ko"><strong style="color: var(--accent-blue);">RAW, HEIC</strong> 및 움직이는 이미지(<strong style="color: var(--accent-blue);">GIF, WebP</strong>) 실시간 뷰 지원</li>
+                        <li data-lang="en" hidden>Real-time playback/view of <strong style="color: var(--accent-blue);">RAW, HEIC, and animated formats</strong></li>
+                        <li data-lang="ko">상황에 맞춰 조율하는 <strong style="color: var(--accent-blue);">스마트 디코딩 모드</strong> (속도/보통/화질 최우선)</li>
+                        <li data-lang="en" hidden>Adjustable <strong style="color: var(--accent-blue);">Smart Decoding Modes</strong> (Speed vs Quality priority)</li>
+                        <li data-lang="ko">직관적인 화면 전환 <strong style="color: var(--accent-blue);">슬라이드쇼 리뷰</strong> (Fullscreen Slideshow)</li>
+                        <li data-lang="en" hidden>Intuitive <strong style="color: var(--accent-blue);">Fullscreen Slideshow</strong> review with transition effects</li>
+                        <li data-lang="ko">Lightroom과 실시간 선별/분류 동기화 (<strong style="color: var(--accent-blue);">XMP Sidecar 별점, Pick/Reject</strong>)</li>
+                        <li data-lang="en" hidden>Real-time culling sync with Lightroom (<strong style="color: var(--accent-blue);">XMP Rating, Pick/Reject</strong>)</li>
+                        <li data-lang="ko">macOS <strong style="color: var(--accent-blue);">Finder 컬러 태그 완벽 연동</strong></li>
+                        <li data-lang="en" hidden>Seamless integration with <strong style="color: var(--accent-blue);">macOS Finder color tags</strong></li>
+                        <li data-lang="ko"><strong style="color: var(--accent-blue);">중복 사진</strong> 시각적 파악 및 <strong style="color: var(--accent-blue);">일괄 정리</strong> 모드 (Duplicate Cleaner)</li>
+                        <li data-lang="en" hidden>Visual <strong style="color: var(--accent-blue);">Duplicate checking</strong> and batch cleaner</li>
+                        <li data-lang="ko">다중 사진 나란히 보기 <strong style="color: var(--accent-blue);">비교 모드</strong> (Compare Mode)</li>
+                        <li data-lang="en" hidden>Side-by-side multiple image <strong style="color: var(--accent-blue);">Compare Mode</strong> (up to 4 images)</li>
+                        <li data-lang="ko">눈감음, 노출, 초점 등을 AI로 확인하는 보조 도구 (<strong style="color: var(--accent-blue);">Quick Check</strong>)</li>
+                        <li data-lang="en" hidden><strong style="color: var(--accent-blue);">AI-assisted Quick Check</strong> (flags for blink, focus, exposure)</li>
+                        <li data-lang="ko">직관적인 <strong style="color: var(--accent-blue);">히스토그램</strong>, 카메라 <strong style="color: var(--accent-blue);">EXIF 분석</strong> 및 <strong style="color: var(--accent-blue);">GPS 위치 맵</strong> 제공</li>
+                        <li data-lang="en" hidden>Intuitive <strong style="color: var(--accent-blue);">Histogram</strong>, detailed <strong style="color: var(--accent-blue);">EXIF info</strong>, and <strong style="color: var(--accent-blue);">GPS Map</strong> panels</li>
+                        <li data-lang="ko">키보드 중심의 끊김 없는 <strong style="color: var(--accent-blue);">파일 관리</strong> (선택/복사/붙여넣기/삭제)</li>
+                        <li data-lang="en" hidden>Seamless keyboard-centric <strong style="color: var(--accent-blue);">File Management</strong> (Select/Copy/Paste/Delete)</li>
+                        <li data-lang="ko">다른 작업과 함께 보기 편리한 <strong style="color: var(--accent-blue);">화면 맨위 고정</strong> (Always On Top) 지원</li>
+                        <li data-lang="en" hidden>Convenient <strong style="color: var(--accent-blue);">Always On Top</strong> mode for multi-tasking</li>
+                    </ul>
                 </div>
             </div>
         </section>

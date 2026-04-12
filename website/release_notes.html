@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SnapView Release Notes | Fast macOS Image Viewer</title>
+    <meta name="description"
+        content="Release Notes for SnapView - Learn how to install, view, and organize your photos quickly on macOS.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Syne:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/images/snapview-icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .manual-container {
+            max-width: 800px;
+            margin: 120px auto 80px;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .manual-content h1 {
+            font-size: 48px;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .manual-content .subtitle {
+            font-size: 20px;
+            color: var(--text-secondary);
+            margin-bottom: 60px;
+            line-height: 1.6;
+        }
+
+        .manual-content h2 {
+            font-family: var(--font-heading);
+            font-size: 28px;
+            margin-top: 60px;
+            margin-bottom: 24px;
+            color: var(--text-primary);
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 16px;
+        }
+
+        .manual-content h3 {
+            font-family: var(--font-body);
+            font-size: 20px;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            color: var(--accent-blue);
+        }
+
+        .manual-content p,
+        .manual-content li {
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .manual-content ul {
+            padding-left: 20px;
+            margin-bottom: 24px;
+        }
+
+        .manual-content li {
+            margin-bottom: 8px;
+        }
+
+        .manual-content code {
+            background: var(--glass-bg);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: var(--text-primary);
+            border: 1px solid var(--glass-border);
+        }
+
+        .manual-content blockquote {
+            border-left: 4px solid var(--accent-blue);
+            margin: 24px 0;
+            padding-left: 20px;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        .manual-content hr {
+            border: 0;
+            height: 1px;
+            background: var(--glass-border);
+            margin: 60px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-orb orb-1" aria-hidden="true" style="opacity: 0.2;"></div>
+    <div class="bg-orb orb-2" aria-hidden="true" style="opacity: 0.2;"></div>
+
+    <main class="page">
+        <header class="topbar">
+            <a class="brand" href="index.html" aria-label="SnapView home">
+                <img src="assets/images/snapview-icon.png" alt="SnapView icon">
+                <span>SnapView</span>
+            </a>
+
+            <nav class="nav" aria-label="Primary">
+                <a href="index.html#workflow">Features</a>
+                <a href="index.html#specs">Specs</a>
+                <a href="manual.html">Manual</a>
+                <a href="release_notes.html" class="active">Release Notes</a>
+            </nav>
+
+            <div class="lang-switch" role="group" aria-label="Language">
+                <button type="button" data-set-lang="ko">KO</button>
+                <button type="button" data-set-lang="en">EN</button>
+            </div>
+        </header>
+
+        <section class="manual-container manual-content">
+            <!-- Korean Content -->
+            <div data-lang="ko">
+                <h1>SnapView 릴리즈 노트</h1>
+                <h2>v0.10.2 (Current) - 2026-04-12</h2>
+                <h3>새로운 점</h3>
+                <ul>
+                    <li>Main View에서 animated GIF와 animated WebP를 바로 재생할 수 있게 했습니다.</li>
+                    <li>기본앱 등록은 <code>주요 포맷</code>부터 먼저 적용할 수 있게 단순화했고, Finder <code>이 앱으로 열기</code> 추천 목록 대응도 보강했습니다.</li>
+                    <li>Quick Check와 파일 열기 흐름의 안정성을 더 다듬었습니다.</li>
+                </ul>
+                <h3>개선된 점</h3>
+                <ul>
+                    <li>Main View에서 animated GIF / WebP를 일반 선별 흐름 안에서 바로 볼 수 있습니다.</li>
+                    <li>자주 쓰는 포맷만 먼저 기본앱으로 등록한 뒤, 원할 때만 더 넓게 등록할 수 있습니다.</li>
+                    <li>지원하지 않는 파일은 멈춘 것처럼 보이기보다 바로 안내 메시지로 정리됩니다.</li>
+                    <li>상세 Quick Check 갱신 중 발생할 수 있던 종료 경로를 줄였습니다.</li>
+                    <li>파일 열기 패널이 떠 있는 동안 메인 창이 어색하게 보이던 부분을 보정했습니다.</li>
+                    <li>현재 열려 있는 이미지의 상위 폴더 경로가 바뀐 경우 복구 흐름을 보강했습니다.</li>
+                </ul>
+                <h3>참고</h3>
+                <ul>
+                    <li>animated 재생은 이번 버전에서 Main View만 지원합니다. 다른 보기에서는 정지 이미지로 보입니다.</li>
+                    <li>AVIF와 JPEG XL은 macOS 디코더 지원 여부에 따라 동작합니다.</li>
+                </ul>
+                <h2>v0.10.1 - 2026-04-11</h2>
+                <h3>Highlights</h3>
+                <ul>
+                    <li><code>화면 모드</code> 설정을 추가해 <code>시스템 / 라이트 / 다크</code> 중 원하는 모양을 직접 고를 수 있게 했습니다.</li>
+                    <li>Main, Grid, Filmstrip, Manage의 라이트 모드를 더 자연스럽고 읽기 편하게 다듬었습니다.</li>
+                    <li><code>Reject</code> 표시를 더 잘 보이게 하고, 빠른 선별 중 나타나던 몇 가지 거슬리는 동작도 함께 다듬었습니다.</li>
+                </ul>
+                <h3>UX / UI</h3>
+                <ul>
+                    <li>라이트 모드가 너무 어둡거나 지나치게 밝게 보이지 않도록 화면 톤을 다시 맞췄습니다.</li>
+                    <li>Manage 뷰의 상태 요약과 텍스트 가독성을 높였습니다.</li>
+                    <li>메인 보기, Grid, Filmstrip에서 <code>Pick</code>과 <code>Reject</code> 상태를 더 빨리 알아볼 수 있게 했습니다.</li>
+                </ul>
+                <h3>Performance</h3>
+                <ul>
+                    <li><code>Cmd+Delete</code> 뒤 다음 사진이 더 안정적으로 바로 보이도록 했습니다.</li>
+                    <li>빠르게 이미지를 열거나 다시 붙는 상황에서 안정성을 높였습니다.</li>
+                    <li>라이트 모드 화면들이 더 일관되게 보이도록 정리했습니다.</li>
+                </ul>
+                <h3>Fixes</h3>
+                <ul>
+                    <li><code>Reject</code> 표시가 잘 안 보이던 문제를 수정했습니다.</li>
+                    <li>빠르게 삭제를 반복한 뒤 다음 사진이 바로 안 보이던 문제를 줄였습니다.</li>
+                    <li>이미지를 다시 열거나 붙이는 과정에서 생길 수 있던 종료 문제를 완화했습니다.</li>
+                    <li><code>이미지를 열지 못했습니다</code> 안내에 <code>닫기</code>와 <code>Esc</code> dismiss를 추가했습니다.</li>
+                    <li>라이트 모드 Manage 뷰 가독성을 더 보정했습니다.</li>
+                </ul>
+                <h3>Known Issues</h3>
+                <ul>
+                    <li>ZIP 탐색은 일반 폴더보다 구조적으로 느릴 수 있습니다.</li>
+                    <li>아주 크거나 특수한 파일은 더 안정적인 표시 방식으로 열릴 수 있습니다.</li>
+                </ul>
+                <h3>Install / Update</h3>
+                <ol>
+                    <li><code>SnapView-0.10.1.dmg</code> 다운로드</li>
+                    <li><code>SnapView.app</code>을 <code>Applications</code>로 드래그</li>
+                    <li>기존 버전이 있으면 덮어쓰기 후 실행</li>
+                    <li>이후 새 버전이 배포되면 앱이 자동으로 확인하고 설치 여부를 묻습니다</li>
+                </ol>
+                <h3>Notes</h3>
+                <ul>
+                    <li>이번 업데이트는 빠른 선별 흐름과 라이트 모드 사용성을 다듬는 데 집중했습니다.</li>
+                </ul>
+                <h2>v0.10.0 - 2026-04-09</h2>
+                <h3>Highlights</h3>
+                <ul>
+                    <li>현재 폴더나 선택 상태를 그대로 이어받는 전체화면 <code>슬라이드쇼 v1</code>을 추가했습니다.</li>
+                    <li>속도, 전환, 루프, 셔플, 재생 상태를 바로 볼 수 있는 슬라이드쇼 HUD를 추가했습니다.</li>
+                    <li>작은 이미지와 전환 품질을 더 자연스럽게 보여주도록 슬라이드쇼 화면을 다듬었습니다.</li>
+                </ul>
+                <h3>UX / UI</h3>
+                <ul>
+                    <li>타이틀바, <code>도구</code> 메뉴, 주요 보기 화면에서 같은 방식으로 슬라이드쇼를 시작할 수 있습니다.</li>
+                    <li>HUD를 값 중심으로 단순화해 속도와 전환 설정을 더 빨리 읽을 수 있게 했습니다.</li>
+                    <li><code>작은 이미지 확대</code> 옵션을 추가해 전체화면 재생을 더 보기 좋게 만들었습니다.</li>
+                    <li>슬라이드쇼 시작/종료 기준을 <code>Shift + Enter</code>로 정리했습니다.</li>
+                </ul>
+                <h3>Performance</h3>
+                <ul>
+                    <li>크로스페이드가 일반 재생과 셔플 재생에서 더 안정적으로 보이도록 했습니다.</li>
+                    <li>다음 이미지를 더 똑똑하게 준비해 전환이 거칠게 보이는 경우를 줄였습니다.</li>
+                    <li>부드러운 전환이 어려운 경우에도 화면이 덜 튀도록 정리했습니다.</li>
+                </ul>
+                <h3>Fixes</h3>
+                <ul>
+                    <li><code>Fade to Black</code> 전환이 <code>Crossfade</code>와 더 분명하게 다르게 보이도록 수정했습니다.</li>
+                    <li>자동 재생과 일시정지 시작 흐름을 더 자연스럽게 정리했습니다.</li>
+                    <li>전체화면에서 작은 이미지가 너무 작게 보이던 문제를 보완했습니다.</li>
+                    <li>창을 닫았다가 다시 열 때 메인 창 복구가 더 일관되게 동작하도록 했습니다.</li>
+                </ul>
+                <h3>Known Issues</h3>
+                <ul>
+                    <li>대형 ZIP 세트는 일반 폴더보다 전환이 덜 매끄러울 수 있습니다.</li>
+                    <li>아주 무거운 이미지 세트는 일반 폴더보다 전환이 덜 매끄러울 수 있습니다.</li>
+                </ul>
+                <h3>Install / Update</h3>
+                <ol>
+                    <li><code>SnapView-0.10.0.dmg</code> 다운로드</li>
+                    <li><code>SnapView.app</code>을 <code>Applications</code>로 드래그</li>
+                    <li>기존 버전이 있으면 덮어쓰기 후 실행</li>
+                    <li>이후 새 버전이 배포되면 앱이 자동으로 확인하고 설치 여부를 묻습니다</li>
+                </ol>
+                <h3>Notes</h3>
+                <ul>
+                    <li>이 릴리즈는 슬라이드쇼를 정식 리뷰 모드로 추가한 첫 버전입니다.</li>
+                </ul>
+            </div>
+
+            <!-- English Content -->
+            <div data-lang="en" hidden>
+                <h1>SnapView Release Notes</h1>
+                <h2>v0.10.2 (Current) - 2026-04-12</h2>
+                <h3>What's New</h3>
+                <ul>
+                    <li>Animated GIF and animated WebP now play directly in Main View.</li>
+                    <li>Default app setup is easier with a simpler <code>Major Formats</code> option first, plus better visibility in Finder's <code>Open With</code> recommendations.</li>
+                    <li>Quick Check and file-opening behavior feel steadier during real photo review.</li>
+                </ul>
+                <h3>Improvements</h3>
+                <ul>
+                    <li>Main View can now play animated GIF and WebP without leaving your normal review flow.</li>
+                    <li>You can register common image formats first, then choose a broader registration only if you want it.</li>
+                    <li>Unsupported files now stop earlier with a clear message instead of feeling stuck or inconsistent.</li>
+                    <li>Reduced a Quick Check crash path that could happen while detailed review data was updating.</li>
+                    <li>Improved how the main window behaves while the file-open panel is on screen.</li>
+                    <li>Improved recovery when the currently open image's parent folder path changes.</li>
+                </ul>
+                <h3>Notes</h3>
+                <ul>
+                    <li>Animated playback is limited to Main View in this release. Other views still show a still frame.</li>
+                    <li>AVIF and JPEG XL remain dependent on macOS decoder support.</li>
+                </ul>
+                <h2>v0.10.1 - 2026-04-11</h2>
+                <h3>Highlights</h3>
+                <ul>
+                    <li>Added a new <code>Appearance Mode</code> setting so you can choose <code>System</code>, <code>Light</code>, or <code>Dark</code> and keep the app on the look you prefer.</li>
+                    <li>Improved light mode so Main, Grid, Filmstrip, and Manage feel more balanced and easier to read.</li>
+                    <li>Made <code>Reject</code> marks easier to notice and improved a few rough edges around fast review and image-open warnings.</li>
+                </ul>
+                <h3>UX / UI</h3>
+                <ul>
+                    <li>Light mode now uses a softer desktop-style surface instead of looking too dark or too bright.</li>
+                    <li>Manage view text and status summaries are easier to read, especially in light mode and inactive windows.</li>
+                    <li><code>Pick</code> and <code>Reject</code> markings are easier to spot while reviewing in the main view, Grid, and Filmstrip.</li>
+                </ul>
+                <h3>Performance</h3>
+                <ul>
+                    <li>Moving quickly after <code>Cmd+Delete</code> is more reliable, with the next image updating more consistently.</li>
+                    <li>Opening or reattaching images is more stable during fast browsing.</li>
+                    <li>Light mode surfaces now behave more consistently across the app.</li>
+                </ul>
+                <h3>Fixes</h3>
+                <ul>
+                    <li>Fixed cases where <code>Reject</code> was too easy to miss during review.</li>
+                    <li>Fixed cases where the next image did not refresh correctly after rapid deletes.</li>
+                    <li>Reduced a crash path that could happen while reopening or attaching images.</li>
+                    <li>Added <code>Close</code> and <code>Esc</code> support to the <code>Could not open image</code> warning so it can be dismissed more easily.</li>
+                    <li>Improved Manage view readability in light mode.</li>
+                </ul>
+                <h3>Known Issues</h3>
+                <ul>
+                    <li>ZIP browsing can still be slower than normal folders.</li>
+                    <li>Some very large or unusual files may still open in a more compatible display mode.</li>
+                </ul>
+                <h3>Install / Update</h3>
+                <ol>
+                    <li>Download <code>SnapView-0.10.1.dmg</code>.</li>
+                    <li>Drag <code>SnapView.app</code> into <code>Applications</code>.</li>
+                    <li>Replace the previous version if needed.</li>
+                    <li>Future updates are checked automatically and shown with a user confirmation prompt.</li>
+                </ol>
+                <h3>Notes</h3>
+                <ul>
+                    <li>This update is mainly focused on making everyday review work feel steadier and easier to read.</li>
+                </ul>
+                <h2>v0.10.0 - 2026-04-09</h2>
+                <h3>Highlights</h3>
+                <ul>
+                    <li>Introduced fullscreen <code>Slideshow v1</code> for hands-off review of the current folder, selection, or browsing context.</li>
+                    <li>Added slideshow controls for speed, transitions, loop, shuffle, and on-screen playback status.</li>
+                    <li>Improved slideshow smoothness and fullscreen presentation, including better handling for smaller images.</li>
+                </ul>
+                <h3>UX / UI</h3>
+                <ul>
+                    <li>Slideshow can be started from the titlebar, Tools menu, and major review views.</li>
+                    <li>The slideshow HUD was simplified so speed and transition choices are easier to read at a glance.</li>
+                    <li>Added a <code>Scale Small Images to Fit</code> option for fuller fullscreen playback.</li>
+                    <li>Standardized slideshow start and exit around <code>Shift + Enter</code>.</li>
+                </ul>
+                <h3>Performance</h3>
+                <ul>
+                    <li>Crossfade playback is more reliable during normal browsing and shuffle playback.</li>
+                    <li>The next image is prepared more intelligently to reduce rough transitions.</li>
+                    <li>When a smooth transition is not possible in time, slideshow playback falls back more cleanly.</li>
+                </ul>
+                <h3>Fixes</h3>
+                <ul>
+                    <li>Fixed <code>Fade to Black</code> so it feels distinct from <code>Crossfade</code>.</li>
+                    <li>Fixed slideshow start behavior for paused and autoplay entry cases.</li>
+                    <li>Fixed fullscreen playback for smaller images so they fill the screen more naturally.</li>
+                    <li>Improved window recovery behavior after closing and reopening the main view.</li>
+                </ul>
+                <h3>Known Issues</h3>
+                <ul>
+                    <li>Large ZIP-based sets can still transition less smoothly than normal folders.</li>
+                    <li>Very heavy image sets may still look less smooth than normal folders.</li>
+                </ul>
+                <h3>Install / Update</h3>
+                <ol>
+                    <li>Download <code>SnapView-0.10.0.dmg</code>.</li>
+                    <li>Drag <code>SnapView.app</code> into <code>Applications</code>.</li>
+                    <li>Replace the previous version if needed.</li>
+                    <li>Future updates are checked automatically and shown with a user confirmation prompt.</li>
+                </ol>
+                <h3>Notes</h3>
+                <ul>
+                    <li>This release introduced slideshow as a new fullscreen review mode.</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-left">
+                <span>SnapView by SnapWorks Lab</span>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
