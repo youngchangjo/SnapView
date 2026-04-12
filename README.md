@@ -8,7 +8,7 @@
 
 Fast macOS image viewer for real photo culling work.
 
-Current Version: `v0.10.1`
+Current Version: `v0.10.2`
 
 Language: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
 
@@ -17,17 +17,15 @@ Release Notes: [Public Release Notes](https://github.com/youngchangjo/SnapView/b
 ## Download
 
 - Latest release: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
-- Install package: open the latest release page and download `SnapView-0.10.1.dmg`
+- Install package: open the latest release page and download `SnapView-0.10.2.dmg`
 - Official website: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
 
-## What's New In v0.10.1
+## What's New In v0.10.2
 
-- A new `Appearance Mode` setting in General lets you choose `System`, `Light`, or `Dark`, and both the main window and Settings window follow the same choice.
-- Light mode surfaces across Main, Grid, Filmstrip, and Manage now use a muted desktop-gray palette instead of falling back to dark-looking content backgrounds or stark white panels.
-- Reject badges are now easier to spot in the main image overlay and are shown by default in Grid and Filmstrip thumbnails alongside Pick.
-- Rapid `Cmd+Delete` passes now refresh the next image reliably even when the same visible slot is reused.
-- A canvas-attach crash path during drag/open reattachment was defused by deferring state clearing out of the active SwiftUI/AppKit update pass.
-- The `Could not open image` failure overlay now includes an explicit dismiss action and `Esc` support, so the warning can be cleared without changing selection.
+- Animated GIF and animated WebP now play directly in Main View.
+- Default app setup is easier with a simpler `Major Formats` option first, plus better visibility in Finder's `Open With` recommendations.
+- Quick Check and file-opening behavior feel steadier during real photo review.
+- Unsupported files now stop earlier with a clear message instead of feeling stuck or inconsistent.
 
 ## Screenshots
 
@@ -105,7 +103,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 ## Install
 
 1. Download the latest DMG from [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest).
-2. Open `SnapView-0.10.1.dmg`.
+2. Open `SnapView-0.10.2.dmg`.
 3. Drag `SnapView.app` into `Applications`.
 4. Launch SnapView from `Applications`.
 
@@ -123,6 +121,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 
 - ZIP browsing can be slower than normal folders because archive contents must be read before display.
 - ZIP items are not normal filesystem files, so some save/interoperability features are limited there.
+- Animated `gif` and `webp` play in Main View only. Other views currently show a still first frame.
 - Finder interoperability is centered on color labels.
 - Lightroom interoperability is centered on XMP sidecars for rating, Pick, and Reject.
 - Conditional formats such as AVIF or JXL depend on macOS decoder availability.
@@ -136,7 +135,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 
 실사용 사진 선별 작업에 맞춘 macOS용 고속 이미지 뷰어입니다.
 
-현재 버전: `v0.10.1`
+현재 버전: `v0.10.2`
 
 언어: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
 
@@ -145,21 +144,19 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 ## 다운로드
 
 - 최신 릴리즈: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
-- 설치 파일: 최신 릴리즈 페이지에서 `SnapView-0.10.1.dmg`를 다운로드해 설치합니다
+- 설치 파일: 최신 릴리즈 페이지에서 `SnapView-0.10.2.dmg`를 다운로드해 설치합니다
 - 공식 사이트: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
 
 스크린샷은 위 `Screenshots` 섹션에서 바로 확인할 수 있습니다.
 
 `v0.10.0`부터의 상세 변경 이력은 별도 문서인 [공개 릴리즈 노트](https://github.com/youngchangjo/SnapView/blob/main/RELEASE_NOTES.md)에서 확인할 수 있습니다.
 
-## v0.10.1 주요 변경
+## v0.10.2 주요 변경
 
-- 설정 > 일반에 `화면 모드`를 추가해 `시스템 / 라이트 / 다크`를 직접 선택할 수 있고, 메인 창과 설정 창이 같은 appearance를 따르도록 정리
-- 메인 / 그리드 / 필름스트립 / 관리뷰의 라이트 모드를 순백색 대신 눌린 회색 유리 톤으로 정리해, 밝기와 가독성은 확보하면서도 화면이 과하게 번쩍이지 않도록 조정
-- 메인 표시 이미지의 `Reject` 배지를 보강하고, 그리드 / 필름스트립 썸네일 기본 플래그 표시를 `Pick + Reject`로 올려 선별 상태가 더 빨리 보이도록 정리
-- `Cmd+Delete` 연속 삭제 뒤 다음 사진이 같은 슬롯으로 당겨져도 프리뷰가 즉시 갱신되도록 same-index refresh 경로를 보강
-- 메인 캔버스 attach 중 상태 clear 재진입으로 AppKit constraint 예외가 날 수 있던 종료 경로를 완화
-- `이미지를 열지 못했습니다` 오버레이에 `닫기` 버튼과 `Esc dismiss`를 추가해 현재 선택을 바꾸지 않고 안내만 내릴 수 있게 정리
+- Main View에서 animated GIF와 animated WebP를 바로 재생할 수 있습니다.
+- 기본앱 등록은 `주요 포맷`부터 먼저 적용할 수 있고, Finder `이 앱으로 열기` 추천 목록 대응도 보강했습니다.
+- Quick Check와 파일 열기 흐름의 안정성을 더 다듬었습니다.
+- 지원하지 않는 파일은 멈춘 것처럼 보이기보다 바로 안내 메시지로 정리됩니다.
 
 ## 왜 SnapView인가요
 
@@ -215,7 +212,7 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 ## 설치 방법
 
 1. [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)에서 최신 DMG를 다운로드합니다.
-2. `SnapView-0.10.1.dmg`를 엽니다.
+2. `SnapView-0.10.2.dmg`를 엽니다.
 3. `SnapView.app`을 `Applications`로 드래그합니다.
 4. `Applications`에서 SnapView를 실행합니다.
 
@@ -233,6 +230,7 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 
 - ZIP 탐색은 일반 폴더보다 구조적으로 느릴 수 있습니다.
 - ZIP 내부 항목은 실제 파일이 아니므로 일부 저장/연동 기능이 제한됩니다.
+- animated `gif` / `webp`는 Main View에서만 재생되고, 다른 뷰에서는 첫 프레임 정지 이미지로 표시됩니다.
 - Finder 연동은 컬러 라벨 중심입니다.
 - Lightroom 연동은 XMP sidecar 기반 별점/Pick/Reject 중심입니다.
 - AVIF, JXL 같은 조건부 포맷은 macOS 디코더 지원 여부에 따라 달라집니다.
