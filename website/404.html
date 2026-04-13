@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page Not Found | SnapView</title>
+    <meta name="description" content="The page could not be found. Return to SnapView home, manual, or release notes.">
+    <meta name="robots" content="noindex, follow">
+    <meta name="theme-color" content="#050507">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="icon" type="image/png" href="assets/images/snapview-icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .error-shell {
+            min-height: 100vh;
+            padding: 120px 24px 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .error-card {
+            width: min(720px, 100%);
+            padding: 48px;
+            border: 1px solid var(--glass-border);
+            border-radius: 28px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(24px);
+            box-shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
+        }
+
+        .error-code {
+            margin: 0 0 12px;
+            color: var(--accent-blue);
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        .error-card h1 {
+            margin: 0 0 20px;
+            font-size: clamp(44px, 7vw, 68px);
+        }
+
+        .error-card p {
+            margin: 0 0 18px;
+            color: var(--text-secondary);
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .error-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .error-note {
+            margin-top: 28px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-orb orb-1" aria-hidden="true"></div>
+    <div class="bg-orb orb-2" aria-hidden="true"></div>
+
+    <main class="page">
+        <header class="topbar">
+            <a class="brand" href="/" aria-label="SnapView home">
+                <img src="assets/images/snapview-icon.png" alt="SnapView icon">
+                <span>SnapView</span>
+            </a>
+        </header>
+
+        <section class="error-shell">
+            <div class="error-card">
+                <p class="error-code">404 error</p>
+                <h1>Page not found.</h1>
+                <p>The page you requested does not exist on the SnapView website, or the URL has changed.</p>
+                <p>If you were trying to learn about SnapView, start from the homepage or jump directly to the manual or release notes.</p>
+
+                <div class="error-links">
+                    <a class="btn btn-primary" href="/">Back to Home</a>
+                    <a class="btn btn-ghost" href="/manual.html">Open Manual</a>
+                    <a class="btn btn-ghost" href="/release_notes.html">Release Notes</a>
+                    <a class="btn btn-ghost" href="https://github.com/youngchangjo/SnapView/releases/latest/download/SnapView.dmg" rel="noreferrer">Download Beta</a>
+                </div>
+
+                <p class="error-note">Looking for the Korean version? Use the language toggle from the homepage after you land there.</p>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
