@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. Language Toggle Logic
   const langButtons = document.querySelectorAll('[data-set-lang]');
 
-  // Set initial language based on browser or default to KO
-  let currentLang = localStorage.getItem('snapview_lang') || 'ko';
+  // Set initial language based on saved preference or default to EN
+  let currentLang = localStorage.getItem('snapview_lang') || 'en';
   applyLanguage(currentLang);
 
   langButtons.forEach(btn => {
@@ -32,6 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   function applyLanguage(lang) {
+    document.documentElement.lang = lang;
+
     // Update active state of buttons
     langButtons.forEach(btn => {
       if (btn.getAttribute('data-set-lang') === lang) {
