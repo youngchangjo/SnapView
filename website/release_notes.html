@@ -165,6 +165,28 @@
                     <li>animated 재생은 이번 버전에서도 Main View만 지원합니다.</li>
                     <li>AVIF와 JPEG XL은 macOS 디코더 지원 여부에 따라 동작합니다.</li>
                 </ul>
+
+                <h2>v0.10.2 - 2026-04-12</h2>
+                <h3>새로운 점</h3>
+                <ul>
+                    <li>Main View에서 animated GIF와 animated WebP를 바로 재생할 수 있게 했습니다.</li>
+                    <li>기본앱 등록은 <code>주요 포맷</code>부터 먼저 적용할 수 있게 단순화했고, Finder <code>이 앱으로 열기</code> 추천 목록 대응도 보강했습니다.</li>
+                    <li>Quick Check와 파일 열기 흐름의 안정성을 더 다듬었습니다.</li>
+                </ul>
+                <h3>개선된 점</h3>
+                <ul>
+                    <li>Main View에서 animated GIF / WebP를 일반 선별 흐름 안에서 바로 볼 수 있습니다.</li>
+                    <li>자주 쓰는 포맷만 먼저 기본앱으로 등록한 뒤, 원할 때만 더 넓게 등록할 수 있습니다.</li>
+                    <li>지원하지 않는 파일은 멈춘 것처럼 보이기보다 바로 안내 메시지로 정리됩니다.</li>
+                    <li>상세 Quick Check 갱신 중 발생할 수 있던 종료 경로를 줄였습니다.</li>
+                    <li>파일 열기 패널이 떠 있는 동안 메인 창이 어색하게 보이던 부분을 보정했습니다.</li>
+                    <li>현재 열려 있는 이미지의 상위 폴더 경로가 바뀐 경우 복구 흐름을 보강했습니다.</li>
+                </ul>
+                <h3>참고</h3>
+                <ul>
+                    <li>animated 재생은 이번 버전에서 Main View만 지원합니다. 다른 보기에서는 정지 이미지로 보입니다.</li>
+                    <li>AVIF와 JPEG XL은 macOS 디코더 지원 여부에 따라 동작합니다.</li>
+                </ul>
                 <h2>v0.10.1 - 2026-04-11</h2>
                 <h3>Highlights</h3>
                 <ul>
@@ -275,6 +297,28 @@
                 <ul>
                     <li>HEIC/HEIF/HIF browsing remains supported and this release focuses on making restore/reopen behavior steadier, not changing the supported-format list.</li>
                     <li>Animated playback is still limited to Main View.</li>
+                    <li>AVIF and JPEG XL remain dependent on macOS decoder support.</li>
+                </ul>
+
+                <h2>v0.10.2 - 2026-04-12</h2>
+                <h3>What's New</h3>
+                <ul>
+                    <li>Animated GIF and animated WebP now play directly in Main View.</li>
+                    <li>Default app setup is easier with a simpler <code>Major Formats</code> option first, plus better visibility in Finder's <code>Open With</code> recommendations.</li>
+                    <li>Quick Check and file-opening behavior feel steadier during real photo review.</li>
+                </ul>
+                <h3>Improvements</h3>
+                <ul>
+                    <li>Main View can now play animated GIF and WebP without leaving your normal review flow.</li>
+                    <li>You can register common image formats first, then choose a broader registration only if you want it.</li>
+                    <li>Unsupported files now stop earlier with a clear message instead of feeling stuck or inconsistent.</li>
+                    <li>Reduced a Quick Check crash path that could happen while detailed review data was updating.</li>
+                    <li>Improved how the main window behaves while the file-open panel is on screen.</li>
+                    <li>Improved recovery when the currently open image's parent folder path changes.</li>
+                </ul>
+                <h3>Notes</h3>
+                <ul>
+                    <li>Animated playback is limited to Main View in this release. Other views still show a still frame.</li>
                     <li>AVIF and JPEG XL remain dependent on macOS decoder support.</li>
                 </ul>
                 <h2>v0.10.1 - 2026-04-11</h2>
