@@ -8,7 +8,7 @@
 
 Fast macOS image viewer for real photo culling work.
 
-Current Version: `v0.10.2`
+Current Version: `v0.10.3`
 
 Language: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
 
@@ -17,15 +17,15 @@ Release Notes: [Public Release Notes](https://github.com/youngchangjo/SnapView/b
 ## Download
 
 - Latest release: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
-- Install package: open the latest release page and download `SnapView-0.10.2.dmg`
+- Install package: open the latest release page and download `SnapView-0.10.3.dmg`
 - Official website: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
 
-## What's New In v0.10.2
+## What's New In v0.10.3
 
-- Animated GIF and animated WebP now play directly in Main View.
-- Default app setup is easier with a simpler `Major Formats` option first, plus better visibility in Finder's `Open With` recommendations.
-- Quick Check and file-opening behavior feel steadier during real photo review.
-- Unsupported files now stop earlier with a clear message instead of feeling stuck or inconsistent.
+- `Show in Finder` jumps from the current photo straight to its file in Finder.
+- Overlay text is easier to read on bright images with new shadow controls and automatic contrast.
+- HEIC and long-idle window restore behavior feel steadier during real browsing.
+- Rating UI can now stay always visible, appear only on rated items, or stay hidden while keyboard/menu actions still work.
 
 ## Screenshots
 
@@ -135,7 +135,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 
 실사용 사진 선별 작업에 맞춘 macOS용 고속 이미지 뷰어입니다.
 
-현재 버전: `v0.10.2`
+현재 버전: `v0.10.3`
 
 언어: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
 
@@ -144,19 +144,19 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 ## 다운로드
 
 - 최신 릴리즈: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
-- 설치 파일: 최신 릴리즈 페이지에서 `SnapView-0.10.2.dmg`를 다운로드해 설치합니다
+- 설치 파일: 최신 릴리즈 페이지에서 `SnapView-0.10.3.dmg`를 다운로드해 설치합니다
 - 공식 사이트: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
 
 스크린샷은 위 `Screenshots` 섹션에서 바로 확인할 수 있습니다.
 
 `v0.10.0`부터의 상세 변경 이력은 별도 문서인 [공개 릴리즈 노트](https://github.com/youngchangjo/SnapView/blob/main/RELEASE_NOTES.md)에서 확인할 수 있습니다.
 
-## v0.10.2 주요 변경
+## v0.10.3 주요 변경
 
-- Main View에서 animated GIF와 animated WebP를 바로 재생할 수 있습니다.
-- 기본앱 등록은 `주요 포맷`부터 먼저 적용할 수 있고, Finder `이 앱으로 열기` 추천 목록 대응도 보강했습니다.
-- Quick Check와 파일 열기 흐름의 안정성을 더 다듬었습니다.
-- 지원하지 않는 파일은 멈춘 것처럼 보이기보다 바로 안내 메시지로 정리됩니다.
+- `Show in Finder`로 현재 보고 있는 사진 파일을 Finder에서 바로 찾을 수 있습니다.
+- 밝은 사진 위에서도 파일명과 정보 오버레이가 잘 보이도록 그림자 옵션과 자동 모드를 추가했습니다.
+- HEIC와 오래 숨겨졌던 창이 다시 올라올 때의 화면 표시 안정성을 더 다듬었습니다.
+- 별점 UI를 `항상 표시 / 자동 / 숨김`으로 조절할 수 있습니다.
 
 ## 왜 SnapView인가요
 
