@@ -190,6 +190,7 @@
                     <li>좋은 컷은 <img src="assets/icons/star-filled.svg" class="inline-icon" alt=""> <code>1~5</code>로 별점, 불필요한 컷은 <img src="assets/icons/reject.svg" class="inline-icon" alt=""> <code>X</code>로 Reject 표시합니다.</li>
                     <li>Lightroom과 함께 쓰는 경우, SnapView에서 준 별점/Pick/Reject가 XMP sidecar 기준으로 그대로 이어집니다.</li>
                     <li>Finder에서도 결과를 바로 보고 싶다면 태그를 함께 적용합니다. SnapView는 Finder의 7색 태그(빨간색/주황색/노란색/초록색/파란색/보라색/회색)를 그대로 따릅니다.</li>
+                    <li>현재 보고 있는 파일을 Finder에서 바로 찾고 싶으면 <code>Cmd + Return</code> 또는 메뉴의 <code>Show in Finder</code>를 사용합니다.</li>
                     <li>비교가 필요하면 <img src="assets/icons/compare.svg" class="inline-icon" alt=""> <code>C</code>로 Compare 모드에서 1~4장 비교합니다.</li>
                     <li><code>Delete</code>로 삭제하거나 <code>Cmd+C</code>로 복사해 정리합니다.</li>
                     <li>완전히 동일한 파일 정리는 <code>Cmd+Shift+D</code>로 중복사진정리에서 처리합니다.</li>
@@ -403,26 +404,41 @@
                 </ul>
                 <p>즉, <code>K</code>는 Quick Check만 따로 켜는 것이 아니라 점검에 필요한 정보 패널을 한 번에 여는 용도입니다.</p>
 
-                <h3>9.4 하위 폴더 이미지 포함</h3>
+                <h3>9.4 오버레이 가독성 / 별점 UI</h3>
+                <ul>
+                    <li>설정 &gt; 일반에서 <code>오버레이 텍스트 그림자</code>를 <code>기본 / 강하게 / 자동</code>으로 고를 수 있습니다.</li>
+                    <li><code>자동</code>은 밝은 이미지에서만 그림자를 더 강하게 적용해 파일명과 간단 정보가 더 잘 보이게 합니다.</li>
+                    <li>설정 &gt; 일반에서 <code>별점 UI</code>를 <code>항상 표시 / 자동 / 숨김</code>으로 조절할 수 있습니다.</li>
+                    <li><code>자동</code>은 별점이 있는 사진에서만 별점 UI가 보입니다.</li>
+                    <li><code>숨김</code>을 써도 <code>1~5</code>, <code>0</code>, <code>\</code>, 메뉴의 별점 기능은 그대로 사용할 수 있습니다.</li>
+                </ul>
+
+                <h3>9.5 하위 폴더 이미지 포함</h3>
                 <ul>
                     <li>설정에서 <code>하위 폴더 이미지 포함</code>을 켜면 현재 폴더뿐 아니라 하위 폴더의 이미지도 함께 탐색합니다.</li>
                     <li>라이브러리 범위가 넓어져 편리하지만, 큰 폴더에서는 초기 스캔 범위와 결과 개수가 달라질 수 있습니다.</li>
                 </ul>
 
-                <h3>9.5 별점 후 자동 이동</h3>
+                <h3>9.6 별점 후 자동 이동</h3>
                 <ul>
                     <li><code>별점 후 자동 이동</code>을 켜면 별점을 준 뒤 자동으로 다음 사진으로 넘어갑니다.</li>
                     <li>빠른 1차 선별에서는 매우 유용하고, 세밀하게 비교할 때는 끄는 편이 좋습니다.</li>
                     <li><code>Cmd+A</code>로도 토글할 수 있습니다.</li>
                 </ul>
 
-                <h3>9.6 화면 맨위 고정</h3>
+                <h3>9.7 화면 맨위 고정</h3>
                 <ul>
                     <li>다른 앱과 함께 비교하거나 Finder/Lightroom과 번갈아 볼 때 유용합니다.</li>
                     <li><code>Cmd+Shift+T</code>로 빠르게 켜고 끌 수 있습니다.</li>
                 </ul>
 
-                <h3>9.7 Pro JPG / ZIP 해상도</h3>
+                <h3>9.8 모든 창을 닫으면 종료</h3>
+                <ul>
+                    <li>설정 &gt; 일반에 <code>모든 창을 닫으면 종료</code> 옵션이 있습니다.</li>
+                    <li>기본값은 꺼져 있고, 원할 때만 창을 모두 닫을 때 앱도 함께 종료되도록 바꿀 수 있습니다.</li>
+                </ul>
+
+                <h3>9.9 Pro JPG / ZIP 해상도</h3>
                 <ul>
                     <li>Pro 레이아웃에서는 일반 디코딩 모드와 별도로 <code>Pro JPG 해상도</code>, <code>Pro ZIP 해상도</code> 설정이 적용될 수 있습니다.</li>
                     <li>즉, 일반 모드의 디코딩 우선순위와 Pro 모드의 해상도 정책은 완전히 같은 개념이 아닙니다.</li>
@@ -458,7 +474,7 @@
                     <li>정보 토글: <img src="assets/icons/info.svg" class="inline-icon" alt=""> <code>I</code>(정보), <code>Space</code>(정보), <img src="assets/icons/quickcheck.svg" class="inline-icon" alt=""> <code>K</code>(퀵체크 세트), <img src="assets/icons/histogram.svg" class="inline-icon" alt=""> <code>H</code>(히스토그램)</li>
                     <li>화면: <code>Enter</code>(전체화면), <code>Cmd+Shift+T</code>(맨위 고정)</li>
                     <li>선별: <code>1~5</code>, <code>0</code>, <code>P</code>, <code>X</code>, <code>U</code>, <code>Cmd+1~6</code></li>
-                    <li>작업: <code>Cmd+C</code>, <code>Cmd+V</code>, <code>Delete</code>/<code>D</code>, <code>Cmd+Delete</code>, <code>Cmd+O</code></li>
+                    <li>작업: <code>Cmd+C</code>, <code>Cmd+V</code>, <code>Delete</code>/<code>D</code>, <code>Cmd+Delete</code>, <code>Cmd+O</code>, <code>Cmd+Return</code>(<code>Show in Finder</code>)</li>
                     <li>선택: <code>Cmd+A</code> (Main=Auto Advance 토글, Grid/Manage=전체 선택)</li>
                 </ul>
                 <p>전체 목록은 <code>docs/release/SHORTCUTS.md</code>를 참고하세요.</p>

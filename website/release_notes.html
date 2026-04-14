@@ -144,25 +144,25 @@
             <!-- Korean Content -->
             <div data-lang="ko" hidden>
                 <h1>SnapView 릴리즈 노트</h1>
-                <h2>v0.10.2 (Current) - 2026-04-12</h2>
+                <h2>v0.10.3 (Current) - 2026-04-15</h2>
                 <h3>새로운 점</h3>
                 <ul>
-                    <li>Main View에서 animated GIF와 animated WebP를 바로 재생할 수 있게 했습니다.</li>
-                    <li>기본앱 등록은 <code>주요 포맷</code>부터 먼저 적용할 수 있게 단순화했고, Finder <code>이 앱으로 열기</code> 추천 목록 대응도 보강했습니다.</li>
-                    <li>Quick Check와 파일 열기 흐름의 안정성을 더 다듬었습니다.</li>
+                    <li><code>Show in Finder</code>로 현재 보고 있는 사진 파일을 Finder에서 바로 찾을 수 있습니다.</li>
+                    <li>밝은 사진 위에서도 파일명과 정보 오버레이가 더 잘 보이도록 그림자 옵션과 자동 모드를 추가했습니다.</li>
+                    <li>HEIC와 창 복귀 후 화면 표시 안정성을 더 다듬었습니다.</li>
                 </ul>
                 <h3>개선된 점</h3>
                 <ul>
-                    <li>Main View에서 animated GIF / WebP를 일반 선별 흐름 안에서 바로 볼 수 있습니다.</li>
-                    <li>자주 쓰는 포맷만 먼저 기본앱으로 등록한 뒤, 원할 때만 더 넓게 등록할 수 있습니다.</li>
-                    <li>지원하지 않는 파일은 멈춘 것처럼 보이기보다 바로 안내 메시지로 정리됩니다.</li>
-                    <li>상세 Quick Check 갱신 중 발생할 수 있던 종료 경로를 줄였습니다.</li>
-                    <li>파일 열기 패널이 떠 있는 동안 메인 창이 어색하게 보이던 부분을 보정했습니다.</li>
-                    <li>현재 열려 있는 이미지의 상위 폴더 경로가 바뀐 경우 복구 흐름을 보강했습니다.</li>
+                    <li>메뉴, 컨텍스트 메뉴, <code>⌘↩</code>에서 <code>Show in Finder</code>를 바로 쓸 수 있습니다.</li>
+                    <li>오버레이 텍스트 그림자를 <code>기본 / 강하게 / 자동</code>으로 고를 수 있고, 자동은 밝은 화면에서만 더 진하게 적용합니다.</li>
+                    <li>별점 UI를 <code>항상 표시 / 자동 / 숨김</code>으로 조절할 수 있어, 화면은 더 단순하게 유지하면서도 별점 단축키와 메뉴는 그대로 쓸 수 있습니다.</li>
+                    <li><code>모든 창을 닫으면 종료</code> 옵션을 추가했지만, 기본값은 macOS 관례에 맞게 꺼져 있습니다.</li>
+                    <li>앱 아이콘 모서리를 더 부드럽게 다듬어 최신 macOS에서 조금 더 자연스럽게 보이도록 정리했습니다.</li>
                 </ul>
                 <h3>참고</h3>
                 <ul>
-                    <li>animated 재생은 이번 버전에서 Main View만 지원합니다. 다른 보기에서는 정지 이미지로 보입니다.</li>
+                    <li>HEIC/HEIF/HIF 지원 자체를 바꾼 릴리즈가 아니라, reopen/restore 상황에서 더 안정적으로 보이도록 다듬은 릴리즈입니다.</li>
+                    <li>animated 재생은 이번 버전에서도 Main View만 지원합니다.</li>
                     <li>AVIF와 JPEG XL은 macOS 디코더 지원 여부에 따라 동작합니다.</li>
                 </ul>
                 <h2>v0.10.1 - 2026-04-11</h2>
@@ -256,25 +256,25 @@
             <!-- English Content -->
             <div data-lang="en">
                 <h1>SnapView Release Notes</h1>
-                <h2>v0.10.2 (Current) - 2026-04-12</h2>
+                <h2>v0.10.3 (Current) - 2026-04-15</h2>
                 <h3>What's New</h3>
                 <ul>
-                    <li>Animated GIF and animated WebP now play directly in Main View.</li>
-                    <li>Default app setup is easier with a simpler <code>Major Formats</code> option first, plus better visibility in Finder's <code>Open With</code> recommendations.</li>
-                    <li>Quick Check and file-opening behavior feel steadier during real photo review.</li>
+                    <li><code>Show in Finder</code> lets you jump from the current photo straight to its file in Finder.</li>
+                    <li>Overlay text is easier to read on bright photos with new shadow controls and smarter automatic contrast.</li>
+                    <li>HEIC and long-idle window restore behavior feel more reliable during real browsing.</li>
                 </ul>
                 <h3>Improvements</h3>
                 <ul>
-                    <li>Main View can now play animated GIF and WebP without leaving your normal review flow.</li>
-                    <li>You can register common image formats first, then choose a broader registration only if you want it.</li>
-                    <li>Unsupported files now stop earlier with a clear message instead of feeling stuck or inconsistent.</li>
-                    <li>Reduced a Quick Check crash path that could happen while detailed review data was updating.</li>
-                    <li>Improved how the main window behaves while the file-open panel is on screen.</li>
-                    <li>Improved recovery when the currently open image's parent folder path changes.</li>
+                    <li>Added <code>Show in Finder</code> to menus, context menus, and <code>⌘↩</code> for faster handoff to Finder.</li>
+                    <li>Added overlay text shadow controls with <code>Normal</code>, <code>Strong</code>, and <code>Auto</code> modes so filenames and compact EXIF stay readable on bright images.</li>
+                    <li>Added rating UI options so you can keep rating controls always visible, show them only on rated items, or hide them while preserving keyboard and menu rating actions.</li>
+                    <li>Added an optional <code>Quit when all windows are closed</code> preference. It stays off by default.</li>
+                    <li>Refined the app icon shape so it feels more natural in recent macOS icon presentation.</li>
                 </ul>
                 <h3>Notes</h3>
                 <ul>
-                    <li>Animated playback is limited to Main View in this release. Other views still show a still frame.</li>
+                    <li>HEIC/HEIF/HIF browsing remains supported and this release focuses on making restore/reopen behavior steadier, not changing the supported-format list.</li>
+                    <li>Animated playback is still limited to Main View.</li>
                     <li>AVIF and JPEG XL remain dependent on macOS decoder support.</li>
                 </ul>
                 <h2>v0.10.1 - 2026-04-11</h2>
