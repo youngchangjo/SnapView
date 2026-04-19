@@ -1,10 +1,64 @@
 # SnapView Release Notes
 
-## v0.10.3 (Current) - 2026-04-15
+## v0.10.4 (Current) - 2026-04-19
 
 Language: [🇺🇸 English](#english-current) | [🇰🇷 한국어](#korean-current)
 
 <a id="english-current"></a>
+
+### English
+
+#### What's New
+- File browsing now follows Finder-style natural filename order, so numbered files move in the expected sequence.
+- Reopening SnapView from Finder or Dock after closing the window is steadier and less likely to show a blank viewer.
+- Opening another image while SnapView is already running now switches to the requested photo more directly.
+- Grid and Filmstrip navigation feel more immediate during keyboard and mouse selection.
+
+#### Improvements
+- Folder and ZIP image lists now sort filenames like `photo-1`, `photo-2`, `photo-10` instead of `photo-1`, `photo-10`, `photo-2`.
+- RAW+JPG pairing, normal folder browsing, ZIP browsing, Grid, Filmstrip, and keyboard navigation now share the same natural ordering behavior.
+- External file opens after `Cmd+W` avoid reloading the previous image first, reducing the visible “old photo then new photo” flash.
+- The visible image canvas is recovered more reliably when a new file is opened while the previous SnapView window is closed or hidden.
+- Grid Up/Down keyboard movement now refreshes its column count when entering Grid, so movement follows the current window width instead of an older layout.
+- Grid single-click selection now responds immediately instead of waiting to see whether the click becomes a double-click.
+- Filmstrip key-repeat navigation now moves the thumbnail focus first and commits the final image after input settles, reducing visible stutter while holding arrow keys.
+- Intermittent “file not found” overlays are retried briefly when the file reappears, reducing cases where a valid image stays stuck behind an error dialog.
+- Adjusted the app icon footprint so it sits more naturally beside other apps in Finder and the Dock on legacy macOS.
+
+#### Notes
+- Natural sorting is now the default behavior. There is no separate setting to enable.
+- The sorting change affects browsing order anywhere SnapView uses the current folder or ZIP image list.
+
+<a id="korean-current"></a>
+
+### 한국어
+
+#### 새로운 점
+- 파일 탐색 순서가 Finder식 자연 정렬로 바뀌어, 숫자가 들어간 파일명이 기대한 순서대로 이동합니다.
+- 창을 닫은 뒤 Finder나 Dock에서 다시 열 때 빈 화면처럼 보이던 흐름을 더 안정화했습니다.
+- SnapView가 이미 실행 중일 때 다른 이미지를 열면 요청한 사진으로 더 직접 전환됩니다.
+- Grid와 Filmstrip에서 키보드/마우스 선택 반응을 더 즉각적으로 다듬었습니다.
+
+#### 개선된 점
+- 폴더와 ZIP 이미지 목록이 이제 `사진-1`, `사진-2`, `사진-10` 순서로 정렬됩니다. 기존처럼 `사진-1`, `사진-10`, `사진-2` 순서로 이동하지 않습니다.
+- RAW+JPG 페어링, 일반 폴더 탐색, ZIP 탐색, Grid, Filmstrip, 키보드 이동이 같은 자연 정렬 기준을 사용합니다.
+- `Cmd+W` 이후 외부에서 파일을 다시 열 때 이전 이미지를 먼저 다시 그린 뒤 새 이미지로 바뀌는 체감을 줄였습니다.
+- 이전 SnapView 창이 닫히거나 숨겨진 상태에서 새 파일을 열어도 보이는 이미지 캔버스가 더 안정적으로 복구됩니다.
+- Grid 진입 시 현재 창 너비 기준으로 열 수를 다시 계산해, 위/아래 키 이동이 이전 창 크기 기준으로 어긋나던 문제를 줄였습니다.
+- Grid 단일 클릭 선택이 더블클릭 대기 없이 즉시 반응하도록 개선했습니다.
+- Filmstrip에서 방향키를 누르고 있을 때 썸네일 포커스를 먼저 움직이고, 마지막 대상 이미지만 입력이 멈춘 뒤 반영해 버벅임을 줄였습니다.
+- 파일이 실제로 다시 보이는 경우에도 `파일을 찾을 수 없음` 오류가 남아 있던 간헐 상황을 줄이기 위해 짧은 자동 재시도를 추가했습니다.
+- 앱 아이콘의 표시 비율을 조정해 기존 legacy macOS의 Finder와 Dock에서 다른 앱들과 조금 더 자연스럽게 어울리도록 정리했습니다.
+
+#### 참고
+- 자연 정렬은 기본 동작입니다. 별도로 켜야 하는 설정은 없습니다.
+- 이번 정렬 변경은 현재 폴더 또는 ZIP 이미지 목록을 사용하는 탐색 순서 전반에 적용됩니다.
+
+## v0.10.3 - 2026-04-15
+
+Language: [🇺🇸 English](#english-0103) | [🇰🇷 한국어](#korean-0103)
+
+<a id="english-0103"></a>
 
 ### English
 
@@ -25,7 +79,7 @@ Language: [🇺🇸 English](#english-current) | [🇰🇷 한국어](#korean-cu
 - Animated playback is still limited to Main View.
 - AVIF and JPEG XL remain dependent on macOS decoder support.
 
-<a id="korean-current"></a>
+<a id="korean-0103"></a>
 
 ### 한국어
 
@@ -125,7 +179,7 @@ Language: [🇺🇸 English](#english-current) | [🇰🇷 한국어](#korean-cu
 #### Notes
 - This update is mainly focused on making everyday review work feel steadier and easier to read.
 
-<a id="korean-current"></a>
+<a id="korean-0101"></a>
 
 ### 한국어
 
