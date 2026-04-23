@@ -108,16 +108,22 @@
                 <p class="sub-lead" data-lang="ko" hidden>RAW 지원 · Zero Import Delay · Free to Use</p>
                 <p class="sub-lead" data-lang="en">RAW Support · Zero Import Delay · Free to Use</p>
 
-                <div class="hero-actions">
+                <div class="hero-actions" style="flex-wrap: wrap;">
                     <a class="btn btn-primary"
-                        href="https://github.com/youngchangjo/SnapView/releases/latest/download/SnapView.dmg"
-                        rel="noreferrer" data-lang="ko" hidden>Free Download (Beta)</a>
+                        href="#" onclick="alert('준비 중입니다.'); return false;"
+                        rel="noreferrer" data-lang="ko" hidden>Mac App Store 다운로드</a>
                     <a class="btn btn-primary"
+                        href="#" onclick="alert('Coming soon...'); return false;"
+                        rel="noreferrer" data-lang="en">Mac App Store</a>
+                        
+                    <a class="btn btn-ghost"
                         href="https://github.com/youngchangjo/SnapView/releases/latest/download/SnapView.dmg"
-                        rel="noreferrer" data-lang="en">Free Download (Beta)</a>
-                    <a class="btn btn-ghost" href="#workflow" data-lang="ko" hidden>워크플로우 살펴보기</a>
-                    <a class="btn btn-ghost" href="#workflow" data-lang="en">See the Workflow</a>
+                        rel="noreferrer" data-lang="ko" hidden>DMG 다운로드</a>
+                    <a class="btn btn-ghost"
+                        href="https://github.com/youngchangjo/SnapView/releases/latest/download/SnapView.dmg"
+                        rel="noreferrer" data-lang="en">DMG Download</a>
                 </div>
+
 
                 <p class="hero-format-note" data-lang="ko" hidden>
                     지원 형식: RAW (ARW/CR2/CR3/NEF/DNG/RAF/ORF/RW2) + JPG/PNG/HEIC/TIFF + <strong>압축 풀지 않고 ZIP 바로 열기</strong>
@@ -414,20 +420,37 @@
             <p style="margin-top: 10px; color: var(--text-secondary);" data-lang="en" hidden>Free. No catalog. No
                 waiting.</p>
 
-            <div class="hero-actions" style="margin-top: 40px;">
+            <div class="hero-actions" style="margin-top: 40px; flex-wrap: wrap;">
                 <a class="btn btn-primary"
-                    href="https://github.com/youngchangjo/SnapView/releases/latest/download/SnapView.dmg"
-                    rel="noreferrer" data-lang="ko">Free Download (Beta)</a>
+                    href="#" onclick="alert('준비 중입니다.'); return false;"
+                    rel="noreferrer" data-lang="ko">Mac App Store 다운로드</a>
                 <a class="btn btn-primary"
+                    href="#" onclick="alert('Coming soon...'); return false;"
+                    rel="noreferrer" data-lang="en" hidden>Mac App Store</a>
+                    
+                <a class="btn btn-ghost"
                     href="https://github.com/youngchangjo/SnapView/releases/latest/download/SnapView.dmg"
-                    rel="noreferrer" data-lang="en" hidden>Free Download (Beta)</a>
-                <a class="btn btn-ghost" href="mailto:sunset@snapworkslab.com">sunset@snapworkslab.com</a>
+                    rel="noreferrer" data-lang="ko">DMG 다운로드</a>
+                <a class="btn btn-ghost"
+                    href="https://github.com/youngchangjo/SnapView/releases/latest/download/SnapView.dmg"
+                    rel="noreferrer" data-lang="en" hidden>DMG Download</a>
+            </div>
+            
+            <div style="margin-top: 24px; font-size: 14px; color: var(--text-secondary); line-height: 1.6; text-align: left; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 12px; padding: 16px; max-width: 520px; margin-left: auto; margin-right: auto;">
+                <p data-lang="ko" style="margin: 0;"><strong>DMG 버전</strong>은 제한 없는 파일 관리와 최신 기능을 먼저 제공합니다. <strong>App Store 버전</strong>은 샌드박스 정책을 따르는 안정 배포판으로, 파일 접근 시 권한 허용이 필요할 수 있습니다.</p>
+                <p data-lang="en" hidden style="margin: 0;">The <strong>DMG version</strong> provides unrestricted file management and the latest features first. The <strong>App Store version</strong> is a stable sandboxed release, which may require permission prompts for file access.</p>
             </div>
         </section>
 
         <footer class="footer">
             <div class="footer-left">
-                <span>SnapView by SnapWorks Lab</span>
+                <a href="https://snapworkslab.com" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center;">
+                    <img src="assets/images/snapworkslab-logo.png" alt="SnapWorks Lab" style="height: 30px; opacity: 0.8; transition: opacity 0.2s;">
+                </a>
+            </div>
+            <div class="footer-right" style="display: flex; gap: 16px;">
+                <a href="support/" style="color: var(--text-secondary); text-decoration: none; font-size: 14px;">Support</a>
+                <a href="privacy/" style="color: var(--text-secondary); text-decoration: none; font-size: 14px;">Privacy Policy</a>
             </div>
         </footer>
     </main>
