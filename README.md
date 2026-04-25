@@ -8,7 +8,7 @@
 
 Fast macOS image viewer for real photo culling work.
 
-Current Version: `v0.10.4`
+Current Version: `v1.0.0`
 
 Language: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
 
@@ -20,12 +20,13 @@ Release Notes: [Public Release Notes](https://github.com/youngchangjo/SnapView/b
 - Install package: open the latest release page and download `SnapView-0.10.4.dmg`
 - Official website: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
 
-## What's New In v0.10.4
+## v1.0.0 하이라이트
 
-- File browsing now follows Finder-style natural filename order for numbered filenames.
-- Reopening SnapView from Finder or Dock after closing the window is steadier.
-- Opening another image while SnapView is already running switches to the requested photo more directly.
-- Grid and Filmstrip navigation feel more immediate during keyboard and mouse selection.
+- SnapView 1.0.0 정식 출시와 함께 DMG와 Mac App Store 채널을 분리해 제공
+- `Reference` 비교 모드와 기존 `Selection` 모드를 `R` 키로 전환
+- `F2` 또는 컨텍스트 메뉴로 파일명을 SnapView 안에서 직접 변경
+- Finder에서 파일을 열 때 `Single Window` 또는 `Multiple Windows`를 선택
+- 외부 앱 열기에서 RAW/JPG 우선순위를 설정하고 `⌥⌘O`로 앱 선택창을 빠르게 열기
 
 ## Screenshots
 
@@ -103,7 +104,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 ## Install
 
 1. Download the latest DMG from [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest).
-2. Open `SnapView-0.10.2.dmg`.
+2. Open `SnapView-1.0.0.dmg`.
 3. Drag `SnapView.app` into `Applications`.
 4. Launch SnapView from `Applications`.
 
@@ -135,7 +136,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 
 실사용 사진 선별 작업에 맞춘 macOS용 고속 이미지 뷰어입니다.
 
-현재 버전: `v0.10.4`
+현재 버전: `v1.0.0`
 
 언어: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
 
@@ -151,12 +152,13 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 
 `v0.10.0`부터의 상세 변경 이력은 별도 문서인 [공개 릴리즈 노트](https://github.com/youngchangjo/SnapView/blob/main/RELEASE_NOTES.md)에서 확인할 수 있습니다.
 
-## v0.10.4 주요 변경
+## v1.0.0 주요 변경
 
-- Finder식 자연 정렬로 숫자가 포함된 파일명을 기대 순서대로 탐색합니다.
-- 창을 닫은 뒤 Finder나 Dock에서 다시 열 때의 화면 표시 흐름을 더 안정화했습니다.
-- SnapView가 이미 실행 중일 때 다른 이미지를 열면 요청한 사진으로 더 직접 전환됩니다.
-- Grid와 Filmstrip에서 키보드/마우스 선택 반응을 더 즉각적으로 다듬었습니다.
+- SnapView 1.0.0 정식 출시 및 Mac App Store 지원
+- Reference 비교 모드 추가와 Selection/Reference 전환
+- 파일 이름 변경 기능(F2, 컨텍스트 메뉴)
+- 단일 창 / 멀티 창 파일 열기 정책
+- 외부 앱 열기에서 RAW/JPG 우선순위 선택 및 `⌥⌘O` 앱 선택창
 
 ## 왜 SnapView인가요
 
@@ -212,7 +214,7 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 ## 설치 방법
 
 1. [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)에서 최신 DMG를 다운로드합니다.
-2. `SnapView-0.10.2.dmg`를 엽니다.
+2. `SnapView-1.0.0.dmg`를 엽니다.
 3. `SnapView.app`을 `Applications`로 드래그합니다.
 4. `Applications`에서 SnapView를 실행합니다.
 

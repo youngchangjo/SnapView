@@ -1,6 +1,6 @@
 # SnapView Release Notes
 
-## v0.10.4 (Current) - 2026-04-19
+## v1.0.0 (Current) - 2026-04-25
 
 Language: [🇺🇸 English](#english-current) | [🇰🇷 한국어](#korean-current)
 
@@ -9,50 +9,48 @@ Language: [🇺🇸 English](#english-current) | [🇰🇷 한국어](#korean-cu
 ### English
 
 #### What's New
-- File browsing now follows Finder-style natural filename order, so numbered files move in the expected sequence.
-- Reopening SnapView from Finder or Dock after closing the window is steadier and less likely to show a blank viewer.
-- Opening another image while SnapView is already running now switches to the requested photo more directly.
-- Grid and Filmstrip navigation feel more immediate during keyboard and mouse selection.
+- **SnapView 1.0.0 Official Release & Mac App Store**: SnapView is now officially a stable 1.0.0 release! We are also introducing a dedicated Mac App Store build. Both the direct download (DMG) and Mac App Store channels provide a polished, stable experience, and all Beta badges have been removed.
+- **Reference Compare Mode**: Compare mode is more powerful with a new `Reference` comparison mode alongside the standard `Selection` mode. Press `R` to toggle between them.
+- **File Renaming**: You can now rename files directly within SnapView using `F2` or the context menu.
+- **Window Open Policy**: Choose how SnapView opens files from Finder—reuse a `Single Window` or open in `Multiple Windows`.
+- **Smarter External App Handoff**: You can now set whether to prioritize the RAW or JPG file when opening a pair in an external app. Use `⌥⌘O` to quickly choose another app.
 
 #### Improvements
-- Folder and ZIP image lists now sort filenames like `photo-1`, `photo-2`, `photo-10` instead of `photo-1`, `photo-10`, `photo-2`.
-- RAW+JPG pairing, normal folder browsing, ZIP browsing, Grid, Filmstrip, and keyboard navigation now share the same natural ordering behavior.
-- External file opens after `Cmd+W` avoid reloading the previous image first, reducing the visible “old photo then new photo” flash.
-- The visible image canvas is recovered more reliably when a new file is opened while the previous SnapView window is closed or hidden.
-- Grid Up/Down keyboard movement now refreshes its column count when entering Grid, so movement follows the current window width instead of an older layout.
-- Grid single-click selection now responds immediately instead of waiting to see whether the click becomes a double-click.
-- Filmstrip key-repeat navigation now moves the thumbnail focus first and commits the final image after input settles, reducing visible stutter while holding arrow keys.
-- Intermittent “file not found” overlays are retried briefly when the file reappears, reducing cases where a valid image stays stuck behind an error dialog.
-- Adjusted the app icon footprint so it sits more naturally beside other apps in Finder and the Dock on legacy macOS.
+- In `Reference` compare mode, you can anchor one photo and move through candidates, using arrow keys and `Tab` to easily shift focus between panels.
+- Choose whether to resume your last compare session or start fresh based on your current context when entering Compare mode.
+- The photo count overlay is now customizable: show `Current / Total`, just `Current`, or hide it entirely.
+- Added a `Resort After Rename` preference to automatically keep your files in order when names change.
+- Restyled the title bar for a flatter, cleaner look that matches modern macOS surfaces.
+- Greatly improved the visual stability when opening files from Finder in Single Window mode, reducing screen flashes and keyboard focus issues.
+- External app selection is simpler with a unified `Open with another app…` flow.
 
 #### Notes
-- Natural sorting is now the default behavior. There is no separate setting to enable.
-- The sorting change affects browsing order anywhere SnapView uses the current folder or ZIP image list.
+- The Mac App Store build is a sandboxed stable release lane. The DMG lane remains the faster direct-download lane.
+- ZIP browsing remains supported in both lanes, with different backends chosen for the distribution channel.
 
 <a id="korean-current"></a>
 
 ### 한국어
 
 #### 새로운 점
-- 파일 탐색 순서가 Finder식 자연 정렬로 바뀌어, 숫자가 들어간 파일명이 기대한 순서대로 이동합니다.
-- 창을 닫은 뒤 Finder나 Dock에서 다시 열 때 빈 화면처럼 보이던 흐름을 더 안정화했습니다.
-- SnapView가 이미 실행 중일 때 다른 이미지를 열면 요청한 사진으로 더 직접 전환됩니다.
-- Grid와 Filmstrip에서 키보드/마우스 선택 반응을 더 즉각적으로 다듬었습니다.
+- **SnapView 1.0.0 정식 출시 및 Mac App Store 지원**: 드디어 SnapView 1.0.0 정식 버전을 선보입니다! 더불어 Mac App Store를 위한 전용 빌드가 추가되었습니다. 이제 직접 다운로드(DMG)와 App Store 채널 모두에서 베타 꼬리표를 뗀 가장 안정적인 버전을 만나보실 수 있습니다.
+- **Reference(기준) 비교 모드**: 기존 `Selection(선택)` 모드 외에 기준 사진을 고정하고 비교하는 `Reference(기준)` 모드가 추가되었습니다. `R` 키로 쉽게 전환할 수 있습니다.
+- **파일 이름 변경**: SnapView 안에서 바로 파일 이름을 바꿀 수 있습니다 (`F2` 키 또는 우클릭 메뉴 사용).
+- **창 열기 정책**: Finder에서 파일을 열 때 기존 창을 재사용할지(단일 창) 새 창을 띄울지(멀티 창) 설정에서 선택할 수 있습니다.
+- **똑똑해진 외부 앱 열기**: RAW+JPG 짝 파일 중 어떤 포맷을 먼저 외부 앱으로 넘길지 설정할 수 있고, `⌥⌘O` 단축키로 앱 선택 창을 바로 띄울 수 있습니다.
 
 #### 개선된 점
-- 폴더와 ZIP 이미지 목록이 이제 `사진-1`, `사진-2`, `사진-10` 순서로 정렬됩니다. 기존처럼 `사진-1`, `사진-10`, `사진-2` 순서로 이동하지 않습니다.
-- RAW+JPG 페어링, 일반 폴더 탐색, ZIP 탐색, Grid, Filmstrip, 키보드 이동이 같은 자연 정렬 기준을 사용합니다.
-- `Cmd+W` 이후 외부에서 파일을 다시 열 때 이전 이미지를 먼저 다시 그린 뒤 새 이미지로 바뀌는 체감을 줄였습니다.
-- 이전 SnapView 창이 닫히거나 숨겨진 상태에서 새 파일을 열어도 보이는 이미지 캔버스가 더 안정적으로 복구됩니다.
-- Grid 진입 시 현재 창 너비 기준으로 열 수를 다시 계산해, 위/아래 키 이동이 이전 창 크기 기준으로 어긋나던 문제를 줄였습니다.
-- Grid 단일 클릭 선택이 더블클릭 대기 없이 즉시 반응하도록 개선했습니다.
-- Filmstrip에서 방향키를 누르고 있을 때 썸네일 포커스를 먼저 움직이고, 마지막 대상 이미지만 입력이 멈춘 뒤 반영해 버벅임을 줄였습니다.
-- 파일이 실제로 다시 보이는 경우에도 `파일을 찾을 수 없음` 오류가 남아 있던 간헐 상황을 줄이기 위해 짧은 자동 재시도를 추가했습니다.
-- 앱 아이콘의 표시 비율을 조정해 기존 legacy macOS의 Finder와 Dock에서 다른 앱들과 조금 더 자연스럽게 어울리도록 정리했습니다.
+- `Reference(기준)` 비교 모드에서는 한쪽 패널에 기준 사진을 고정해두고, 다른 패널의 후보 사진만 넘겨보며 비교할 수 있습니다. 방향키와 `Tab`으로 패널 간 포커스 이동을 지원합니다.
+- Compare 모드 진입 시 이전 상태를 이어서 할지(Resume Last Session), 새로 시작할지(Current Context) 선택할 수 있습니다.
+- 화면 상단의 사진 수 표시를 `현재/전체`, `현재`, `숨김` 중 취향에 맞게 변경할 수 있습니다.
+- 이름 변경 후 자동으로 정렬 순서를 맞추는 `이름 변경 후 재정렬` 옵션이 추가되었습니다.
+- 타이틀바 영역을 더 깔끔하고 평탄한 톤으로 다듬어 화면 전환 시 일관성을 높였습니다.
+- 단일 창 모드에서 Finder를 통해 새 파일을 더블클릭으로 열 때, 화면이 깜빡이거나 단축키가 먹지 않던 문제를 대폭 다듬었습니다.
+- 다른 앱으로 사진을 보낼 때, 한 곳으로 정리된 `다른 앱으로 열기…` 흐름으로 일관성 있게 열 수 있습니다.
 
 #### 참고
-- 자연 정렬은 기본 동작입니다. 별도로 켜야 하는 설정은 없습니다.
-- 이번 정렬 변경은 현재 폴더 또는 ZIP 이미지 목록을 사용하는 탐색 순서 전반에 적용됩니다.
+- Mac App Store 빌드는 sandbox를 적용한 안정판 배포 lane입니다. DMG lane은 빠른 직접 다운로드 배포 lane으로 유지됩니다.
+- ZIP 탐색은 두 lane 모두에서 지원하며, 배포 채널에 맞는 backend를 사용합니다.
 
 ## v0.10.3 - 2026-04-15
 
