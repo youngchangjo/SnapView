@@ -162,11 +162,20 @@
                 </ul>
 
                 <h2>3. 설치와 첫 실행</h2>
+
+                <h3>3.0 배포 채널 선택 (중요)</h3>
+                <ul>
+                    <li>Mac App Store 버전은 sandbox 안정판 채널이며, 현재 Apple Silicon(<code>arm64</code>) 기준으로 제공합니다.</li>
+                    <li>Intel Mac 사용자는 DMG 채널의 <code>x86_64</code> experimental 앱 빌드를 별도로 내려받아 사용해야 합니다.</li>
+                    <li><code>x86_64</code> 빌드는 호환성 확인용 실험 옵션이며 정식 지원 타깃은 아닙니다.</li>
+                </ul>
+
                 <h3>3.1 설치</h3>
+                <p>채널별 설치 방법은 아래와 같습니다.</p>
                 <ol>
-                    <li>릴리즈에서 <code>SnapView.dmg</code>를 다운로드합니다.</li>
-                    <li>DMG를 열고 <code>SnapView.app</code>을 <code>Applications</code>로 드래그합니다.</li>
-                    <li><code>Applications</code>에서 SnapView를 실행합니다.</li>
+                    <li><strong>DMG 채널(Fast)</strong>: 릴리즈에서 <code>SnapView.dmg</code>를 내려받아 <code>SnapView.app</code>을 <code>Applications</code>로 드래그해 설치합니다.</li>
+                    <li><strong>Mac App Store 채널(Stable)</strong>: Mac App Store에서 SnapView를 설치합니다.</li>
+                    <li>Intel Mac 사용자는 App Store가 아니라 DMG 채널의 <code>x86_64</code> experimental 앱 빌드를 사용합니다.</li>
                 </ol>
 
                 <h3>3.2 처음 실행 시</h3>
@@ -196,6 +205,20 @@
                     <li><code>Delete</code>로 삭제하거나 <code>Cmd+C</code>로 복사해 정리합니다.</li>
                     <li>완전히 동일한 파일 정리는 <code>Cmd+Shift+D</code>로 중복사진정리에서 처리합니다.</li>
                 </ol>
+
+                <h3>4.1 v1.0.0 핵심 변경</h3>
+                <ul>
+                    <li><strong>1.0.0 정식 출시 및 Mac App Store 지원</strong>: 베타 꼬리표를 뗀 정식 안정판이 출시되었으며, Mac App Store 전용 빌드가 추가되었습니다.</li>
+                    <li>Compare 모드가 <code>Selection / Reference</code> 이원 흐름으로 확장되었습니다. <code>R</code> 키로 즉시 전환할 수 있습니다.</li>
+                    <li><code>Reference</code> 모드에서 <code>Tab</code>, <code>↑</code>, <code>↓</code>, <code>←</code>, <code>→</code>로 기준/후보 포커스와 이동을 키보드 중심으로 처리할 수 있습니다.</li>
+                    <li>설정 &gt; Navigation에 <code>컴페어 진입 동작(Current Context / Resume Last Session)</code>이 추가되었습니다.</li>
+                    <li>외부 앱 열기 흐름이 <code>다른 앱으로 열기…</code>로 통합되었고, 저장된 앱이 있으면 바로 열며 없으면 앱 선택창을 표시합니다.</li>
+                    <li><code>F2</code> / 메뉴 <code>Rename…</code>로 Main/Grid/Filmstrip/Compare 어디서든 현재 파일명을 변경할 수 있습니다. (실제 파일명 변경, 확장자 유지)</li>
+                    <li>설정 &gt; 일반에 <code>창 열기 정책</code>(<code>단일 창(재사용)</code> / <code>멀티 창(새 창 열기)</code>)이 추가되어 외부 열기 동작을 선택할 수 있습니다.</li>
+                    <li>설정 &gt; Navigation에 <code>파일명 변경 후 재정렬(Resort After Rename)</code>이 추가되어 rename 후 목록 정렬 여부를 선택할 수 있습니다.</li>
+                    <li>설정 &gt; 일반의 오버레이 옵션에 <code>사진 수 UI(현재/전체, 현재, 미표기)</code>가 추가되었습니다.</li>
+                    <li>Main/Grid/Filmstrip/Manage의 상단 chrome 톤이 일관되게 정리되었습니다.</li>
+                </ul>
 
                 <h2>5. 화면 구성 이해하기</h2>
                 <ul>
@@ -349,6 +372,25 @@
                     <li><code>Cmd+Delete</code>: 즉시 삭제(주의)</li>
                 </ul>
 
+                <h3>7.7 외부 앱으로 열기</h3>
+                <ul>
+                    <li><code>다른 앱으로 열기…</code>는 현재 파일을 외부 앱으로 엽니다.</li>
+                    <li>같은 확장자 그룹에 대해 이전에 선택한 앱이 있으면 그 앱으로 바로 열고, 저장된 앱이 없으면 앱 선택창을 표시합니다.</li>
+                    <li><code>Cmd + Option + O</code>는 저장된 앱과 관계없이 앱 선택창을 직접 엽니다.</li>
+                    <li>RAW+JPG 페어는 설정 &gt; 일반 &gt; <code>외부 앱으로 열 RAW+JPG 대상</code>에서 RAW 우선 또는 JPG 우선으로 선택할 수 있습니다.</li>
+                    <li>기본값은 RAW 우선입니다.</li>
+                    <li>ZIP 내부 항목은 외부 앱 열기 미지원입니다.</li>
+                </ul>
+
+                <h3>7.8 파일명 변경 (<code>F2</code> / <code>Rename…</code>)</h3>
+                <ul>
+                    <li>Main/Grid/Filmstrip/Compare 어디서든 <code>F2</code> 또는 메뉴 <code>Rename…</code>로 현재 파일명을 변경할 수 있습니다.</li>
+                    <li>ZIP 내부 항목은 실제 파일 시스템 대상이 아니므로 이름 변경을 지원하지 않습니다.</li>
+                    <li>확장자는 유지되며, basename만 변경됩니다.</li>
+                    <li>설정 &gt; Navigation의 <code>파일명 변경 후 재정렬(Resort After Rename)</code>이 켜져 있으면 rename 직후 현재 정렬 규칙으로 목록을 재평가하고 변경한 파일을 다시 선택합니다.</li>
+                    <li>옵션이 꺼져 있으면 현재 목록 순서를 최대한 유지한 채 파일명/경로만 갱신합니다.</li>
+                </ul>
+
                 <h2>8. Quick Check와 Compare 사용법</h2>
                 <h3>8.1 Quick Check</h3>
                 <ul>
@@ -361,7 +403,16 @@
                 <h3>8.2 Compare 모드</h3>
                 <ul>
                     <li><img src="assets/icons/compare.svg" class="inline-icon" alt=""> <code>C</code>로 Compare 모드 진입/종료</li>
-                    <li>1~4장을 나란히 비교해 한 장을 고릅니다.</li>
+                    <li>기본 <code>Selection</code> 모드에서는 1~4장을 나란히 비교해 한 장을 고릅니다.</li>
+                    <li>Compare 모드 안에서 <code>R</code>을 누르면 <code>Selection</code>과 <code>Reference</code>를 전환할 수 있습니다.</li>
+                    <li>Compare 상단에는 <code>Selection / Reference</code> 세그먼트와 상태 텍스트가 표시되어 현재 비교 문맥을 바로 확인할 수 있습니다.</li>
+                    <li><code>Reference</code> 모드에서는 한 장을 기준으로 고정하고, 다른 후보를 좌/우로 넘기며 순차 비교할 수 있습니다.</li>
+                    <li><code>Reference</code> 모드에서는 <code>Tab</code>으로 기준/후보 포커스를 전환할 수 있습니다.</li>
+                    <li><code>Reference</code> 모드에서 <code>↑</code>는 기준 포커스, <code>↓</code>는 후보 포커스로 즉시 지정합니다.</li>
+                    <li><code>Reference</code> 모드에서 <code>←</code>/<code>→</code>는 현재 포커스된 패널(기준 또는 후보) 이미지를 이동합니다.</li>
+                    <li>Reference 모드의 평점/픽/리젝트/태그/삭제는 현재 포커스된 패널(기준 또는 후보)에만 적용됩니다.</li>
+                    <li>Compare 삭제 확인 팝업에서 취소하면 비교 모드와 포커스 상태가 유지됩니다.</li>
+                    <li>새 소스(다른 파일/ZIP)로 전환하면 이전 Compare 상태는 자동으로 정리됩니다. 단, <code>Resume Last Session</code> 설정이 켜져 있고 같은 소스를 다시 열면 마지막 세션을 복원할 수 있습니다.</li>
                     <li>확대해서 디테일까지 확인할 수 있습니다.</li>
                 </ul>
 
@@ -410,36 +461,50 @@
                     <li>설정 &gt; 일반에서 <code>오버레이 텍스트 그림자</code>를 <code>기본 / 강하게 / 자동</code>으로 고를 수 있습니다.</li>
                     <li><code>자동</code>은 밝은 이미지에서만 그림자를 더 강하게 적용해 파일명과 간단 정보가 더 잘 보이게 합니다.</li>
                     <li>설정 &gt; 일반에서 <code>별점 UI</code>를 <code>항상 표시 / 자동 / 숨김</code>으로 조절할 수 있습니다.</li>
+                    <li>설정 &gt; 일반에서 별점 UI 아래 <code>사진 수 UI</code>를 <code>현재/전체 / 현재 / 미표기</code>로 조절할 수 있습니다.</li>
                     <li><code>자동</code>은 별점이 있는 사진에서만 별점 UI가 보입니다.</li>
                     <li><code>숨김</code>을 써도 <code>1~5</code>, <code>0</code>, <code>\</code>, 메뉴의 별점 기능은 그대로 사용할 수 있습니다.</li>
                 </ul>
 
-                <h3>9.5 하위 폴더 이미지 포함</h3>
+                <h3>9.5 창 닫기 동작</h3>
+                <ul>
+                    <li>설정 &gt; 일반에 <code>모든 창을 닫으면 종료</code> 옵션이 있습니다.</li>
+                    <li>기본값은 꺼져 있습니다. 원할 때만 자동 종료로 바꿀 수 있습니다.</li>
+                </ul>
+
+                <h3>9.6 하위 폴더 이미지 포함</h3>
                 <ul>
                     <li>설정에서 <code>하위 폴더 이미지 포함</code>을 켜면 현재 폴더뿐 아니라 하위 폴더의 이미지도 함께 탐색합니다.</li>
                     <li>라이브러리 범위가 넓어져 편리하지만, 큰 폴더에서는 초기 스캔 범위와 결과 개수가 달라질 수 있습니다.</li>
                 </ul>
 
-                <h3>9.6 별점 후 자동 이동</h3>
+                <h3>9.7 창 열기 정책 / 파일명 변경 후 재정렬</h3>
+                <ul>
+                    <li>설정 &gt; 일반 &gt; <code>창 열기 정책</code>에서 <code>단일 창(재사용)</code> 또는 <code>멀티 창(새 창 열기)</code>를 선택할 수 있습니다.</li>
+                    <li>설정 &gt; Navigation &gt; <code>파일명 변경 후 재정렬</code>을 켜면 rename 직후 목록을 재정렬합니다.</li>
+                </ul>
+
+                <h3>9.8 별점 후 자동 이동</h3>
                 <ul>
                     <li><code>별점 후 자동 이동</code>을 켜면 별점을 준 뒤 자동으로 다음 사진으로 넘어갑니다.</li>
                     <li>빠른 1차 선별에서는 매우 유용하고, 세밀하게 비교할 때는 끄는 편이 좋습니다.</li>
                     <li><code>Cmd+A</code>로도 토글할 수 있습니다.</li>
                 </ul>
 
-                <h3>9.7 화면 맨위 고정</h3>
+                <h3>9.9 컴페어 재진입 동작</h3>
+                <ul>
+                    <li>설정 &gt; Navigation &gt; <code>컴페어 진입 동작</code>에서 진입 정책을 선택할 수 있습니다.</li>
+                    <li><code>현재 선택 기준(Current Context)</code>은 현재 선택/현재 인덱스를 기준으로 컴페어를 시작합니다. (기본값)</li>
+                    <li><code>마지막 세션 복원(Resume Last Session)</code>은 같은 소스(같은 폴더/ZIP)를 다시 열 때 마지막 Compare 구성과 포커스를 복원합니다.</li>
+                </ul>
+
+                <h3>9.10 화면 맨위 고정</h3>
                 <ul>
                     <li>다른 앱과 함께 비교하거나 Finder/Lightroom과 번갈아 볼 때 유용합니다.</li>
                     <li><code>Cmd+Shift+T</code>로 빠르게 켜고 끌 수 있습니다.</li>
                 </ul>
 
-                <h3>9.8 모든 창을 닫으면 종료</h3>
-                <ul>
-                    <li>설정 &gt; 일반에 <code>모든 창을 닫으면 종료</code> 옵션이 있습니다.</li>
-                    <li>기본값은 꺼져 있고, 원할 때만 창을 모두 닫을 때 앱도 함께 종료되도록 바꿀 수 있습니다.</li>
-                </ul>
-
-                <h3>9.9 Pro JPG / ZIP 해상도</h3>
+                <h3>9.11 Pro JPG / ZIP 해상도</h3>
                 <ul>
                     <li>Pro 레이아웃에서는 일반 디코딩 모드와 별도로 <code>Pro JPG 해상도</code>, <code>Pro ZIP 해상도</code> 설정이 적용될 수 있습니다.</li>
                     <li>즉, 일반 모드의 디코딩 우선순위와 Pro 모드의 해상도 정책은 완전히 같은 개념이 아닙니다.</li>
@@ -549,8 +614,9 @@
 
                 <h2>15. 업데이트</h2>
                 <ul>
-                    <li>앱 메뉴에서 <code>업데이트 확인(Check for Updates)</code>를 실행할 수 있습니다.</li>
-                    <li>최신 릴리즈는 <code>SnapView.dmg</code> 기준으로 배포됩니다.</li>
+                    <li><strong>DMG 채널(Fast)</strong>: 앱 메뉴 <code>업데이트 확인(Check for Updates)</code>로 수동/자동 업데이트를 확인합니다. GitHub 릴리즈에서 <code>SnapView.dmg</code>로 수동 업데이트할 수도 있습니다.</li>
+                    <li><strong>Mac App Store 채널(Stable)</strong>: Mac App Store의 업데이트 경로를 따릅니다.</li>
+                    <li>Intel Mac(<code>x86_64</code>)용 앱은 DMG 채널 experimental 빌드로만 제공합니다.</li>
                 </ul>
 
                 <h2>16. 데이터/안전 관련 참고</h2>
@@ -562,7 +628,7 @@
 
                 <h2>17. 문서 버전</h2>
                 <ul>
-                    <li>기준 버전: <code>v0.10.0</code></li>
+                    <li>기준 버전: <code>v1.0.0 (2026-04-25)</code></li>
                 </ul>
             </div>
 
@@ -588,11 +654,19 @@
 
                 <h2>3. Installation and First Run</h2>
 
+                <h3>3.0 Distribution Channel Selection (Important)</h3>
+                <ul>
+                    <li>The Mac App Store version is the sandboxed stable channel, currently provided for Apple Silicon (<code>arm64</code>).</li>
+                    <li>Intel Mac users must download and use the <code>x86_64</code> experimental app build from the DMG channel.</li>
+                    <li>The <code>x86_64</code> build is an experimental option for compatibility testing and is not an officially supported target.</li>
+                </ul>
+
                 <h3>3.1 Installation</h3>
+                <p>Installation methods by channel are as follows:</p>
                 <ol>
-                    <li>Download <code>SnapView.dmg</code> from the releases page.</li>
-                    <li>Open the DMG and drag <code>SnapView.app</code> to <code>Applications</code>.</li>
-                    <li>Launch SnapView from <code>Applications</code>.</li>
+                    <li><strong>DMG Channel (Fast)</strong>: Download <code>SnapView.dmg</code> from the releases page, then drag <code>SnapView.app</code> to <code>Applications</code>.</li>
+                    <li><strong>Mac App Store Channel (Stable)</strong>: Install SnapView from the Mac App Store.</li>
+                    <li>Intel Mac users should use the <code>x86_64</code> experimental app build from the DMG channel instead of the App Store.</li>
                 </ol>
 
                 <h3>3.2 First Run</h3>
@@ -621,6 +695,20 @@
                     <li>Use <code>Delete</code> to remove or <code>Cmd+C</code> to copy and organize.</li>
                     <li>For exact file duplicates, press <code>Cmd+Shift+D</code> to use the Duplicate cleanup feature.</li>
                 </ol>
+
+                <h3>4.1 v1.0.0 Key Changes</h3>
+                <ul>
+                    <li><strong>1.0.0 Official Release & Mac App Store Support</strong>: The beta label is off! A stable release is now available, along with a dedicated Mac App Store build.</li>
+                    <li>Compare mode has expanded into a dual <code>Selection / Reference</code> flow. Toggle instantly with the <code>R</code> key.</li>
+                    <li>In <code>Reference</code> mode, use <code>Tab</code>, <code>↑</code>, <code>↓</code>, <code>←</code>, and <code>→</code> to manage reference/candidate focus and navigation mostly via keyboard.</li>
+                    <li>Added <code>Compare Entry Behavior (Current Context / Resume Last Session)</code> under Settings &gt; Navigation.</li>
+                    <li>External app launching is unified under <code>Open with another app…</code>; it immediately opens a saved app if available, or shows the app selection window otherwise.</li>
+                    <li>Rename files directly from Main/Grid/Filmstrip/Compare using <code>F2</code> or the <code>Rename…</code> menu. (Changes actual filename, preserves extension)</li>
+                    <li>Added <code>Window Open Policy</code> (<code>Single Window (Reuse)</code> / <code>Multiple Windows (Open New)</code>) under Settings &gt; General to control external opening behavior.</li>
+                    <li>Added <code>Resort After Rename</code> under Settings &gt; Navigation to choose whether to resort the list after renaming.</li>
+                    <li>Added <code>Photo Count UI (Current/Total, Current, Hidden)</code> to overlay options under Settings &gt; General.</li>
+                    <li>The top chrome tone across Main/Grid/Filmstrip/Manage is now consistently flat and clean.</li>
+                </ul>
 
                 <h2>5. Understanding the Interface</h2>
                 <ul>
@@ -781,6 +869,25 @@
                     <li><code>Cmd+Delete</code>: Delete Immediately (Caution).</li>
                 </ul>
 
+                <h3>7.7 Open with External App</h3>
+                <ul>
+                    <li><code>Open with another app…</code> opens the current file in an external application.</li>
+                    <li>If a saved app exists for the same extension group, it opens immediately; otherwise, it shows the app selection window.</li>
+                    <li><code>Cmd + Option + O</code> directly opens the app selection window, ignoring any saved preferences.</li>
+                    <li>For RAW+JPG pairs, you can choose RAW priority or JPG priority in Settings &gt; General &gt; <code>RAW+JPG Target for External Apps</code>.</li>
+                    <li>The default is RAW priority.</li>
+                    <li>Items inside a ZIP are not supported for external app opening.</li>
+                </ul>
+
+                <h3>7.8 Rename File (<code>F2</code> / <code>Rename…</code>)</h3>
+                <ul>
+                    <li>You can change the current filename from anywhere (Main/Grid/Filmstrip/Compare) using <code>F2</code> or the <code>Rename…</code> menu.</li>
+                    <li>Items inside a ZIP are not actual files, so renaming is not supported.</li>
+                    <li>The extension is preserved; only the basename is changed.</li>
+                    <li>If <code>Resort After Rename</code> is enabled in Settings &gt; Navigation, the list is re-evaluated immediately after renaming according to the current sort rule, and the renamed file is selected again.</li>
+                    <li>If disabled, it updates the filename/path while maintaining the current list order as much as possible.</li>
+                </ul>
+
                 <h2>8. Quick Check & Compare</h2>
 
                 <h3>8.1 Quick Check</h3>
@@ -794,7 +901,16 @@
                 <h3>8.2 Compare Mode</h3>
                 <ul>
                     <li>Press <img src="assets/icons/compare.svg" class="inline-icon" alt=""> <code>C</code> to enter/exit Compare Mode.</li>
-                    <li>Compare 1-4 shots side-by-side to pick the best one.</li>
+                    <li>In the default <code>Selection</code> mode, compare 1-4 shots side-by-side to pick the best one.</li>
+                    <li>Press <code>R</code> inside Compare mode to switch between <code>Selection</code> and <code>Reference</code> modes.</li>
+                    <li>The top of the Compare view displays a <code>Selection / Reference</code> segment and status text so you can instantly verify the current comparison context.</li>
+                    <li>In <code>Reference</code> mode, anchor one shot as the reference and navigate left/right through candidates for sequential comparison.</li>
+                    <li>In <code>Reference</code> mode, use <code>Tab</code> to switch focus between reference and candidate panels.</li>
+                    <li>In <code>Reference</code> mode, use <code>↑</code> to immediately focus the reference panel, and <code>↓</code> for the candidate panel.</li>
+                    <li>In <code>Reference</code> mode, use <code>←</code>/<code>→</code> to move the image in the currently focused panel.</li>
+                    <li>Ratings/Picks/Rejects/Tags/Deletes in Reference mode only apply to the currently focused panel (reference or candidate).</li>
+                    <li>If you cancel a deletion confirmation in Compare mode, the comparison mode and focus state are preserved.</li>
+                    <li>Switching to a new source (another folder/ZIP) automatically clears the previous Compare state. However, if <code>Resume Last Session</code> is enabled, reopening the same source restores the last session.</li>
                     <li>Zoom in to check details.</li>
                 </ul>
 
@@ -968,8 +1084,9 @@
 
                 <h2>15. Updates</h2>
                 <ul>
-                    <li>Use <code>Check for Updates</code> in the app menu.</li>
-                    <li>Latest releases are distributed via <code>SnapView.dmg</code>.</li>
+                    <li><strong>DMG Channel (Fast)</strong>: Use <code>Check for Updates</code> in the app menu for Sparkle updates, or download the latest <code>SnapView.dmg</code> from GitHub releases.</li>
+                    <li><strong>Mac App Store Channel (Stable)</strong>: Follows the standard Mac App Store update process.</li>
+                    <li>Intel Mac (<code>x86_64</code>) builds are only available as experimental builds via the DMG channel.</li>
                 </ul>
 
                 <h2>16. Data & Safety Notes</h2>
@@ -981,7 +1098,7 @@
 
                 <h2>17. Document Version</h2>
                 <ul>
-                    <li>Base version: <code>v0.10.0</code></li>
+                    <li>Base version: <code>v1.0.0 (2026-04-25)</code></li>
                 </ul>
             </div>
         </section>
