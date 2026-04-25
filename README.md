@@ -17,16 +17,16 @@ Release Notes: [Public Release Notes](https://github.com/youngchangjo/SnapView/b
 ## Download
 
 - Latest release: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
-- Install package: open the latest release page and download `SnapView-0.10.4.dmg`
+- Install package: open the latest release page and download `SnapView-1.0.0.dmg`
 - Official website: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
 
-## v1.0.0 하이라이트
+## v1.0.0 Highlights
 
-- SnapView 1.0.0 정식 출시와 함께 DMG와 Mac App Store 채널을 분리해 제공
-- `Reference` 비교 모드와 기존 `Selection` 모드를 `R` 키로 전환
-- `F2` 또는 컨텍스트 메뉴로 파일명을 SnapView 안에서 직접 변경
-- Finder에서 파일을 열 때 `Single Window` 또는 `Multiple Windows`를 선택
-- 외부 앱 열기에서 RAW/JPG 우선순위를 설정하고 `⌥⌘O`로 앱 선택창을 빠르게 열기
+- SnapView 1.0.0 ships with separate DMG and Mac App Store distribution lanes.
+- Toggle between `Reference` and `Selection` compare modes with `R`.
+- Rename files directly in SnapView with `F2` or the context menu.
+- Choose `Single Window` or `Multiple Windows` when opening files from Finder.
+- Set RAW/JPG priority for external app handoff and use `⌥⌘O` to pick another app quickly.
 
 ## Screenshots
 
@@ -145,7 +145,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 ## 다운로드
 
 - 최신 릴리즈: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
-- 설치 파일: 최신 릴리즈 페이지에서 `SnapView-0.10.4.dmg`를 다운로드해 설치합니다
+- 설치 파일: 최신 릴리즈 페이지에서 `SnapView-1.0.0.dmg`를 다운로드해 설치합니다
 - 공식 사이트: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
 
 스크린샷은 위 `Screenshots` 섹션에서 바로 확인할 수 있습니다.
