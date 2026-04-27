@@ -9,8 +9,8 @@
     <language>en</language>
     <item>
       <title>Version 1.0.1</title>
-      <pubDate>Mon, 27 Apr 2026 07:06:36 +0000</pubDate>
-      <sparkle:version>10001</sparkle:version>
+      <pubDate>Mon, 27 Apr 2026 07:13:55 +0000</pubDate>
+      <sparkle:version>1004</sparkle:version>
       <sparkle:shortVersionString>1.0.1</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.5</sparkle:minimumSystemVersion>
       <description><![CDATA[
@@ -19,10 +19,10 @@
       <sparkle:releaseNotesLink>https://github.com/youngchangjo/SnapView/releases/tag/v1.0.1</sparkle:releaseNotesLink>
       <enclosure
         url="https://github.com/youngchangjo/SnapView/releases/download/v1.0.1/SnapView.dmg"
-        sparkle:version="10001"
+        sparkle:version="1004"
         sparkle:shortVersionString="1.0.1"
-        sparkle:edSignature="D0a3jUzXxZPmysY+fCeI0NQXnaQmcpfw0GkOfDRZqryyWXmouLwPZ9v4oX7Ppcu9KbCGNspJ/jbaT/jq9SRuDA=="
-        length="6295748"
+        sparkle:edSignature="sjb9qsQsrtDJ6WhvabLXMo4GfxBGRIVplRKqIE2niQm+aZNmysnoByw3v+xOEbZgFENV5gZhKEIhYg2HglLODQ=="
+        length="6214167"
         type="application/octet-stream" />
     </item>
   </channel>
