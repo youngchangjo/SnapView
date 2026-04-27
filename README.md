@@ -1,237 +1,334 @@
-<a id="english"></a>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/snapview-icon.png" alt="SnapView app icon" width="128">
-</p>
-
 # SnapView
 
-Fast macOS image viewer for real photo culling work.
+SnapView는 macOS에서 **빠른 탐색**과 **효율적인 사진 정리**를 동시에 목표로 만든 이미지 뷰어입니다.
 
-Current Version: `v0.10.4`
+- 관리 UX: Lightroom 스타일 워크플로우
+- 체감 속도: 꿀뷰 스타일 빠른 탐색
+- 분석 신뢰: Quick Check 기반 촬영 품질 진단
 
-Language: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
+폴더 기반 이미지뿐 아니라 ZIP 이미지 탐색도 지원하며, 단일 뷰/그리드/필름스트립/사진관리/중복사진정리를 오가며 작업할 수 있습니다.
 
-Release Notes: [Public Release Notes](https://github.com/youngchangjo/SnapView/blob/main/RELEASE_NOTES.md) | [GitHub Releases](https://github.com/youngchangjo/SnapView/releases)
+Current Version: <!-- VERSION:START -->`v1.0.0`<!-- VERSION:END -->
 
-## Download
+## v1.0.0 하이라이트
 
-- Latest release: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
-- Install package: open the latest release page and download `SnapView-0.10.4.dmg`
-- Official website: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
+- Mac App Store 공개 심사 후보를 위해 Privacy Manifest와 App Store 전용 검증 절차를 보강
+- 공개 안정판 About 패널과 인트로 화면에서 Beta 표기를 제거하고 개인정보 처리방침/지원 링크를 추가
+- App Store 빌드에서도 ZIP 탐색을 유지하되 sandbox-safe ZIPFoundation backend를 사용
+- Finder식 자연 정렬로 숫자가 포함된 파일명을 기대 순서대로 탐색
+- Cmd+W 이후 Finder/Dock에서 다시 열 때 blank canvas와 이전 이미지 flash를 더 줄임
+- 이미 실행 중인 SnapView에서 다른 이미지를 열 때 요청한 파일로 더 직접 전환
+- Grid 위/아래 키 이동이 현재 창 너비 기준 열 수를 사용하도록 보정
+- Grid 클릭 선택과 Filmstrip 키 반복 이동 체감을 더 즉각적으로 조정
 
-## What's New In v0.10.4
+## 핵심 USP
 
-- File browsing now follows Finder-style natural filename order for numbered filenames.
-- Reopening SnapView from Finder or Dock after closing the window is steadier.
-- Opening another image while SnapView is already running switches to the requested photo more directly.
-- Grid and Filmstrip navigation feel more immediate during keyboard and mouse selection.
+- **Quick Check 진단 엔진**: EXIF 나열이 아닌 점수/경고/근거 기반 촬영 품질 판정
+- **Compare 실전 선별**: 1~4장 동적 비교 + AI 추천 근거 자연어 설명
+- **Duplicate 정리 워크스페이스**: 동일 파일과 같은 사진의 해상도/용량 변형본을 하나의 중복정리 흐름에서 통합 검토/정리
+- **대량 라이브러리 대응 UX**: 비교 대상 추가 시 기준 컷(현재 포커스/선택) 근처로 즉시 이동
+- **ZIP/RAW+JPG 실사용 워크플로우**: 압축 아카이브 탐색과 페어 선별 흐름을 하나로 통합
+- **대형 이미지 복구 UX**: 원본 우선, 자동 `호환 미리보기`, 수동 `안전하게 열기`, Finder/ZIP 기반 탐색 연속성을 한 흐름으로 제공
+- **도입 마찰 최소화**: 인트로/설정에서 `주요 포맷 등록`과 `전체 등록`으로 나뉜 기본 이미지 앱 온보딩 제공
+- **Finder 연동 개선**: 지원 이미지 형식을 Finder `이 앱으로 열기` 추천 앱 목록에 더 잘 노출하도록 앱 문서 타입 선언 보강
+- **움직이는 이미지 지원**: Main View에서 animated GIF / WebP를 바로 재생
 
-## Screenshots
+## 주요 특징
 
-![SnapView overview](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/hero.png)
-
-| Main View | Grid View |
-| --- | --- |
-| ![SnapView Main View](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/web_mainview.png) | ![SnapView Grid View](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/web_gridview.png) |
-
-| Filmstrip View | Manage View |
-| --- | --- |
-| ![SnapView Filmstrip View](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/web_filmstrip.png) | ![SnapView Manage View](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/web_managemode.png) |
-
-| Quick Check | Compare Mode |
-| --- | --- |
-| ![SnapView Quick Check](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/quickcheck.png) | ![SnapView Compare Mode](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/comparemode.png) |
-
-| Duplicate Mode |
-| --- |
-| ![SnapView Duplicate Mode](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/duplicatemode.png) |
-
-Detailed release notes from `v0.10.0` onward are available in the separate [Public Release Notes](https://github.com/youngchangjo/SnapView/blob/main/RELEASE_NOTES.md) document.
-
-## Why SnapView
-
-SnapView is built for the part after import: checking sharpness, comparing near-duplicates, rating selects, and moving through folders quickly without waiting for a catalog app.
-
-The key idea is simple: do the fastest first-pass cull in SnapView, then carry the result forward instead of starting over somewhere else.
-
-- Fast folder and ZIP browsing
-- Quick Check for quality diagnosis with reasons, not just EXIF fields
-- Compare mode for picking the best frame from similar shots
-- Duplicate workspace for exact-file cleanup
-- Keyboard-first rating, pick, reject, and Finder tag workflow
-- Lightroom-style XMP interoperability for rating, Pick, and Reject
-- Finder tag interoperability so file and folder status remain visible outside the app
-- Decoding modes that let you choose between speed, balanced review, and quality-first inspection
-
-## Typical Workflow
-
-1. Open a folder, image, or ZIP archive.
-2. Move quickly in Main, Grid, Filmstrip, or Manage view.
-3. Mark keepers with rating, Pick, Reject, or color labels.
-4. Open Quick Check or Compare when you need a closer call.
-5. Continue in Lightroom with XMP-backed ratings and flags, or keep organizing in Finder with color labels.
-6. Use Duplicate mode to clean up exact duplicates.
-
-## Views And Tools
-
-- `Main View`: single-image browsing with zoom, fit, rotate, and overlay tools
-- `Grid View`: thumbnail selection for fast triage
-- `Filmstrip View`: main image plus strip for quick pass review
-- `Manage View`: folder navigation, filters, and filmstrip in one workspace
-- `Quick Check`: score, warnings, and supporting reasons, plus histogram and detailed EXIF in one review set
-- `Compare`: side-by-side review and best-shot recommendation
-- `Duplicate`: exact duplicate grouping and cleanup workflow
-- `Decoding Modes`: speed-first, balanced, and quality-first viewing behavior
-
-## Good Fit For
-
-- photographers doing first-pass culling
-- users who browse directly from folders instead of importing into a catalog first
-- mixed libraries with JPG, HEIF/HIF, RAW, and ZIP archives
-- keyboard-heavy review workflows
-- Lightroom users who want a faster culling stage before editing
-- macOS users who want color labels to stay visible in Finder after review
-
-## Supported Formats
-
-- Standard images: `jpg`, `jpeg`, `png`, `gif`, `bmp`, `webp`, `heic`, `heif`, `hif`, `tif`, `tiff`
-- RAW: `arw`, `cr2`, `cr3`, `nef`, `nrw`, `dng`, `raf`, `orf`, `rw2`, `pef`, `srw`
-- Container: `zip` for supported images inside archives
-- Conditional: `avif`, `jxl` when macOS decoder support is available
-
-## Install
-
-1. Download the latest DMG from [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest).
-2. Open `SnapView-0.10.2.dmg`.
-3. Drag `SnapView.app` into `Applications`.
-4. Launch SnapView from `Applications`.
-
-## Requirements
-
-- macOS `15.5` or later
-
-## Security And Privacy
-
-- Release builds are signed with Apple Developer ID.
-- Release builds are notarized for standard macOS installation flow.
-- SnapView works with files you open locally. It is designed around local browsing, review, and cleanup workflows.
-
-## Notes
-
-- ZIP browsing can be slower than normal folders because archive contents must be read before display.
-- ZIP items are not normal filesystem files, so some save/interoperability features are limited there.
-- Animated `gif` and `webp` play in Main View only. Other views currently show a still first frame.
-- Finder interoperability is centered on color labels.
-- Lightroom interoperability is centered on XMP sidecars for rating, Pick, and Reject.
-- Conditional formats such as AVIF or JXL depend on macOS decoder availability.
-- If Gatekeeper blocks the app on first launch, open it from `Applications` again after confirming in macOS security settings.
-
----
-
-<a id="korean"></a>
-
-# SnapView
-
-실사용 사진 선별 작업에 맞춘 macOS용 고속 이미지 뷰어입니다.
-
-현재 버전: `v0.10.4`
-
-언어: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
-
-릴리즈 노트: [공개 릴리즈 노트](https://github.com/youngchangjo/SnapView/blob/main/RELEASE_NOTES.md) | [GitHub Releases](https://github.com/youngchangjo/SnapView/releases)
-
-## 다운로드
-
-- 최신 릴리즈: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
-- 설치 파일: 최신 릴리즈 페이지에서 `SnapView-0.10.4.dmg`를 다운로드해 설치합니다
-- 공식 사이트: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
-
-스크린샷은 위 `Screenshots` 섹션에서 바로 확인할 수 있습니다.
-
-`v0.10.0`부터의 상세 변경 이력은 별도 문서인 [공개 릴리즈 노트](https://github.com/youngchangjo/SnapView/blob/main/RELEASE_NOTES.md)에서 확인할 수 있습니다.
-
-## v0.10.4 주요 변경
-
-- Finder식 자연 정렬로 숫자가 포함된 파일명을 기대 순서대로 탐색합니다.
-- 창을 닫은 뒤 Finder나 Dock에서 다시 열 때의 화면 표시 흐름을 더 안정화했습니다.
-- SnapView가 이미 실행 중일 때 다른 이미지를 열면 요청한 사진으로 더 직접 전환됩니다.
-- Grid와 Filmstrip에서 키보드/마우스 선택 반응을 더 즉각적으로 다듬었습니다.
-
-## 왜 SnapView인가요
-
-SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘겨 보기, 초점 확인, 비슷한 컷 비교, 별점 선별, 중복 정리에 맞춰 설계되어 있습니다. 카탈로그를 먼저 만드는 방식보다 폴더 기반 검토 흐름에 더 가깝습니다.
-
-핵심은 간단합니다. 가장 시간이 많이 드는 1차 선별은 SnapView에서 빠르게 끝내고, 그 결과를 Lightroom이나 Finder에서 그대로 이어서 쓰는 것입니다.
-
-- 폴더와 ZIP 이미지를 빠르게 탐색
-- EXIF 나열이 아니라 점수와 근거를 보여주는 Quick Check
-- 비슷한 컷에서 베스트샷을 고르기 위한 Compare
-- 동일 파일 정리를 위한 Duplicate 워크스페이스
-- 별점, Pick, Reject, Finder 태그 중심의 키보드 선별
-- Lightroom 스타일 XMP 연동으로 별점, Pick, Reject 결과를 그대로 이어가기
-- Finder 태그 연동으로 macOS 파일/폴더 정리 단계까지 상태 유지
-- 속도 우선 / 보통 / 화질 최우선 디코딩 모드로 작업 성격에 맞게 조절
-
-## 대표 사용 흐름
-
-1. 폴더, 이미지, ZIP 파일을 엽니다.
-2. Main, Grid, Filmstrip, Manage 뷰를 오가며 빠르게 검토합니다.
-3. 별점, Pick, Reject, 컬러 라벨로 선별합니다.
-4. 애매한 컷은 Quick Check 또는 Compare로 판단합니다.
-5. 별점/Pick/Reject 결과는 Lightroom에서, 컬러 라벨은 Finder에서 그대로 이어서 활용합니다.
-6. 마지막에 Duplicate 모드로 정확한 중복 파일을 정리합니다.
-
-## 뷰와 도구
-
-- `Main View`: 단일 이미지 중심 탐색, 확대, 맞춤, 회전, 오버레이
-- `Grid View`: 다량 썸네일 선별
-- `Filmstrip View`: 메인 이미지와 스트립 기반 빠른 검토
-- `Manage View`: 폴더 탐색, 필터, 필름스트립을 함께 쓰는 관리 작업 공간
-- `Quick Check`: 점수, 경고, 근거 기반 촬영 품질 진단과 히스토그램/상세 EXIF 점검 세트
-- `Compare`: 나란히 비교하며 베스트샷 선택
-- `Duplicate`: 동일 파일 그룹 정리 워크플로우
-- `디코딩 모드`: 속도 우선, 보통, 화질 최우선
-
-## 이런 경우에 잘 맞습니다
-
-- 대량 촬영본을 빠르게 1차 선별해야 할 때
-- 카탈로그보다 폴더 기반 탐색을 선호할 때
-- JPG, HEIF/HIF, RAW, ZIP이 섞인 라이브러리를 다룰 때
-- 키보드 중심으로 빠르게 검토하고 싶을 때
-- Lightroom 편집 전 선별 단계가 너무 무겁게 느껴질 때
-- Finder에서도 분류 상태를 바로 유지하고 싶을 때
+- 폴더/이미지/ZIP 열기
+- Finder식 자연 파일명 정렬: `image-2`가 `image-10`보다 먼저 오도록 숫자 포함 파일명을 사람이 기대하는 순서로 탐색
+- 단일 뷰 + 그리드 뷰 + 필름스트립 + 사진관리모드
+- 중복사진정리(동일 파일 우선 + 같은 사진 변형본 통합 검토)
+- Quick Check 촬영 진단(점수/경고/근거)
+- Compare Mode 베스트샷 추천 + 근거 설명
+- 전체화면 슬라이드쇼 v1 (`Shift + Enter`, scope snapshot, 하단 HUD, 원위치 복귀)
+- Main View animated GIF / WebP playback
+- 별점 표시/필터링
+- Pick/Reject/컬러라벨 기반 선별 및 필터링
+- 복수 선택, 복사/붙여넣기/삭제
+- `Show in Finder` 현재 파일 선택 표시 (`⌘↩`, 컨텍스트 메뉴)
+- `다른 앱으로 열기…`로 외부 앱 열기 지원. 저장된 앱이 있으면 바로 열고, 없으면 앱 선택창을 표시하며, RAW+JPG 페어는 RAW/JPG 대상 우선순위를 설정 가능
+- ZIP 내부 항목은 외부 앱 열기 미지원
+- `F2` / `Rename…`로 현재 문맥(Main/Grid/Filmstrip/Compare) 파일명 변경 지원 (실제 디스크 rename, 확장자 유지)
+- 키보드 중심 탐색 및 단축키
+- 기본 이미지 앱 등록(인트로 `주요 포맷`, 설정 `주요 포맷/전체 등록`)
+- Sparkle 기반 새 버전 자동 확인 + 설정 가능한 자동 다운로드/설치
+- 설정 > 일반에서 앱 appearance를 `시스템 / 라이트 / 다크`로 직접 선택
+- 설정 > 일반에서 `창 열기 정책`을 `단일 창(재사용) / 멀티 창(새 창 열기)`로 선택 가능. 멀티 창에서 단일 창으로 전환해도 기존 창은 유지되고, 이후 열기 요청부터 단일 창 정책을 적용
+- 설정 > 일반에서 오버레이 텍스트 그림자를 `기본 / 강하게 / 자동`으로 조절 가능
+- 설정 > 일반에서 별점 UI 아래 `사진 수 UI`를 `현재/전체 / 현재 / 미표기`로 선택 가능
+- 설정 > Navigation에서 `파일명 변경 후 재정렬(Resort After Rename)` ON/OFF를 선택 가능
+- 설정에서 별점 UI를 `항상 / 자동 / 숨김`으로 조절하고, 마지막 창 닫기 시 자동 종료를 선택 가능
+- 표준 macOS 메뉴 구조 정렬 (`File / View / Navigate / Mark / Tools`)
+- 표시 품질(속도/균형/품질) 및 Pro 해상도 옵션
+- 네트워크 저장소에서는 현재 프레임 우선 정책으로 선행 작업 예산을 자동 축소하고, 이전 이미지의 preview/full-res/metadata 후행 작업은 즉시 취소해 `보통`이 `화질 최우선`보다 더 무거워지지 않도록 조정
+- 네트워크 저장소에서는 최근 decode/hitch 관측값이 나쁘면 현재 프레임 decode 크기도 자동으로 낮춰, `보통` 기준 체감 끊김을 더 줄이도록 조정
+- 파일 기반 대형 이미지는 원본 우선으로 기다리고, 원본 실패 시 자동 `호환 미리보기`를 한 번 더 시도한 뒤 그래도 안 되면 현재 캔버스에서 `안전하게 열기`로 downsample-only 경로를 수동 실행할 수 있도록 정리
+- 실패 오버레이는 `다시 시도` / `안전하게 열기` 외에도 `닫기` 또는 `Esc`로 내릴 수 있어, 현재 선택을 유지한 채 안내만 숨길 수 있음
+- `pair RAW/JPG`가 켜져 있어도 `tif`/`tiff`/`gif`/`bmp` 같은 단일 포맷 파일은 자산 목록에서 누락하지 않고 그대로 연다
+- 큰 파일에서 빠른 프리뷰가 먼저 떠도 원본 로딩은 사용자 화면을 가리지 않고, 실패/복구가 필요한 상태만 현재 캔버스에 유지하도록 조정
+- Quick Check/히스토그램 분석은 토글/네비게이션으로 요청이 stale해지면 apply 전까지 즉시 취소하고, 히스토그램 샘플링은 sRGB 정규화 경로로 고정
+- 리사이즈 후 원본 전환 파이프라인
+- 샤픈 ON/OFF
+- 화면 맨 위 고정
+- 디버그 로그 기록
+- 개발자 디버그 모드에서 중복정리 `dHash / 밝기 / 블록 차이` 임계값 실시간 튜닝
+- sleep / display sleep / 숨김 / 가려짐 상태에서 background work를 즉시 멈추고, 복귀 시 현재 프레임만 먼저 복구하는 long-idle 에너지 보호
+- **Auto Advance**: 별점 후 자동 다음 이동
+- **Pick/Reject**: P/X/U 키로 빠른 선별 (Lightroom 호환)
+- **썸네일 플래그 기본값**: 그리드/필름스트립에서 Pick과 Reject를 함께 표시
+- **라이트 모드 muted surface**: 메인/그리드/필름스트립/관리뷰는 순백색 대신 눌린 회색 톤을 쓰고, inactive 창에서도 배경과 패널이 따로 뜨지 않게 정리
+- **비활성 타이틀바 white chrome**: 라이트 모드 inactive 타이틀바 backdrop은 macOS 기본 white window 톤을 유지해 상단만 회색으로 튀지 않게 정리
+- **타이틀바 chrome 평탄화 일관성**: Main/Grid/Filmstrip/Manage에서 상단 chrome 표면을 같은 톤으로 맞춰 모드 전환 시 시각 밀도를 유지
+- **Manage 상태 요약 가독성**: 필터 하단 상태 요약은 네비게이터/필터와 같은 caption 계열 폰트와 시스템 텍스트 톤을 쓰고, 패널 fill도 텍스트 뒤 배경으로 내려 라이트 모드에서도 따로 씻겨 보이지 않게 정리
+- **태그**: Cmd+1~6 키로 Finder 기준 색상 태그 적용/해제
+- **Finder 태그 일치**: Finder에서 바꾼 7색 태그 이름/색상 순서를 SnapView가 그대로 따름
+- **타이틀바 대비 보정**: 라이트/다크 모드에 따라 타이틀바 chrome이 달라져 밝은 사진 위에서도 주요 컨트롤이 읽힘
+- **Quick Compare**: 1~4장 동적 비교 + `Selection/Reference` 전환(`R`), Reference 포커스 전환(`Tab`, `↑`, `↓`), 포커스 패널 이동(`←`, `→`), 동기화 줌/팬
+- **Compare Re-entry 설정**: Settings > Navigation에서 `Current Context` 또는 `Resume Last Session`으로 컴페어 재진입 동작 선택
+- **Navigator(관리뷰)**: 폴더/ZIP 혼합 탐색, 상위/이전/다음 이동, Finder 연동
 
 ## 지원 포맷
 
+코드 기준(`PhotoBrowserModel.allowedExt`) 현재 지원 확장자는 아래와 같습니다.
+
 - 일반 이미지: `jpg`, `jpeg`, `png`, `gif`, `bmp`, `webp`, `heic`, `heif`, `hif`, `tif`, `tiff`
+- 조건부 이미지: `avif`, `jxl` (시스템 이미지 디코더 지원 시 자동 활성화)
 - RAW: `arw`, `cr2`, `cr3`, `nef`, `nrw`, `dng`, `raf`, `orf`, `rw2`, `pef`, `srw`
-- 컨테이너: `zip` 내부 지원 이미지
-- 조건부: `avif`, `jxl`은 macOS 디코더 지원 시 활성화
+- 컨테이너: `zip` (내부의 지원 이미지 확장자만 표시)
 
-## 설치 방법
+참고:
+- 파일 열기 패널은 시스템 이미지 타입을 넓게 보여줄 수 있지만, 실제 탐색/표시는 위 확장자 목록을 기준으로 동작합니다.
+- animated `gif` / `webp`는 Main View에서만 재생하고, 다른 뷰에서는 첫 프레임 정지 이미지로 표시합니다.
+- `avif`/`jxl`가 시스템(OS/하드웨어 디코더)에서 미지원이면 탐색 목록에서 자동 제외되고, 직접 열 때 원인 안내 메시지를 표시합니다.
+- 카메라 메타데이터 코드 매핑(AF/손떨림/셔터/렌즈ID 등)은 `/Users/youngchangjo/Development/SnapView/SnapView/SnapView/Resources/metadata_code_maps.json`에서 관리합니다.
 
-1. [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)에서 최신 DMG를 다운로드합니다.
-2. `SnapView-0.10.2.dmg`를 엽니다.
-3. `SnapView.app`을 `Applications`로 드래그합니다.
-4. `Applications`에서 SnapView를 실행합니다.
+## 대형 이미지 지원 포인트
 
-## 시스템 요구사항
+- SnapView의 대형 이미지 대응은 단순히 `큰 TIFF/RAW도 열림` 수준이 아니라, `원본 우선 -> 자동 호환 복구 -> 수동 안전 열기`까지 하나의 흐름으로 연결한 것이 포인트입니다.
+- 공식 자료 기준으로 다른 뷰어들도 넓은 포맷 지원 또는 고해상도 처리 성능을 강조합니다.
+  - Apple Preview: 일반 이미지 보기/변환 지원은 넓지만, 대형 이미지 복구 UX 자체를 강하게 내세우지는 않습니다.
+  - ApolloOne: 초고해상도 RAW를 매우 빠르게 여는 성능을 전면에 내세웁니다.
+  - XnView MP: 500개 이상의 포맷 지원을 강하게 내세웁니다.
+  - qView: 공통 포맷 지원과 빠른 전환을 강조합니다.
+- 그래서 SnapView의 포인트는 `대형 이미지를 지원한다` 자체보다, 폴더/ZIP/선별 워크플로우 안에서 실패를 조용히 복구하고 사용자가 필요한 순간만 개입하게 만드는 UX에 있습니다.
 
-- macOS `15.5` 이상
+## 설치 (릴리즈 앱)
 
-## 보안 및 개인정보
+### 1) DMG 파일 열기
 
-- 릴리즈 빌드는 Apple Developer ID 서명 상태입니다.
-- 릴리즈 빌드는 notarization을 거쳐 일반적인 macOS 설치 흐름을 따릅니다.
-- SnapView는 사용자가 연 로컬 파일을 기준으로 탐색, 검토, 정리하는 워크플로우를 중심으로 동작합니다.
+1. 릴리즈된 `SnapView-0.10.2.dmg`를 더블 클릭합니다.
+2. 마운트된 디스크 이미지를 엽니다.
 
-## 참고 사항
+### 2) 앱 설치
 
-- ZIP 탐색은 일반 폴더보다 구조적으로 느릴 수 있습니다.
-- ZIP 내부 항목은 실제 파일이 아니므로 일부 저장/연동 기능이 제한됩니다.
-- animated `gif` / `webp`는 Main View에서만 재생되고, 다른 뷰에서는 첫 프레임 정지 이미지로 표시됩니다.
-- Finder 연동은 컬러 라벨 중심입니다.
-- Lightroom 연동은 XMP sidecar 기반 별점/Pick/Reject 중심입니다.
-- AVIF, JXL 같은 조건부 포맷은 macOS 디코더 지원 여부에 따라 달라집니다.
-- 첫 실행 시 Gatekeeper 경고가 나오면 macOS 보안 설정에서 허용 후 다시 실행해 주십시오.
+1. `SnapView.app`을 `Applications` 폴더로 드래그합니다.
+2. `Applications`에서 앱을 실행합니다.
+
+### 3) 처음 실행 시 보안 경고가 뜨는 경우
+
+1. 시스템 설정 > 개인정보 보호 및 보안에서 실행 허용을 선택합니다.
+2. 다시 앱을 실행합니다.
+
+## 개발 빌드 (선택)
+
+- 요구 사항: macOS, Xcode, Git
+- 프로젝트 실행:
+  1. `SnapView.xcodeproj` 열기
+  2. 스킴 `SnapView` 선택
+  3. Build & Run (`Cmd+R`)
+
+## 개발 검증 샘플
+
+- 이미지 샘플이 필요한 검증은 `test-assets/` 하위 자산을 기준으로 합니다.
+- 기존 샘플이 부족하면 외부 임시 경로를 기준으로 삼지 않고, `test-assets/` 하위에 목적별 폴더를 만든 뒤 필요한 이미지를 다운로드하거나 생성해 검증합니다.
+
+## 기본 사용 방법
+
+1. `열기`로 폴더/이미지/ZIP 파일을 엽니다.
+2. 뷰 모드를 작업에 맞게 전환합니다.
+3. 키보드/마우스로 빠르게 선별하고, 별점/복사/삭제를 수행합니다.
+
+## 뷰 모드
+
+- Main View: 단일 이미지 중심 탐색
+- Grid View: 다량 썸네일 탐색 및 선택
+- Filmstrip View: 메인 + 하단 스트립 중심 빠른 선별
+- 사진관리모드(Manage): 사이드바(폴더/필터) + 메인 + 필름스트립
+- 중복사진정리(Duplicate): 동일 파일을 우선 묶고, 남은 후보는 같은 사진의 해상도/용량 변형본인지 다시 확인하는 전용 워크스페이스
+
+## 슬라이드쇼 v1
+
+- `Shift + Enter`로 현재 문맥에서 바로 전체화면 슬라이드쇼를 시작하거나 종료합니다.
+- 기존 `Shift + Space`도 호환용으로 유지하지만, 한국어 입력 환경 충돌을 피하려면 `Shift + Enter`를 기본으로 쓰는 편이 안정적입니다.
+- 기본값은 `진입 시 바로 재생` ON이라 시작과 동시에 재생되고, 설정에서 끄면 전체화면 진입 직후 일시정지 상태로 시작합니다.
+- 시작 범위는 현재 보고 있는 문맥 snapshot 기준입니다.
+  - Main: 현재 표시 순서 전체
+  - Grid / Filmstrip / Manage: 선택 우선, 선택이 없으면 현재 결과 전체
+  - ZIP: ZIP 내부 현재 순서만
+- 하단 HUD는 v1에서 항상 보이며, `이전 / 재생·일시정지 / 다음 / 속도 / 전환 / 루프 / 셔플 / 작은 이미지 확대 / 종료`를 제공합니다.
+- HUD의 `속도` / `전환` 칩은 제목 대신 현재 선택값이 바로 읽히도록 `3초`, `크로스페이드`, `하드 컷` 같은 값 중심으로 보여줍니다.
+- HUD의 `루프` / `셔플` / `작은 이미지 확대`는 텍스트 칩 대신 원형 아이콘 토글로 표시합니다.
+- 좌상단에는 현재 위치 배지가, 시작 직후 상단 중앙에는 `scope chip`이 잠깐 나타납니다.
+- `Compare`와 `중복사진정리`에서는 시작하지 않습니다.
+- 슬라이드쇼 중에는 별점, Pick/Reject, 태그 편집을 하지 않고 재생 전용 키만 우선 처리합니다.
+- 전환은 `하드 컷`, `크로스페이드`, `블랙 페이드` 중에서 선택할 수 있습니다.
+- `크로스페이드`는 다음 프레임이 이미 준비돼 있으면 애니메이션을 유지하고, 준비되지 않은 경우에만 하드 컷으로 자연스럽게 넘어갈 수 있습니다.
+- 작은 이미지는 기본적으로 슬라이드쇼 전체화면을 더 잘 채우도록 확대되며, 원본 100% 크기로 보고 싶으면 HUD 또는 `도구 > 작은 이미지 확대 끄기`로 바로 되돌릴 수 있습니다.
+
+## 단축키
+
+- `Q / W / E / R`: 그리드 / 메인 / 필름스트립 / 사진관리모드
+- 비교 모드 내부 `R`: `Selection` / `Reference` 비교 전환
+- Reference Compare 내부 `Tab`: `Reference` / `Candidate` 포커스 전환
+- Reference Compare 내부 `↑ / ↓`: `Reference` 포커스 / `Candidate` 포커스 지정
+- Reference Compare 내부 `← / →`: 현재 포커스 패널 이미지 이동
+- `Cmd + Shift + D`: 중복사진정리 진입/재스캔 (`Shift + D` 종료)
+- `Cmd + Return`: `Show in Finder`
+- `Cmd + Shift + O`: `Open With…`
+- `Cmd + Option + O`: `Choose Open With App…`
+- `F2`: 파일명 변경 (`Rename…`)
+- `Tab`: 모드 순환
+- `=` / `-`: 확대 / 축소
+- `0` / `9`: Fit / 원본 크기
+- `← / →`, `↑ / ↓`: 이전 / 다음 이미지
+- `Cmd + ↑ / ↓`: 첫 이미지 / 마지막 이미지
+- `⌥ + ↑ / ↓`: 이전 / 다음 폴더 첫 이미지
+- `Cmd + ← / →`: 빠른 이동
+- `S`: 샤픈 ON/OFF
+- `Cmd + R`: 회전
+- `I`: 파일명 + 간단 EXIF(Compact) 토글
+- `K`: 퀵체크 세트(히스토그램 + 퀵체크 + 상세 EXIF) 토글
+- `H`: 히스토그램 토글
+- `\\` (또는 `₩`): 별점 0
+- `Shift + Enter`: 슬라이드쇼 시작 / 종료
+- `Shift + Space`: 레거시 시작 / 종료 호환
+- `Space`: 슬라이드쇼 활성 중 재생 / 일시정지
+- `Esc`: 슬라이드쇼 종료
+- `[` / `]`: 슬라이드쇼 느리게 / 빠르게
+- `L`: 슬라이드쇼 루프 토글
+- `S`: 슬라이드쇼 셔플 토글
+
+## 성능/품질 메모
+
+- 기본 철학: 먼저 빠르게 표시(리사이즈), 필요 시 원본 전환
+- 디코딩 모드는 `현재 프레임 품질 정책`이고, 프리캐시/sidecar/XMP/warmup 같은 선행 작업량은 저장소 상태에 따라 별도 자동 예산으로 제어한다.
+- 네트워크 저장소에서는 최근 foreground decode / frame display / main hitch 관측값을 보고 현재 프레임 decode max pixel도 자동으로 더 낮출 수 있다.
+- 성능 평가는 첫 표시 속도뿐 아니라 idle 상태에서 background work가 빠르게 가라앉는지도 함께 본다.
+- 장시간 방치 시 에너지/배터리 사용이 다시 커지는 문제는 단순 성능 이슈가 아니라 안정성 결함으로 본다.
+- 대용량 폴더는 전체 인덱싱 완료를 기다리지 않고 초기 스냅샷을 먼저 반영해 첫 이미지와 초기 다음 이동을 우선 확보
+- 폴더 인덱싱 중에는 기존 표시 화면(또는 인트로)을 유지하고 하단 중앙 캡슐 배지에 `Indexing`을 표시한 뒤, 완료 시 폴더는 1번 이미지/단일 파일 드롭은 해당 타깃 인덱스로 확정
+- ZIP은 폴더보다 구조적으로 지연이 클 수 있음
+- 큰 파일은 `파일 용량`이 아니라 `픽셀 크기`와 추정 메모리 기준으로 더 무거운 경로를 탈 수 있음
+- 큰 파일의 원본 로딩은 현재 화면을 가리지 않고 백그라운드에서 조용히 진행하고, 원본 실패 시에만 자동 `호환 미리보기`와 복구 UI를 노출함
+- 빠른 프리뷰가 먼저 떠도 위 상태는 원본 디코드가 끝날 때까지 유지되며, 작은 이미지에서는 짧은 지연 전에 로딩 카드를 띄우지 않아 일반 탐색 중 번쩍거림을 줄임
+- 자동 `호환 미리보기`가 성공하면 `호환 미리보기` 상태로 바로 표시하고, 그래도 실패하면 `다시 시도` / `안전하게 열기`를 보여줌
+- `안전하게 열기`는 원본 fallback 대신 보수적인 downsample-only 경로로 여는 모드라, 원본보다 품질은 낮을 수 있지만 실제로 열릴 확률을 높이는 마지막 복구 수단임
+- Pro 모드에서 JPG/ZIP 해상도를 분리 설정해 튜닝 가능
+- 디버그 로그로 로딩/줌/뷰포트 이슈 분석 가능
+- 개발자 디버그 모드에서는 중복정리의 `dHash / 밝기 / 블록 차이` 임계값을 조절하면서 같은 사진 변형본 검출 민감도를 바로 재스캔해 확인할 수 있음
+
+## 버전 및 릴리즈
+
+관련 문서:
+
+- `docs/release/VERSIONING.md`
+- `CHANGELOG.md`
+- `VERSION`
+- `docs/internal/TOOLING_CONTEXT.md` (개발 철학/기능 방향/작업 컨텍스트)
+- `docs/product/SLIDESHOW_V1_IMPLEMENTATION_SPEC.md` (슬라이드쇼 v1 UX/구현 스펙)
+
+반자동 릴리즈:
+
+```bash
+# 프리뷰
+scripts/release.sh --patch
+
+# 적용 + CI 검사 + 마지막 승인
+scripts/release.sh --patch --apply
+```
+
+원칙:
+- 일반 커밋에서는 버전을 올리지 않습니다.
+- 릴리즈 커밋에서만 `scripts/release.sh`로 버전을 증가시킵니다.
+- 버전 업 전 변경 내용은 `CHANGELOG.md`의 `Unreleased`에 기록합니다.
+- release notes draft 준비, 문서 정책 변경, public 릴리즈 절차 변경도 예외 없이 `CHANGELOG.md`의 `Unreleased`에 먼저 기록합니다.
+- 사용자가 "버전 업"을 요청하면 `Unreleased`를 신규 버전 섹션으로 승격합니다.
+- 버전 업 시 `docs/release/README_PUBLIC.md`, `docs/release/RELEASE_NOTES.md` 버전 표기도 동일 버전으로 동기화합니다.
+- public 릴리즈 자동화는 `docs/release/README_PUBLIC.md -> public README.md`, `docs/release/RELEASE_NOTES.md -> public RELEASE_NOTES.md`까지 같이 동기화되어야 완료로 봅니다.
+- 다음 버전 사용자용 `RELEASE_NOTES` 초안은 source에 먼저 작성하고, 사용자 확인 전에는 public으로 동기화하지 않습니다.
+- `docs/release/RELEASE_NOTES.md`는 public 고객용 문서이므로 내부 운영 규칙/릴리즈 절차 메모는 넣지 않습니다.
+- `docs/release/RELEASE_NOTES.md`는 사용자 체감 변화와 사용성 중심으로 쓰고, 구현 세부와 개발자 용어는 `CHANGELOG.md`/내부 문서로 분리합니다.
+- GitHub Actions full release에는 Developer ID 인증서와 Apple notary API key secret이 필요합니다.
+- 릴리즈 전 자격증명 프리플라이트:
+
+```bash
+scripts/preflight_release_credentials.sh --check
+```
+
+- 새 머신/키체인 복구 후 GitHub secret + 로컬 notary profile까지 한 번에 다시 맞출 때:
+
+```bash
+scripts/preflight_release_credentials.sh --apply-github-secrets --store-notary-profile
+```
+
+DMG 빌드:
+
+```bash
+scripts/build_dmg.sh
+```
+
+정책:
+- 상시 필요한 것은 `.dmg` 생성이 아니라 `DMG 채널 앱 빌드 검사`입니다.
+- `.dmg` 패키징은 사용자가 릴리즈를 요청한 시점에만 수행합니다.
+- 상시 DMG 채널 빌드 검사에는 Intel Mac용 `x86_64` 앱 빌드를 실험적 호환 옵션으로 함께 포함합니다.
+- `x86_64` 빌드는 정식 지원 타깃이 아니며, 릴리즈 노트에 `실험 기능`으로 명시합니다.
+
+`--apply` 실행 시:
+
+- `scripts/ci.sh`로 이원 빌드 검사 자동 실행 (DMG lane 테스트 + DMG Release 빌드 + App Store Release 빌드 + App Store 후보 기본 검증, 실패 시 릴리즈 중단)
+- `CHANGELOG.md` 갱신
+- `VERSION` 갱신
+- Xcode `MARKETING_VERSION` 동기화
+- `README.md`의 Current Version 동기화
+- 마지막에 commit/tag는 사용자 승인 후 진행
+
+CI 수동 실행:
+
+```bash
+scripts/ci.sh
+```
+
+## 문제 해결
+
+- 아이콘/버전이 즉시 반영되지 않을 때
+  - Xcode에서 `Clean Build Folder` 후 재실행
+- 키 입력이 안 먹는 경우
+  - 앱 창 포커스 상태 확인 후 재시도
+- ZIP 탐색이 느린 경우
+  - 디코딩 모드를 `속도 우선`으로 설정
+- 대형 이미지가 오래 걸리는 경우
+  - 원본 로딩은 백그라운드에서 조용히 진행될 수 있습니다.
+  - 사용자가 보게 되는 오버레이는 원본 실패 뒤 복구가 필요할 때부터입니다.
+- 대형 이미지가 열리지 않는 경우
+  - SnapView는 먼저 원본 디코드 실패 뒤 자동 `호환 미리보기`를 한 번 더 시도합니다.
+  - 그래도 실패하면 `다시 시도`를 눌러 원본 디코드를 다시 시도합니다.
+  - 계속 실패하면 `안전하게 열기`로 downsample-only 경로를 사용합니다.
+  - `안전하게 열기`에도 실패하면 파일 손상 또는 현재 macOS 코덱 미지원 가능성을 확인합니다.
+- 네트워크 드라이브에서 `보통`이 유난히 끊기던 구버전 문제는 `v0.9.20` 이전 회귀였고, 현재 정책은 모드 변경이 아니라 자동 예산 조절로 해결하는 방향이다.
+- 이미지/ZIP가 열리지 않는 경우
+  - 앱이 공통 원인(포맷 미지원, 파일 없음/권한 없음, ZIP 손상/타임아웃)을 자동 분류해 안내 메시지를 표시합니다.
+  - 권한 부족이면 재선택(권한 허용) 패널을 띄워 권한을 다시 요청하고, 허용 시 자동으로 재시도합니다.
+  - ZIP 손상 안내가 나오면 파일 무결성 확인 후 다시 압축하거나 원본 ZIP을 재다운로드해 주세요.
+
+## 상태
+
+SnapView는 실사용 중심으로 발전 중이며, 현재 우선순위는 다음과 같습니다.
+
+- 안정성
+- 탐색 체감 성능
+- 장시간 방치 안정성(long-idle energy safety)
+- 관리 모드 UX 완성도
+
+알려진 이슈:
+- 현재 재현되는 주요 알려진 이슈 없음 (`21% ↔ 25%` 확대 비율 흔들림은 재현되지 않아 모니터링 중)
