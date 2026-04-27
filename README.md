@@ -8,7 +8,7 @@
 
 Fast macOS image viewer for real photo culling work.
 
-Current Version: `v0.10.4`
+Current Version: `v1.0.0`
 
 Language: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
 
@@ -17,15 +17,16 @@ Release Notes: [Public Release Notes](https://github.com/youngchangjo/SnapView/b
 ## Download
 
 - Latest release: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
-- Install package: open the latest release page and download `SnapView-0.10.4.dmg`
+- Install package: open the latest release page and download `SnapView-1.0.0.dmg`
 - Official website: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
 
-## What's New In v0.10.4
+## What's New In v1.0.0
 
-- File browsing now follows Finder-style natural filename order for numbered filenames.
-- Reopening SnapView from Finder or Dock after closing the window is steadier.
-- Opening another image while SnapView is already running switches to the requested photo more directly.
-- Grid and Filmstrip navigation feel more immediate during keyboard and mouse selection.
+- **SnapView 1.0.0 Official Release & Mac App Store**: SnapView is now officially a stable 1.0.0 release! We are also introducing a dedicated Mac App Store build. Both the direct download and App Store channels provide a polished, stable experience, and all Beta badges have been removed.
+- **Reference Compare Mode**: Compare mode is more powerful with a new `Reference` comparison mode alongside the standard `Selection` mode. Press `R` to toggle between them.
+- **File Renaming**: You can now rename files directly within SnapView using `F2` or the context menu.
+- **Window Open Policy**: Choose how SnapView opens files from Finder—reuse a `Single Window` or open in `Multiple Windows`.
+- **Smarter External App Handoff**: You can now set whether to prioritize the RAW or JPG file when opening a pair in an external app. Use `⌥⌘O` to quickly choose another app.
 
 ## Screenshots
 
@@ -103,7 +104,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 ## Install
 
 1. Download the latest DMG from [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest).
-2. Open `SnapView-0.10.2.dmg`.
+2. Open `SnapView-1.0.0.dmg`.
 3. Drag `SnapView.app` into `Applications`.
 4. Launch SnapView from `Applications`.
 
@@ -125,6 +126,8 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 - Finder interoperability is centered on color labels.
 - Lightroom interoperability is centered on XMP sidecars for rating, Pick, and Reject.
 - Conditional formats such as AVIF or JXL depend on macOS decoder availability.
+- Release candidates are validated in both lanes (DMG Fast + Mac App Store Stable) before shipment.
+- Intel Mac (`x86_64`) DMG-channel app builds are provided as an experimental compatibility option and are not an officially supported release target.
 - If Gatekeeper blocks the app on first launch, open it from `Applications` again after confirming in macOS security settings.
 
 ---
@@ -135,7 +138,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 
 실사용 사진 선별 작업에 맞춘 macOS용 고속 이미지 뷰어입니다.
 
-현재 버전: `v0.10.4`
+현재 버전: `v1.0.0`
 
 언어: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
 
@@ -144,19 +147,20 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 ## 다운로드
 
 - 최신 릴리즈: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
-- 설치 파일: 최신 릴리즈 페이지에서 `SnapView-0.10.4.dmg`를 다운로드해 설치합니다
+- 설치 파일: 최신 릴리즈 페이지에서 `SnapView-1.0.0.dmg`를 다운로드해 설치합니다
 - 공식 사이트: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
 
 스크린샷은 위 `Screenshots` 섹션에서 바로 확인할 수 있습니다.
 
 `v0.10.0`부터의 상세 변경 이력은 별도 문서인 [공개 릴리즈 노트](https://github.com/youngchangjo/SnapView/blob/main/RELEASE_NOTES.md)에서 확인할 수 있습니다.
 
-## v0.10.4 주요 변경
+## v1.0.0 주요 변경
 
-- Finder식 자연 정렬로 숫자가 포함된 파일명을 기대 순서대로 탐색합니다.
-- 창을 닫은 뒤 Finder나 Dock에서 다시 열 때의 화면 표시 흐름을 더 안정화했습니다.
-- SnapView가 이미 실행 중일 때 다른 이미지를 열면 요청한 사진으로 더 직접 전환됩니다.
-- Grid와 Filmstrip에서 키보드/마우스 선택 반응을 더 즉각적으로 다듬었습니다.
+- **SnapView 1.0.0 정식 출시 및 Mac App Store 지원**: 드디어 SnapView 1.0.0 정식 버전을 선보입니다! 더불어 Mac App Store를 위한 전용 빌드가 추가되었습니다. 이제 직접 다운로드와 App Store 채널 모두에서 베타 꼬리표를 뗀 가장 안정적인 버전을 만나보실 수 있습니다.
+- **Reference(기준) 비교 모드**: 기존 `Selection(선택)` 모드 외에 기준 사진을 고정하고 비교하는 `Reference(기준)` 모드가 추가되었습니다. `R` 키로 쉽게 전환할 수 있습니다.
+- **파일 이름 변경**: SnapView 안에서 바로 파일 이름을 바꿀 수 있습니다 (`F2` 키 또는 우클릭 메뉴 사용).
+- **창 열기 정책**: Finder에서 파일을 열 때 기존 창을 재사용할지(단일 창) 새 창을 띄울지(멀티 창) 설정에서 선택할 수 있습니다.
+- **똑똑해진 외부 앱 열기**: RAW+JPG 짝 파일 중 어떤 포맷을 먼저 외부 앱으로 넘길지 설정할 수 있고, `⌥⌘O` 단축키로 앱 선택 창을 바로 띄울 수 있습니다.
 
 ## 왜 SnapView인가요
 
@@ -212,7 +216,7 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 ## 설치 방법
 
 1. [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)에서 최신 DMG를 다운로드합니다.
-2. `SnapView-0.10.2.dmg`를 엽니다.
+2. `SnapView-1.0.0.dmg`를 엽니다.
 3. `SnapView.app`을 `Applications`로 드래그합니다.
 4. `Applications`에서 SnapView를 실행합니다.
 
@@ -234,4 +238,6 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 - Finder 연동은 컬러 라벨 중심입니다.
 - Lightroom 연동은 XMP sidecar 기반 별점/Pick/Reject 중심입니다.
 - AVIF, JXL 같은 조건부 포맷은 macOS 디코더 지원 여부에 따라 달라집니다.
+- 릴리즈 후보는 출고 전에 DMG Fast + Mac App Store Stable 두 채널 검증을 모두 거칩니다.
+- Intel Mac(`x86_64`)용 DMG 채널 앱 빌드는 실험적 호환 옵션으로 제공하며, 정식 지원 타깃은 아닙니다.
 - 첫 실행 시 Gatekeeper 경고가 나오면 macOS 보안 설정에서 허용 후 다시 실행해 주십시오.
