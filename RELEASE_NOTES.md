@@ -1,6 +1,44 @@
 # SnapView Release Notes
 
-## v1.0.0 (Current) - 2026-04-25
+## v1.0.1 (Current) - 2026-04-27
+
+Language: [🇺🇸 English](#english-101) | [🇰🇷 한국어](#korean-101)
+
+<a id="english-101"></a>
+
+### English
+
+#### What's New
+- **Window Size Shortcuts**: Quickly resize the SnapView window with `Ctrl+1` (default), `Ctrl+2` (1.5×), `Ctrl+3` (2×), `Ctrl+4` (2.5×), or `Ctrl+0` (fill screen). Also available from View > Window Size in the menu bar.
+- **Window On Launch Setting**: Choose whether SnapView starts with the system default size, restores your last window size, or opens fullscreen. Find it in Settings > General.
+
+#### Improvements
+- Color labels (Red, Orange, Yellow, Green, Blue, Purple, Gray) now display in English when the app language is set to English, and integrate correctly with Finder tags in both languages.
+- `Cmd+A` in Grid View now selects only the filtered items (by rating, flag, or label) instead of all photos in the folder.
+- Default app registration is more reliable: the app bundle is now pre-registered with Launch Services before setting file associations, and the result is verified after each attempt.
+- When default app registration partially fails, a dialog now lists the failed extensions and provides manual registration guidance.
+- The sandbox permission dialog (App Store build) now includes a brief explanation of the policy.
+- Help menu: a "SnapView Full Manual" and "Release Notes" link are now available in the SnapView menu.
+- Light mode: the Quick Start box and intro screen now match the light appearance properly.
+<a id="korean-101"></a>
+
+### 한국어
+
+#### 새로운 점
+- **창 크기 단축키**: `Ctrl+1`(기본), `Ctrl+2`(1.5배), `Ctrl+3`(2배), `Ctrl+4`(2.5배), `Ctrl+0`(화면 채우기)로 창 크기를 빠르게 전환할 수 있습니다. 메뉴 > View > 창 크기에서도 사용 가능합니다.
+- **시작 시 창 설정**: SnapView를 시스템 기본 크기로 시작할지, 마지막 창 크기를 복원할지, 전체 화면으로 시작할지 선택할 수 있습니다. 설정 > 일반에서 변경하세요.
+
+#### 개선 사항
+- 컬러 라벨(빨간색, 주황색, 노란색, 초록색, 파란색, 보라색, 회색)이 앱 언어가 영어일 때 영문으로 표시되며, Finder 태그와도 양쪽 언어 모두 올바르게 연동됩니다.
+- 그리드 뷰에서 별점/플래그/라벨로 필터 후 `Cmd+A`를 실행하면 전체 폴더가 아닌 필터된 항목만 선택됩니다.
+- 기본 앱 등록 안정성 향상: 등록 전 Launch Services에 앱 번들을 먼저 등록하고, 각 확장자별 등록 결과를 검증합니다.
+- 기본 앱 등록이 일부 실패하면 실패한 확장자 목록과 수동 등록 방법을 안내 다이얼로그로 표시합니다.
+- 샌드박스 권한 요청 다이얼로그(App Store 빌드)에 정책 안내 문구를 추가했습니다.
+- SnapView 메뉴에 "전체 매뉴얼" 및 "릴리즈 노트" 링크가 추가되었습니다.
+- 라이트 모드: 빠른 시작 박스와 인트로 화면이 라이트 모드에 맞게 개선되었습니다.
+---
+
+## v1.0.0 - 2026-04-25
 
 Language: [🇺🇸 English](#english-current) | [🇰🇷 한국어](#korean-current)
 
