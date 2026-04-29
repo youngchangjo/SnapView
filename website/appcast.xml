@@ -8,21 +8,21 @@
     <description>SnapView updates</description>
     <language>en</language>
     <item>
-      <title>Version 1.0.1</title>
-      <pubDate>Mon, 27 Apr 2026 07:13:55 +0000</pubDate>
-      <sparkle:version>10001</sparkle:version>
-      <sparkle:shortVersionString>1.0.1</sparkle:shortVersionString>
+      <title>Version 1.0.2</title>
+      <pubDate>Wed, 29 Apr 2026 12:20:42 +0000</pubDate>
+      <sparkle:version>10008</sparkle:version>
+      <sparkle:shortVersionString>1.0.2</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.5</sparkle:minimumSystemVersion>
       <description><![CDATA[
-        SnapView 1.0.1 release.
+        SnapView 1.0.2 release.
       ]]></description>
-      <sparkle:releaseNotesLink>https://github.com/youngchangjo/SnapView/releases/tag/v1.0.1</sparkle:releaseNotesLink>
+      <sparkle:releaseNotesLink>https://github.com/youngchangjo/SnapView/releases/tag/v1.0.2</sparkle:releaseNotesLink>
       <enclosure
-        url="https://github.com/youngchangjo/SnapView/releases/download/v1.0.1/SnapView.dmg"
-        sparkle:version="10001"
-        sparkle:shortVersionString="1.0.1"
-        sparkle:edSignature="sjb9qsQsrtDJ6WhvabLXMo4GfxBGRIVplRKqIE2niQm+aZNmysnoByw3v+xOEbZgFENV5gZhKEIhYg2HglLODQ=="
-        length="6214167"
+        url="https://github.com/youngchangjo/SnapView/releases/download/v1.0.2/SnapView.dmg"
+        sparkle:version="10008"
+        sparkle:shortVersionString="1.0.2"
+        sparkle:edSignature="di0Op62AU7SryGoktkpxI7GLyCPTkvv/YMSwz3PCJRK1LrSzE5Ujo0a62DWQ+NtknXuBuhUe45q91LxG/k97Ag=="
+        length="10702379"
         type="application/octet-stream" />
     </item>
   </channel>
