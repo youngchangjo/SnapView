@@ -22,11 +22,12 @@ Release Notes: [Public Release Notes](https://github.com/youngchangjo/SnapView/b
 
 ## What's New In v1.0.2
 
-- **More App Languages**: SnapView now includes Japanese, Simplified Chinese, and Spanish for the main app interface.
-- **Trackpad Browsing**: Two-finger trackpad swipes can move to the previous or next image, and zoomed images can be panned more naturally.
-- **Compare View Polish**: Compare and Reference Compare labels and selection controls are more consistent.
-- **Universal DMG**: The direct download is now shipped as one universal DMG. Separate Intel-only DMG assets are not published by default.
-- **Stability Improvements**: File access guidance, overlay readability, and folder-change handling have been improved.
+- **More Languages**: Japanese, Simplified Chinese, and Spanish are now available across the main app interface, settings, menus, context menus, and help surfaces.
+- **Trackpad Browsing**: Two-finger swipes can move between photos, with natural-scroll direction support. When zoomed in, two-finger scrolling pans the image instead of skipping photos.
+- **Compare And Quick Check Polish**: Compare and Reference Compare controls are more consistent, and Quick Check shows key EXIF sections sooner while remembering collapsed sections.
+- **Clearer File Access Handling**: Direct download and Mac App Store builds now explain file-access failures and sandbox permission recovery more clearly for each distribution channel.
+- **Universal DMG Release**: The direct download is now delivered as one universal DMG. Separate Intel-only DMG assets are not published by default.
+- **Stability Improvements**: SnapView is more resilient when images are moved or deleted outside the app while browsing, and overlays are easier to read on bright images.
 
 ## Screenshots
 
@@ -127,7 +128,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 - Lightroom interoperability is centered on XMP sidecars for rating, Pick, and Reject.
 - Conditional formats such as AVIF or JXL depend on macOS decoder availability.
 - Release candidates are validated in both lanes (DMG Fast + Mac App Store Stable) before shipment.
-- Intel Mac (`x86_64`) DMG-channel app builds are provided as an experimental compatibility option and are not an officially supported release target.
+- DMG releases are shipped as a single universal download by default. Do not publish a separate Intel-only DMG or standalone x86_64 app asset unless explicitly requested for a special compatibility test.
 - If Gatekeeper blocks the app on first launch, open it from `Applications` again after confirming in macOS security settings.
 
 ---
@@ -156,11 +157,12 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 
 ## v1.0.2 주요 변경
 
-- **지원 언어 확대**: 일본어, 중국어(간체), 스페인어 UI 지원을 추가했습니다.
-- **트랙패드 탐색**: 두 손가락 스와이프로 이전/다음 사진을 이동하고, 확대된 사진은 더 자연스럽게 이동할 수 있습니다.
-- **Compare 화면 개선**: Compare와 Reference Compare의 라벨과 선별 컨트롤을 더 일관되게 다듬었습니다.
-- **Universal DMG**: 직접 다운로드 버전은 단일 universal DMG로 제공합니다. 별도 Intel 전용 DMG 산출물은 기본 공개하지 않습니다.
-- **안정성 개선**: 파일 접근 안내, 오버레이 가독성, 폴더 변경 중 안정성을 개선했습니다.
+- **지원 언어 확대**: 일본어, 중국어(간체), 스페인어 UI 지원을 추가하고 설정, 메뉴, 우클릭 메뉴, 도움말 문구의 다국어 적용 범위를 넓혔습니다.
+- **트랙패드 탐색 개선**: 두 손가락 스와이프로 이전/다음 사진을 이동할 수 있고, 확대된 상태에서는 두 손가락 스크롤이 사진 이동보다 화면 이동을 우선합니다.
+- **Compare / Quick Check 개선**: Compare와 Reference Compare의 표시와 선별 컨트롤을 정리하고, Quick Check EXIF 섹션 표시와 접힘 상태 저장을 개선했습니다.
+- **파일 접근 안내 개선**: 직접 다운로드 버전과 Mac App Store 버전의 파일 접근 실패/권한 안내를 배포 채널에 맞게 분리했습니다.
+- **Universal DMG 릴리즈**: 직접 다운로드 버전은 단일 universal DMG로 제공합니다. 별도 Intel 전용 DMG 산출물은 기본 공개하지 않습니다.
+- **안정성 보강**: 탐색 중 외부에서 이미지가 이동되거나 삭제되는 상황에 더 안정적으로 대응하고, 밝은 이미지 위 오버레이 가독성을 개선했습니다.
 
 ## 왜 SnapView인가요
 
@@ -239,5 +241,5 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 - Lightroom 연동은 XMP sidecar 기반 별점/Pick/Reject 중심입니다.
 - AVIF, JXL 같은 조건부 포맷은 macOS 디코더 지원 여부에 따라 달라집니다.
 - 릴리즈 후보는 출고 전에 DMG Fast + Mac App Store Stable 두 채널 검증을 모두 거칩니다.
-- Intel Mac(`x86_64`)용 DMG 채널 앱 빌드는 실험적 호환 옵션으로 제공하며, 정식 지원 타깃은 아닙니다.
+- DMG 릴리즈는 기본적으로 단일 universal 다운로드로 제공합니다. 별도 Intel 전용 DMG 또는 x86_64 standalone app 산출물은 명시적으로 요청된 특수 호환성 테스트가 아니면 공개하지 않습니다.
 - 첫 실행 시 Gatekeeper 경고가 나오면 macOS 보안 설정에서 허용 후 다시 실행해 주십시오.

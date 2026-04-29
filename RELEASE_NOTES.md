@@ -1,6 +1,48 @@
 # SnapView Release Notes
 
-## v1.0.1 (Current) - 2026-04-27
+## v1.0.2 (Current) - 2026-04-29
+
+Language: [🇺🇸 English](#english-102) | [🇰🇷 한국어](#korean-102)
+
+<a id="english-102"></a>
+
+### English
+
+#### What's New
+- **More App Languages**: SnapView now includes Japanese, Simplified Chinese, and Spanish for the main app interface.
+- **Trackpad Browsing**: Two-finger trackpad swipes can now move to the previous or next image, with an option to match macOS natural scrolling.
+- **Experimental Intel Mac Compatibility**: The Mac App Store build now includes an Intel-compatible binary slice. Apple Silicon remains the primary tested environment, and Intel Mac support is treated as experimental for this release.
+
+#### Improvements
+- Compare and Reference Compare have been polished so reference/candidate labels, rating, Pick, and color label controls behave more consistently.
+- Quick Check now shows important EXIF details sooner, remembers collapsed sections, and keeps location information easier to review when GPS data is available.
+- Mouse wheel and trackpad behavior is more consistent across Main, Filmstrip, and Manage views. When zoomed in, two-finger scrolling pans the image instead of accidentally changing photos.
+- Menus, context menus, settings, and help text now follow the selected app language more consistently, including Japanese, Simplified Chinese, and Spanish.
+- File access guidance is clearer in both the direct download version and the Mac App Store version, with App Store permission recovery kept separate from direct-download access errors.
+- Intro and overlay surfaces are easier to read on bright images, with a more consistent background style.
+- SnapView is more stable when folder contents change while browsing, including cases where images are moved or deleted outside the app.
+
+<a id="korean-102"></a>
+
+### 한국어
+
+#### 새로운 점
+- **지원 언어 확대**: 일본어, 중국어(간체), 스페인어 UI 지원을 추가했습니다.
+- **트랙패드 탐색**: 두 손가락 스와이프로 이전/다음 사진을 이동할 수 있고, macOS의 자연스러운 스크롤 방향에 맞출 수 있습니다.
+- **Intel Mac 실험 지원**: Mac App Store 빌드에 Intel Mac 호환 바이너리를 포함했습니다. Apple Silicon을 기본 검증 환경으로 유지하며, 이번 릴리즈의 Intel Mac 지원은 실험 기능으로 제공합니다.
+
+#### 개선된 점
+- Compare와 Reference Compare 화면을 더 일관되게 다듬었습니다. 기준/비교 대상 표시, 별점, Pick, 컬러 라벨 조작 흐름을 맞췄습니다.
+- Quick Check에서 주요 EXIF 정보가 더 바로 보이고, 접기/펼치기 상태가 다음 실행에도 유지됩니다. GPS 정보가 있는 사진은 위치 정보를 더 쉽게 확인할 수 있습니다.
+- Main, Filmstrip, Manage에서 마우스 휠과 트랙패드 동작이 더 일관되게 동작합니다. 확대된 상태에서는 두 손가락 스크롤이 사진 이동보다 화면 이동을 우선합니다.
+- 메뉴, 우클릭 메뉴, 설정, 도움말 문구가 선택한 앱 언어를 더 일관되게 따르도록 정리했습니다. 일본어, 중국어(간체), 스페인어에서도 일부 항목이 영어로 남던 문제를 줄였습니다.
+- 직접 다운로드 버전과 Mac App Store 버전에서 파일 접근 문제를 더 이해하기 쉽게 안내합니다. App Store 권한 재허용 흐름과 직접 다운로드 버전의 접근 실패 안내도 분리했습니다.
+- 밝은 사진 위에서도 인트로와 정보 오버레이가 더 잘 보이도록 배경과 가독성을 다듬었습니다.
+- 사진을 보는 중 폴더 안의 이미지가 이동되거나 삭제되는 상황에서도 더 안정적으로 동작하도록 보강했습니다.
+
+---
+
+## v1.0.1 - 2026-04-27
 
 Language: [🇺🇸 English](#english-101) | [🇰🇷 한국어](#korean-101)
 
