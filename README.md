@@ -14,6 +14,10 @@ Language: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
 
 Release Notes: [Public Release Notes](https://github.com/youngchangjo/SnapView/blob/main/RELEASE_NOTES.md) | [GitHub Releases](https://github.com/youngchangjo/SnapView/releases)
 
+Official Website: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
+
+Mac App Store: [SnapView on the App Store](https://apps.apple.com/app/snapview/id6744965601)
+
 ## Download
 
 - Latest release: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
@@ -144,6 +148,10 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 언어: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
 
 릴리즈 노트: [공개 릴리즈 노트](https://github.com/youngchangjo/SnapView/blob/main/RELEASE_NOTES.md) | [GitHub Releases](https://github.com/youngchangjo/SnapView/releases)
+
+공식 홈페이지: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
+
+Mac App Store: [App Store에서 SnapView 보기](https://apps.apple.com/app/snapview/id6744965601)
 
 ## 다운로드
 
