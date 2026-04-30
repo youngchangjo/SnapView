@@ -1,3 +1,23 @@
+const GA_MEASUREMENT_ID = 'G-25D1QQCTY8';
+const GA_ENABLED_HOSTNAMES = new Set([
+  'snapview.snapworkslab.com',
+]);
+
+if (GA_ENABLED_HOSTNAMES.has(window.location.hostname)) {
+  const gaScript = document.createElement('script');
+  gaScript.async = true;
+  gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+  document.head.appendChild(gaScript);
+
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function gtag() {
+    window.dataLayer.push(arguments);
+  };
+
+  window.gtag('js', new Date());
+  window.gtag('config', GA_MEASUREMENT_ID);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Scroll Animations (Intersection Observer)
   const observerOptions = {
