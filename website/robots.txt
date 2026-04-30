@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://snapview.snapworkslab.com/sitemap.xml
+Sitemap: https://snapview.snapworkslab.com/rss.xml

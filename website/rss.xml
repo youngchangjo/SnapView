@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SnapView Updates</title>
+    <link>https://snapview.snapworkslab.com/</link>
+    <description>Product updates, release notes, and support information for SnapView, a fast Mac photo viewer for RAW files and image review.</description>
+    <language>en</language>
+    <lastBuildDate>Thu, 30 Apr 2026 00:00:00 +0900</lastBuildDate>
+    <atom:link href="https://snapview.snapworkslab.com/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SnapView v1.0.2 Release Notes</title>
+      <link>https://snapview.snapworkslab.com/release_notes.html</link>
+      <guid isPermaLink="true">https://snapview.snapworkslab.com/release_notes.html#v1-0-2</guid>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0900</pubDate>
+      <description>See the latest SnapView v1.0.2 improvements, fixes, and workflow updates.</description>
+    </item>
+    <item>
+      <title>SnapView User Manual</title>
+      <link>https://snapview.snapworkslab.com/manual.html</link>
+      <guid isPermaLink="true">https://snapview.snapworkslab.com/manual.html</guid>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 +0900</pubDate>
+      <description>Learn how to install, browse, compare, rate, and organize photos in SnapView for Mac.</description>
+    </item>
+    <item>
+      <title>SnapView Support</title>
+      <link>https://snapview.snapworkslab.com/support/</link>
+      <guid isPermaLink="true">https://snapview.snapworkslab.com/support/</guid>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 +0900</pubDate>
+      <description>Get help with SnapView for Mac, compare DMG and Mac App Store versions, and contact SnapWorks Lab for support.</description>
+    </item>
+  </channel>
+</rss>
