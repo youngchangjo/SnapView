@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SnapView | Fast Mac Photo Viewer for RAW Files</title>
     <meta name="description"
-        content="SnapView is a fast Mac photo viewer for RAW files, folders, ZIP archives, and quick image review without import or catalog wait.">
+        content="SnapView is a fast Mac photo viewer for RAW files, folders, ZIP archives, quick image review, simple image export, and on-device OCR without import or catalog wait.">
     <link rel="canonical" href="https://snapview.snapworkslab.com/">
     <meta name="theme-color" content="#050507">
     <meta property="og:type" content="website">
     <meta property="og:title" content="SnapView | Fast Mac Photo Viewer for RAW Files">
     <meta property="og:description"
-        content="SnapView is a fast Mac photo viewer for RAW files, folders, ZIP archives, and quick image review without import or catalog wait.">
+        content="SnapView is a fast Mac photo viewer for RAW files, folders, ZIP archives, quick image review, simple image export, and on-device OCR without import or catalog wait.">
     <meta property="og:url" content="https://snapview.snapworkslab.com/">
     <meta property="og:site_name" content="SnapView">
     <meta property="og:image" content="https://snapview.snapworkslab.com/assets/images/hero.png?v=20260413-1144">
@@ -24,7 +24,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="SnapView | Fast Mac Photo Viewer for RAW Files">
     <meta name="twitter:description"
-        content="SnapView is a fast Mac photo viewer for RAW files, folders, ZIP archives, and quick image review without import or catalog wait.">
+        content="SnapView is a fast Mac photo viewer for RAW files, folders, ZIP archives, quick image review, simple image export, and on-device OCR without import or catalog wait.">
     <meta name="twitter:image" content="https://snapview.snapworkslab.com/assets/images/hero.png?v=20260413-1144">
     <meta name="twitter:image:alt" content="SnapView homepage hero preview showing the fast Mac image viewer interface">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,7 +53,7 @@
             "name": "SnapView",
             "applicationCategory": "PhotographyApplication",
             "operatingSystem": "macOS",
-            "description": "SnapView is a fast Mac photo viewer for RAW files, folders, ZIP archives, and quick image review without import or catalog wait.",
+            "description": "SnapView is a fast Mac photo viewer for RAW files, folders, ZIP archives, quick image review, simple image export, and on-device OCR without import or catalog wait.",
             "url": "https://snapview.snapworkslab.com/",
             "downloadUrl": "https://github.com/youngchangjo/SnapView/releases/latest/download/SnapView.dmg",
             "image": "https://snapview.snapworkslab.com/assets/images/hero.png",
@@ -127,10 +127,10 @@
 
 
                 <p class="hero-format-note" data-lang="ko" hidden>
-                    지원 형식: RAW (ARW/CR2/CR3/NEF/DNG/RAF/ORF/RW2) + JPG/PNG/HEIC/TIFF + <strong>압축 풀지 않고 ZIP 바로 열기</strong>
+                    지원 형식: RAW (ARW/CR2/CR3/NEF/DNG/RAF/ORF/RW2) + JPG/PNG/HEIC/TIFF + Video (MP4/MOV/M4V) + <strong>압축 풀지 않고 ZIP 바로 열기</strong>
                 </p>
                 <p class="hero-format-note" data-lang="en">
-                    Supports: RAW (ARW/CR2/CR3/NEF/DNG/RAF/ORF/RW2) + JPG/PNG/HEIC/TIFF + <strong>Direct ZIP Browsing</strong>
+                    Supports: RAW (ARW/CR2/CR3/NEF/DNG/RAF/ORF/RW2) + JPG/PNG/HEIC/TIFF + Video (MP4/MOV/M4V) + <strong>Direct ZIP Browsing</strong>
                 </p>
             </div>
 
@@ -356,13 +356,14 @@
             <div class="specs-grid">
                 <div class="spec-item">
                     <span class="spec-label">OS</span>
-                    <span class="spec-value">macOS 14.0 Sonoma+ (Apple Silicon)</span>
+                    <span class="spec-value">macOS 14.0 Sonoma+ (Apple Silicon primary, Intel experimental)</span>
                 </div>
                 <div class="spec-item">
                     <span class="spec-label">Formats</span>
                     <span class="spec-value">
                         RAW (ARW, CR2, CR3, NEF, NRW, DNG, RAF, ORF, RW2, PEF, SRW)<br>
                         JPG, PNG, GIF, BMP, WEBP, HEIC, HEIF, TIFF<br>
+                        Video: MP4, MOV, M4V<br>
                         <strong>Writes XMP Sidecar (Ratings, Flags)</strong>
                     </span>
                     <span class="spec-sub"
@@ -402,6 +403,12 @@
                         <li data-lang="en" hidden>Side-by-side multiple image <strong style="color: var(--accent-blue);">Compare Mode</strong> (up to 4 images)</li>
                         <li data-lang="ko">눈감음, 노출, 초점 등을 AI로 확인하는 보조 도구 (<strong style="color: var(--accent-blue);">Quick Check</strong>)</li>
                         <li data-lang="en" hidden><strong style="color: var(--accent-blue);">AI-assisted Quick Check</strong> (flags for blink, focus, exposure)</li>
+                        <li data-lang="ko">공유용 작은 복사본을 만드는 <strong style="color: var(--accent-blue);">이미지 내보내기</strong> (JPEG/PNG, 소셜 프리셋)</li>
+                        <li data-lang="en" hidden><strong style="color: var(--accent-blue);">Image Export</strong> for smaller sharing copies (JPEG/PNG, social presets)</li>
+                        <li data-lang="ko">사진 속 문자를 인식하고 복사하는 <strong style="color: var(--accent-blue);">온디바이스 OCR</strong></li>
+                        <li data-lang="en" hidden><strong style="color: var(--accent-blue);">On-device OCR</strong> to recognize and copy text from photos</li>
+                        <li data-lang="ko">지원되는 사진의 <strong style="color: var(--accent-blue);">촬영 시각/GPS 보정</strong></li>
+                        <li data-lang="en" hidden><strong style="color: var(--accent-blue);">Capture date/GPS edits</strong> for supported photos</li>
                         <li data-lang="ko">직관적인 <strong style="color: var(--accent-blue);">히스토그램</strong>, 카메라 <strong style="color: var(--accent-blue);">EXIF 분석</strong> 및 <strong style="color: var(--accent-blue);">GPS 위치 맵</strong> 제공</li>
                         <li data-lang="en" hidden>Intuitive <strong style="color: var(--accent-blue);">Histogram</strong>, detailed <strong style="color: var(--accent-blue);">EXIF info</strong>, and <strong style="color: var(--accent-blue);">GPS Map</strong> panels</li>
                         <li data-lang="ko">키보드 중심의 끊김 없는 <strong style="color: var(--accent-blue);">파일 관리</strong> (선택/복사/붙여넣기/삭제)</li>
