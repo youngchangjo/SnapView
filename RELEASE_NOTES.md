@@ -1,6 +1,52 @@
 # SnapView Release Notes
 
-## v1.0.2 (Current) - 2026-04-29
+## v1.5.0 (Current) - 2026-05-03
+
+Language: [🇺🇸 English](#english-150) | [🇰🇷 한국어](#korean-150)
+
+<a id="english-150"></a>
+
+### English
+
+#### What's New
+- **Photo And Video Together**: SnapView can now browse supported videos alongside photos in the same folder. The first supported video set is `MP4`, `MOV`, and `M4V`.
+- **Simple Video Playback**: Main, Filmstrip, and Manage views now support video playback with autoplay, volume control, timeline seeking, and `Space` for play/pause.
+- **Image Export**: Create resized copies as `JPEG` or `PNG` with simple presets for Instagram, Threads, X, blogs, or a custom size.
+- **Date And Location Edits**: Adjust photo date/time and GPS metadata with a cautious workflow that blocks unsupported write paths.
+- **On-device OCR**: Run text recognition from Quick Check, copy recognized text, and optionally show yellow text highlights directly on the image.
+
+#### Improvements
+- Video metadata is shown in the same spirit as photo metadata, including resolution, file size, codec, FPS, bitrate, HDR, date, and device details when available.
+- Video-incompatible actions such as image export and rotation are disabled while a video is selected.
+- Export results now summarize created files, file sizes, partial failures, and quick actions to open the file or folder.
+- Quick Check OCR automatic execution is optional and remains off by default.
+- Localization coverage has been expanded across Settings, intro prompts, Quick Check, Compare, Duplicate Review, image export, video settings, menus, and help surfaces.
+- Traditional Chinese, French, and German are included in the broader UI language set.
+- Appearance updates after changing color mode in Settings are more reliable.
+- Intro, Quick Start, and overlay surfaces are easier to read in both light and dark mode.
+
+<a id="korean-150"></a>
+
+### 한국어
+
+#### 새로운 점
+- **사진과 동영상을 함께 탐색**: 같은 폴더 안의 사진과 동영상을 함께 넘겨볼 수 있습니다. 1차 지원 대상은 `MP4`, `MOV`, `M4V`입니다.
+- **간단한 동영상 재생**: Main, Filmstrip, Manage 뷰에서 동영상을 재생할 수 있고, 자동재생, 음량 조절, 타임라인 이동, `Space` 재생/일시정지를 지원합니다.
+- **이미지 내보내기**: `JPEG` 또는 `PNG` 복사본을 만들 수 있고, Instagram, Threads, X, 블로그, 수동 크기 프리셋을 제공합니다.
+- **촬영 시각과 위치 보정**: 사진의 날짜/시간과 GPS 정보를 안전한 흐름으로 수정할 수 있습니다. 지원하지 않는 원본 쓰기 경로는 차단합니다.
+- **온디바이스 OCR**: Quick Check에서 사진 속 문자를 인식하고 복사할 수 있으며, 필요하면 이미지 위에 노란 하이라이트로 인식 영역을 표시합니다.
+
+#### 개선된 점
+- 동영상 선택 시 사진 정보와 비슷한 흐름으로 해상도, 파일 크기, 코덱, FPS, 비트레이트, HDR, 날짜, 기기 정보를 표시합니다.
+- Quick Check OCR 자동 실행은 선택 옵션이며 기본값은 꺼짐입니다.
+- 설정, 인트로 안내, Quick Check, Compare, 중복사진정리, 이미지 내보내기, 동영상 설정, 메뉴, 도움말 등 앱 전반의 다국어 적용 범위를 넓혔습니다.
+- 중국어 번체, 프랑스어, 독일어 UI 지원을 추가로 보강했습니다.
+- 설정에서 색상 모드를 변경할 때 열린 창에 더 안정적으로 반영되도록 개선했습니다.
+- 라이트/다크 모드에서 인트로, 빠른 시작, 정보 오버레이가 더 읽기 좋게 보이도록 다듬었습니다.
+
+---
+
+## v1.0.2 - 2026-04-29
 
 Language: [🇺🇸 English](#english-102) | [🇰🇷 한국어](#korean-102)
 
