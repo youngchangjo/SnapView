@@ -9,24 +9,18 @@ Language: [🇺🇸 English](#english-151) | [🇰🇷 한국어](#korean-151)
 ### English
 
 #### Improvements
-
-Improved browsing performance when moving quickly through photos.
-
-Image transitions now keep up more smoothly during repeated arrow-key navigation, and metadata updates are better balanced so they do not get ahead of the image display.
-
-Also fixed an issue where the decoding mode display could appear incorrect in some screens.
+- **Smoother Browsing**: Photo navigation feels more responsive, especially when holding the arrow keys to move through many images.
+- **1.5 Polish**: The new video browsing, image export, and on-device OCR features from v1.5 are now delivered with additional stability and performance tuning.
 
 <a id="korean-151"></a>
 
 ### 한국어
 
 #### 개선된 점
+- **더 부드러운 탐색**: 방향키를 길게 눌러 많은 사진을 넘길 때 이미지 전환이 더 안정적으로 따라오도록 다듬었습니다.
+- **1.5 기능 안정화**: 동영상 탐색, 이미지 내보내기, 온디바이스 OCR 등 v1.5의 주요 기능을 더 안정적으로 사용할 수 있도록 조정했습니다.
 
-사진을 빠르게 넘길 때의 체감 성능을 개선했습니다.
-
-특히 방향키를 길게 눌러 연속으로 탐색할 때 이미지 전환이 더 부드럽게 따라오도록 조정했습니다.
-
-또한 일부 화면에서 디코딩 모드 표시가 올바르게 반영되지 않을 수 있던 문제를 수정했습니다.
+---
 
 ## v1.5.0 - 2026-05-03
 
