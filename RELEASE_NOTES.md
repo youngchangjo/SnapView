@@ -1,6 +1,34 @@
 # SnapView Release Notes
 
-## v1.5.0 (Current) - 2026-05-03
+## v1.5.1 (Current) - 2026-05-04
+
+Language: [🇺🇸 English](#english-151) | [🇰🇷 한국어](#korean-151)
+
+<a id="english-151"></a>
+
+### English
+
+#### Improvements
+
+Improved browsing performance when moving quickly through photos.
+
+Image transitions now keep up more smoothly during repeated arrow-key navigation, and metadata updates are better balanced so they do not get ahead of the image display.
+
+Also fixed an issue where the decoding mode display could appear incorrect in some screens.
+
+<a id="korean-151"></a>
+
+### 한국어
+
+#### 개선된 점
+
+사진을 빠르게 넘길 때의 체감 성능을 개선했습니다.
+
+특히 방향키를 길게 눌러 연속으로 탐색할 때 이미지 전환이 더 부드럽게 따라오도록 조정했습니다.
+
+또한 일부 화면에서 디코딩 모드 표시가 올바르게 반영되지 않을 수 있던 문제를 수정했습니다.
+
+## v1.5.0 - 2026-05-03
 
 Language: [🇺🇸 English](#english-150) | [🇰🇷 한국어](#korean-150)
 
