@@ -151,7 +151,18 @@
             <!-- Korean Content -->
             <div data-lang="ko" hidden>
                 <h1>SnapView 릴리즈 노트</h1>
-                <h2>v1.5.1 (Current) - 2026-05-04</h2>
+                <h2>v1.5.2 (Current) - 2026-05-06</h2>
+                <h3>개선된 점</h3>
+                <p>SnapView 1.5.2에서는 실제 사진 탐색 흐름의 표시 안정성과 OCR 지원 범위를 개선했습니다.</p>
+                <ul>
+                    <li>대량 로컬 폴더와 네트워크 폴더에서 사진을 빠르게 넘길 때 인덱스만 앞서가고 이미지 표시가 늦는 상황을 줄였습니다.</li>
+                    <li>설정에서 <code>이미지만</code>/<code>동영상 포함</code>을 바꾸면 현재 폴더 목록을 올바르게 다시 구성합니다.</li>
+                    <li>실제 미디어 목록이 같을 때는 불필요한 재인덱싱을 줄이고, 이미지 전용 네트워크 폴더에서는 느린 동영상 병합 정렬 경로를 피합니다.</li>
+                    <li>Quick Check와 수동 OCR의 명시 지원 언어를 한국어와 영어로 정리하고 한글 인식을 보강했습니다.</li>
+                    <li>EXIF와 Quick Check 정보 표시 타이밍을 이미지 탐색 흐름에 더 자연스럽게 맞췄습니다.</li>
+                </ul>
+
+                <h2>v1.5.1 - 2026-05-04</h2>
                 <h3>개선된 점</h3>
                 <ul>
                     <li><strong>더 부드러운 탐색</strong>: 방향키를 길게 눌러 많은 사진을 넘길 때 이미지 전환이 더 안정적으로 따라오도록 다듬었습니다.</li>
@@ -398,7 +409,18 @@
             <!-- English Content -->
             <div data-lang="en">
                 <h1>SnapView Release Notes</h1>
-                <h2>v1.5.1 (Current) - 2026-05-04</h2>
+                <h2>v1.5.2 (Current) - 2026-05-06</h2>
+                <h3>Improvements</h3>
+                <p>SnapView 1.5.2 focuses on smoother real-world browsing and clearer OCR support.</p>
+                <ul>
+                    <li>Fast browsing through large local folders and network folders is more consistent, with fewer cases where the index advances but the image display falls behind.</li>
+                    <li>Switching between Images Only and Include Videos now refreshes the current folder list correctly.</li>
+                    <li>Unchanged folders avoid unnecessary reindexing, and image-only network folders skip slow video merge sorting.</li>
+                    <li>Quick Check and manual OCR now explicitly support Korean and English text recognition.</li>
+                    <li>EXIF and Quick Check information timing has been restored so metadata stays useful without getting ahead of image display.</li>
+                </ul>
+
+                <h2>v1.5.1 - 2026-05-04</h2>
                 <h3>Improvements</h3>
                 <ul>
                     <li><strong>Smoother Browsing</strong>: Photo navigation feels more responsive, especially when holding the arrow keys to move through many images.</li>
