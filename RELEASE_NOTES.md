@@ -1,6 +1,38 @@
 # SnapView Release Notes
 
-## v1.5.1 (Current) - 2026-05-04
+## v1.5.2 (Current) - 2026-05-06
+
+Language: [🇺🇸 English](#english-152) | [🇰🇷 한국어](#korean-152)
+
+<a id="english-152"></a>
+
+### English
+
+#### Improvements
+
+SnapView 1.5.2 focuses on smoother real-world browsing and clearer OCR support.
+
+- Fast browsing through large local folders and network folders is more consistent, with fewer cases where the index advances but the image display falls behind.
+- Switching between Images Only and Include Videos now refreshes the current folder list correctly.
+- Unchanged folders avoid unnecessary reindexing, and image-only network folders skip slow video merge sorting.
+- Quick Check and manual OCR now explicitly support Korean and English text recognition.
+- EXIF and Quick Check information timing has been restored so metadata stays useful without getting ahead of image display.
+
+<a id="korean-152"></a>
+
+### 한국어
+
+#### 개선된 점
+
+SnapView 1.5.2에서는 실제 사진 탐색 흐름의 표시 안정성과 OCR 지원 범위를 개선했습니다.
+
+- 대량 로컬 폴더와 네트워크 폴더에서 사진을 빠르게 넘길 때 인덱스만 앞서가고 이미지 표시가 늦는 상황을 줄였습니다.
+- 설정에서 `이미지만`/`동영상 포함`을 바꾸면 현재 폴더 목록을 올바르게 다시 구성합니다.
+- 실제 미디어 목록이 같을 때는 불필요한 재인덱싱을 줄이고, 이미지 전용 네트워크 폴더에서는 느린 동영상 병합 정렬 경로를 피합니다.
+- Quick Check와 수동 OCR의 명시 지원 언어를 한국어와 영어로 정리하고 한글 인식을 보강했습니다.
+- EXIF와 Quick Check 정보 표시 타이밍을 이미지 탐색 흐름에 더 자연스럽게 맞췄습니다.
+
+## v1.5.1 - 2026-05-04
 
 Language: [🇺🇸 English](#english-151) | [🇰🇷 한국어](#korean-151)
 
@@ -9,18 +41,24 @@ Language: [🇺🇸 English](#english-151) | [🇰🇷 한국어](#korean-151)
 ### English
 
 #### Improvements
-- **Smoother Browsing**: Photo navigation feels more responsive, especially when holding the arrow keys to move through many images.
-- **1.5 Polish**: The new video browsing, image export, and on-device OCR features from v1.5 are now delivered with additional stability and performance tuning.
+
+Improved browsing performance when moving quickly through photos.
+
+Image transitions now keep up more smoothly during repeated arrow-key navigation, and metadata updates are better balanced so they do not get ahead of the image display.
+
+Also fixed an issue where the decoding mode display could appear incorrect in some screens.
 
 <a id="korean-151"></a>
 
 ### 한국어
 
 #### 개선된 점
-- **더 부드러운 탐색**: 방향키를 길게 눌러 많은 사진을 넘길 때 이미지 전환이 더 안정적으로 따라오도록 다듬었습니다.
-- **1.5 기능 안정화**: 동영상 탐색, 이미지 내보내기, 온디바이스 OCR 등 v1.5의 주요 기능을 더 안정적으로 사용할 수 있도록 조정했습니다.
 
----
+사진을 빠르게 넘길 때의 체감 성능을 개선했습니다.
+
+특히 방향키를 길게 눌러 연속으로 탐색할 때 이미지 전환이 더 부드럽게 따라오도록 조정했습니다.
+
+또한 일부 화면에서 디코딩 모드 표시가 올바르게 반영되지 않을 수 있던 문제를 수정했습니다.
 
 ## v1.5.0 - 2026-05-03
 
@@ -35,7 +73,7 @@ Language: [🇺🇸 English](#english-150) | [🇰🇷 한국어](#korean-150)
 - **Simple Video Playback**: Main, Filmstrip, and Manage views now support video playback with autoplay, volume control, timeline seeking, and `Space` for play/pause.
 - **Image Export**: Create resized copies as `JPEG` or `PNG` with simple presets for Instagram, Threads, X, blogs, or a custom size.
 - **Date And Location Edits**: Adjust photo date/time and GPS metadata with a cautious workflow that blocks unsupported write paths.
-- **On-device OCR**: Run text recognition from Quick Check, copy recognized text, and optionally show yellow text highlights directly on the image.
+- **On-device OCR**: Run Korean/English text recognition from Quick Check, copy recognized text, and optionally show yellow text highlights directly on the image.
 
 #### Improvements
 - Video metadata is shown in the same spirit as photo metadata, including resolution, file size, codec, FPS, bitrate, HDR, date, and device details when available.
@@ -56,7 +94,7 @@ Language: [🇺🇸 English](#english-150) | [🇰🇷 한국어](#korean-150)
 - **간단한 동영상 재생**: Main, Filmstrip, Manage 뷰에서 동영상을 재생할 수 있고, 자동재생, 음량 조절, 타임라인 이동, `Space` 재생/일시정지를 지원합니다.
 - **이미지 내보내기**: `JPEG` 또는 `PNG` 복사본을 만들 수 있고, Instagram, Threads, X, 블로그, 수동 크기 프리셋을 제공합니다.
 - **촬영 시각과 위치 보정**: 사진의 날짜/시간과 GPS 정보를 안전한 흐름으로 수정할 수 있습니다. 지원하지 않는 원본 쓰기 경로는 차단합니다.
-- **온디바이스 OCR**: Quick Check에서 사진 속 문자를 인식하고 복사할 수 있으며, 필요하면 이미지 위에 노란 하이라이트로 인식 영역을 표시합니다.
+- **온디바이스 OCR**: Quick Check에서 사진 속 한국어/영어 문자를 인식하고 복사할 수 있으며, 필요하면 이미지 위에 노란 하이라이트로 인식 영역을 표시합니다.
 
 #### 개선된 점
 - 동영상 선택 시 사진 정보와 비슷한 흐름으로 해상도, 파일 크기, 코덱, FPS, 비트레이트, HDR, 날짜, 기기 정보를 표시합니다.
@@ -64,7 +102,7 @@ Language: [🇺🇸 English](#english-150) | [🇰🇷 한국어](#korean-150)
 - 설정, 인트로 안내, Quick Check, Compare, 중복사진정리, 이미지 내보내기, 동영상 설정, 메뉴, 도움말 등 앱 전반의 다국어 적용 범위를 넓혔습니다.
 - 중국어 번체, 프랑스어, 독일어 UI 지원을 추가로 보강했습니다.
 - 설정에서 색상 모드를 변경할 때 열린 창에 더 안정적으로 반영되도록 개선했습니다.
-- 라이트/다크 모드에서 인트로, 빠른 시작, 정보 오버레이가 더 읽기 좋게 보이도록 다듬었습니다.
+- 라이트/다크 모드에서 인트로, 빠른 시작, 정보 오버레이가 더 읽기 좋게 보이도록 개선했습니다.
 
 ---
 
@@ -100,12 +138,12 @@ Language: [🇺🇸 English](#english-102) | [🇰🇷 한국어](#korean-102)
 - **Intel Mac 실험 지원**: Mac App Store 빌드에 Intel Mac 호환 바이너리를 포함했습니다. Apple Silicon을 기본 검증 환경으로 유지하며, 이번 릴리즈의 Intel Mac 지원은 실험 기능으로 제공합니다.
 
 #### 개선된 점
-- Compare와 Reference Compare 화면을 더 일관되게 다듬었습니다. 기준/비교 대상 표시, 별점, Pick, 컬러 라벨 조작 흐름을 맞췄습니다.
+- Compare와 Reference Compare 화면을 더 일관되게 개선했습니다. 기준/비교 대상 표시, 별점, Pick, 컬러 라벨 조작 흐름을 맞췄습니다.
 - Quick Check에서 주요 EXIF 정보가 더 바로 보이고, 접기/펼치기 상태가 다음 실행에도 유지됩니다. GPS 정보가 있는 사진은 위치 정보를 더 쉽게 확인할 수 있습니다.
 - Main, Filmstrip, Manage에서 마우스 휠과 트랙패드 동작이 더 일관되게 동작합니다. 확대된 상태에서는 두 손가락 스크롤이 사진 이동보다 화면 이동을 우선합니다.
 - 메뉴, 우클릭 메뉴, 설정, 도움말 문구가 선택한 앱 언어를 더 일관되게 따르도록 정리했습니다. 일본어, 중국어(간체), 스페인어에서도 일부 항목이 영어로 남던 문제를 줄였습니다.
 - 직접 다운로드 버전과 Mac App Store 버전에서 파일 접근 문제를 더 이해하기 쉽게 안내합니다. App Store 권한 재허용 흐름과 직접 다운로드 버전의 접근 실패 안내도 분리했습니다.
-- 밝은 사진 위에서도 인트로와 정보 오버레이가 더 잘 보이도록 배경과 가독성을 다듬었습니다.
+- 밝은 사진 위에서도 인트로와 정보 오버레이가 더 잘 보이도록 배경과 가독성을 개선했습니다.
 - 사진을 보는 중 폴더 안의 이미지가 이동되거나 삭제되는 상황에서도 더 안정적으로 동작하도록 보강했습니다.
 
 ---
@@ -192,8 +230,8 @@ Language: [🇺🇸 English](#english-current) | [🇰🇷 한국어](#korean-cu
 - Compare 모드 진입 시 이전 상태를 이어서 할지(Resume Last Session), 새로 시작할지(Current Context) 선택할 수 있습니다.
 - 화면 상단의 사진 수 표시를 `현재/전체`, `현재`, `숨김` 중 취향에 맞게 변경할 수 있습니다.
 - 이름 변경 후 자동으로 정렬 순서를 맞추는 `이름 변경 후 재정렬` 옵션이 추가되었습니다.
-- 타이틀바 영역을 더 깔끔하고 평탄한 톤으로 다듬어 화면 전환 시 일관성을 높였습니다.
-- 단일 창 모드에서 Finder를 통해 새 파일을 더블클릭으로 열 때, 화면이 깜빡이거나 단축키가 먹지 않던 문제를 대폭 다듬었습니다.
+- 타이틀바 영역을 더 깔끔하고 평탄한 톤으로 정리해 화면 전환 시 일관성을 높였습니다.
+- 단일 창 모드에서 Finder를 통해 새 파일을 더블클릭으로 열 때, 화면이 깜빡이거나 단축키가 먹지 않던 문제를 대폭 개선했습니다.
 - 다른 앱으로 사진을 보낼 때, 한 곳으로 정리된 `다른 앱으로 열기…` 흐름으로 일관성 있게 열 수 있습니다.
 
 #### 참고
@@ -237,7 +275,7 @@ Language: [🇺🇸 English](#english-0104) | [🇰🇷 한국어](#korean-0104)
 - 파일 탐색 순서가 Finder식 자연 정렬로 바뀌어, 숫자가 들어간 파일명이 기대한 순서대로 이동합니다.
 - 창을 닫은 뒤 Finder나 Dock에서 다시 열 때 빈 화면처럼 보이던 흐름을 더 안정화했습니다.
 - SnapView가 이미 실행 중일 때 다른 이미지를 열면 요청한 사진으로 더 직접 전환됩니다.
-- Grid와 Filmstrip에서 키보드/마우스 선택 반응을 더 즉각적으로 다듬었습니다.
+- Grid와 Filmstrip에서 키보드/마우스 선택 반응을 더 즉각적으로 개선했습니다.
 
 #### 개선된 점
 - 폴더와 ZIP 이미지 목록이 이제 `사진-1`, `사진-2`, `사진-10` 순서로 정렬됩니다. 기존처럼 `사진-1`, `사진-10`, `사진-2` 순서로 이동하지 않습니다.
@@ -286,18 +324,18 @@ Language: [🇺🇸 English](#english-0103) | [🇰🇷 한국어](#korean-0103)
 #### 새로운 점
 - `Show in Finder`를 추가해 현재 보고 있는 사진 파일을 Finder에서 바로 찾을 수 있게 했습니다.
 - 밝은 사진 위에서도 파일명과 정보 오버레이가 더 잘 보이도록 그림자 옵션과 자동 모드를 추가했습니다.
-- HEIC와 창 복귀 후 화면 표시 안정성을 더 다듬었습니다.
+- HEIC와 창 복귀 후 화면 표시 안정성을 더 개선했습니다.
 
 #### 개선된 점
 - 메뉴, 컨텍스트 메뉴, `⌘↩`에서 `Show in Finder`를 바로 쓸 수 있습니다.
 - 오버레이 텍스트 그림자를 `기본 / 강하게 / 자동`으로 고를 수 있고, 자동은 밝은 화면에서만 더 진하게 적용합니다.
 - 별점 UI를 `항상 표시 / 자동 / 숨김`으로 조절할 수 있어, 화면은 더 단순하게 유지하면서도 별점 단축키와 메뉴는 그대로 쓸 수 있습니다.
-- 저사양 Mac에서는 주변 precache/warmup/preview 작업 예산을 더 보수적으로 조정해 탐색 체감과 메모리 사용을 다듬었습니다.
+- 저사양 Mac에서는 주변 precache/warmup/preview 작업 예산을 더 보수적으로 조정해 탐색 체감과 메모리 사용을 개선했습니다.
 - 모든 창을 닫는 종료 옵션을 추가하여 사용성을 개선했습니다. 기본값은 macOS 관례에 맞는 OFF입니다.
-- 앱 아이콘 모서리를 더 부드럽게 다듬어 기존 legacy macOS에서 조금 더 자연스럽게 보이도록 정리했습니다.
+- 앱 아이콘 모서리를 더 부드럽게 정리해 기존 legacy macOS에서 조금 더 자연스럽게 보이도록 수정했습니다.
 
 #### 참고
-- HEIC/HEIF/HIF 지원 자체를 바꾼 릴리즈가 아니라, reopen/restore 상황에서 더 안정적으로 보이도록 다듬은 릴리즈입니다.
+- HEIC/HEIF/HIF 지원 자체를 바꾼 릴리즈가 아니라, reopen/restore 상황에서 더 안정적으로 보이도록 개선한 릴리즈입니다.
 - AVIF와 JPEG XL은 macOS 디코더 지원 여부에 따라 동작합니다.
 
 ## v0.10.2 - 2026-04-12
@@ -326,7 +364,7 @@ Language: [🇺🇸 English](#english-0103) | [🇰🇷 한국어](#korean-0103)
 #### 새로운 점
 - Main View에서 animated GIF와 animated WebP를 바로 재생할 수 있게 했습니다.
 - 기본앱 등록은 `주요 포맷`부터 먼저 적용할 수 있게 단순화했고, Finder `이 앱으로 열기` 추천 목록 대응도 보강했습니다.
-- Quick Check와 파일 열기 흐름의 안정성을 더 다듬었습니다.
+- Quick Check와 파일 열기 흐름의 안정성을 더 개선했습니다.
 
 #### 개선된 점
 - Main View에서 animated GIF / WebP를 일반 선별 흐름 안에서 바로 볼 수 있습니다.
@@ -385,8 +423,8 @@ Language: [🇺🇸 English](#english-0103) | [🇰🇷 한국어](#korean-0103)
 
 #### Highlights
 - `화면 모드` 설정을 추가해 `시스템 / 라이트 / 다크` 중 원하는 모양을 직접 고를 수 있게 했습니다.
-- Main, Grid, Filmstrip, Manage의 라이트 모드를 더 자연스럽고 읽기 편하게 다듬었습니다.
-- `Reject` 표시를 더 잘 보이게 하고, 빠른 선별 중 나타나던 몇 가지 거슬리는 동작도 함께 다듬었습니다.
+- Main, Grid, Filmstrip, Manage의 라이트 모드를 더 자연스럽고 읽기 편하게 개선했습니다.
+- `Reject` 표시를 더 잘 보이게 하고, 빠른 선별 중 나타나던 몇 가지 거슬리는 동작도 함께 수정했습니다.
 
 #### UX / UI
 - 라이트 모드가 너무 어둡거나 지나치게 밝게 보이지 않도록 화면 톤을 다시 맞췄습니다.
@@ -416,7 +454,7 @@ Language: [🇺🇸 English](#english-0103) | [🇰🇷 한국어](#korean-0103)
 4. 이후 새 버전이 배포되면 앱이 자동으로 확인하고 설치 여부를 묻습니다
 
 #### Notes
-- 이번 업데이트는 빠른 선별 흐름과 라이트 모드 사용성을 다듬는 데 집중했습니다.
+- 이번 업데이트는 빠른 선별 흐름과 라이트 모드 사용성을 개선하는 데 집중했습니다.
 
 ## v0.10.0 - 2026-04-09
 
@@ -462,7 +500,7 @@ Language: [🇺🇸 English](#english-0103) | [🇰🇷 한국어](#korean-0103)
 #### Highlights
 - 현재 폴더나 선택 상태를 그대로 이어받는 전체화면 `슬라이드쇼 v1`을 추가했습니다.
 - 속도, 전환, 루프, 셔플, 재생 상태를 바로 볼 수 있는 슬라이드쇼 HUD를 추가했습니다.
-- 작은 이미지와 전환 품질을 더 자연스럽게 보여주도록 슬라이드쇼 화면을 다듬었습니다.
+- 작은 이미지와 전환 품질을 더 자연스럽게 보여주도록 슬라이드쇼 화면을 수정했습니다.
 
 #### UX / UI
 - 타이틀바, `도구` 메뉴, 주요 보기 화면에서 같은 방식으로 슬라이드쇼를 시작할 수 있습니다.

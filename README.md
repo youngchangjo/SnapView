@@ -8,7 +8,7 @@
 
 Fast macOS image viewer for real photo culling work.
 
-Current Version: `v1.5.1`
+Current Version: `v1.5.2`
 
 
 Language: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
@@ -22,13 +22,15 @@ Mac App Store: [SnapView on the App Store](https://apps.apple.com/app/snapview/i
 ## Download
 
 - Latest release: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
-- Install package: open the latest release page and download `SnapView-1.5.1.dmg`
+- Install package: open the latest release page and download `SnapView-1.5.2.dmg`
 - Official website: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
 
-## v1.5.1 Update
+## v1.5.2 Update
 
-- **Faster Continuous Browsing**: Photo navigation feels smoother when moving quickly with repeated arrow-key input.
-- **Decoding Mode Fix**: Fixed an issue where the decoding mode display could appear incorrect in some screens.
+- **Smoother Folder Browsing**: Large local folders and network folders feel more consistent when moving quickly through photos.
+- **More Predictable Index Refresh**: Switching between Images Only and Include Videos now refreshes the current folder list correctly, while unchanged folders avoid unnecessary reindexing.
+- **Korean And English OCR**: Quick Check and manual OCR now explicitly support Korean and English text recognition.
+- **Quick Check / EXIF Timing**: Metadata and Quick Check details update promptly again without getting ahead of image display.
 
 ## What's New In v1.5
 
@@ -36,7 +38,7 @@ Mac App Store: [SnapView on the App Store](https://apps.apple.com/app/snapview/i
 - **Simple Video Playback**: Play videos in Main, Filmstrip, and Manage views, with autoplay settings, volume control, and `Space` for play/pause.
 - **Image Export**: Create resized copies as `JPEG` or `PNG` using simple presets for Instagram, Threads, X, blogs, or a custom size. JPEG quality can be adjusted when needed.
 - **Date And Location Edits**: Adjust photo date/time and GPS metadata with a cautious workflow that keeps unsupported files protected.
-- **On-device OCR**: Run OCR from Quick Check, copy recognized text, and optionally show detected text highlights directly on the image.
+- **On-device OCR**: Run OCR from Quick Check, copy recognized Korean and English text, and optionally show detected text highlights directly on the image.
 - **Video-aware Tools**: Actions that do not apply to video, such as image export and rotation, are disabled for video assets to keep the workflow predictable.
 
 ## Screenshots
@@ -116,7 +118,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 ## Install
 
 1. Download the latest DMG from [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest).
-2. Open `SnapView-1.5.0.dmg`.
+2. Open `SnapView-1.5.2.dmg`.
 3. Drag `SnapView.app` into `Applications`.
 4. Launch SnapView from `Applications`.
 
@@ -150,7 +152,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 
 실사용 사진 선별 작업에 맞춘 macOS용 고속 이미지 뷰어입니다.
 
-현재 버전: `v1.5.1`
+현재 버전: `v1.5.2`
 
 
 언어: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
@@ -164,17 +166,19 @@ Mac App Store: [App Store에서 SnapView 보기](https://apps.apple.com/app/snap
 ## 다운로드
 
 - 최신 릴리즈: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
-- 설치 파일: 최신 릴리즈 페이지에서 `SnapView-1.5.1.dmg`를 다운로드해 설치합니다
+- 설치 파일: 최신 릴리즈 페이지에서 `SnapView-1.5.2.dmg`를 다운로드해 설치합니다
 - 공식 사이트: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
 
 스크린샷은 위 `Screenshots` 섹션에서 바로 확인할 수 있습니다.
 
 `v0.10.0`부터의 상세 변경 이력은 별도 문서인 [공개 릴리즈 노트](https://github.com/youngchangjo/SnapView/blob/main/RELEASE_NOTES.md)에서 확인할 수 있습니다.
 
-## v1.5.1 업데이트
+## v1.5.2 업데이트
 
-- **빠른 연속 탐색 개선**: 방향키를 길게 눌러 사진을 빠르게 넘길 때 이미지 전환이 더 부드럽게 따라오도록 개선했습니다.
-- **디코딩 모드 표시 수정**: 일부 화면에서 디코딩 모드 표시가 올바르게 반영되지 않을 수 있던 문제를 수정했습니다.
+- **폴더 탐색 안정성 개선**: 대량 로컬 폴더와 네트워크 폴더에서 사진을 빠르게 넘길 때 화면 표시가 더 안정적으로 이어지도록 수정했습니다.
+- **인덱싱 갱신 정리**: `이미지만`/`동영상 포함` 설정 변경 시 현재 폴더 목록을 올바르게 다시 만들고, 실제 목록이 같을 때는 불필요한 재인덱싱을 줄였습니다.
+- **한국어/영어 OCR**: Quick Check와 수동 OCR의 명시 지원 언어를 한국어와 영어로 정리하고 한글 인식을 보강했습니다.
+- **EXIF/Quick Check 표시 타이밍 복구**: 정보 패널이 이미지 표시 흐름과 더 자연스럽게 맞도록 조정했습니다.
 
 ## v1.5 주요 변경
 
@@ -182,7 +186,7 @@ Mac App Store: [App Store에서 SnapView 보기](https://apps.apple.com/app/snap
 - **간단한 동영상 재생**: Main, Filmstrip, Manage 뷰에서 동영상을 재생할 수 있고, 자동재생 설정, 음량 조절, `Space` 재생/일시정지를 지원합니다.
 - **이미지 내보내기**: `JPEG` 또는 `PNG` 복사본을 만들 수 있고, Instagram, Threads, X, 블로그, 수동 크기 프리셋을 제공합니다. JPEG 품질도 조절할 수 있습니다.
 - **촬영 시각과 위치 보정**: 사진의 날짜/시간과 GPS 정보를 안전한 흐름으로 수정할 수 있습니다. 지원하지 않는 파일은 원본 쓰기를 막아 예기치 않은 손상을 피합니다.
-- **온디바이스 OCR**: Quick Check에서 사진 속 문자를 인식하고 복사할 수 있으며, 필요하면 이미지 위에 인식 영역을 노란 하이라이트로 표시합니다.
+- **온디바이스 OCR**: Quick Check에서 사진 속 한국어/영어 문자를 인식하고 복사할 수 있으며, 필요하면 이미지 위에 인식 영역을 노란 하이라이트로 표시합니다.
 - **동영상 대응 도구 정리**: 회전, 이미지 내보내기처럼 동영상에 맞지 않는 기능은 동영상 선택 시 실행되지 않도록 정리했습니다.
 
 
@@ -241,7 +245,7 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 ## 설치 방법
 
 1. [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)에서 최신 DMG를 다운로드합니다.
-2. `SnapView-1.5.0.dmg`를 엽니다.
+2. `SnapView-1.5.2.dmg`를 엽니다.
 3. `SnapView.app`을 `Applications`로 드래그합니다.
 4. `Applications`에서 SnapView를 실행합니다.
 
