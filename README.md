@@ -8,7 +8,7 @@
 
 Fast macOS image viewer for real photo culling work.
 
-Current Version: `v1.5.2`
+Current Version: `v1.6.0`
 
 
 Language: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
@@ -17,20 +17,23 @@ Release Notes: [Public Release Notes](https://github.com/youngchangjo/SnapView/b
 
 Official Website: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
 
-Mac App Store: [SnapView on the App Store](https://apps.apple.com/app/snapview/id6744965601)
+Mac App Store: [SnapView on the App Store](https://apps.apple.com/us/app/snapview-fast-image-viewer/id6762974261)
 
 ## Download
 
 - Latest release: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
-- Install package: open the latest release page and download `SnapView-1.5.2.dmg`
+- Install package: open the latest release page and download `SnapView-1.6.0.dmg`
 - Official website: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
 
-## v1.5.2 Update
+## v1.6.0 Update
 
-- **Smoother Folder Browsing**: Large local folders and network folders feel more consistent when moving quickly through photos.
-- **More Predictable Index Refresh**: Switching between Images Only and Include Videos now refreshes the current folder list correctly, while unchanged folders avoid unnecessary reindexing.
-- **Korean And English OCR**: Quick Check and manual OCR now explicitly support Korean and English text recognition.
-- **Quick Check / EXIF Timing**: Metadata and Quick Check details update promptly again without getting ahead of image display.
+- **Rotate And Flip**: Added clockwise rotation and horizontal flip for the current image.
+- **JPEG Original Save For Rotation**: Added an option to save current-file rotation directly to the JPEG original.
+- **Space Zoom Toggle**: In image view, `Space` now toggles between 100% view and the previous zoom level.
+- **Shortcut Cleanup Options**: Added an option to clear a rating or Pick by pressing the same shortcut again, and improved rating clear on English keyboard layouts.
+- **Preview Promotion Reliability**: Reduced cases where a preview image could remain after fast browsing instead of promoting to the final image display.
+- **Viewer State Recovery**: Returning to SnapView now preserves video playback position and image zoom/pan state more reliably.
+- **Settings And JPEG Metadata**: Added reset-all-settings and Finder date alignment for edited JPEG capture dates.
 
 ## What's New In v1.5
 
@@ -118,7 +121,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 ## Install
 
 1. Download the latest DMG from [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest).
-2. Open `SnapView-1.5.2.dmg`.
+2. Open `SnapView-1.6.0.dmg`.
 3. Drag `SnapView.app` into `Applications`.
 4. Launch SnapView from `Applications`.
 
@@ -152,7 +155,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 
 실사용 사진 선별 작업에 맞춘 macOS용 고속 이미지 뷰어입니다.
 
-현재 버전: `v1.5.2`
+현재 버전: `v1.6.0`
 
 
 언어: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
@@ -161,24 +164,27 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 
 공식 홈페이지: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
 
-Mac App Store: [App Store에서 SnapView 보기](https://apps.apple.com/app/snapview/id6744965601)
+Mac App Store: [App Store에서 SnapView 보기](https://apps.apple.com/us/app/snapview-fast-image-viewer/id6762974261)
 
 ## 다운로드
 
 - 최신 릴리즈: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
-- 설치 파일: 최신 릴리즈 페이지에서 `SnapView-1.5.2.dmg`를 다운로드해 설치합니다
+- 설치 파일: 최신 릴리즈 페이지에서 `SnapView-1.6.0.dmg`를 다운로드해 설치합니다
 - 공식 사이트: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
 
 스크린샷은 위 `Screenshots` 섹션에서 바로 확인할 수 있습니다.
 
 `v0.10.0`부터의 상세 변경 이력은 별도 문서인 [공개 릴리즈 노트](https://github.com/youngchangjo/SnapView/blob/main/RELEASE_NOTES.md)에서 확인할 수 있습니다.
 
-## v1.5.2 업데이트
+## v1.6.0 업데이트
 
-- **폴더 탐색 안정성 개선**: 대량 로컬 폴더와 네트워크 폴더에서 사진을 빠르게 넘길 때 화면 표시가 더 안정적으로 이어지도록 수정했습니다.
-- **인덱싱 갱신 정리**: `이미지만`/`동영상 포함` 설정 변경 시 현재 폴더 목록을 올바르게 다시 만들고, 실제 목록이 같을 때는 불필요한 재인덱싱을 줄였습니다.
-- **한국어/영어 OCR**: Quick Check와 수동 OCR의 명시 지원 언어를 한국어와 영어로 정리하고 한글 인식을 보강했습니다.
-- **EXIF/Quick Check 표시 타이밍 복구**: 정보 패널이 이미지 표시 흐름과 더 자연스럽게 맞도록 조정했습니다.
+- **회전과 좌우 반전**: 현재 이미지의 시계 방향 회전과 좌우 반전을 추가했습니다.
+- **회전 후 JPEG 원본 저장**: 현재 파일 회전에서 JPEG 원본에 바로 저장할 수 있는 옵션을 추가했습니다.
+- **Space 배율 토글**: 이미지 보기에서 `Space`로 100% 보기와 이전 배율을 빠르게 오갈 수 있습니다.
+- **단축키 해제 옵션**: 같은 별점/Pick 단축키를 한 번 더 눌러 해제하는 옵션을 추가하고, 영문 키보드의 별점 취소 동작을 보강했습니다.
+- **프리뷰 전환 안정성**: 빠른 탐색 후 프리뷰 이미지가 최종 표시로 전환되지 않고 남는 상황을 줄였습니다.
+- **보기 상태 복원**: SnapView로 다시 돌아왔을 때 동영상 재생 위치와 이미지 확대/이동 상태를 더 안정적으로 유지합니다.
+- **설정/JPEG 메타데이터 정리**: 설정 초기화와 JPEG 촬영 날짜 수정 시 Finder 날짜 정렬 옵션을 추가했습니다.
 
 ## v1.5 주요 변경
 
@@ -245,7 +251,7 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 ## 설치 방법
 
 1. [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)에서 최신 DMG를 다운로드합니다.
-2. `SnapView-1.5.2.dmg`를 엽니다.
+2. `SnapView-1.6.0.dmg`를 엽니다.
 3. `SnapView.app`을 `Applications`로 드래그합니다.
 4. `Applications`에서 SnapView를 실행합니다.
 

@@ -1,6 +1,46 @@
 # SnapView Release Notes
 
-## v1.5.2 (Current) - 2026-05-06
+## v1.6.0 (Current) - 2026-05-09
+
+Language: [🇺🇸 English](#english-160) | [🇰🇷 한국어](#korean-160)
+
+<a id="english-160"></a>
+
+### English
+
+#### What's New
+- **Rotate And Flip**: Added clockwise rotation and horizontal flip for the current image.
+- **JPEG Original Save For Rotation**: Added an option to save current-file rotation directly to the JPEG original. Current-folder rotation remains screen-only.
+- **Space Zoom Toggle**: In Main, Filmstrip, and Manage image views, `Space` now toggles between 100% view and the previous zoom level.
+- **Repeat Shortcut Clear**: Added an optional setting to clear a rating or Pick by pressing the same rating/Pick shortcut again.
+- **Reset Settings**: Added a reset-all-settings button.
+- **JPEG Finder Date Alignment**: Added an advanced JPEG option to align Finder creation/modified dates with the edited capture date.
+
+#### Improvements
+- Reduced cases where a preview image could remain after fast browsing instead of promoting to the final image display.
+- Returning to SnapView now preserves video playback position and image zoom/pan state more reliably.
+- Reduced unnecessary state updates during fast browsing through small local images.
+- Rating clear now works more reliably from English input and keyboard layouts using the physical `₩`/`\` key.
+
+<a id="korean-160"></a>
+
+### 한국어
+
+#### 새로운 점
+- **회전과 좌우 반전**: 현재 이미지 시계 방향 회전과 좌우 반전을 추가했습니다.
+- **회전 후 JPEG 원본 저장**: 현재 파일 회전에서 JPEG 원본에 바로 저장할 수 있는 옵션을 추가했습니다. 현재 폴더(전체 파일) 회전은 기존처럼 화면 표시 기준으로 적용됩니다.
+- **Space 배율 토글**: Main, Filmstrip, Manage 이미지 보기에서 `Space`로 100% 보기와 이전 배율을 빠르게 오갈 수 있습니다.
+- **같은 단축키로 해제**: 같은 별점 또는 Pick 단축키를 한 번 더 눌러 해제할 수 있는 선택 옵션을 추가했습니다.
+- **설정 초기화**: 모든 설정을 기본값으로 되돌리는 버튼을 추가했습니다.
+- **JPEG Finder 날짜 정렬**: JPEG 원본 메타데이터 저장 시 Finder 생성일/수정일도 편집한 촬영 날짜에 맞출 수 있는 고급 옵션을 추가했습니다.
+
+#### 개선된 점
+- 빠른 탐색 중 프리뷰 이미지가 최종 이미지 표시로 전환되지 않고 남는 상황을 줄였습니다.
+- SnapView로 다시 돌아왔을 때 동영상 재생 위치와 이미지 확대/이동 상태를 더 안정적으로 유지합니다.
+- 작은 로컬 이미지를 빠르게 넘길 때 불필요한 상태 갱신을 줄였습니다.
+- 영문 입력/키보드 환경에서도 `₩`/`\` 물리 키 별점 취소가 더 안정적으로 동작합니다.
+
+## v1.5.2 - 2026-05-06
 
 Language: [🇺🇸 English](#english-152) | [🇰🇷 한국어](#korean-152)
 
