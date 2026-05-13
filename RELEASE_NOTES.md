@@ -1,6 +1,60 @@
 # SnapView Release Notes
 
-## v1.6.0 (Current) - 2026-05-09
+## v1.7.0 (Current) - 2026-05-14
+
+Language: [🇺🇸 English](#english-170) | [🇰🇷 한국어](#korean-170)
+
+<a id="english-170"></a>
+
+### English
+
+#### What's New
+- **More App Languages**: SnapView now includes app UI support for Portuguese (Brazil), Italian, Dutch, Turkish, Polish, and Swedish.
+- **Scroll Direction Controls**: Mouse wheel and trackpad navigation are more consistent across Main, Filmstrip, Manage, and Video views. Direction customization can be enabled separately for mouse/trackpad and vertical/horizontal scrolling.
+- **Viewer Preference Memory**: SnapView can remember the info overlay state, preserve image zoom while moving between images, and use a pure black dark viewer background.
+- **Same-image Return Recovery**: Returning to SnapView from another app or window now preserves the current photo's zoom and pan state even when cross-image zoom preservation is disabled.
+- **Photo Info Overlay Flags**: Photo Info Overlay visibility now also controls main-view Pick/Reject badges, so those markers no longer remain on top of the image when the info overlay is off.
+- **Rotation Save Reliability**: JPEG rotation saves are confirmed before success is shown, duplicate rotation requests are ignored, thumbnails refresh after original changes, and Current Folder rotation view can save only the current JPG/JPEG image.
+- **Original Quality Loading**: Quality-first mode now requests the current image at original quality on network drives. Balanced and Quality modes more reliably upgrade settled preview or resized images to original quality, and show a clear status when original loading fails.
+- **Smoother Original Quality Transition**: Original-quality upgrades now crossfade from resized images, use a shorter apply fade, and start sooner after navigation settles.
+- **Video Playback Fixes**: Ended videos can be replayed with the playback button or `Space`, and `Option`+Left/Right seeks videos in 5-second steps.
+- **Default App Registration Reliability**: SnapView briefly rechecks Launch Services after a successful registration request to avoid false failure alerts.
+- **Move To Folder**: Move the current file or explicitly selected files to another folder from inside SnapView.
+- **Toolbar Tooltips**: The runtime titlebar tooltip path now provides supported-language help text for top toolbar icon buttons.
+
+#### Improvements
+- Navigation arrows and video controls now hide more predictably instead of staying over images or videos while the pointer is idle.
+- Fullscreen video presentation uses the available viewer surface more cleanly.
+- Compare and Reference Compare now render images opened from ZIP archives correctly instead of showing black panels.
+- Copy, delete, and move actions now use the current item or explicit selections more reliably.
+- Optional confirmation-free `Delete`/`Backspace` moves files to macOS Trash only and remains disabled by default.
+
+<a id="korean-170"></a>
+
+### 한국어
+
+#### 새로운 점
+- **앱 UI 언어 추가**: 포르투갈어(브라질), 이탈리아어, 네덜란드어, 터키어, 폴란드어, 스웨덴어 앱 UI 지원을 추가했습니다.
+- **스크롤 방향 설정**: Main, Filmstrip, Manage, Video 뷰에서 마우스 휠과 트랙패드 탐색이 더 일관되게 동작합니다. 필요하면 마우스/트랙패드, 상하/좌우 방향을 따로 사용자화할 수 있습니다.
+- **보기 설정 기억**: 정보 오버레이 표시 상태를 기억하고, 이미지 이동 시 확대 비율을 유지하며, 다크 모드에서 완전한 검은 배경을 사용할 수 있습니다.
+- **같은 사진 복귀 상태 유지**: 다른 앱이나 다른 창에 갔다가 SnapView로 돌아왔을 때, 이미지 간 확대 유지 옵션이 꺼져 있어도 현재 사진의 확대/이동 상태를 유지합니다.
+- **정보 오버레이 플래그**: 정보 오버레이 표시 설정이 메인 보기의 Pick/Reject 배지도 함께 제어해, 정보 오버레이를 끄면 해당 표시가 이미지 위에 남지 않습니다.
+- **회전 저장 안정성**: JPEG 회전 저장은 성공 확인 후 완료를 안내하고, 겹치는 키 처리 경로의 중복 회전 명령을 무시하며, 원본 변경 후 썸네일을 새로 고칩니다. 현재 폴더 회전 보기는 현재 JPG/JPEG 이미지 하나만 저장할 수 있습니다.
+- **원본 품질 전환 안정화**: 품질 우선 모드에서는 네트워크 드라이브에서도 현재 이미지를 원본 품질로 요청합니다. 보통/품질 우선 모드에서는 탐색이 멈춘 뒤 프리뷰 또는 리사이즈 이미지가 원본 품질로 더 안정적으로 전환되며, 실패 시 상태를 명확하게 표시합니다.
+- **원본 품질 전환 체감 개선**: 리사이즈 이미지에서 원본 품질로 전환될 때 자연스럽게 페이드되고, 적용 페이드를 짧게 유지하며, 탐색이 멈춘 뒤 원본 요청을 더 빠르게 시작합니다.
+- **동영상 재생 보정**: 끝까지 재생된 동영상은 재생 버튼 또는 `Space`로 처음부터 다시 재생할 수 있고, `Option`+왼쪽/오른쪽으로 5초 단위 탐색을 할 수 있습니다.
+- **기본 앱 등록 안정성**: 기본 프로그램 등록 요청이 성공한 뒤 Launch Services 반영을 짧게 재확인해 실제 등록됐는데 실패로 보이는 알림을 줄였습니다.
+- **폴더로 이동**: 현재 파일 또는 명시적으로 선택한 파일을 SnapView 안에서 다른 폴더로 이동할 수 있습니다.
+- **툴바 툴팁**: 상단 툴바 아이콘 버튼에 런타임 타이틀바 툴팁 경로와 지원 언어 도움말 문구를 적용했습니다.
+
+#### 개선된 점
+- 이미지/동영상 좌우 화살표와 동영상 컨트롤이 포인터가 멈춘 상태에서 콘텐츠 위에 계속 남지 않도록 정리했습니다.
+- 전체화면 동영상이 보기 영역을 더 깔끔하게 사용하도록 조정했습니다.
+- ZIP 내부 이미지를 Compare와 Reference Compare에서 열 때 검은 화면으로 보일 수 있던 문제를 수정했습니다.
+- 복사, 삭제, 이동이 현재 항목 또는 명시 선택 항목을 더 정확하게 기준으로 삼습니다.
+- 확인 없는 `Delete`/`Backspace`는 선택 옵션이며, 켜도 macOS 휴지통 이동만 수행하고 기본값은 꺼짐입니다.
+
+## v1.6.0 - 2026-05-09
 
 Language: [🇺🇸 English](#english-160) | [🇰🇷 한국어](#korean-160)
 
@@ -157,7 +211,7 @@ Language: [🇺🇸 English](#english-102) | [🇰🇷 한국어](#korean-102)
 #### What's New
 - **More App Languages**: SnapView now includes Japanese, Simplified Chinese, and Spanish for the main app interface.
 - **Trackpad Browsing**: Two-finger trackpad swipes can now move to the previous or next image, with an option to match macOS natural scrolling.
-- **Experimental Intel Mac Compatibility**: The Mac App Store build now includes an Intel-compatible binary slice. Apple Silicon remains the primary tested environment, and Intel Mac support is treated as experimental for this release.
+- **Universal Mac Compatibility**: The Mac App Store build now includes both Apple Silicon and Intel-compatible binary slices.
 
 #### Improvements
 - Compare and Reference Compare have been polished so reference/candidate labels, rating, Pick, and color label controls behave more consistently.
@@ -175,7 +229,7 @@ Language: [🇺🇸 English](#english-102) | [🇰🇷 한국어](#korean-102)
 #### 새로운 점
 - **지원 언어 확대**: 일본어, 중국어(간체), 스페인어 UI 지원을 추가했습니다.
 - **트랙패드 탐색**: 두 손가락 스와이프로 이전/다음 사진을 이동할 수 있고, macOS의 자연스러운 스크롤 방향에 맞출 수 있습니다.
-- **Intel Mac 실험 지원**: Mac App Store 빌드에 Intel Mac 호환 바이너리를 포함했습니다. Apple Silicon을 기본 검증 환경으로 유지하며, 이번 릴리즈의 Intel Mac 지원은 실험 기능으로 제공합니다.
+- **Universal Mac 호환성**: Mac App Store 빌드에 Apple Silicon과 Intel Mac 호환 바이너리를 함께 포함했습니다.
 
 #### 개선된 점
 - Compare와 Reference Compare 화면을 더 일관되게 개선했습니다. 기준/비교 대상 표시, 별점, Pick, 컬러 라벨 조작 흐름을 맞췄습니다.
