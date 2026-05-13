@@ -174,8 +174,8 @@
                 <ul>
                     <li>Mac App Store 버전은 sandbox 안정판 채널입니다.</li>
                     <li>DMG 버전은 직접 다운로드 채널이며, 빠른 배포와 Sparkle 업데이트 흐름을 사용합니다.</li>
+                    <li>DMG 버전은 단일 유니버설 앱으로 제공되며 Apple Silicon과 Intel Mac을 같은 다운로드로 지원합니다.</li>
                     <li>Apple Silicon을 기본 검증 환경으로 유지합니다.</li>
-                    <li>Intel Mac 호환은 실험 지원으로 제공합니다. 정상 동작을 보장하는 정식 지원 타깃은 아니며, 실행 시 별도 안내가 표시될 수 있습니다.</li>
                 </ul>
 
                 <h3>3.1 설치</h3>
@@ -183,7 +183,7 @@
                 <ol>
                     <li><strong>DMG 채널(Fast)</strong>: 릴리즈에서 <code>SnapView.dmg</code>를 내려받아 <code>SnapView.app</code>을 <code>Applications</code>로 드래그해 설치합니다.</li>
                     <li><strong>Mac App Store 채널(Stable)</strong>: Mac App Store에서 SnapView를 설치합니다.</li>
-                    <li>두 채널 모두 Apple Silicon을 기본 검증 환경으로 유지하며, Intel Mac은 실험 호환 범위로 다룹니다.</li>
+                    <li>DMG 채널은 Apple Silicon과 Intel Mac을 포함한 단일 유니버설 앱으로 제공합니다.</li>
                 </ol>
 
                 <h3>3.2 처음 실행 시</h3>
@@ -212,9 +212,22 @@
                     <li>비교가 필요하면 <img src="assets/icons/compare.svg" class="inline-icon" alt=""> <code>C</code>로 Compare 모드에서 1~4장 비교합니다.</li>
                     <li><code>Delete</code>로 삭제하거나 <code>Cmd+C</code>로 복사해 정리합니다.</li>
                     <li>완전히 동일한 파일 정리는 <code>Cmd+Shift+D</code>로 중복사진정리에서 처리합니다.</li>
-                    <li>동영상이 섞인 폴더는 사진과 함께 넘겨보고, <code>Space</code>로 재생/일시정지합니다.</li>
+                    <li>동영상이 섞인 폴더는 사진과 함께 넘겨보고, <code>Space</code>로 재생/일시정지합니다. 재생이 끝난 뒤에도 <code>Space</code> 또는 재생 버튼으로 처음부터 다시 재생할 수 있고, <code>Option + ←/→</code>로 5초 단위 탐색을 할 수 있습니다.</li>
                     <li>공유용 작은 복사본이 필요하면 <code>이미지 내보내기</code>에서 JPEG/PNG와 프리셋 크기를 선택합니다.</li>
                 </ol>
+
+                <h3>4.1 v1.7.0 안정화 변경</h3>
+                <ul>
+                    <li>마우스 휠과 트랙패드 스크롤의 이전/다음 이동 방향을 Main, Filmstrip, Manage, Video에서 같은 기준으로 맞췄습니다.</li>
+                    <li><code>자연스러운 스크롤</code> 옵션과 <code>스크롤 방향 직접 설정</code>을 분리했습니다. 필요하면 마우스/트랙패드, 상하/좌우 축을 각각 따로 지정할 수 있으며, 방향 사용자화는 기본적으로 꺼져 있습니다.</li>
+                    <li>정보 오버레이 표시 상태를 기억합니다. 정보 오버레이를 끄면 Main View의 Pick/Reject, 별점, 컬러 라벨 표시도 함께 숨겨집니다.</li>
+                    <li>이미지 이동 시 확대 비율을 유지하는 옵션과 다크 모드의 완전 검은 뷰어 배경 옵션을 추가했습니다.</li>
+                    <li>상단 툴바 아이콘에 지원 언어별 툴팁을 추가했습니다.</li>
+                    <li>리사이즈 이미지가 원본으로 바뀔 때도 짧은 페이드로 자연스럽게 전환되며, 원본 전환 요청을 더 빠르게 시작합니다.</li>
+                    <li>JPEG 회전 저장은 실제 저장 성공을 확인한 뒤 완료 안내를 표시하고, 저장 후 썸네일을 새로 고칩니다.</li>
+                    <li>파일 작업은 명시 선택 항목을 우선합니다. Grid/Manage에서 선택한 파일을 복사/삭제/이동할 때 폴더 전체가 잘못 대상으로 잡히지 않도록 정리했습니다.</li>
+                    <li>앱 내부 <code>Move to Folder</code>와 확인 없는 <code>Delete</code>/<code>Backspace</code> 휴지통 이동 옵션을 추가했습니다. 확인 없는 삭제 옵션은 기본 꺼짐이며, 영구 삭제가 아니라 macOS 휴지통 이동만 수행합니다.</li>
+                </ul>
 
                 <h2>5. 화면 구성 이해하기</h2>
                 <ul>
@@ -362,12 +375,16 @@
                     <li>전환 종류는 HUD 메뉴에서 <code>하드 컷</code> / <code>크로스페이드</code> / <code>블랙 페이드</code> 중 선택합니다.</li>
                 </ul>
 
-                <h3>7.5 복사/삭제</h3>
+                <h3>7.6 복사/삭제/이동</h3>
                 <ul>
                     <li><code>Cmd+C</code>: 선택 항목 복사</li>
                     <li><code>Cmd+V</code>: 붙여넣기 (Grid/사진관리모드에서 주로 사용)</li>
                     <li><code>Delete</code> 또는 <code>D</code>: 삭제</li>
-                    <li><code>Cmd+Delete</code>: 즉시 삭제(주의)</li>
+                    <li><code>Cmd+Delete</code>: 확인 없이 휴지통으로 이동</li>
+                    <li>설정 &gt; 일반의 <code>삭제 확인 없이 휴지통으로 이동</code>을 켜면 <code>Delete</code> 또는 <code>Backspace</code>도 확인창 없이 macOS 휴지통으로 이동합니다.</li>
+                    <li>확인 없는 삭제 옵션은 기본 꺼짐이며, 영구 삭제를 수행하지 않습니다.</li>
+                    <li><code>Move to Folder</code>: 현재 이미지 또는 명시 선택 항목을 앱 내부에서 지정 폴더로 이동합니다.</li>
+                    <li>Grid/Manage에서는 사용자가 명시 선택한 항목이 파일 작업 대상입니다. 선택이 없을 때만 현재 항목을 대상으로 삼습니다.</li>
                 </ul>
 
                 <h3>7.7 외부 앱으로 열기</h3>
@@ -518,6 +535,20 @@
                     <li>즉, 일반 모드의 디코딩 우선순위와 Pro 모드의 해상도 정책은 완전히 같은 개념이 아닙니다.</li>
                 </ul>
 
+                <h3>9.12 스크롤 방향과 확대 유지</h3>
+                <ul>
+                    <li>설정 &gt; Navigation에서 마우스 휠 동작을 <code>이전/다음 이미지</code>, <code>스크롤</code>, <code>줌</code> 중 선택할 수 있습니다.</li>
+                    <li><code>자연스러운 스크롤</code>은 Apple 설정과 같은 의미로 동작합니다. 켜면 손가락/휠이 움직이는 방향을 콘텐츠 이동 방향처럼 해석해 이전/다음 방향을 반대로 적용합니다.</li>
+                    <li><code>스크롤 방향 직접 설정</code>을 켜면 자연스러운 스크롤과 별개로 마우스/트랙패드, 상하/좌우 축의 이전/다음 방향을 각각 지정합니다.</li>
+                    <li><code>이미지 이동 시 확대 비율 유지</code>를 켜면 다음 이미지로 넘어가도 현재 확대 비율을 유지합니다. 꺼져 있으면 이미지마다 기본 맞춤 표시로 돌아갑니다.</li>
+                </ul>
+
+                <h3>9.13 다크 배경과 툴팁</h3>
+                <ul>
+                    <li>설정 &gt; 일반에서 다크 모드 뷰어 배경을 완전 검은색으로 바꿀 수 있습니다.</li>
+                    <li>상단 툴바 아이콘 위에 커서를 올리면 해당 버튼의 기능을 툴팁으로 확인할 수 있습니다.</li>
+                </ul>
+
                 <h2>10. ZIP 파일 사용 시 주의점</h2>
                 <ul>
                     <li>ZIP 내부 이미지도 일반 폴더처럼 탐색할 수 있습니다.</li>
@@ -546,10 +577,10 @@
                     <li>점프 이동: <code>Cmd+좌/우</code>(10장), <code>Cmd+Shift+좌/우</code>(50장)</li>
                     <li>줌: <code>=</code> / <code>-</code>, Fit <code>0</code>, 100% <code>9</code></li>
                     <li>정보 토글: <img src="assets/icons/info.svg" class="inline-icon" alt=""> <code>I</code>(정보), <img src="assets/icons/quickcheck.svg" class="inline-icon" alt=""> <code>K</code>(퀵체크 세트), <img src="assets/icons/histogram.svg" class="inline-icon" alt=""> <code>H</code>(히스토그램)</li>
-                    <li>동영상: <code>Space</code> (재생/일시정지)</li>
+                    <li>동영상: <code>Space</code> (재생/일시정지/종료 후 다시 재생), <code>Option+좌/우</code> (5초 탐색)</li>
                     <li>화면: <code>Enter</code>(전체화면), <code>Cmd+Shift+T</code>(맨위 고정)</li>
                     <li>선별: <code>1~5</code>, <code>0</code>, <code>P</code>, <code>X</code>, <code>U</code>, <code>Cmd+1~6</code></li>
-                    <li>작업: <code>Cmd+C</code>, <code>Cmd+V</code>, <code>Delete</code>/<code>D</code>, <code>Cmd+Delete</code>, <code>Cmd+O</code>, <code>Cmd+Return</code>(<code>Show in Finder</code>)</li>
+                    <li>작업: <code>Cmd+C</code>, <code>Cmd+V</code>, <code>Delete</code>/<code>Backspace</code>/<code>D</code>, <code>Cmd+Delete</code>, <code>Cmd+O</code>, <code>Cmd+Return</code>(<code>Show in Finder</code>)</li>
                     <li>선택: <code>Cmd+A</code> (Main=Auto Advance 토글, Grid/Manage=전체 선택)</li>
                 </ul>
                 <p>전체 목록은 <code>docs/release/SHORTCUTS.md</code>를 참고하세요.</p>
@@ -627,7 +658,7 @@
                 <ul>
                     <li><strong>DMG 채널(Fast)</strong>: 앱 메뉴 <code>업데이트 확인(Check for Updates)</code>로 수동/자동 업데이트를 확인합니다. GitHub 릴리즈에서 <code>SnapView.dmg</code>로 수동 업데이트할 수도 있습니다.</li>
                     <li><strong>Mac App Store 채널(Stable)</strong>: Mac App Store의 업데이트 경로를 따릅니다.</li>
-                    <li>Intel Mac 호환은 실험 지원으로 제공되며, 실행 시 안내가 표시될 수 있습니다.</li>
+                    <li>DMG 채널은 별도 Intel 전용 파일 없이 최신 <code>SnapView.dmg</code> 하나로 업데이트합니다.</li>
                 </ul>
 
                 <h2>16. 데이터/안전 관련 참고</h2>
@@ -665,8 +696,8 @@
                 <ul>
                     <li>The Mac App Store version is the sandboxed stable channel.</li>
                     <li>The DMG version is the direct download channel with faster releases and Sparkle updates.</li>
+                    <li>The DMG version is a single universal app that supports Apple Silicon and Intel Mac from the same download.</li>
                     <li>Apple Silicon remains the primary verified environment.</li>
-                    <li>Intel Mac compatibility is experimental and not treated as a fully guaranteed support target. Intel users may see an extra warning at launch.</li>
                 </ul>
 
                 <h3>3.1 Installation</h3>
@@ -674,7 +705,7 @@
                 <ol>
                     <li><strong>DMG Channel (Fast)</strong>: Download <code>SnapView.dmg</code> from the releases page, then drag <code>SnapView.app</code> to <code>Applications</code>.</li>
                     <li><strong>Mac App Store Channel (Stable)</strong>: Install SnapView from the Mac App Store.</li>
-                    <li>Both channels keep Apple Silicon as the primary verified environment, with Intel Mac support treated as experimental compatibility.</li>
+                    <li>The DMG channel ships as one universal app for Apple Silicon and Intel Mac.</li>
                 </ol>
 
                 <h3>3.2 First Run</h3>
@@ -702,9 +733,22 @@
                     <li>If you need to compare, press <img src="assets/icons/compare.svg" class="inline-icon" alt=""> <code>C</code> for Compare Mode (1-4 images).</li>
                     <li>Use <code>Delete</code> to remove or <code>Cmd+C</code> to copy and organize.</li>
                     <li>For exact file duplicates, press <code>Cmd+Shift+D</code> to use the Duplicate cleanup feature.</li>
-                    <li>If a folder includes videos, browse them alongside photos and press <code>Space</code> to play or pause.</li>
+                    <li>If a folder includes videos, browse them alongside photos and press <code>Space</code> to play or pause. Ended videos can be replayed with <code>Space</code> or the play button, and <code>Option + Left/Right</code> seeks in 5-second steps.</li>
                     <li>When you need smaller copies for sharing, use <code>Image Export</code> and choose JPEG/PNG plus a size preset.</li>
                 </ol>
+
+                <h3>4.1 v1.7.0 Stability Changes</h3>
+                <ul>
+                    <li>Mouse wheel and trackpad previous/next navigation now use the same direction rules across Main, Filmstrip, Manage, and Video views.</li>
+                    <li><code>Natural Scrolling</code> and <code>Custom Scroll Direction</code> are separate settings. Custom directions can be set per device and axis, and remain off by default.</li>
+                    <li>SnapView remembers the info overlay state. When the info overlay is off, Main View Pick/Reject, rating, and color label markers are hidden together.</li>
+                    <li>Options were added to preserve zoom while moving between images and to use a pure black viewer background in dark mode.</li>
+                    <li>Top toolbar icons now show localized tooltips.</li>
+                    <li>Resized images crossfade briefly when promoted to original quality, and original requests begin sooner after navigation settles.</li>
+                    <li>JPEG rotation save confirms the write before showing success and refreshes thumbnails after saving.</li>
+                    <li>File actions prefer explicit selections. Grid/Manage copy, delete, and move no longer fall back to the whole folder when files are selected.</li>
+                    <li><code>Move to Folder</code> and an optional confirmation-free <code>Delete</code>/<code>Backspace</code> Trash path were added. The no-confirmation option is off by default and only moves files to macOS Trash.</li>
+                </ul>
 
                 <h2>5. Understanding the Interface</h2>
                 <ul>
@@ -859,12 +903,16 @@
                     <li>Select transitions from the HUD (<code>Hard Cut</code> / <code>Crossfade</code> / <code>Black Fade</code>).</li>
                 </ul>
 
-                <h3>7.6 Copy/Delete</h3>
+                <h3>7.6 Copy/Delete/Move</h3>
                 <ul>
                     <li><code>Cmd+C</code>: Copy selected items.</li>
                     <li><code>Cmd+V</code>: Paste (used heavily in Grid/Manage Views).</li>
                     <li><code>Delete</code> or <code>D</code>: Delete.</li>
-                    <li><code>Cmd+Delete</code>: Delete Immediately (Caution).</li>
+                    <li><code>Cmd+Delete</code>: Move to Trash without an extra confirmation.</li>
+                    <li>If <code>Move to Trash without confirmation</code> is enabled in Settings &gt; General, <code>Delete</code> or <code>Backspace</code> also moves files to macOS Trash without an extra confirmation.</li>
+                    <li>The no-confirmation option is off by default and does not permanently delete files.</li>
+                    <li><code>Move to Folder</code>: Move the current image or explicitly selected files to a chosen folder inside SnapView.</li>
+                    <li>In Grid/Manage, explicit selections are used for file actions. If nothing is selected, SnapView uses the current item.</li>
                 </ul>
 
                 <h3>7.7 Open with External App</h3>
@@ -986,6 +1034,20 @@
                     <li>In Pro layouts, specific <code>Pro JPG Resolution</code> and <code>Pro ZIP Resolution</code> settings may apply independently of the general decoding mode.</li>
                 </ul>
 
+                <h3>9.8 Scroll Direction and Zoom Preservation</h3>
+                <ul>
+                    <li>In Settings &gt; Navigation, mouse wheel behavior can be set to <code>Previous/Next Image</code>, <code>Scroll</code>, or <code>Zoom</code>.</li>
+                    <li><code>Natural Scrolling</code> follows Apple's meaning: the finger/wheel movement is treated as content movement, reversing previous/next direction.</li>
+                    <li>When <code>Custom Scroll Direction</code> is enabled, mouse/trackpad and vertical/horizontal axes can be assigned independently from Natural Scrolling.</li>
+                    <li>When <code>Preserve image zoom while navigating</code> is enabled, the current zoom ratio carries to the next image. When off, each image returns to fit view.</li>
+                </ul>
+
+                <h3>9.9 Dark Background and Tooltips</h3>
+                <ul>
+                    <li>In Settings &gt; General, the dark-mode viewer background can be changed to pure black.</li>
+                    <li>Hover over top toolbar icons to see tooltips for each button.</li>
+                </ul>
+
                 <h2>10. Notes on ZIP Files</h2>
                 <ul>
                     <li>You can browse images inside ZIPs just like folders.</li>
@@ -1014,10 +1076,10 @@
                     <li>Jump: <code>Cmd+Left/Right</code> (10), <code>Cmd+Shift+Left/Right</code> (50)</li>
                     <li>Zoom: <code>=</code> / <code>-</code>, Fit <code>0</code>, 100% <code>9</code></li>
                     <li>Toggle Info: <code>I</code> (Info), <code>K</code> (Quick Check Setup), <code>H</code> (Histogram)</li>
-                    <li>Video: <code>Space</code> (Play/Pause)</li>
+                    <li>Video: <code>Space</code> (Play/Pause/Replay after ending), <code>Option+Left/Right</code> (5-second seek)</li>
                     <li>Screen Options: <code>Enter</code> (Full Screen), <code>Cmd+Shift+T</code> (Always On Top)</li>
                     <li>Cull: <code>1~5</code>, <code>0</code>, <code>P</code>, <code>X</code>, <code>U</code>, <code>Cmd+1~6</code></li>
-                    <li>Actions: <code>Cmd+C</code>, <code>Cmd+V</code>, <code>Delete</code>/<code>D</code>, <code>Cmd+Delete</code>, <code>Cmd+O</code></li>
+                    <li>Actions: <code>Cmd+C</code>, <code>Cmd+V</code>, <code>Delete</code>/<code>Backspace</code>/<code>D</code>, <code>Cmd+Delete</code>, <code>Cmd+O</code></li>
                     <li>Selection: <code>Cmd+A</code> (Main=Auto Advance, Grid/Manage=Select All)</li>
                 </ul>
                 <p>Refer to <code>docs/release/SHORTCUTS.md</code> for the full list.</p>
@@ -1097,7 +1159,7 @@
                 <ul>
                     <li><strong>DMG Channel (Fast)</strong>: Use <code>Check for Updates</code> in the app menu for Sparkle updates, or download the latest <code>SnapView.dmg</code> from GitHub releases.</li>
                     <li><strong>Mac App Store Channel (Stable)</strong>: Follows the standard Mac App Store update process.</li>
-                    <li>Intel Mac compatibility is experimental and may show an additional warning at launch.</li>
+                    <li>The DMG channel updates through the single latest <code>SnapView.dmg</code>; there is no separate Intel-only download.</li>
                 </ul>
 
                 <h2>16. Data & Safety Notes</h2>

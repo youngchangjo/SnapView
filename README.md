@@ -19,11 +19,6 @@ Official Website: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
 
 Mac App Store: [SnapView on the App Store](https://apps.apple.com/us/app/snapview-fast-image-viewer/id6762974261)
 
-App Store metadata is localized separately from the in-app UI language resources.
-
-- App UI languages: Korean, English, Japanese, Simplified Chinese, Traditional Chinese, Spanish, French, German, Portuguese (Brazil), Italian, Dutch, Turkish, Polish, Swedish.
-- App Store metadata: includes broader localized store pages for Portuguese Brazil, Italian, Dutch, Turkish, Polish, Swedish, Indonesian, Malay, Thai, Vietnamese, Danish, Norwegian, Finnish, Czech, Hungarian, Romanian, and Greek.
-
 ## Download
 
 - Latest release: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
@@ -185,8 +180,6 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 공식 홈페이지: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
 
 Mac App Store: [App Store에서 SnapView 보기](https://apps.apple.com/us/app/snapview-fast-image-viewer/id6762974261)
-
-App Store metadata localization은 앱 내부 UI 언어 리소스와 별도로 관리합니다. App Store 페이지 언어 범위는 추가 지역/언어로 확장했고, 선택 가능한 2순위 UI 언어 `pt-BR`, `it`, `nl`, `tr`, `pl`, `sv`는 검증과 고노출 문자열 커버리지용으로 포함했으며 아직 완전 번역으로 홍보하지 않습니다.
 
 ## 다운로드
 
