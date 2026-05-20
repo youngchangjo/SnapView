@@ -1,6 +1,43 @@
 # SnapView Release Notes
 
-## v1.7.0 (Current) - 2026-05-14
+## v1.8.0 (Current) - 2026-05-20
+
+Language: [🇺🇸 English](#english-180) | [🇰🇷 한국어](#korean-180)
+
+<a id="english-180"></a>
+
+### English
+
+#### What's New
+- SnapView 1.8 focuses on stability: filtered selection accuracy, RAW+JPG workflow safeguards, smoother video controls, predictable rotation behavior, and small viewer/UI fixes.
+
+#### Improvements
+- Grid selection now respects the current filter, so Select All targets only the visible filtered items.
+- Filmstrip now supports horizontal scrolling.
+- RAW+JPG pairing is more reliable for ARW, CR3, RW2, and DNG workflows.
+- Video playback restore no longer flashes the playback bar through an empty initial state when returning to SnapView.
+- `Option + Left/Right` video seeks briefly reveal the playback bar while preserving the existing auto-hide behavior.
+- Repeated same-direction image rotations now progress predictably through each 90-degree step.
+- Settings and messages for saved rotations are shorter and easier to understand.
+- Keypad `+` and `-`, viewer menu state, square thumbnail frames, Help readability, and solid viewer background behavior were tightened.
+
+<a id="korean-180"></a>
+
+### 한국어
+
+#### 새로운 점
+- SnapView 1.8은 안정성에 집중합니다. 필터 적용 상태의 선택 정확도, RAW+JPG 작업 흐름 보호, 동영상 컨트롤 안정화, 예측 가능한 회전 동작, 작은 보기/UI 수정을 포함합니다.
+
+#### 개선된 점
+- Grid 선택이 현재 필터를 기준으로 동작해, 전체 선택 시 화면에 보이는 필터 결과만 선택합니다.
+- Filmstrip에서 가로 스크롤을 지원합니다.
+- ARW, CR3, RW2, DNG 작업 흐름에서 RAW+JPG 묶음 관리가 더 안정적으로 동작합니다.
+- SnapView로 돌아올 때 동영상 재생 막대가 빈 초기 상태로 잠깐 표시되지 않도록 복원 흐름을 안정화했습니다.
+- 동영상에서 `Option + 왼쪽/오른쪽` 탐색 후 기존 자동 숨김 동작은 유지하면서 재생 막대를 잠깐 표시합니다.
+- 같은 방향으로 이미지 회전을 반복해도 각 90도 단계가 정확하게 표시됩니다.
+- 텐키 `+`/`-`, 보기 메뉴 상태, 썸네일 네모 프레임, Help 창 가독성, 단색 뷰어 배경 동작을 함께 개선했습니다.
+
+## v1.7.0 - 2026-05-14
 
 Language: [🇺🇸 English](#english-170) | [🇰🇷 한국어](#korean-170)
 

@@ -8,7 +8,7 @@
 
 Fast macOS image viewer for real photo culling work.
 
-Current Version: `v1.7.0`
+Current Version: `v1.8.0`
 
 
 Language: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
@@ -22,23 +22,12 @@ Mac App Store: [SnapView on the App Store](https://apps.apple.com/us/app/snapvie
 ## Download
 
 - Latest release: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
-- Install package: open the latest release page and download `SnapView-1.7.0.dmg`
+- Install package: open the latest release page and download `SnapView-1.8.0.dmg`
 - Official website: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
 
-## v1.7.0 Update
+## v1.8.0 Update
 
-- **Scroll Direction Reliability**: Stabilizes mouse wheel and trackpad previous/next navigation across Main, Filmstrip, Manage, and Video views, with optional per-device and per-axis direction customization.
-- **Cleaner Viewer Overlays**: Keeps image/video navigation arrows and video controls transient so they do not remain over the content while the pointer is idle.
-- **Photo Info Overlay Flags**: Photo Info Overlay visibility now also controls main-view Pick/Reject badges, so those markers no longer remain on top of the image when the info overlay is off.
-- **Viewer Preference Memory**: Adds persisted viewer preferences for info overlay state, preserved image zoom across navigation, and a pure black dark viewer background option.
-- **Rotation Save Reliability**: Verifies JPEG rotation saves before showing success, ignores duplicate rotation requests, refreshes thumbnails after the original changes, and lets Current Folder rotation view save only the current JPG/JPEG image.
-- **Original Quality Loading**: Quality-first mode now requests the current image at original quality on network drives. Balanced and Quality modes more reliably upgrade settled preview or resized images to original quality, and show a clear status when original loading fails.
-- **Smoother Original Quality Transition**: Original-quality upgrades now crossfade from resized images, use a shorter apply fade, and start sooner after navigation settles.
-- **Video Playback Fixes**: Ended videos can be replayed with the playback button or `Space`, and `Option`+Left/Right seeks videos in 5-second steps.
-- **Default App Registration Reliability**: Rechecks Launch Services briefly after a successful registration request to avoid false failure alerts.
-- **File Action Targeting**: Fixes copy/delete/move target resolution so explicit selections and the current item are handled predictably instead of selecting the whole folder.
-- **File Move And Delete Options**: Adds Move to Folder and an opt-in Trash-only Delete/Backspace path without an extra confirmation dialog.
-- **Toolbar Discoverability**: Adds localized tooltips for top toolbar icon buttons in supported app languages.
+SnapView 1.8 focuses on stability: filtered selection accuracy, RAW+JPG workflow safeguards, video playback polish, repeated rotation display reliability, and small viewer/UI fixes.
 
 ## v1.6.0 Update
 
@@ -136,7 +125,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 ## Install
 
 1. Download the latest DMG from [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest).
-2. Open `SnapView-1.7.0.dmg`.
+2. Open `SnapView-1.8.0.dmg`.
 3. Drag `SnapView.app` into `Applications`.
 4. Launch SnapView from `Applications`.
 
@@ -158,6 +147,8 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 - Finder interoperability is centered on color labels.
 - Lightroom interoperability is centered on XMP sidecars for rating, Pick, and Reject.
 - Conditional formats such as AVIF or JXL depend on macOS decoder availability.
+- App UI languages: Korean, English, Japanese, Simplified Chinese, Traditional Chinese, Spanish, French, German, Portuguese (Brazil), Italian, Dutch, Turkish, Polish, Swedish.
+- App Store metadata also covers Indonesian, Malay, Thai, Vietnamese, Danish, Norwegian, Finnish, Czech, Hungarian, Romanian, and Greek.
 - Release candidates are validated in both lanes (DMG Fast + Mac App Store Stable) before shipment.
 - DMG releases are shipped as a single universal download. Do not publish a separate Intel-only DMG or standalone x86_64 app asset.
 - If Gatekeeper blocks the app on first launch, open it from `Applications` again after confirming in macOS security settings.
@@ -170,7 +161,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 
 실사용 사진 선별 작업에 맞춘 macOS용 고속 이미지 뷰어입니다.
 
-현재 버전: `v1.7.0`
+현재 버전: `v1.8.0`
 
 
 언어: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
@@ -184,27 +175,16 @@ Mac App Store: [App Store에서 SnapView 보기](https://apps.apple.com/us/app/s
 ## 다운로드
 
 - 최신 릴리즈: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
-- 설치 파일: 최신 릴리즈 페이지에서 `SnapView-1.7.0.dmg`를 다운로드해 설치합니다
+- 설치 파일: 최신 릴리즈 페이지에서 `SnapView-1.8.0.dmg`를 다운로드해 설치합니다
 - 공식 사이트: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
 
 스크린샷은 위 `Screenshots` 섹션에서 바로 확인할 수 있습니다.
 
 `v0.10.0`부터의 상세 변경 이력은 별도 문서인 [공개 릴리즈 노트](https://github.com/youngchangjo/SnapView/blob/main/RELEASE_NOTES.md)에서 확인할 수 있습니다.
 
-## v1.7.0 업데이트
+## v1.8.0 업데이트
 
-- **스크롤 방향 안정화**: Main, Filmstrip, Manage, Video 뷰에서 마우스 휠과 트랙패드의 이전/다음 이동 기준을 정리하고, 필요 시 기기별/축별 방향을 따로 지정할 수 있게 했습니다.
-- **보기 오버레이 정리**: 이미지/동영상 좌우 화살표와 동영상 컨트롤이 포인터가 멈춘 상태에서 콘텐츠 위에 계속 남지 않도록 조정했습니다.
-- **정보 오버레이 플래그**: 정보 오버레이 표시 설정이 메인 보기의 Pick/Reject 배지도 함께 제어해, 정보 오버레이를 끄면 해당 표시가 이미지 위에 남지 않습니다.
-- **보기 설정 기억**: 정보 오버레이 표시 상태, 이미지 이동 시 확대 비율 유지, 다크 모드 완전 검은 배경 옵션을 설정으로 저장합니다.
-- **회전 저장 안정성**: JPEG 회전 저장 성공을 확인한 뒤 완료를 안내하고, 겹치는 키 처리 경로의 중복 회전 명령을 무시하며, 원본 변경 후 썸네일을 새로 고칩니다. 현재 폴더 회전 보기에서도 현재 JPG/JPEG 이미지 하나만 저장합니다.
-- **원본 품질 전환 안정화**: 품질 우선 모드에서는 네트워크 드라이브에서도 현재 이미지를 원본 품질로 요청합니다. 보통/품질 우선 모드에서는 탐색이 멈춘 뒤 프리뷰 또는 리사이즈 이미지가 원본 품질로 더 안정적으로 전환되며, 실패 시 상태를 명확하게 표시합니다.
-- **원본 품질 전환 체감 개선**: 리사이즈 이미지에서 원본 품질로 전환될 때 자연스럽게 페이드되고, 적용 페이드를 짧게 유지하며, 탐색이 멈춘 뒤 원본 요청을 더 빠르게 시작합니다.
-- **동영상 재생 보정**: 재생이 끝난 동영상도 재생 버튼이나 `Space`로 다시 처음부터 재생할 수 있고, `Option`+좌/우로 5초 단위 탐색을 지원합니다.
-- **기본 앱 등록 안정성**: 기본 프로그램 등록 요청이 성공한 뒤 Launch Services 반영을 짧게 재확인해 실제 등록됐는데 실패로 보이는 알림을 줄였습니다.
-- **파일 작업 대상 안정화**: 복사/삭제/이동이 명시 선택 항목 또는 현재 항목을 기준으로 동작하도록 정리해, 폴더 전체가 잘못 선택되는 상황을 막았습니다.
-- **파일 이동/삭제 옵션**: 앱 안에서 폴더로 이동하는 기능과, 기본 비활성화 상태의 휴지통 즉시 이동 옵션을 추가했습니다.
-- **툴바 발견성 개선**: 상단 툴바 아이콘 버튼에 지원 언어별 툴팁을 추가했습니다.
+SnapView 1.8은 안정성에 집중합니다. 필터 적용 상태의 선택 정확도, RAW+JPG 작업 흐름 보호, 동영상 재생 보정, 반복 회전 표시 안정성, 작은 보기/UI 수정을 포함합니다.
 
 ## v1.6.0 업데이트
 
@@ -281,7 +261,7 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 ## 설치 방법
 
 1. [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)에서 최신 DMG를 다운로드합니다.
-2. `SnapView-1.7.0.dmg`를 엽니다.
+2. `SnapView-1.8.0.dmg`를 엽니다.
 3. `SnapView.app`을 `Applications`로 드래그합니다.
 4. `Applications`에서 SnapView를 실행합니다.
 
@@ -303,6 +283,8 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 - Finder 연동은 컬러 라벨 중심입니다.
 - Lightroom 연동은 XMP sidecar 기반 별점/Pick/Reject 중심입니다.
 - AVIF, JXL 같은 조건부 포맷은 macOS 디코더 지원 여부에 따라 달라집니다.
+- 앱 UI 언어는 한국어, 영어, 일본어, 중국어 간체, 중국어 번체, 스페인어, 프랑스어, 독일어, 포르투갈어(브라질), 이탈리아어, 네덜란드어, 터키어, 폴란드어, 스웨덴어입니다.
+- App Store 메타데이터는 인도네시아어, 말레이어, 태국어, 베트남어, 덴마크어, 노르웨이어, 핀란드어, 체코어, 헝가리어, 루마니아어, 그리스어도 포함합니다.
 - 릴리즈 후보는 출고 전에 DMG Fast + Mac App Store Stable 두 채널 검증을 모두 거칩니다.
 - DMG 릴리즈는 단일 universal 다운로드로 제공합니다. 별도 Intel 전용 DMG 또는 x86_64 standalone app 산출물은 공개하지 않습니다.
 - 첫 실행 시 Gatekeeper 경고가 나오면 macOS 보안 설정에서 허용 후 다시 실행해 주십시오.
