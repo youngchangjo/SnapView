@@ -25,29 +25,6 @@ Mac App Store: [SnapView on the App Store](https://apps.apple.com/us/app/snapvie
 - Install package: open the latest release page and download `SnapView-1.8.0.dmg`
 - Official website: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
 
-## v1.8.0 Update
-
-SnapView 1.8 focuses on stability: filtered selection accuracy, RAW+JPG workflow safeguards, video playback polish, repeated rotation display reliability, and small viewer/UI fixes.
-
-## v1.6.0 Update
-
-- **Rotate And Flip**: Added clockwise rotation and horizontal flip for the current image.
-- **JPEG Original Save For Rotation**: Added an option to save current-file rotation directly to the JPEG original.
-- **Space Zoom Toggle**: In image view, `Space` now toggles between 100% view and the previous zoom level.
-- **Shortcut Cleanup Options**: Added an option to clear a rating or Pick by pressing the same shortcut again, and improved rating clear on English keyboard layouts.
-- **Preview Promotion Reliability**: Reduced cases where a preview image could remain after fast browsing instead of promoting to the final image display.
-- **Viewer State Recovery**: Returning to SnapView now preserves video playback position and image zoom/pan state more reliably.
-- **Settings And JPEG Metadata**: Added reset-all-settings and Finder date alignment for edited JPEG capture dates.
-
-## What's New In v1.5
-
-- **Photo And Video Browsing**: Browse supported videos together with photos in the same folder. `MP4`, `MOV`, and `M4V` are included in the first supported video set.
-- **Simple Video Playback**: Play videos in Main, Filmstrip, and Manage views, with autoplay settings, volume control, and `Space` for play/pause.
-- **Image Export**: Create resized copies as `JPEG` or `PNG` using simple presets for Instagram, Threads, X, blogs, or a custom size. JPEG quality can be adjusted when needed.
-- **Date And Location Edits**: Adjust photo date/time and GPS metadata with a cautious workflow that keeps unsupported files protected.
-- **On-device OCR**: Run OCR from Quick Check, copy recognized Korean and English text, and optionally show detected text highlights directly on the image.
-- **Video-aware Tools**: Actions that do not apply to video, such as image export and rotation, are disabled for video assets to keep the workflow predictable.
-
 ## Screenshots
 
 ![SnapView overview](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/hero.png)
@@ -181,30 +158,6 @@ Mac App Store: [App Store에서 SnapView 보기](https://apps.apple.com/us/app/s
 스크린샷은 위 `Screenshots` 섹션에서 바로 확인할 수 있습니다.
 
 `v0.10.0`부터의 상세 변경 이력은 별도 문서인 [공개 릴리즈 노트](https://github.com/youngchangjo/SnapView/blob/main/RELEASE_NOTES.md)에서 확인할 수 있습니다.
-
-## v1.8.0 업데이트
-
-SnapView 1.8은 안정성에 집중합니다. 필터 적용 상태의 선택 정확도, RAW+JPG 작업 흐름 보호, 동영상 재생 보정, 반복 회전 표시 안정성, 작은 보기/UI 수정을 포함합니다.
-
-## v1.6.0 업데이트
-
-- **회전과 좌우 반전**: 현재 이미지의 시계 방향 회전과 좌우 반전을 추가했습니다.
-- **회전 후 JPEG 원본 저장**: 현재 파일 회전에서 JPEG 원본에 바로 저장할 수 있는 옵션을 추가했습니다.
-- **Space 배율 토글**: 이미지 보기에서 `Space`로 100% 보기와 이전 배율을 빠르게 오갈 수 있습니다.
-- **단축키 해제 옵션**: 같은 별점/Pick 단축키를 한 번 더 눌러 해제하는 옵션을 추가하고, 영문 키보드의 별점 취소 동작을 보강했습니다.
-- **프리뷰 전환 안정성**: 빠른 탐색 후 프리뷰 이미지가 최종 표시로 전환되지 않고 남는 상황을 줄였습니다.
-- **보기 상태 복원**: SnapView로 다시 돌아왔을 때 동영상 재생 위치와 이미지 확대/이동 상태를 더 안정적으로 유지합니다.
-- **설정/JPEG 메타데이터 정리**: 설정 초기화와 JPEG 촬영 날짜 수정 시 Finder 날짜 정렬 옵션을 추가했습니다.
-
-## v1.5 주요 변경
-
-- **사진 + 동영상 탐색**: 같은 폴더 안의 사진과 동영상을 함께 넘겨볼 수 있습니다. 1차 지원 대상은 `MP4`, `MOV`, `M4V`입니다.
-- **간단한 동영상 재생**: Main, Filmstrip, Manage 뷰에서 동영상을 재생할 수 있고, 자동재생 설정, 음량 조절, `Space` 재생/일시정지를 지원합니다.
-- **이미지 내보내기**: `JPEG` 또는 `PNG` 복사본을 만들 수 있고, Instagram, Threads, X, 블로그, 수동 크기 프리셋을 제공합니다. JPEG 품질도 조절할 수 있습니다.
-- **촬영 시각과 위치 보정**: 사진의 날짜/시간과 GPS 정보를 안전한 흐름으로 수정할 수 있습니다. 지원하지 않는 파일은 원본 쓰기를 막아 예기치 않은 손상을 피합니다.
-- **온디바이스 OCR**: Quick Check에서 사진 속 한국어/영어 문자를 인식하고 복사할 수 있으며, 필요하면 이미지 위에 인식 영역을 노란 하이라이트로 표시합니다.
-- **동영상 대응 도구 정리**: 회전, 이미지 내보내기처럼 동영상에 맞지 않는 기능은 동영상 선택 시 실행되지 않도록 정리했습니다.
-
 
 ## 왜 SnapView인가요
 
