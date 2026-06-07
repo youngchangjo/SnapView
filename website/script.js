@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 2. Language Toggle Logic
   const langButtons = document.querySelectorAll('[data-set-lang]');
+  const localePayloads = new Map();
 
   // Set initial language based on saved preference or default to EN
   let currentLang = localStorage.getItem('snapview_lang') || 'en';
@@ -51,15 +52,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  async function loadLocalePayload(lang) {
+    if (lang !== 'ko') {
+      return {};
+    }
+
+    if (!localePayloads.has(lang)) {
+      localePayloads.set(lang, fetch('/locales/home.ko.json', { cache: 'force-cache' }).then(response => {
+        if (!response.ok) {
+          throw new Error(`Failed to load Korean homepage locale: ${response.status}`);
+        }
+        return response.json();
+      }));
+    }
+
+    return localePayloads.get(lang);
+  }
+
   async function hydrateLanguage(lang) {
-    const inlineNodes = document.querySelectorAll(`[data-lang="${lang}"][data-ko-html]`);
-    inlineNodes.forEach(el => {
-      if (el.dataset.langHydrated === 'true') {
-        return;
-      }
-      el.innerHTML = el.getAttribute('data-ko-html');
-      el.dataset.langHydrated = 'true';
-    });
+    const localizedNodes = document.querySelectorAll(`[data-lang="${lang}"][data-i18n]`);
+    if (localizedNodes.length > 0) {
+      const payload = await loadLocalePayload(lang);
+      localizedNodes.forEach(el => {
+        if (el.dataset.langHydrated === 'true') {
+          return;
+        }
+
+        const key = el.getAttribute('data-i18n');
+        if (!Object.prototype.hasOwnProperty.call(payload, key)) {
+          console.warn(`Missing SnapView locale key: ${key}`);
+          return;
+        }
+
+        el.innerHTML = payload[key];
+        el.dataset.langHydrated = 'true';
+      });
+    }
 
     const remoteNodes = document.querySelectorAll(`[data-lang="${lang}"][data-lang-src]`);
     await Promise.all(Array.from(remoteNodes).map(async el => {
