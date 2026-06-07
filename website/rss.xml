@@ -5,19 +5,19 @@
     <link>https://snapview.snapworkslab.com/</link>
     <description>Product updates, release notes, and support information for SnapView, a fast Mac photo viewer for RAW files and image review.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 20 May 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jun 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://snapview.snapworkslab.com/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SnapView v1.8.0 Release Notes</title>
-      <link>https://snapview.snapworkslab.com/release_notes.html</link>
-      <guid isPermaLink="true">https://snapview.snapworkslab.com/release_notes.html#v1-8-0</guid>
+      <link>https://snapview.snapworkslab.com/release_notes</link>
+      <guid isPermaLink="true">https://snapview.snapworkslab.com/release_notes#v1-8-0</guid>
       <pubDate>Wed, 20 May 2026 00:00:00 +0900</pubDate>
       <description>See the latest SnapView v1.8.0 filtered selection, RAW+JPG pairing, video playback, rotation display, Filmstrip scrolling, and viewer UI updates.</description>
     </item>
     <item>
       <title>SnapView User Manual</title>
-      <link>https://snapview.snapworkslab.com/manual.html</link>
-      <guid isPermaLink="true">https://snapview.snapworkslab.com/manual.html</guid>
+      <link>https://snapview.snapworkslab.com/manual</link>
+      <guid isPermaLink="true">https://snapview.snapworkslab.com/manual</guid>
       <pubDate>Thu, 14 May 2026 00:00:00 +0900</pubDate>
       <description>Learn how to install, browse, compare, rate, and organize photos in SnapView for Mac.</description>
     </item>

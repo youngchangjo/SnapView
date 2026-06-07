@@ -51,8 +51,40 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  function applyLanguage(lang) {
+  async function hydrateLanguage(lang) {
+    const inlineNodes = document.querySelectorAll(`[data-lang="${lang}"][data-ko-html]`);
+    inlineNodes.forEach(el => {
+      if (el.dataset.langHydrated === 'true') {
+        return;
+      }
+      el.innerHTML = el.getAttribute('data-ko-html');
+      el.dataset.langHydrated = 'true';
+    });
+
+    const remoteNodes = document.querySelectorAll(`[data-lang="${lang}"][data-lang-src]`);
+    await Promise.all(Array.from(remoteNodes).map(async el => {
+      if (el.dataset.langHydrated === 'true') {
+        return;
+      }
+
+      const response = await fetch(el.getAttribute('data-lang-src'), { cache: 'force-cache' });
+      if (!response.ok) {
+        throw new Error(`Failed to load ${el.getAttribute('data-lang-src')}: ${response.status}`);
+      }
+
+      el.innerHTML = await response.text();
+      el.dataset.langHydrated = 'true';
+    }));
+  }
+
+  async function applyLanguage(lang) {
     document.documentElement.lang = lang;
+
+    try {
+      await hydrateLanguage(lang);
+    } catch (error) {
+      console.warn('SnapView language content could not be loaded.', error);
+    }
 
     // Update active state of buttons
     langButtons.forEach(btn => {
@@ -69,10 +101,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('[data-lang]').forEach(el => {
       if (el.getAttribute('data-lang') === lang) {
         el.removeAttribute('hidden');
-        el.style.display = ''; // Reset display property if inline
+        el.style.display = '';
       } else {
         el.setAttribute('hidden', '');
-        el.style.display = 'none'; // Force hide
+        el.style.display = 'none';
       }
     });
 

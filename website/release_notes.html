@@ -7,13 +7,13 @@
     <title>SnapView Release Notes | Fast Mac Image Viewer for Hobby Photographers</title>
     <meta name="description"
         content="See what changed in SnapView, including new features, fixes, and workflow improvements for Mac photo review.">
-    <link rel="canonical" href="https://snapview.snapworkslab.com/release_notes.html">
+    <link rel="canonical" href="https://snapview.snapworkslab.com/release_notes">
     <meta name="theme-color" content="#050507">
     <meta property="og:type" content="website">
     <meta property="og:title" content="SnapView Release Notes | Fast Mac Image Viewer for Hobby Photographers">
     <meta property="og:description"
         content="See what changed in SnapView, including new features, fixes, and workflow improvements for Mac photo review.">
-    <meta property="og:url" content="https://snapview.snapworkslab.com/release_notes.html">
+    <meta property="og:url" content="https://snapview.snapworkslab.com/release_notes">
     <meta property="og:site_name" content="SnapView">
     <meta property="og:image" content="https://snapview.snapworkslab.com/assets/images/snapview-icon.png">
     <meta property="og:image:secure_url" content="https://snapview.snapworkslab.com/assets/images/snapview-icon.png">
@@ -32,7 +32,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Syne:wght@600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="icon" type="image/png" href="assets/images/snapview-icon.png">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/manifest.webmanifest">
     <link rel="alternate" type="application/rss+xml" title="SnapView Updates" href="https://snapview.snapworkslab.com/rss.xml">
@@ -129,16 +132,16 @@
 
     <main class="page">
         <header class="topbar">
-            <a class="brand" href="index.html" aria-label="SnapView home">
+            <a class="brand" href="/" aria-label="SnapView home">
                 <img src="assets/images/snapview-icon.png" alt="SnapView icon">
                 <span>SnapView</span>
             </a>
 
             <nav class="nav" aria-label="Primary">
-                <a href="index.html#workflow">Features</a>
-                <a href="index.html#specs">Specs</a>
-                <a href="manual.html">Manual</a>
-                <a href="release_notes.html" class="active">Release Notes</a>
+                <a href="/#workflow">Features</a>
+                <a href="/#specs">Specs</a>
+                <a href="/manual">Manual</a>
+                <a href="/release_notes" class="active">Release Notes</a>
             </nav>
 
             <div class="lang-switch" role="group" aria-label="Language">
@@ -148,320 +151,8 @@
         </header>
 
         <section class="manual-container manual-content">
-            <!-- Korean Content -->
-            <div data-lang="ko" hidden>
-                <h1>SnapView 릴리즈 노트</h1>
-                <h2 id="v1-8-0-ko">v1.8.0 (Current) - 2026-05-20</h2>
-                <h3>새로운 점</h3>
-                <ul>
-                    <li>SnapView 1.8은 안정성에 집중합니다. 필터 적용 상태의 선택 정확도, RAW+JPG 작업 흐름 보호, 동영상 컨트롤 안정화, 정확한 회전 표시, 작은 보기/UI 수정을 포함합니다.</li>
-                </ul>
-                <h3>개선된 점</h3>
-                <ul>
-                    <li>Grid 선택이 현재 필터를 기준으로 동작해, 전체 선택 시 화면에 보이는 필터 결과만 선택합니다.</li>
-                    <li>Filmstrip에서 가로 스크롤을 지원합니다.</li>
-                    <li>ARW, CR3, RW2, DNG 작업 흐름에서 RAW+JPG 묶음 관리가 더 안정적으로 동작합니다.</li>
-                    <li>SnapView로 돌아올 때 동영상 재생 막대가 빈 초기 상태로 잠깐 표시되지 않도록 복원 흐름을 안정화했습니다.</li>
-                    <li>동영상에서 <code>Option + 왼쪽/오른쪽</code> 탐색 후 기존 자동 숨김 동작은 유지하면서 재생 막대를 잠깐 표시합니다.</li>
-                    <li>같은 방향으로 이미지 회전을 반복해도 각 90도 단계가 정확하게 표시됩니다.</li>
-                    <li>텐키 <code>+</code>/<code>-</code>, 보기 메뉴 상태, 썸네일 네모 프레임, Help 창 가독성, 단색 뷰어 배경 동작을 함께 개선했습니다.</li>
-                </ul>
-
-                <h2 id="v1-7-0-ko">v1.7.0 - 2026-05-14</h2>
-                <h3>새로운 점</h3>
-                <ul>
-                    <li><strong>앱 UI 언어 추가</strong>: 포르투갈어(브라질), 이탈리아어, 네덜란드어, 터키어, 폴란드어, 스웨덴어 앱 UI 지원을 추가했습니다.</li>
-                    <li><strong>스크롤 방향 설정</strong>: Main, Filmstrip, Manage, Video 뷰에서 마우스 휠과 트랙패드 탐색이 더 일관되게 동작합니다. 필요하면 마우스/트랙패드, 상하/좌우 방향을 따로 사용자화할 수 있습니다.</li>
-                    <li><strong>보기 설정 기억</strong>: 정보 오버레이 표시 상태를 기억하고, 이미지 이동 시 확대 비율을 유지하며, 다크 모드에서 완전한 검은 배경을 사용할 수 있습니다.</li>
-                    <li><strong>같은 사진 복귀 상태 유지</strong>: 다른 앱이나 다른 창에 갔다가 SnapView로 돌아왔을 때, 이미지 간 확대 유지 옵션이 꺼져 있어도 현재 사진의 확대/이동 상태를 유지합니다.</li>
-                    <li><strong>정보 오버레이 플래그</strong>: 정보 오버레이 표시 설정이 메인 보기의 Pick/Reject 배지도 함께 제어해, 정보 오버레이를 끄면 해당 표시가 이미지 위에 남지 않습니다.</li>
-                    <li><strong>회전 저장 안정성</strong>: JPEG 회전 저장은 성공 확인 후 완료를 안내하고, 중복 회전 명령을 무시하며, 원본 변경 후 썸네일을 새로 고칩니다. 현재 폴더 회전 보기는 현재 JPG/JPEG 이미지 하나만 저장할 수 있습니다.</li>
-                    <li><strong>원본 품질 전환 안정화</strong>: 품질 우선 모드에서는 네트워크 드라이브에서도 현재 이미지를 원본 품질로 요청합니다. 보통/품질 우선 모드에서는 탐색이 멈춘 뒤 프리뷰 또는 리사이즈 이미지가 원본 품질로 더 안정적으로 전환됩니다.</li>
-                    <li><strong>동영상 재생 보정</strong>: 끝까지 재생된 동영상은 재생 버튼 또는 <code>Space</code>로 처음부터 다시 재생할 수 있고, <code>Option</code>+왼쪽/오른쪽으로 5초 단위 탐색을 할 수 있습니다.</li>
-                    <li><strong>폴더로 이동</strong>: 현재 파일 또는 명시적으로 선택한 파일을 SnapView 안에서 다른 폴더로 이동할 수 있습니다.</li>
-                    <li><strong>툴바 툴팁</strong>: 상단 툴바 아이콘 버튼에 지원 언어별 도움말 문구를 적용했습니다.</li>
-                </ul>
-                <h3>개선된 점</h3>
-                <ul>
-                    <li>이미지/동영상 좌우 화살표와 동영상 컨트롤이 포인터가 멈춘 상태에서 콘텐츠 위에 계속 남지 않도록 정리했습니다.</li>
-                    <li>전체화면 동영상이 보기 영역을 더 깔끔하게 사용하도록 조정했습니다.</li>
-                    <li>ZIP 내부 이미지를 Compare와 Reference Compare에서 열 때 검은 화면으로 보일 수 있던 문제를 수정했습니다.</li>
-                    <li>복사, 삭제, 이동이 현재 항목 또는 명시 선택 항목을 더 정확하게 기준으로 삼습니다.</li>
-                    <li>확인 없는 <code>Delete</code>/<code>Backspace</code>는 선택 옵션이며, 켜도 macOS 휴지통 이동만 수행하고 기본값은 꺼짐입니다.</li>
-                </ul>
-
-                <h2>v1.6.0 - 2026-05-09</h2>
-                <h3>새로운 점</h3>
-                <ul>
-                    <li><strong>회전과 좌우 반전</strong>: 현재 이미지 시계 방향 회전과 좌우 반전을 추가했습니다.</li>
-                    <li><strong>회전 후 JPEG 원본 저장</strong>: 현재 파일 회전에서 JPEG 원본에 바로 저장할 수 있는 옵션을 추가했습니다. 현재 폴더(전체 파일) 회전은 기존처럼 화면 표시 기준으로 적용됩니다.</li>
-                    <li><strong>Space 배율 토글</strong>: Main, Filmstrip, Manage 이미지 보기에서 <code>Space</code>로 100% 보기와 이전 배율을 빠르게 오갈 수 있습니다.</li>
-                    <li><strong>같은 단축키로 해제</strong>: 같은 별점 또는 Pick 단축키를 한 번 더 눌러 해제할 수 있는 선택 옵션을 추가했습니다.</li>
-                    <li><strong>설정 초기화</strong>: 모든 설정을 기본값으로 되돌리는 버튼을 추가했습니다.</li>
-                    <li><strong>JPEG Finder 날짜 정렬</strong>: JPEG 원본 메타데이터 저장 시 Finder 생성일/수정일도 편집한 촬영 날짜에 맞출 수 있는 고급 옵션을 추가했습니다.</li>
-                </ul>
-                <h3>개선된 점</h3>
-                <ul>
-                    <li>빠른 탐색 중 프리뷰 이미지가 최종 이미지 표시로 전환되지 않고 남는 상황을 줄였습니다.</li>
-                    <li>SnapView로 다시 돌아왔을 때 동영상 재생 위치와 이미지 확대/이동 상태를 더 안정적으로 유지합니다.</li>
-                    <li>작은 로컬 이미지를 빠르게 넘길 때 불필요한 상태 갱신을 줄였습니다.</li>
-                    <li>영문 입력/키보드 환경에서도 <code>₩</code>/<code>\</code> 물리 키 별점 취소가 더 안정적으로 동작합니다.</li>
-                </ul>
-
-                <h2>v1.5.2 - 2026-05-06</h2>
-                <h3>개선된 점</h3>
-                <p>SnapView 1.5.2에서는 실제 사진 탐색 흐름의 표시 안정성과 OCR 지원 범위를 개선했습니다.</p>
-                <ul>
-                    <li>대량 로컬 폴더와 네트워크 폴더에서 사진을 빠르게 넘길 때 인덱스만 앞서가고 이미지 표시가 늦는 상황을 줄였습니다.</li>
-                    <li>설정에서 <code>이미지만</code>/<code>동영상 포함</code>을 바꾸면 현재 폴더 목록을 올바르게 다시 구성합니다.</li>
-                    <li>실제 미디어 목록이 같을 때는 불필요한 재인덱싱을 줄이고, 이미지 전용 네트워크 폴더에서는 느린 동영상 병합 정렬 경로를 피합니다.</li>
-                    <li>Quick Check와 수동 OCR의 명시 지원 언어를 한국어와 영어로 정리하고 한글 인식을 보강했습니다.</li>
-                    <li>EXIF와 Quick Check 정보 표시 타이밍을 이미지 탐색 흐름에 더 자연스럽게 맞췄습니다.</li>
-                </ul>
-
-                <h2>v1.5.1 - 2026-05-04</h2>
-                <h3>개선된 점</h3>
-                <ul>
-                    <li><strong>더 부드러운 탐색</strong>: 방향키를 길게 눌러 많은 사진을 넘길 때 이미지 전환이 더 안정적으로 따라오도록 다듬었습니다.</li>
-                    <li><strong>1.5 기능 안정화</strong>: 동영상 탐색, 이미지 내보내기, 온디바이스 OCR 등 v1.5의 주요 기능을 더 안정적으로 사용할 수 있도록 조정했습니다.</li>
-                </ul>
-
-                <h2>v1.5.0 - 2026-05-03</h2>
-                <h3>새로운 점</h3>
-                <ul>
-                    <li><strong>사진과 동영상을 함께 탐색</strong>: 같은 폴더 안의 사진과 동영상을 함께 넘겨볼 수 있습니다. 1차 지원 대상은 <code>MP4</code>, <code>MOV</code>, <code>M4V</code>입니다.</li>
-                    <li><strong>간단한 동영상 재생</strong>: Main, Filmstrip, Manage 뷰에서 동영상을 재생할 수 있고, 자동재생, 음량 조절, 타임라인 이동, <code>Space</code> 재생/일시정지를 지원합니다.</li>
-                    <li><strong>이미지 내보내기</strong>: <code>JPEG</code> 또는 <code>PNG</code> 복사본을 만들 수 있고, Instagram, Threads, X, 블로그, 수동 크기 프리셋을 제공합니다.</li>
-                    <li><strong>촬영 시각과 위치 보정</strong>: 사진의 날짜/시간과 GPS 정보를 안전한 흐름으로 수정할 수 있습니다. 지원하지 않는 원본 쓰기 경로는 차단합니다.</li>
-                    <li><strong>온디바이스 OCR</strong>: Quick Check에서 사진 속 문자를 인식하고 복사할 수 있으며, 필요하면 이미지 위에 노란 하이라이트로 인식 영역을 표시합니다.</li>
-                </ul>
-                <h3>개선된 점</h3>
-                <ul>
-                    <li>동영상 선택 시 사진 정보와 비슷한 흐름으로 해상도, 파일 크기, 코덱, FPS, 비트레이트, HDR, 날짜, 기기 정보를 표시합니다.</li>
-                    <li>Quick Check OCR 자동 실행은 선택 옵션이며 기본값은 꺼짐입니다.</li>
-                    <li>설정, 인트로 안내, Quick Check, Compare, 중복사진정리, 이미지 내보내기, 동영상 설정, 메뉴, 도움말 등 앱 전반의 다국어 적용 범위를 넓혔습니다.</li>
-                    <li>중국어 번체, 프랑스어, 독일어 UI 지원을 추가로 보강했습니다.</li>
-                    <li>설정에서 색상 모드를 변경할 때 열린 창에 더 안정적으로 반영되도록 개선했습니다.</li>
-                    <li>라이트/다크 모드에서 인트로, 빠른 시작, 정보 오버레이가 더 읽기 좋게 보이도록 다듬었습니다.</li>
-                </ul>
-
-                <h2>v1.0.2 - 2026-04-29</h2>
-                <h3>새로운 점</h3>
-                <ul>
-                    <li><strong>지원 언어 확대</strong>: 일본어, 중국어(간체), 스페인어 UI 지원을 추가했습니다.</li>
-                    <li><strong>트랙패드 탐색</strong>: 두 손가락 스와이프로 이전/다음 사진을 이동할 수 있고, macOS의 자연스러운 스크롤 방향에 맞출 수 있습니다.</li>
-                    <li><strong>Universal Mac 호환성</strong>: Mac App Store 빌드에 Apple Silicon과 Intel Mac 호환 바이너리를 함께 포함했습니다.</li>
-                </ul>
-                <h3>개선된 점</h3>
-                <ul>
-                    <li>Compare와 Reference Compare 화면을 더 일관되게 다듬었습니다. 기준/비교 대상 표시, 별점, Pick, 컬러 라벨 조작 흐름을 맞췄습니다.</li>
-                    <li>Quick Check에서 주요 EXIF 정보가 더 바로 보이고, 접기/펼치기 상태가 다음 실행에도 유지됩니다. GPS 정보가 있는 사진은 위치 정보를 더 쉽게 확인할 수 있습니다.</li>
-                    <li>Main, Filmstrip, Manage에서 마우스 휠과 트랙패드 동작이 더 일관되게 동작합니다. 확대된 상태에서는 두 손가락 스크롤이 사진 이동보다 화면 이동을 우선합니다.</li>
-                    <li>메뉴, 우클릭 메뉴, 설정, 도움말 문구가 선택한 앱 언어를 더 일관되게 따르도록 정리했습니다. 일본어, 중국어(간체), 스페인어에서도 일부 항목이 영어로 남던 문제를 줄였습니다.</li>
-                    <li>직접 다운로드 버전과 Mac App Store 버전에서 파일 접근 문제를 더 이해하기 쉽게 안내합니다. App Store 권한 재허용 흐름과 직접 다운로드 버전의 접근 실패 안내도 분리했습니다.</li>
-                    <li>밝은 사진 위에서도 인트로와 정보 오버레이가 더 잘 보이도록 배경과 가독성을 다듬었습니다.</li>
-                    <li>사진을 보는 중 폴더 안의 이미지가 이동되거나 삭제되는 상황에서도 더 안정적으로 동작하도록 보강했습니다.</li>
-                </ul>
-
-                <h2>v1.0.1 - 2026-04-27</h2>
-                <h3>새로운 점</h3>
-                <ul>
-                    <li><strong>시작 시 창</strong>: SnapView 시작 방식을 기본값 / 마지막 창 복원 / 전체 화면 중 선택할 수 있습니다.</li>
-                    <li><strong>창 크기 단축키</strong>: <code>Ctrl+1</code>~<code>4</code>, <code>Ctrl+0</code>으로 기본 / 1.5배 / 2배 / 2.5배 / 화면 채우기를 빠르게 전환할 수 있습니다.</li>
-                    <li>View 메뉴에 <strong>창 크기(Window Size)</strong> 서브메뉴가 추가되었습니다 (한/영 대응).</li>
-                    <li>SnapView 메뉴에 <strong>전체 매뉴얼</strong>, <strong>릴리스 노트</strong> 링크가 추가되었습니다.</li>
-                </ul>
-                <h3>개선된 점</h3>
-                <ul>
-                    <li>별점 UI 기본값이 <code>항상</code>에서 <code>자동 (별점 있을 때만)</code>으로 변경되었습니다.</li>
-                    <li>이전/다음 자동전환과 하위 폴더 이미지 포함이 기본값으로 활성화됩니다.</li>
-                    <li>컬러 라벨이 영어 모드에서도 올바르게 현지화되어 표시됩니다.</li>
-                    <li>기본 앱 등록 안정성이 개선되고, 실패 시 안내 다이얼로그가 표시됩니다.</li>
-                    <li>권한 요청 다이얼로그가 샌드박스 정책과 DMG 대안을 더 명확하게 안내합니다.</li>
-                    <li><code>Ctrl+0</code>이 이미지 줌과 충돌하던 버그가 수정되었습니다.</li>
-                </ul>
-
-                <h2>v1.0.0 - 2026-04-25</h2>
-                <h3>새로운 점</h3>
-                <ul>
-                    <li><strong>SnapView 1.0.0 정식 출시 및 Mac App Store 지원</strong>: 드디어 SnapView 1.0.0 정식 버전을 선보입니다! 더불어 Mac App Store를 위한 전용 빌드가 추가되었습니다. 이제 직접 다운로드(DMG)와 App Store 채널 모두에서 베타 꼬리표를 뗀 가장 안정적인 버전을 만나보실 수 있습니다.</li>
-                    <li><strong>Reference(기준) 비교 모드</strong>: 기존 <code>Selection(선택)</code> 모드 외에 기준 사진을 고정하고 비교하는 <code>Reference(기준)</code> 모드가 추가되었습니다. <code>R</code> 키로 쉽게 전환할 수 있습니다.</li>
-                    <li><strong>파일 이름 변경</strong>: SnapView 안에서 바로 파일 이름을 바꿀 수 있습니다 (<code>F2</code> 키 또는 우클릭 메뉴 사용).</li>
-                    <li><strong>창 열기 정책</strong>: Finder에서 파일을 열 때 기존 창을 재사용할지(단일 창) 새 창을 띄울지(멀티 창) 설정에서 선택할 수 있습니다.</li>
-                    <li><strong>똑똑해진 외부 앱 열기</strong>: RAW+JPG 짝 파일 중 어떤 포맷을 먼저 외부 앱으로 넘길지 설정할 수 있고, <code>⌥⌘O</code> 단축키로 앱 선택 창을 바로 띄울 수 있습니다.</li>
-                </ul>
-                <h3>개선된 점</h3>
-                <ul>
-                    <li><code>Reference(기준)</code> 비교 모드에서는 한쪽 패널에 기준 사진을 고정해두고, 다른 패널의 후보 사진만 넘겨보며 비교할 수 있습니다. 방향키와 <code>Tab</code>으로 패널 간 포커스 이동을 지원합니다.</li>
-                    <li>Compare 모드 진입 시 이전 상태를 이어서 할지(Resume Last Session), 새로 시작할지(Current Context) 선택할 수 있습니다.</li>
-                    <li>화면 상단의 사진 수 표시를 <code>현재/전체</code>, <code>현재</code>, <code>숨김</code> 중 취향에 맞게 변경할 수 있습니다.</li>
-                    <li>이름 변경 후 자동으로 정렬 순서를 맞추는 <code>이름 변경 후 재정렬</code> 옵션이 추가되었습니다.</li>
-                    <li>타이틀바 영역을 더 깔끔하고 평탄한 톤으로 다듬어 화면 전환 시 일관성을 높였습니다.</li>
-                    <li>단일 창 모드에서 Finder를 통해 새 파일을 더블클릭으로 열 때, 화면이 깜빡이거나 단축키가 먹지 않던 문제를 대폭 다듬었습니다.</li>
-                    <li>다른 앱으로 사진을 보낼 때, 한 곳으로 정리된 <code>다른 앱으로 열기…</code> 흐름으로 일관성 있게 열 수 있습니다.</li>
-                </ul>
-                <h3>참고</h3>
-                <ul>
-                    <li>Mac App Store 빌드는 sandbox를 적용한 안정판 배포 lane입니다. DMG lane은 빠른 직접 다운로드 배포 lane으로 유지됩니다.</li>
-                    <li>ZIP 탐색은 두 lane 모두에서 지원하며, 배포 채널에 맞는 backend를 사용합니다.</li>
-                </ul>
-
-                <h2>v0.10.4 - 2026-04-19</h2>
-                <h3>새로운 점</h3>
-                <ul>
-                    <li>파일 탐색 순서가 Finder식 자연 정렬로 바뀌어, 숫자가 들어간 파일명이 기대한 순서대로 이동합니다.</li>
-                    <li>창을 닫은 뒤 Finder나 Dock에서 다시 열 때 빈 화면처럼 보이던 흐름을 더 안정화했습니다.</li>
-                    <li>SnapView가 이미 실행 중일 때 다른 이미지를 열면 요청한 사진으로 더 직접 전환됩니다.</li>
-                    <li>Grid와 Filmstrip에서 키보드/마우스 선택 반응을 더 즉각적으로 다듬었습니다.</li>
-                </ul>
-                <h3>개선된 점</h3>
-                <ul>
-                    <li>폴더와 ZIP 이미지 목록이 이제 <code>사진-1</code>, <code>사진-2</code>, <code>사진-10</code> 순서로 정렬됩니다.</li>
-                    <li>RAW+JPG 페어링, 일반 폴더 탐색, ZIP 탐색, Grid, Filmstrip, 키보드 이동이 같은 자연 정렬 기준을 사용합니다.</li>
-                    <li><code>Cmd+W</code> 이후 외부에서 파일을 다시 열 때 이전 이미지를 먼저 다시 그린 뒤 새 이미지로 바뀌는 체감을 줄였습니다.</li>
-                    <li>이전 SnapView 창이 닫히거나 숨겨진 상태에서 새 파일을 열어도 보이는 이미지 캔버스가 더 안정적으로 복구됩니다.</li>
-                    <li>Grid 진입 시 현재 창 너비 기준으로 열 수를 다시 계산해, 위/아래 키 이동이 이전 창 크기 기준으로 어긋나던 문제를 줄였습니다.</li>
-                    <li>Grid 단일 클릭 선택이 더블클릭 대기 없이 즉시 반응하도록 개선했습니다.</li>
-                    <li>Filmstrip에서 방향키를 누르고 있을 때 썸네일 포커스를 먼저 움직이고, 마지막 대상 이미지만 입력이 멈춘 뒤 반영해 버벅임을 줄였습니다.</li>
-                    <li>파일이 실제로 다시 보이는 경우에도 <code>파일을 찾을 수 없음</code> 오류가 남아 있던 간헐 상황을 줄이기 위해 짧은 자동 재시도를 추가했습니다.</li>
-                    <li>앱 아이콘의 표시 비율을 조정해 기존 legacy macOS의 Finder와 Dock에서 다른 앱들과 조금 더 자연스럽게 어울리도록 정리했습니다.</li>
-                </ul>
-                <h3>참고</h3>
-                <ul>
-                    <li>자연 정렬은 기본 동작입니다. 별도로 켜야 하는 설정은 없습니다.</li>
-                    <li>이번 정렬 변경은 현재 폴더 또는 ZIP 이미지 목록을 사용하는 탐색 순서 전반에 적용됩니다.</li>
-                </ul>
-
-                <h2>v0.10.3 - 2026-04-15</h2>
-                <h3>새로운 점</h3>
-                <ul>
-                    <li><code>Show in Finder</code>로 현재 보고 있는 사진 파일을 Finder에서 바로 찾을 수 있습니다.</li>
-                    <li>밝은 사진 위에서도 파일명과 정보 오버레이가 더 잘 보이도록 그림자 옵션과 자동 모드를 추가했습니다.</li>
-                    <li>HEIC와 창 복귀 후 화면 표시 안정성을 더 다듬었습니다.</li>
-                </ul>
-                <h3>개선된 점</h3>
-                <ul>
-                    <li>메뉴, 컨텍스트 메뉴, <code>⌘↩</code>에서 <code>Show in Finder</code>를 바로 쓸 수 있습니다.</li>
-                    <li>오버레이 텍스트 그림자를 <code>기본 / 강하게 / 자동</code>으로 고를 수 있고, 자동은 밝은 화면에서만 더 진하게 적용합니다.</li>
-                    <li>별점 UI를 <code>항상 표시 / 자동 / 숨김</code>으로 조절할 수 있어, 화면은 더 단순하게 유지하면서도 별점 단축키와 메뉴는 그대로 쓸 수 있습니다.</li>
-                    <li>저사양 Mac에서는 주변 precache/warmup/preview 작업 예산을 더 보수적으로 조정해 탐색 체감과 메모리 사용을 다듬었습니다.</li>
-                    <li>모든 창을 닫는 종료 옵션을 추가하여 사용성을 개선했습니다. 기본값은 macOS 관례에 맞는 OFF입니다.</li>
-                    <li>앱 아이콘 모서리를 더 부드럽게 다듬어 기존 legacy macOS에서 조금 더 자연스럽게 보이도록 정리했습니다.</li>
-                </ul>
-                <h3>참고</h3>
-                <ul>
-                    <li>HEIC/HEIF/HIF 지원 자체를 바꾼 릴리즈가 아니라, reopen/restore 상황에서 더 안정적으로 보이도록 다듬은 릴리즈입니다.</li>
-                    <li>AVIF와 JPEG XL은 macOS 디코더 지원 여부에 따라 동작합니다.</li>
-                </ul>
-
-                <h2>v0.10.2 - 2026-04-12</h2>
-                <h3>새로운 점</h3>
-                <ul>
-                    <li>Main View에서 animated GIF와 animated WebP를 바로 재생할 수 있게 했습니다.</li>
-                    <li>기본앱 등록은 <code>주요 포맷</code>부터 먼저 적용할 수 있게 단순화했고, Finder <code>이 앱으로 열기</code> 추천 목록 대응도 보강했습니다.</li>
-                    <li>Quick Check와 파일 열기 흐름의 안정성을 더 다듬었습니다.</li>
-                </ul>
-                <h3>개선된 점</h3>
-                <ul>
-                    <li>Main View에서 animated GIF / WebP를 일반 선별 흐름 안에서 바로 볼 수 있습니다.</li>
-                    <li>자주 쓰는 포맷만 먼저 기본앱으로 등록한 뒤, 원할 때만 더 넓게 등록할 수 있습니다.</li>
-                    <li>지원하지 않는 파일은 멈춘 것처럼 보이기보다 바로 안내 메시지로 정리됩니다.</li>
-                    <li>상세 Quick Check 갱신 중 발생할 수 있던 종료 경로를 줄였습니다.</li>
-                    <li>파일 열기 패널이 떠 있는 동안 메인 창이 어색하게 보이던 부분을 보정했습니다.</li>
-                    <li>현재 열려 있는 이미지의 상위 폴더 경로가 바뀐 경우 복구 흐름을 보강했습니다.</li>
-                </ul>
-                <h3>참고</h3>
-                <ul>
-                    <li>animated 재생은 이번 버전에서 Main View만 지원합니다. 다른 보기에서는 정지 이미지로 보입니다.</li>
-                    <li>AVIF와 JPEG XL은 macOS 디코더 지원 여부에 따라 동작합니다.</li>
-                </ul>
-                <h2>v0.10.1 - 2026-04-11</h2>
-                <h3>Highlights</h3>
-                <ul>
-                    <li><code>화면 모드</code> 설정을 추가해 <code>시스템 / 라이트 / 다크</code> 중 원하는 모양을 직접 고를 수 있게 했습니다.</li>
-                    <li>Main, Grid, Filmstrip, Manage의 라이트 모드를 더 자연스럽고 읽기 편하게 다듬었습니다.</li>
-                    <li><code>Reject</code> 표시를 더 잘 보이게 하고, 빠른 선별 중 나타나던 몇 가지 거슬리는 동작도 함께 다듬었습니다.</li>
-                </ul>
-                <h3>UX / UI</h3>
-                <ul>
-                    <li>라이트 모드가 너무 어둡거나 지나치게 밝게 보이지 않도록 화면 톤을 다시 맞췄습니다.</li>
-                    <li>Manage 뷰의 상태 요약과 텍스트 가독성을 높였습니다.</li>
-                    <li>메인 보기, Grid, Filmstrip에서 <code>Pick</code>과 <code>Reject</code> 상태를 더 빨리 알아볼 수 있게 했습니다.</li>
-                </ul>
-                <h3>Performance</h3>
-                <ul>
-                    <li><code>Cmd+Delete</code> 뒤 다음 사진이 더 안정적으로 바로 보이도록 했습니다.</li>
-                    <li>빠르게 이미지를 열거나 다시 붙는 상황에서 안정성을 높였습니다.</li>
-                    <li>라이트 모드 화면들이 더 일관되게 보이도록 정리했습니다.</li>
-                </ul>
-                <h3>Fixes</h3>
-                <ul>
-                    <li><code>Reject</code> 표시가 잘 안 보이던 문제를 수정했습니다.</li>
-                    <li>빠르게 삭제를 반복한 뒤 다음 사진이 바로 안 보이던 문제를 줄였습니다.</li>
-                    <li>이미지를 다시 열거나 붙이는 과정에서 생길 수 있던 종료 문제를 완화했습니다.</li>
-                    <li><code>이미지를 열지 못했습니다</code> 안내에 <code>닫기</code>와 <code>Esc</code> dismiss를 추가했습니다.</li>
-                    <li>라이트 모드 Manage 뷰 가독성을 더 보정했습니다.</li>
-                </ul>
-                <h3>Known Issues</h3>
-                <ul>
-                    <li>ZIP 탐색은 일반 폴더보다 구조적으로 느릴 수 있습니다.</li>
-                    <li>아주 크거나 특수한 파일은 더 안정적인 표시 방식으로 열릴 수 있습니다.</li>
-                </ul>
-                <h3>Install / Update</h3>
-                <ol>
-                    <li><code>SnapView-0.10.1.dmg</code> 다운로드</li>
-                    <li><code>SnapView.app</code>을 <code>Applications</code>로 드래그</li>
-                    <li>기존 버전이 있으면 덮어쓰기 후 실행</li>
-                    <li>이후 새 버전이 배포되면 앱이 자동으로 확인하고 설치 여부를 묻습니다</li>
-                </ol>
-                <h3>Notes</h3>
-                <ul>
-                    <li>이번 업데이트는 빠른 선별 흐름과 라이트 모드 사용성을 다듬는 데 집중했습니다.</li>
-                </ul>
-                <h2>v0.10.0 - 2026-04-09</h2>
-                <h3>Highlights</h3>
-                <ul>
-                    <li>현재 폴더나 선택 상태를 그대로 이어받는 전체화면 <code>슬라이드쇼 v1</code>을 추가했습니다.</li>
-                    <li>속도, 전환, 루프, 셔플, 재생 상태를 바로 볼 수 있는 슬라이드쇼 HUD를 추가했습니다.</li>
-                    <li>작은 이미지와 전환 품질을 더 자연스럽게 보여주도록 슬라이드쇼 화면을 다듬었습니다.</li>
-                </ul>
-                <h3>UX / UI</h3>
-                <ul>
-                    <li>타이틀바, <code>도구</code> 메뉴, 주요 보기 화면에서 같은 방식으로 슬라이드쇼를 시작할 수 있습니다.</li>
-                    <li>HUD를 값 중심으로 단순화해 속도와 전환 설정을 더 빨리 읽을 수 있게 했습니다.</li>
-                    <li><code>작은 이미지 확대</code> 옵션을 추가해 전체화면 재생을 더 보기 좋게 만들었습니다.</li>
-                    <li>슬라이드쇼 시작/종료 기준을 <code>Shift + Enter</code>로 정리했습니다.</li>
-                </ul>
-                <h3>Performance</h3>
-                <ul>
-                    <li>크로스페이드가 일반 재생과 셔플 재생에서 더 안정적으로 보이도록 했습니다.</li>
-                    <li>다음 이미지를 더 똑똑하게 준비해 전환이 거칠게 보이는 경우를 줄였습니다.</li>
-                    <li>부드러운 전환이 어려운 경우에도 화면이 덜 튀도록 정리했습니다.</li>
-                </ul>
-                <h3>Fixes</h3>
-                <ul>
-                    <li><code>Fade to Black</code> 전환이 <code>Crossfade</code>와 더 분명하게 다르게 보이도록 수정했습니다.</li>
-                    <li>자동 재생과 일시정지 시작 흐름을 더 자연스럽게 정리했습니다.</li>
-                    <li>전체화면에서 작은 이미지가 너무 작게 보이던 문제를 보완했습니다.</li>
-                    <li>창을 닫았다가 다시 열 때 메인 창 복구가 더 일관되게 동작하도록 했습니다.</li>
-                </ul>
-                <h3>Known Issues</h3>
-                <ul>
-                    <li>대형 ZIP 세트는 일반 폴더보다 전환이 덜 매끄러울 수 있습니다.</li>
-                    <li>아주 무거운 이미지 세트는 일반 폴더보다 전환이 덜 매끄러울 수 있습니다.</li>
-                </ul>
-                <h3>Install / Update</h3>
-                <ol>
-                    <li><code>SnapView-0.10.0.dmg</code> 다운로드</li>
-                    <li><code>SnapView.app</code>을 <code>Applications</code>로 드래그</li>
-                    <li>기존 버전이 있으면 덮어쓰기 후 실행</li>
-                    <li>이후 새 버전이 배포되면 앱이 자동으로 확인하고 설치 여부를 묻습니다</li>
-                </ol>
-                <h3>Notes</h3>
-                <ul>
-                    <li>이 릴리즈는 슬라이드쇼를 정식 리뷰 모드로 추가한 첫 버전입니다.</li>
-                </ul>
-            </div>
+            <!-- Korean Content loads on demand to keep English as the primary crawlable language. -->
+            <div data-lang="ko" data-lang-src="/locales/release-notes.ko.html" hidden></div>
 
             <!-- English Content -->
             <div data-lang="en">
