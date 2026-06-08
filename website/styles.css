@@ -953,8 +953,8 @@ h1 {
 
   .nav {
     display: grid;
-    grid-template-columns: repeat(3, max-content);
-    gap: 10px 14px;
+    grid-template-columns: repeat(4, max-content);
+    gap: 10px 12px;
     justify-content: center;
     width: 100%;
     max-width: calc(100vw - 40px);
