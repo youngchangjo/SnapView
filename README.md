@@ -62,8 +62,8 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 - HUD hover help for review tools follows the selected app language
 - Keyboard-first rating, pick, reject, and Finder tag workflow
 - Q/W/E/R/T + Tab viewer policy: Q=Grid, W=Main View, E=Horizontal Filmstrip, R=Vertical Filmstrip, T=Navigator toggle, Tab=Pro Layout View. Fast browsing keeps Action/Info Strips out of the hot path.
-- Quick Organize presets for repeated copy/move sorting from the current selection
-- Batch Actions for previewed JPEG/PNG export and copy/move recipes
+- Quick Organize presets for repeated copy/move sorting from the current selection, with up to three visible presets in SnapView 2.0
+- Batch Actions for previewed JPEG/PNG export and copy/move recipes, with up to three visible recipes in SnapView 2.0
 - Lightroom-style XMP interoperability for rating, Pick, and Reject
 - Finder tag interoperability so file and folder status remain visible outside the app
 - Decoding modes that let you choose between speed, balanced review, and quality-first inspection
@@ -89,8 +89,8 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 - `Compare`: side-by-side review and best-shot recommendation
 - `Duplicate`: exact duplicate grouping and cleanup workflow
 - `Comic Reading Mode`: switch an opened folder or ZIP into a black reading surface; choose left-to-right or right-to-left two-page spreads from the HUD, advance spreads as `1-2 -> 3-4` without page-surface click turns, restore the last page for that same source, and confirm moving to the next folder/ZIP at the end
-- `Quick Organize`: preset-based copy/move sorting, with visible auto rules limited to Pick and 5-star for the 2.0 surface
-- `Batch Actions`: previewed export/copy/move recipes for repeatable delivery tasks
+- `Quick Organize`: preset-based copy/move sorting, with up to three visible presets and auto rules limited to Pick and 5-star for the 2.0 surface
+- `Batch Actions`: previewed export/copy/move recipes for repeatable delivery tasks, with up to three visible recipes in SnapView 2.0
 - `Decoding Modes`: speed-first, balanced, and quality-first viewing behavior
 
 SnapView 2.0 also improves first-run setup, shortcut help, light/dark toolbar surfaces, Filmstrip scrolling, Quick Check readability, Batch Actions localization, and optional last-image restore for ordinary photo folders.
@@ -140,7 +140,7 @@ SnapView 2.0 also improves first-run setup, shortcut help, light/dark toolbar su
 - Conditional formats such as AVIF or JXL depend on macOS decoder availability.
 - App UI languages: Korean, English, Japanese, Simplified Chinese, Traditional Chinese, Spanish, French, German, Portuguese (Brazil), Italian, Dutch, Turkish, Polish, Swedish.
 - DMG releases are shipped as one universal download for Apple silicon and Intel Macs.
-- If Gatekeeper blocks the app on first launch, open it from `Applications` again after confirming in macOS security settings.
+- Standard signed and notarized DMG or Mac App Store releases should install without a manual macOS security override. If macOS still warns, reinstall from the latest DMG or Mac App Store build.
 
 ---
 
@@ -184,7 +184,7 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 - 동일 파일 정리를 위한 Duplicate 워크스페이스
 - 열린 폴더나 ZIP을 검은 독서 화면으로 전환하는 만화책 보기
 - `Q/W/E/R/T + Tab` 기준 탐색: Grid, Main, 가로 Filmstrip, 세로 Filmstrip, Navigator, 프로 레이아웃 뷰를 분리
-- 빠른 정리 프리셋과 Batch Actions로 반복 복사/이동/내보내기 작업 정리
+- 빠른 정리 프리셋과 Batch Actions로 반복 복사/이동/내보내기 작업 정리. SnapView 2.0에서는 보이는 빠른 정리 프리셋과 Batch Actions 레시피를 각각 3개까지 제공합니다
 - 별점, Pick, Reject, Finder 태그 중심의 키보드 선별
 - Lightroom 스타일 XMP 연동으로 별점, Pick, Reject 결과를 그대로 이어가기
 - Finder 태그 연동으로 macOS 파일/폴더 정리 단계까지 상태 유지
@@ -211,8 +211,8 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 - `Compare`: 나란히 비교하며 베스트샷 선택
 - `Duplicate`: 동일 파일 그룹 정리 워크플로우
 - `만화책 보기`: 열린 폴더나 ZIP을 검은 독서 화면으로 전환하고 HUD에서 좌->우/우->좌 2페이지 펼침을 선택하며, 펼침 이동은 `1-2 -> 3-4`처럼 겹치지 않고 화면 클릭으로 넘기지 않으며, 같은 소스의 마지막 페이지 복원과 다음 폴더/ZIP 이동 확인을 지원
-- `빠른 정리`: 반복 복사/이동 선별을 프리셋으로 실행하며, 2.0 표면의 자동 규칙은 Pick과 별점 5만 노출
-- `Batch Actions`: JPEG/PNG 내보내기, 복사, 이동 레시피를 프리뷰 후 실행
+- `빠른 정리`: 반복 복사/이동 선별을 최대 3개의 보이는 프리셋으로 실행하며, 2.0 표면의 자동 규칙은 Pick과 별점 5만 노출
+- `Batch Actions`: 최대 3개의 보이는 JPEG/PNG 내보내기, 복사, 이동 레시피를 프리뷰 후 실행
 - `디코딩 모드`: 속도 우선, 보통, 화질 최우선
 
 SnapView 2.0 보기 경험은 콘텐츠가 열린 뒤에만 상태를 복원합니다. 일반 사진 폴더의 마지막 사진 복원은 선택 옵션이며, 복원 순서는 소스 식별, 마지막 사진, 마지막 보기 모드, 네비게이터 표시 가능 여부 순서로 유지됩니다.
@@ -262,4 +262,4 @@ SnapView 2.0 보기 경험은 콘텐츠가 열린 뒤에만 상태를 복원합�
 - AVIF, JXL 같은 조건부 포맷은 macOS 디코더 지원 여부에 따라 달라집니다.
 - 앱 UI 언어는 한국어, 영어, 일본어, 중국어 간체, 중국어 번체, 스페인어, 프랑스어, 독일어, 포르투갈어(브라질), 이탈리아어, 네덜란드어, 터키어, 폴란드어, 스웨덴어입니다.
 - DMG 릴리즈는 Apple Silicon과 Intel Mac을 함께 지원하는 단일 universal 다운로드로 제공합니다.
-- 첫 실행 시 Gatekeeper 경고가 나오면 macOS 보안 설정에서 허용 후 다시 실행해 주십시오.
+- 최신 서명/공증 DMG 또는 Mac App Store 릴리즈는 별도 macOS 보안 우회 없이 설치되는 것이 정상입니다. 보안 경고가 계속 보이면 최신 DMG를 다시 설치하거나 Mac App Store 버전을 사용해 주세요.

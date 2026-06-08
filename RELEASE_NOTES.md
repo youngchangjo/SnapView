@@ -1,6 +1,96 @@
 # SnapView Release Notes
 
-## v1.8.0 (Current) - 2026-05-20
+## v2.0.0 (Current) - 2026-06-08
+
+Language: [🇺🇸 English](#english-200) | [🇰🇷 한국어](#korean-200)
+
+<a id="english-200"></a>
+
+### English
+
+#### What's New
+- SnapView 2.0 is a major viewer-workspace update: common Navigator, clearer Q/W/E/R/T + Tab view switching, Pro Layout View, vertical Filmstrip options, a denser action/info strip system, Grid sorting and filters, Settings tabs/search, and a searchable shortcut sheet.
+- A new first-run viewing setup helps new and pre-2.0 users choose thumbnail style, Filmstrip layout, info display, QuickCheck placement, and video browsing behavior. The same setup can be reopened from Settings with `Get Started with SnapView`.
+- The new `M` Map Overlay shows the current photo's GPS location in the same footprint as the Histogram overlay, and the two overlays can stack cleanly when both are visible.
+- Comic Reading mode adds left-to-right and right-to-left two-page reading for folders and ZIP archives, with HUD controls, per-source page restore, and safer page navigation.
+- Quick Organize adds preset-based copy/move workflows, Pick and 5-star organization actions, up to three visible presets, `Option`+`1` through `Option`+`3` shortcuts, editable destinations, preview sheets, and recent run history.
+- Batch Actions adds up to three visible recipe-based JPEG/PNG workflows with preflight previews, safety confirmations, pause/resume/cancel controls, retry support, and recent run logs.
+
+#### Improvements
+- Main, Grid, Filmstrip, and Pro Layout View now share more consistent common file actions while keeping existing toolbar and menu commands available.
+- Q opens Grid, W opens Main View, E opens Horizontal Filmstrip, R opens Vertical Filmstrip, T toggles Navigator visibility, and Tab toggles Pro Layout View for culling and organizing.
+- Navigator and vertical Filmstrip panels support narrow/wide layouts, drag resizing, smoother collapse behavior, and more consistent panel surfaces in light and dark mode.
+- Vertical Filmstrip can scale thumbnails through 4/3/2/1-column layouts, including mouse and Command-scroll size changes.
+- The action strip supports denser file actions, rating 1-5, rating clear, Pick/Reject/Clear, color labels, Quick Organize entry points, and separate Off/Full density choices for the action strip and info strip.
+- The bottom info strip keeps its metadata density stable while resizing, keeps the navigation counter centered, separates its EXIF display from the compact `I` overlay toggle, and Pro Layout View hides the `I` info overlay even when it was enabled in Main View.
+- Location labels in the Map Overlay and info strip are shorter and easier to scan, showing the most relevant place and country instead of a full street-style address.
+- Grid has a tighter toolbar, independent quick filters, a detailed-filter popover, filter reset, persisted sort direction, and clearer selected/file count behavior.
+- QuickCheck/EXIF is easier to read, with a dedicated right-side panel, better light/dark panel tones, camera identity artwork, cleaner scene/score display, and an on-device AI toggle that keeps metadata quiet when analysis is off.
+- RAW+JPG pairing covers more real-world camera workflows, including DNG+JPG, CR3/RW2/ARW/DXO pairs, uppercase extensions, standalone RAW/JPG files, and RAW+HEIC+JPG sets.
+- Settings rows, tabs, search, shortcut help, and localized HUD labels have been cleaned up so controls are easier to find and scan.
+- The SnapView 2 app icon has been refreshed, and the intro screen now includes a SnapWorks Lab light/dark lockup.
+- The intro Quick Start card keeps shortcut rows readable in English and Korean, uses macOS modifier glyphs, and stays clear of the lower window text.
+- The transparent toolbar/titlebar area now uses a subtle blur-gradient shadow in light and dark mode, and vertical Filmstrip no longer draws an extra top divider.
+
+#### Visible Scope
+- The visible 2.0 release focuses on Navigator, Filmstrip, Map Overlay, Comic Reading, Quick Organize, and Batch Actions.
+- The temporary Simple/Normal/Pro chrome switch and old global Tab cycling were removed. Q/W/E/R/T + Tab is now the stable view, Navigator, and Pro Layout View shortcut model.
+- Action Strip and Info Strip settings are simplified to separate Off/Full choices, with placement controls kept out of normal Settings. Action Strip curation keeps rating 1-5, rating clear, Pick/Reject/Clear, and color labels; Quick Organize auto rules expose only Pick and 5-star. SnapView 2.0 keeps the visible Quick Organize preset list and Batch Actions recipe list to three entries each.
+- Comic Reading mode keeps reading direction and Webtoon selection inside the reader HUD; Last View no longer reopens Webtoon directly.
+
+#### Stability And Performance
+- Rapid previous/next navigation is steadier when the action strip, info strip, QuickCheck/EXIF, Histogram, or Map are visible.
+- Q/W/E/R view switching, QuickCheck, Histogram, and Map transitions now use a consistent short animation so panel changes feel closer to the Tab Pro Layout View transition.
+- QuickCheck/EXIF and the bottom info strip now keep the last useful metadata while moving between photos, then update after the next photo's data is ready to reduce loading flicker and stale states.
+- Same-image app/window return preserves manual zoom and pan more reliably.
+- Filmstrip mouse and trackpad scrolling reacts faster with a shorter settle after wheel input, and Grid opens with fewer first-entry stalls.
+- Thumbnail pinch resizing, Navigator row hover feedback, side-panel resizing, empty-canvas window dragging, and Settings sidebar hit targets are more predictable.
+- Delete Undo is available outside Duplicate Mode, and successful image export can auto-close the export sheet while failed or cancelled exports remain visible.
+
+<a id="korean-200"></a>
+
+### 한국어
+
+#### 새로운 점
+- SnapView 2.0은 공통 네비게이터, 더 명확한 Q/W/E/R/T + Tab 보기 전환, 프로 레이아웃 뷰, 세로 필름스트립 옵션, 더 촘촘한 액션/정보 스트립, Grid 정렬/필터, 설정 탭/검색, 검색 가능한 전체 단축키 시트를 포함한 큰 작업 공간 업데이트입니다.
+- 신규 사용자와 2.0 이전 사용자를 위해 첫 실행 보기 설정을 추가했습니다. 썸네일 스타일, 필름스트립 배치, 정보 표시, QuickCheck 위치, 동영상 포함 여부를 고를 수 있고, 설정의 `SnapView 시작하기`에서 다시 열 수 있습니다.
+- `M` 지도 오버레이를 추가해 현재 사진의 GPS 위치를 히스토그램과 같은 크기 오버레이로 확인할 수 있고, 히스토그램과 지도를 함께 켜도 자연스럽게 쌓입니다.
+- Comic Reading 모드는 폴더와 ZIP에서 좌->우 / 우->좌 2페이지 읽기, HUD 페이지 컨트롤, 소스별 마지막 페이지 복원, 더 안전한 페이지 이동을 지원합니다.
+- 빠른 정리는 프리셋 기반 복사/이동, Pick/별점 5 기준 정리, 최대 3개의 보이는 프리셋, `Option`+`1`부터 `Option`+`3` 단축키, 대상 폴더 편집, 미리보기 시트, 최근 실행 기록을 제공합니다.
+- Batch Actions는 최대 3개의 보이는 JPEG/PNG 작업 레시피, 실행 전 미리보기, 안전 확인, 일시정지/재개/취소, 재시도, 최근 실행 기록을 지원합니다.
+
+#### 개선된 점
+- Main, Grid, Filmstrip, 프로 레이아웃 뷰에서 자주 쓰는 파일 액션을 더 일관되게 제공하면서 기존 툴바와 메뉴 명령도 그대로 유지합니다.
+- Q는 Grid, W는 Main View, E는 가로 Filmstrip, R은 세로 Filmstrip, T는 네비게이터 표시 전환, Tab은 프로 레이아웃 뷰 전환을 담당합니다. 일반 탐색은 액션/정보 스트립을 빠른 탐색 경로에서 분리합니다.
+- 네비게이터와 세로 필름스트립 패널은 좁게/넓게 보기, 드래그 크기 조절, 자연스러운 접힘 동작, 라이트/다크 모드에서 더 일관된 패널 톤을 지원합니다.
+- 세로 필름스트립은 4/3/2/1열 단계로 썸네일 크기를 조절할 수 있고, 마우스 및 `Command`+스크롤 크기 변경을 지원합니다.
+- 액션 스트립은 더 촘촘한 파일 액션, 별점 1-5, 별점 취소, Pick/Reject/Clear, 컬러라벨, 빠른 정리 진입점, 액션 스트립과 정보 스트립의 별도 Off/Full 밀도 설정을 지원합니다.
+- 하단 정보 스트립은 창 크기 변경 중에도 메타데이터 밀도를 안정적으로 유지하고, 중앙 탐색 번호를 고정하며, EXIF 표시와 `I` 정보 오버레이 표시를 분리합니다. 프로 레이아웃 뷰에서는 Main View에서 `I` 정보 오버레이가 켜져 있었더라도 오버레이를 숨깁니다.
+- 지도 오버레이와 정보 스트립의 위치 표시는 전체 주소 대신 가장 관련 있는 장소와 국가 중심으로 짧게 보여 더 빠르게 읽을 수 있습니다.
+- Grid는 더 낮은 툴바, 독립적으로 켜고 끄는 빠른 필터, 상세 필터 팝오버, 필터 초기화, 저장되는 정렬 방향, 더 명확한 선택/파일 수 표시를 제공합니다.
+- QuickCheck/EXIF는 오른쪽 전용 패널에서 더 읽기 쉬워졌고, 라이트/다크 패널 톤, 카메라 정체성 이미지, 장면/점수 표시, 온디바이스 AI 토글을 개선해 분석이 꺼진 상태에서도 메타데이터 표시가 조용하게 유지됩니다.
+- RAW+JPG 묶음은 DNG+JPG, CR3/RW2/ARW/DXO 조합, 대문자 확장자, 단독 RAW/JPG, RAW+HEIC+JPG 묶음 등 더 많은 실제 카메라 흐름을 지원합니다.
+- 설정 행 구조, 탭, 검색, 단축키 도움말, HUD 툴팁과 값 표기를 정리해 필요한 설정을 더 빨리 찾고 훑어볼 수 있습니다.
+- SnapView 2 앱 아이콘을 갱신했고, 인트로 화면에 라이트/다크용 SnapWorks Lab 로고를 추가했습니다.
+- 인트로 시작하기 카드는 영어와 한국어에서 단축키 줄이 더 읽기 쉽게 유지되고, macOS 보조키 기호를 사용하며, 하단 문구와 겹치지 않게 정리했습니다.
+- 투명한 툴바/타이틀바 영역은 라이트/다크 모드에서 은은한 블러 그라데이션 그림자를 사용하고, 세로 필름스트립은 불필요한 상단 구분선을 제거했습니다.
+
+#### 보이는 범위
+- 2.0의 실제 노출 범위는 네비게이터, 필름스트립, 지도 오버레이, Comic Reading, 빠른 정리, Batch Actions에 집중합니다.
+- 임시 Simple/Normal/Pro 크롬 전환 버튼과 기존 전역 Tab 순환은 제거했습니다. Q/W/E/R/T + Tab이 안정된 보기 전환, 네비게이터, 프로 레이아웃 뷰 단축키 모델입니다.
+- 액션 스트립과 정보 스트립 설정은 각각 Off/Full 선택으로 단순화했고, 배치 설정은 일반 설정에서 숨겼습니다. 액션 스트립 선별 컨트롤은 기존 별점 1-5, 별점 취소, Pick/Reject/Clear, 컬러라벨 전체 세트를 유지하고, 빠른 정리 자동 규칙은 Pick과 별점 5만 노출합니다. SnapView 2.0의 보이는 빠른 정리 프리셋과 Batch Actions 레시피는 각각 3개까지 제공합니다.
+- Comic Reading 모드의 읽기 방향과 Webtoon 선택은 리더 안의 HUD에서만 다루며, Last View가 Webtoon을 바로 다시 열지는 않습니다.
+
+#### 안정성 및 성능
+- 액션 스트립, 정보 스트립, QuickCheck/EXIF, 히스토그램, 지도를 켠 상태에서도 빠른 이전/다음 탐색이 더 안정적으로 동작합니다.
+- Q/W/E/R 보기 전환, QuickCheck, 히스토그램, 지도 전환에 같은 짧은 애니메이션을 적용해 Tab 프로 레이아웃 뷰 전환과 더 비슷한 흐름으로 느껴집니다.
+- 사진을 넘기는 동안 QuickCheck/EXIF와 하단 정보 스트립은 마지막으로 유효한 메타데이터를 유지하고, 다음 사진의 데이터가 준비된 뒤 교체해 로딩 깜빡임과 오래된 상태 표시를 줄였습니다.
+- 같은 사진으로 앱/창에 다시 돌아올 때 수동 확대와 이동 상태를 더 안정적으로 유지합니다.
+- Filmstrip 마우스/트랙패드 스크롤 반응을 빠르게 하고 휠 입력 뒤 정착 시간을 짧게 조정했으며, Grid 첫 진입 지연을 줄였습니다.
+- 썸네일 핀치 크기 조절, 네비게이터 행 hover, 사이드 패널 크기 조절, 빈 캔버스 창 이동, 설정 사이드바 클릭 영역이 더 예측 가능하게 동작합니다.
+- Duplicate Mode 밖에서도 Delete Undo를 사용할 수 있고, 이미지 내보내기가 완전히 성공한 경우에는 시트를 자동으로 닫을 수 있습니다. 실패하거나 취소된 내보내기는 계속 결과를 보여줍니다.
+
+## v1.8.0 - 2026-05-20
 
 Language: [🇺🇸 English](#english-180) | [🇰🇷 한국어](#korean-180)
 
