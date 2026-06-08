@@ -208,12 +208,15 @@
                 <h2>4. 5-Minute Quick Start</h2>
                 <ol>
                     <li>Use <img src="assets/icons/view-main.svg" class="inline-icon" alt=""> <code>Open</code> to open a folder or ZIP file.</li>
-                    <li>Numbered filenames use Finder-style natural sorting, so <code>photo-1</code>, <code>photo-2</code>, and <code>photo-10</code> appear in the expected order.</li>
-                    <li>Switch view modes with <img src="assets/icons/view-grid.svg" class="inline-icon" alt=""> <img src="assets/icons/view-main.svg" class="inline-icon" alt=""> <img src="assets/icons/view-filmstrip.svg" class="inline-icon" alt=""> <img src="assets/icons/view-manage.svg" class="inline-icon" alt=""> <code>Q/W/E/R</code>.</li>
+                    <li>Switch views with <img src="assets/icons/view-grid.svg" class="inline-icon" alt=""> <img src="assets/icons/view-main.svg" class="inline-icon" alt=""> <img src="assets/icons/view-filmstrip.svg" class="inline-icon" alt=""> <img src="assets/icons/view-manage.svg" class="inline-icon" alt=""> <code>Q/W/E/R</code>, toggle Navigator with <code>T</code>, and open Pro Layout View with <code>Tab</code>.</li>
                     <li>Navigate using <code>Left/Right Arrow</code> keys.</li>
+                    <li>Numbered filenames use Finder-style natural sorting, so <code>photo-1</code>, <code>photo-2</code>, and <code>photo-10</code> appear in the expected order.</li>
+                    <li>For comic folders or ZIPs, press <code>B</code> to enter Comic Reading and press <code>B</code> again to return to normal review.</li>
                     <li>Rate good shots with <img src="assets/icons/star-filled.svg" class="inline-icon" alt=""> <code>1~5</code>, or mark unwanted ones with <img src="assets/icons/reject.svg" class="inline-icon" alt=""> <code>X</code> (Reject).</li>
+                    <li>Use Quick Organize presets or Batch Actions recipes for repeated copy, move, or JPEG/PNG conversion work.</li>
                     <li>When using Lightroom, star ratings, Picks, and Rejects assigned in SnapView carry over directly via XMP sidecars.</li>
                     <li>To view results directly in Finder, apply tags. SnapView supports Finder's standard 7 color tags (Red/Orange/Yellow/Green/Blue/Purple/Gray).</li>
+                    <li>Use <code>Cmd+Return</code> or <code>Show in Finder</code> when you want to locate the current file in Finder.</li>
                     <li>If you need to compare, press <img src="assets/icons/compare.svg" class="inline-icon" alt=""> <code>C</code> for Compare Mode (1-4 images).</li>
                     <li>Use <code>Delete</code> to remove or <code>Cmd+C</code> to copy and organize.</li>
                     <li>For exact file duplicates, press <code>Cmd+Shift+D</code> to use the Duplicate cleanup feature.</li>
@@ -221,15 +224,16 @@
                     <li>When you need smaller copies for sharing, use <code>Image Export</code> and choose JPEG/PNG plus a size preset.</li>
                 </ol>
 
-                <h3>4.1 v1.8.0 Stability Changes</h3>
+                <h3>4.1 v2.0.0 Essentials</h3>
                 <ul>
-                    <li>In Grid, Select All now targets only the visible filtered results when Reject or rating filters are active.</li>
-                    <li>Filmstrip now supports horizontal scrolling.</li>
-                    <li>RAW+JPG pairing is more reliable for same-basename ARW, CR3, RW2, DNG, and JPG workflows.</li>
-                    <li>When returning to SnapView during video playback, the playback bar no longer flashes through an empty initial state.</li>
-                    <li><code>Option + Left/Right</code> video seeking briefly reveals the playback bar while keeping the existing auto-hide behavior.</li>
-                    <li>Repeated same-direction image rotations now show each 90-degree step accurately.</li>
-                    <li>Keypad <code>+</code>/<code>-</code>, viewer menu state, square thumbnail frames, Help readability, and solid viewer background behavior were tightened.</li>
+                    <li>The core view keys are <code>Q/W/E/R/T + Tab</code>: <code>Q</code> for Grid, <code>W</code> for Main View, <code>E</code> for Horizontal Filmstrip, <code>R</code> for Vertical Filmstrip, <code>T</code> for Navigator, and <code>Tab</code> for Pro Layout View.</li>
+                    <li>Comic Reading uses <code>B</code> to enter and exit. Reading direction and Webtoon-style choices live inside the reader HUD.</li>
+                    <li>Comic Reading uses a black reader surface and hides Action Strip / Info Strip while reading.</li>
+                    <li>Multi Monitor remains staged for a later 2.5 Pro workspace, but its toolbar button and shortcut entry are hidden in SnapView 2.0.</li>
+                    <li><code>M</code> opens the Map Overlay for GPS-backed photos.</li>
+                    <li>Action Strip and Info Strip settings are simplified around <code>Off</code> and <code>Full</code> choices for normal users.</li>
+                    <li>Quick Organize presets and Batch Actions can preview repeated copy, move, and JPEG/PNG conversion work before running.</li>
+                    <li>Use <code>Get Started with SnapView</code> in Settings to reopen the first-run viewing setup.</li>
                 </ul>
 
                 <h3>4.2 v1.7.0 Stability Changes</h3>
@@ -248,11 +252,11 @@
                 <h2>5. Understanding the Interface</h2>
                 <ul>
                     <li><strong>Top Toolbar</strong>: Open, Prev/Next, View Mode Switch<img src="assets/icons/view-grid.svg" class="inline-icon" alt="">, Zoom, Info<img src="assets/icons/info.svg" class="inline-icon" alt="">/Quick Check<img src="assets/icons/quickcheck.svg" class="inline-icon" alt="">/Histogram<img src="assets/icons/histogram.svg" class="inline-icon" alt=""> Toggles, Selection Actions.</li>
-                    <li><strong>Center Canvas</strong>: Displays the current image.</li>
+                    <li><strong>Center Canvas</strong>: Displays the current image or supported video.</li>
                     <li><strong>Mode-Specific Areas</strong>:
                         <ul>
                             <li>Grid: Thumbnail grid.</li>
-                            <li>Filmstrip/Manage: Continuous navigation bar at bottom or side.</li>
+                            <li>Filmstrip/Navigator: Continuous navigation and folder movement at the bottom or side.</li>
                             <li>Detail EXIF/Quick Check Panel: For information analysis.</li>
                         </ul>
                     </li>
@@ -264,7 +268,9 @@
                 <ul>
                     <li>Use when focusing on a single image.</li>
                     <li>Quickly switch between Fit (<code>0</code>) and 100% (<code>9</code>).</li>
+                    <li>Use <code>Space</code> to toggle between 100% and the previous zoom level.</li>
                     <li>Toggle simple info overlay <img src="assets/icons/info.svg" class="inline-icon" alt=""> with <code>I</code>.</li>
+                    <li>The info overlay state is remembered for future launches.</li>
                     <li>Loading large images does not interrupt your current workflow.</li>
                     <li>For unsupported formats or ultra-large images that fail to load, follow the on-screen instructions and click <code>Open Safely</code> to view them.</li>
                 </ul>
@@ -274,26 +280,43 @@
                     <li>Use to scan many photos at once.</li>
                     <li>Navigates quickly with arrows/mouse and supports multi-selection.</li>
                     <li>Adjust thumbnail size with <code>=</code>/<code>-</code> to fit your screen.</li>
+                    <li>With the default settings, thumbnails show Pick and Reject flags directly.</li>
                 </ul>
 
                 <h3>6.3 Filmstrip View (<img src="assets/icons/view-filmstrip.svg" class="inline-icon" alt=""> <code>E</code>)</h3>
                 <ul>
                     <li>Good for viewing flow with Main Image + Continuous Strip.</li>
                     <li>Ideal for quickly skimming through burst/similar shots by feel.</li>
+                    <li>Mouse wheel and trackpad previous/next movement follow the same direction rules as Main View.</li>
+                    <li>Pick and Reject state can be checked directly in the bottom strip thumbnails.</li>
                     <li>When a folder includes videos, you can review and play them in the same browsing flow.</li>
                 </ul>
 
-                <h3>6.4 Manage Mode (<img src="assets/icons/view-manage.svg" class="inline-icon" alt=""> <code>R</code>)</h3>
+                <h3>6.4 Vertical Filmstrip / Navigator / Pro Layout View (<img src="assets/icons/view-manage.svg" class="inline-icon" alt=""> <code>R</code> / <code>T</code> / <code>Tab</code>)</h3>
                 <ul>
-                    <li>Use when organizing with Folder/Filter/Selection views.</li>
+                    <li><code>R</code> opens Vertical Filmstrip. <code>T</code> toggles Navigator independently from the current view.</li>
+                    <li><code>Tab</code> toggles Pro Layout View, which brings Action/Info Strips and culling controls into one review workspace.</li>
+                    <li>If the Main View <code>I</code> info overlay was enabled, Pro Layout View hides that overlay and prioritizes the Action/Info Strips.</li>
                     <li>Apply Ratings/Flags/Color Labels and filter to tidy up results.</li>
                     <li>When using Lightroom, it's easy to pass initial selection results via XMP sidecars.</li>
                     <li>By using folder tags, folder-level organization status is immediately visible in Finder via color labels.</li>
-                    <li>In the left navigator pane, use folder row color dots and the <code>Folder Tag</code> filter to quickly narrow down your current work status.</li>
+                    <li>Navigator shows folder row color dots and folder-level status so you can move between work locations quickly.</li>
+                    <li>Mouse wheel and trackpad previous/next movement follow the same direction rules as Main View.</li>
                     <li>Video files can also be reviewed and played inside the same file list.</li>
                 </ul>
 
-                <h3>6.5 Duplicate (<code>Cmd+Shift+D</code>)</h3>
+                <h3>6.5 Comic Reading (<code>B</code>)</h3>
+                <ul>
+                    <li>Turn the opened folder or ZIP into a black reading surface.</li>
+                    <li><code>B</code> or the Comic Reading menu/button enters and exits the reader.</li>
+                    <li>Choose left-to-right, right-to-left, or Webtoon-style reading from the reader HUD.</li>
+                    <li>Two-page spreads advance without overlap, such as <code>1-2 -> 3-4</code>.</li>
+                    <li>Action Strip and Info Strip are hidden while reading so they do not cover the page.</li>
+                    <li>Reopening the same source can restore the last page, but the app does not automatically reopen that source on launch.</li>
+                    <li>At the end, the reader can ask whether to move to the next sibling folder or ZIP.</li>
+                </ul>
+
+                <h3>6.6 Duplicate (<code>Cmd+Shift+D</code>)</h3>
                 <ul>
                     <li>Toggle between <code>Exact</code> and <code>Same Photo</code> at the top.</li>
                     <li><code>Exact</code> shows only <strong>perfectly identical files</strong> in groups.</li>
@@ -307,7 +330,7 @@
                     <li><code>Undo Delete (⌘Z)</code> restores only the most recently deleted photo group.</li>
                 </ul>
 
-                <h3>6.6 SlideShow (<code>Shift + Enter</code>)</h3>
+                <h3>6.7 SlideShow (<code>Shift + Enter</code>)</h3>
                 <ul>
                     <li>SlideShow runs in <code>Full Screen</code>.</li>
                     <li>The default start/stop key is <code>Shift + Enter</code>.</li>
@@ -564,13 +587,14 @@
 
                 <h2>12. Shortcuts Summary</h2>
                 <ul>
-                    <li>View Switch: <code>Q / W / E / R</code>, Compare <code>C</code>, Layout <code>L</code> or <code>Cmd+L</code>, Cycle <code>Tab</code></li>
+                    <li>View Switch: <code>Q</code> Grid, <code>W</code> Main View, <code>E</code> Horizontal Filmstrip, <code>R</code> Vertical Filmstrip, <code>T</code> Navigator, <code>Tab</code> Pro Layout View</li>
                     <li>Duplicate: <code>Cmd+Shift+D</code> (Enter/Rescan), <code>Shift+D</code> (Exit)</li>
                     <li>Compare Mode: <code>C</code></li>
                     <li>Move: <code>Left/Right</code>, <code>Up/Down</code> = Prev/Next, <code>Cmd+Up/Down</code> = First/Last, <code>Option+Up/Down</code> = Jump to Next Folder</li>
                     <li>Jump: <code>Cmd+Left/Right</code> (10), <code>Cmd+Shift+Left/Right</code> (50)</li>
                     <li>Zoom: <code>=</code> / <code>-</code>, Fit <code>0</code>, 100% <code>9</code></li>
-                    <li>Toggle Info: <code>I</code> (Info), <code>K</code> (Quick Check Setup), <code>H</code> (Histogram)</li>
+                    <li>Toggle Info: <code>I</code> (Info), <code>K</code> (Quick Check Setup), <code>H</code> (Histogram), <code>M</code> (Map)</li>
+                    <li>Comic Reading: <code>B</code> (Enter/Exit)</li>
                     <li>Video: <code>Space</code> (Play/Pause/Replay after ending), <code>Option+Left/Right</code> (5-second seek)</li>
                     <li>Screen Options: <code>Enter</code> (Full Screen), <code>Cmd+Shift+T</code> (Always On Top)</li>
                     <li>Cull: <code>1~5</code>, <code>0</code>, <code>P</code>, <code>X</code>, <code>U</code>, <code>Cmd+1~6</code></li>

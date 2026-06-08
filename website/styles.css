@@ -260,7 +260,7 @@ h1 {
 .hero-format-note {
   font-size: 14px;
   color: var(--text-secondary);
-  margin: 0 0 70px;
+  margin: 0;
   line-height: 1.6;
   max-width: 100%;
 }
@@ -289,27 +289,6 @@ h1 {
 
 .btn:hover {
   transform: translateY(-2px);
-}
-
-/* Hero Media with Float Effect */
-.hero-media {
-  margin: 0;
-  min-width: 0;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
-  border: 1px solid var(--glass-border);
-  max-width: 1000px;
-  width: 100%;
-}
-
-.hero-media img {
-  width: 100%;
-  display: block;
-}
-
-.hero-media figcaption {
-  display: none;
 }
 
 /* New Release */
@@ -1040,12 +1019,6 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     overflow-wrap: anywhere;
-  }
-
-  .hero-media {
-    width: 100%;
-    max-width: 350px;
-    border-radius: 12px;
   }
 
   .section-heading h2,

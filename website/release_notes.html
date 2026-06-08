@@ -157,7 +157,35 @@
             <!-- English Content -->
             <div data-lang="en">
                 <h1>SnapView Release Notes</h1>
-                <h2 id="v1-8-0">v1.8.0 (Current) - 2026-05-20</h2>
+                <h2 id="v2-0-0">v2.0.0 (Current) - 2026-06-06</h2>
+                <h3>What's New</h3>
+                <ul>
+                    <li>SnapView 2.0 is a major viewer-workspace update with the common Navigator, clearer <code>Q/W/E/R/T + Tab</code> view switching, Pro Layout View, vertical Filmstrip options, denser Action/Info Strips, Grid sorting and filters, Settings tabs/search, and a searchable shortcut sheet.</li>
+                    <li>A new first-run viewing setup helps new and pre-2.0 users choose thumbnail style, Filmstrip layout, info display, QuickCheck placement, and video browsing behavior. The same setup can be reopened from Settings with <code>Get Started with SnapView</code>.</li>
+                    <li>The new <code>M</code> Map Overlay shows the current photo's GPS location in the same footprint as the Histogram overlay.</li>
+                    <li>Comic Reading mode adds left-to-right and right-to-left two-page reading for folders and ZIP archives, with HUD controls, per-source page restore, and safer page navigation.</li>
+                    <li>Quick Organize adds preset-based copy/move workflows, Pick and 5-star organization actions, <code>Option</code>+<code>1</code> through <code>Option</code>+<code>5</code> shortcuts, editable destinations, preview sheets, and recent run history.</li>
+                    <li>Batch Actions adds recipe-based JPEG/PNG workflows with preflight previews, safety confirmations, pause/resume/cancel controls, retry support, and recent run logs.</li>
+                </ul>
+                <h3>Improvements</h3>
+                <ul>
+                    <li>Main, Grid, Filmstrip, and Pro Layout View now share more consistent common file actions while keeping existing toolbar and menu commands available.</li>
+                    <li><code>Q</code> opens Grid, <code>W</code> opens Main View, <code>E</code> opens Horizontal Filmstrip, <code>R</code> opens Vertical Filmstrip, <code>T</code> toggles Navigator visibility, and <code>Tab</code> toggles Pro Layout View for culling and organizing.</li>
+                    <li>The action strip supports denser file actions, rating 1-5, rating clear, Pick/Reject/Clear, color labels, Quick Organize entry points, and separate Off/Full density choices for the Action Strip and Info Strip.</li>
+                    <li>Location labels in the Map Overlay and Info Strip are shorter and easier to scan, showing the most relevant place and country instead of a full street-style address.</li>
+                    <li>Grid has a tighter toolbar, independent quick filters, a detailed-filter popover, filter reset, persisted sort direction, and clearer selected/file count behavior.</li>
+                    <li>Settings rows, tabs, search, shortcut help, and localized HUD labels have been cleaned up so controls are easier to find and scan.</li>
+                </ul>
+                <h3>Stability And Performance</h3>
+                <ul>
+                    <li>Rapid previous/next navigation is steadier when the Action Strip, Info Strip, QuickCheck/EXIF, Histogram, or Map are visible.</li>
+                    <li><code>Q/W/E/R</code> view switching, QuickCheck, Histogram, and Map transitions now use a consistent short animation so panel changes feel closer to the Tab Pro Layout View transition.</li>
+                    <li>QuickCheck/EXIF and the bottom Info Strip keep the last useful metadata while moving between photos, then update after the next photo's data is ready to reduce loading flicker and stale states.</li>
+                    <li>Same-image app/window return preserves manual zoom and pan more reliably.</li>
+                    <li>Filmstrip scrolling is more responsive, and Grid opens with fewer first-entry stalls.</li>
+                </ul>
+
+                <h2 id="v1-8-0">v1.8.0 - 2026-05-20</h2>
                 <h3>What's New</h3>
                 <ul>
                     <li>SnapView 1.8 focuses on stability: filtered selection accuracy, RAW+JPG workflow safeguards, smoother video controls, accurate rotation display, and small viewer/UI fixes.</li>
