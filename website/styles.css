@@ -325,6 +325,10 @@ h1 {
   text-align: center;
 }
 
+.new-release .section-heading {
+  margin-bottom: 18px;
+}
+
 .section-heading h2,
 .reviews-head h2 {
   font-family: var(--font-heading);
@@ -352,6 +356,11 @@ h1 {
   background: rgba(255, 255, 255, 0.055);
   box-shadow: 0 30px 90px rgba(0, 0, 0, 0.18);
   min-width: 0;
+}
+
+.review-surface-showcase {
+  grid-template-columns: minmax(220px, 0.58fr) minmax(0, 1.72fr);
+  gap: 24px;
 }
 
 .showcase-copy {
@@ -1065,6 +1074,14 @@ h1 {
   .reviews-head {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+
+  .review-surface-showcase {
+    gap: 22px;
+  }
+
+  .review-surface-showcase > img {
+    order: -1;
   }
 
   .feature-tiles {
