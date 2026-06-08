@@ -6,9 +6,8 @@
   --accent-green: #7EE3A1;
   --glass-border: rgba(255, 255, 255, 0.1);
   --glass-bg: rgba(28, 28, 30, 0.6);
-  --font-heading: 'Syne', sans-serif;
-  --font-body: 'Manrope', sans-serif;
-  --font-body: 'Manrope', sans-serif;
+  --font-heading: 'Syne', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+  --font-body: 'Manrope', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
   --orb-opacity: 0.4;
   --icon-filter: invert(1);
 }
@@ -324,9 +323,10 @@ h1 {
 }
 
 .feature-showcase img,
-.screenshot-row img {
+.feature-tiles img {
   width: 100%;
   min-width: 0;
+  display: block;
   border-radius: 14px;
   border: 1px solid var(--glass-border);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.22);
@@ -348,11 +348,22 @@ h1 {
   padding: 24px;
 }
 
-.screenshot-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  margin-top: 18px;
+.feature-tiles article {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.feature-tiles article p {
+  margin-bottom: 20px;
+}
+
+.feature-tiles img {
+  margin-top: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* Story Grid */
@@ -895,8 +906,7 @@ h1 {
     gap: 40px;
   }
 
-  .feature-tiles,
-  .screenshot-row {
+  .feature-tiles {
     grid-template-columns: 1fr;
   }
 
@@ -912,6 +922,10 @@ h1 {
   .feature-tiles h3 {
     font-size: 24px;
     overflow-wrap: anywhere;
+  }
+
+  .feature-tiles img {
+    max-width: 100%;
   }
 
   .new-release,

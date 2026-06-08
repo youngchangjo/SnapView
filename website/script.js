@@ -57,8 +57,13 @@ document.addEventListener('DOMContentLoaded', () => {
       return {};
     }
 
+    if (window.location.protocol === 'file:') {
+      return {};
+    }
+
     if (!localePayloads.has(lang)) {
-      localePayloads.set(lang, fetch('/locales/home.ko.json', { cache: 'force-cache' }).then(response => {
+      const localeURL = new URL('locales/home.ko.json', document.baseURI);
+      localePayloads.set(lang, fetch(localeURL, { cache: 'force-cache' }).then(response => {
         if (!response.ok) {
           throw new Error(`Failed to load Korean homepage locale: ${response.status}`);
         }
@@ -73,6 +78,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const localizedNodes = document.querySelectorAll(`[data-lang="${lang}"][data-i18n]`);
     if (localizedNodes.length > 0) {
       const payload = await loadLocalePayload(lang);
+      if (Object.keys(payload).length === 0) {
+        return;
+      }
+
       localizedNodes.forEach(el => {
         if (el.dataset.langHydrated === 'true') {
           return;
