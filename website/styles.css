@@ -1,3 +1,27 @@
+@font-face {
+  font-family: 'Gmarket Sans';
+  src: url('assets/fonts/GmarketSansLight.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gmarket Sans';
+  src: url('assets/fonts/GmarketSansMedium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gmarket Sans';
+  src: url('assets/fonts/GmarketSansBold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --bg-deep: #050507;
   --text-primary: #ffffff;
@@ -6,10 +30,46 @@
   --accent-green: #7EE3A1;
   --glass-border: rgba(255, 255, 255, 0.1);
   --glass-bg: rgba(28, 28, 30, 0.6);
-  --font-heading: 'Syne', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
-  --font-body: 'Manrope', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+  --font-heading: 'Syne', 'Manrope', sans-serif;
+  --font-body: 'Manrope', sans-serif;
+  --font-ko: 'Gmarket Sans', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
   --orb-opacity: 0.4;
   --icon-filter: invert(1);
+}
+
+h1,
+h2,
+h3,
+.card-copy h2,
+.proof-copy h2,
+.specs-section h3,
+.closing h2 {
+  font-family: var(--font-heading);
+  letter-spacing: 0;
+}
+
+[data-lang="ko"] {
+  font-family: var(--font-ko);
+  word-break: keep-all;
+  line-break: strict;
+  overflow-wrap: break-word;
+  letter-spacing: 0;
+}
+
+[data-lang="ko"][data-i18n] {
+  font-family: var(--font-ko);
+}
+
+[data-lang="ko"]:is(h1, h2, h3, strong, .btn) {
+  font-weight: 700;
+}
+
+[data-lang="ko"]:is(p, li) {
+  font-weight: 300;
+}
+
+[data-lang="ko"]:is(.eyebrow, .sub-lead, .hero-format-note, a, span) {
+  font-weight: 500;
 }
 
 [data-theme="light"] {
@@ -33,6 +93,10 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 96px;
 }
 
 body {
@@ -337,6 +401,7 @@ h1 {
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
   margin-top: 18px;
+  min-width: 0;
 }
 
 .feature-tiles article,
@@ -364,6 +429,54 @@ h1 {
   aspect-ratio: 16 / 10;
   object-fit: cover;
   object-position: center;
+}
+
+.lightness-band {
+  background: transparent;
+}
+
+.lightness-band .proof-copy {
+  max-width: 1100px;
+  margin-bottom: 0;
+}
+
+.lightness-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 46px;
+}
+
+.lightness-card {
+  min-width: 0;
+  padding: 18px;
+  text-align: left;
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+}
+
+.lightness-card img {
+  display: block;
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+}
+
+.lightness-card h3 {
+  margin: 18px 0 10px;
+  color: var(--text-primary);
+  font-size: 20px;
+  line-height: 1.22;
+}
+
+.lightness-card p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.65;
 }
 
 /* Story Grid */
@@ -716,6 +829,17 @@ h1 {
   gap: 20px;
 }
 
+.footer-logo {
+  display: block;
+  height: 30px;
+  opacity: 0.9;
+  transition: opacity 0.2s;
+}
+
+.footer-logo:hover {
+  opacity: 1;
+}
+
 .btn-text {
   position: fixed;
   bottom: 20px;
@@ -814,6 +938,10 @@ h1 {
     overflow: hidden;
   }
 
+  section {
+    scroll-margin-top: 220px;
+  }
+
   .hero-copy,
   .section-heading,
   .proof-copy {
@@ -861,6 +989,17 @@ h1 {
     overflow-wrap: anywhere;
   }
 
+  [data-lang="ko"].lead,
+  [data-lang="ko"].sub-lead,
+  [data-lang="ko"].hero-format-note,
+  .section-heading [data-lang="ko"],
+  .showcase-copy [data-lang="ko"],
+  .feature-tiles [data-lang="ko"],
+  .lightness-card [data-lang="ko"] {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
   .hero-format-note {
     font-size: 13px;
     margin-bottom: 56px;
@@ -879,22 +1018,20 @@ h1 {
   .section-heading h2,
   .reviews-head h2 {
     font-size: 30px;
-    max-width: 270px;
+    max-width: 340px;
     margin-left: auto;
     margin-right: auto;
-    overflow-wrap: anywhere;
   }
 
   .section-heading p:not(.eyebrow),
   .showcase-copy p {
-    max-width: 270px;
+    max-width: 330px;
     margin-left: auto;
     margin-right: auto;
-    overflow-wrap: anywhere;
   }
 
   .showcase-copy h3 {
-    max-width: 270px;
+    max-width: 330px;
   }
 
   .story-card,
@@ -908,6 +1045,10 @@ h1 {
 
   .feature-tiles {
     grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .feature-showcase {
@@ -926,6 +1067,18 @@ h1 {
 
   .feature-tiles img {
     max-width: 100%;
+  }
+
+  .lightness-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lightness-card {
+    padding: 20px;
   }
 
   .new-release,
