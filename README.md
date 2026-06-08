@@ -8,7 +8,7 @@
 
 Fast macOS image viewer for real photo culling work.
 
-Current Version: `v1.8.0`
+Current Version: `v2.0.0`
 
 
 Language: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
@@ -22,28 +22,28 @@ Mac App Store: [SnapView on the App Store](https://apps.apple.com/us/app/snapvie
 ## Download
 
 - Latest release: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
-- Install package: open the latest release page and download `SnapView-1.8.0.dmg`
+- Install package: open the latest release page and download `SnapView-2.0.0.dmg`
 - Official website: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
 
 ## Screenshots
 
-![SnapView overview](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/hero.png)
+![SnapView Pro Layout photo review](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/snapview-2-0-pro-layout.png)
 
-| Main View | Grid View |
+| Pro Layout View | Main View |
 | --- | --- |
-| ![SnapView Main View](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/web_mainview.png) | ![SnapView Grid View](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/web_gridview.png) |
+| ![SnapView Pro Layout View](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/snapview-2-0-pro-layout.png) | ![SnapView Main View](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/snapview-2-0-main-speed.png) |
 
-| Filmstrip View | Manage View |
+| Grid View | Quick Check |
 | --- | --- |
-| ![SnapView Filmstrip View](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/web_filmstrip.png) | ![SnapView Manage View](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/web_managemode.png) |
+| ![SnapView Grid View](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/snapview-2-0-grid.png) | ![SnapView Quick Check](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/snapview-2-0-quickcheck.png) |
 
-| Quick Check | Compare Mode |
+| Quick Organize | ZIP Browsing |
 | --- | --- |
-| ![SnapView Quick Check](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/quickcheck.png) | ![SnapView Compare Mode](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/comparemode.png) |
+| ![SnapView Quick Organize](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/snapview-2-0-quick-organize.png) | ![SnapView ZIP Browsing](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/snapview-2-0-zip.png) |
 
-| Duplicate Mode |
-| --- |
-| ![SnapView Duplicate Mode](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/duplicatemode.png) |
+| Map Overlay | Batch Actions |
+| --- | --- |
+| ![SnapView Map Overlay](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/snapview-2-0-map.png) | ![SnapView Batch Actions](https://raw.githubusercontent.com/youngchangjo/SnapView/main/website/assets/images/snapview-2-0-batch.png) |
 
 Detailed release notes from `v0.10.0` onward are available in the separate [Public Release Notes](https://github.com/youngchangjo/SnapView/blob/main/RELEASE_NOTES.md) document.
 
@@ -55,9 +55,15 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 
 - Fast folder and ZIP browsing
 - Quick Check for quality diagnosis with reasons, not just EXIF fields
+- Map Overlay for GPS-backed photo location review
 - Compare mode for picking the best frame from similar shots
 - Duplicate workspace for exact-file cleanup
+- Comic Reading Mode for opened folders or ZIP archives, with a focused black reader, HUD-local left-to-right/right-to-left controls, Webtoon selection kept inside the reader HUD, same-source last page restore, and next folder/ZIP handoff
+- HUD hover help for review tools follows the selected app language
 - Keyboard-first rating, pick, reject, and Finder tag workflow
+- Q/W/E/R/T + Tab viewer policy: Q=Grid, W=Main View, E=Horizontal Filmstrip, R=Vertical Filmstrip, T=Navigator toggle, Tab=Pro Layout View. Fast browsing keeps Action/Info Strips out of the hot path.
+- Quick Organize presets for repeated copy/move sorting from the current selection
+- Batch Actions for previewed JPEG/PNG export and copy/move recipes
 - Lightroom-style XMP interoperability for rating, Pick, and Reject
 - Finder tag interoperability so file and folder status remain visible outside the app
 - Decoding modes that let you choose between speed, balanced review, and quality-first inspection
@@ -65,22 +71,29 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 ## Typical Workflow
 
 1. Open a folder, image, or ZIP archive.
-2. Move quickly in Main, Grid, Filmstrip, or Manage view.
+2. Move quickly in Main, Grid, horizontal/vertical Filmstrip, and Navigator.
 3. Mark keepers with rating, Pick, Reject, or color labels.
-4. Open Quick Check or Compare when you need a closer call.
-5. Continue in Lightroom with XMP-backed ratings and flags, or keep organizing in Finder with color labels.
-6. Use Duplicate mode to clean up exact duplicates.
+4. Run Quick Organize presets when repeated folder sorting is needed.
+5. Open Quick Check or Compare when you need a closer call.
+6. Continue in Lightroom with XMP-backed ratings and flags, or keep organizing in Finder with color labels.
+7. Use Duplicate mode to clean up exact duplicates.
 
 ## Views And Tools
 
 - `Main View`: single-image browsing with zoom, fit, rotate, and overlay tools
 - `Grid View`: thumbnail selection for fast triage
-- `Filmstrip View`: main image plus strip for quick pass review
-- `Manage View`: folder navigation, filters, and filmstrip in one workspace
+- `Filmstrip View`: main image plus horizontal or vertical strip for quick pass review
+- `Pro Layout View`: folder navigation, filters, Action/Info Strips, and filmstrip in one workspace; `Tab` opens this workspace and `T` toggles Navigator. The Main View `I` info overlay is hidden in Pro Layout View even if it was enabled before entry.
 - `Quick Check`: score, warnings, and supporting reasons, plus histogram and detailed EXIF in one review set
+- `Map Overlay`: `M` shows the current photo GPS location in a Histogram-sized overlay
 - `Compare`: side-by-side review and best-shot recommendation
 - `Duplicate`: exact duplicate grouping and cleanup workflow
+- `Comic Reading Mode`: switch an opened folder or ZIP into a black reading surface; choose left-to-right or right-to-left two-page spreads from the HUD, advance spreads as `1-2 -> 3-4` without page-surface click turns, restore the last page for that same source, and confirm moving to the next folder/ZIP at the end
+- `Quick Organize`: preset-based copy/move sorting, with visible auto rules limited to Pick and 5-star for the 2.0 surface
+- `Batch Actions`: previewed export/copy/move recipes for repeatable delivery tasks
 - `Decoding Modes`: speed-first, balanced, and quality-first viewing behavior
+
+SnapView 2.0 also improves first-run setup, shortcut help, light/dark toolbar surfaces, Filmstrip scrolling, Quick Check readability, Batch Actions localization, and optional last-image restore for ordinary photo folders.
 
 ## Good Fit For
 
@@ -94,7 +107,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 ## Supported Formats
 
 - Standard images: `jpg`, `jpeg`, `png`, `gif`, `bmp`, `webp`, `heic`, `heif`, `hif`, `tif`, `tiff`
-- RAW: `arw`, `cr2`, `cr3`, `nef`, `nrw`, `dng`, `raf`, `orf`, `rw2`, `pef`, `srw`
+- RAW: `arw`, `cr2`, `cr3`, `nef`, `nrw`, `dng`, `dxo`, `raf`, `orf`, `rw2`, `pef`, `srw`
 - Video: `mp4`, `mov`, `m4v` from v1.5.0
 - Container: `zip` for supported images inside archives
 - Conditional: `avif`, `jxl` when macOS decoder support is available
@@ -102,7 +115,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 ## Install
 
 1. Download the latest DMG from [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest).
-2. Open `SnapView-1.8.0.dmg`.
+2. Open `SnapView-2.0.0.dmg`.
 3. Drag `SnapView.app` into `Applications`.
 4. Launch SnapView from `Applications`.
 
@@ -123,11 +136,10 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 - Animated `gif` and `webp` play in Main View only. Other views currently show a still first frame.
 - Finder interoperability is centered on color labels.
 - Lightroom interoperability is centered on XMP sidecars for rating, Pick, and Reject.
+- RAW+JPG pairing covers DNG, CR3, RW2, ARW, DXO, uppercase extensions, standalone files, and RAW+HEIC+JPG sets.
 - Conditional formats such as AVIF or JXL depend on macOS decoder availability.
 - App UI languages: Korean, English, Japanese, Simplified Chinese, Traditional Chinese, Spanish, French, German, Portuguese (Brazil), Italian, Dutch, Turkish, Polish, Swedish.
-- App Store metadata also covers Indonesian, Malay, Thai, Vietnamese, Danish, Norwegian, Finnish, Czech, Hungarian, Romanian, and Greek.
-- Release candidates are validated in both lanes (DMG Fast + Mac App Store Stable) before shipment.
-- DMG releases are shipped as a single universal download. Do not publish a separate Intel-only DMG or standalone x86_64 app asset.
+- DMG releases are shipped as one universal download for Apple silicon and Intel Macs.
 - If Gatekeeper blocks the app on first launch, open it from `Applications` again after confirming in macOS security settings.
 
 ---
@@ -138,7 +150,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 
 실사용 사진 선별 작업에 맞춘 macOS용 고속 이미지 뷰어입니다.
 
-현재 버전: `v1.8.0`
+현재 버전: `v2.0.0`
 
 
 언어: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
@@ -152,7 +164,7 @@ Mac App Store: [App Store에서 SnapView 보기](https://apps.apple.com/us/app/s
 ## 다운로드
 
 - 최신 릴리즈: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
-- 설치 파일: 최신 릴리즈 페이지에서 `SnapView-1.8.0.dmg`를 다운로드해 설치합니다
+- 설치 파일: 최신 릴리즈 페이지에서 `SnapView-2.0.0.dmg`를 다운로드해 설치합니다
 - 공식 사이트: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
 
 스크린샷은 위 `Screenshots` 섹션에서 바로 확인할 수 있습니다.
@@ -167,8 +179,12 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 
 - 폴더와 ZIP 이미지를 빠르게 탐색
 - EXIF 나열이 아니라 점수와 근거를 보여주는 Quick Check
+- GPS가 있는 사진을 확인하기 위한 지도 오버레이
 - 비슷한 컷에서 베스트샷을 고르기 위한 Compare
 - 동일 파일 정리를 위한 Duplicate 워크스페이스
+- 열린 폴더나 ZIP을 검은 독서 화면으로 전환하는 만화책 보기
+- `Q/W/E/R/T + Tab` 기준 탐색: Grid, Main, 가로 Filmstrip, 세로 Filmstrip, Navigator, 프로 레이아웃 뷰를 분리
+- 빠른 정리 프리셋과 Batch Actions로 반복 복사/이동/내보내기 작업 정리
 - 별점, Pick, Reject, Finder 태그 중심의 키보드 선별
 - Lightroom 스타일 XMP 연동으로 별점, Pick, Reject 결과를 그대로 이어가기
 - Finder 태그 연동으로 macOS 파일/폴더 정리 단계까지 상태 유지
@@ -177,22 +193,29 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 ## 대표 사용 흐름
 
 1. 폴더, 이미지, ZIP 파일을 엽니다.
-2. Main, Grid, Filmstrip, Manage 뷰를 오가며 빠르게 검토합니다.
+2. Main, Grid, 가로/세로 Filmstrip, Navigator를 오가며 빠르게 검토합니다.
 3. 별점, Pick, Reject, 컬러 라벨로 선별합니다.
-4. 애매한 컷은 Quick Check 또는 Compare로 판단합니다.
-5. 별점/Pick/Reject 결과는 Lightroom에서, 컬러 라벨은 Finder에서 그대로 이어서 활용합니다.
-6. 마지막에 Duplicate 모드로 정확한 중복 파일을 정리합니다.
+4. 반복 정리가 필요하면 빠른 정리 프리셋이나 Batch Actions를 실행합니다.
+5. 애매한 컷은 Quick Check 또는 Compare로 판단합니다.
+6. 별점/Pick/Reject 결과는 Lightroom에서, 컬러 라벨은 Finder에서 그대로 이어서 활용합니다.
+7. 마지막에 Duplicate 모드로 정확한 중복 파일을 정리합니다.
 
 ## 뷰와 도구
 
 - `Main View`: 단일 이미지 중심 탐색, 확대, 맞춤, 회전, 오버레이
 - `Grid View`: 다량 썸네일 선별
-- `Filmstrip View`: 메인 이미지와 스트립 기반 빠른 검토
-- `Manage View`: 폴더 탐색, 필터, 필름스트립을 함께 쓰는 관리 작업 공간
+- `Filmstrip View`: 메인 이미지와 가로/세로 스트립 기반 빠른 검토
+- `Pro Layout View`: 폴더 탐색, 필터, 액션/정보 스트립, 필름스트립을 함께 쓰는 프로 레이아웃 뷰. `Tab`으로 열고 `T`로 Navigator를 켜고 끕니다. Main View의 `I` 정보 오버레이가 켜져 있어도 Pro Layout View에서는 숨기고 액션/정보 스트립을 우선합니다.
 - `Quick Check`: 점수, 경고, 근거 기반 촬영 품질 진단과 히스토그램/상세 EXIF 점검 세트
+- `지도 오버레이`: `M`으로 현재 사진의 GPS 위치를 히스토그램 크기 오버레이에 표시
 - `Compare`: 나란히 비교하며 베스트샷 선택
 - `Duplicate`: 동일 파일 그룹 정리 워크플로우
+- `만화책 보기`: 열린 폴더나 ZIP을 검은 독서 화면으로 전환하고 HUD에서 좌->우/우->좌 2페이지 펼침을 선택하며, 펼침 이동은 `1-2 -> 3-4`처럼 겹치지 않고 화면 클릭으로 넘기지 않으며, 같은 소스의 마지막 페이지 복원과 다음 폴더/ZIP 이동 확인을 지원
+- `빠른 정리`: 반복 복사/이동 선별을 프리셋으로 실행하며, 2.0 표면의 자동 규칙은 Pick과 별점 5만 노출
+- `Batch Actions`: JPEG/PNG 내보내기, 복사, 이동 레시피를 프리뷰 후 실행
 - `디코딩 모드`: 속도 우선, 보통, 화질 최우선
+
+SnapView 2.0 보기 경험은 콘텐츠가 열린 뒤에만 상태를 복원합니다. 일반 사진 폴더의 마지막 사진 복원은 선택 옵션이며, 복원 순서는 소스 식별, 마지막 사진, 마지막 보기 모드, 네비게이터 표시 가능 여부 순서로 유지됩니다.
 
 ## 이런 경우에 잘 맞습니다
 
@@ -206,7 +229,7 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 ## 지원 포맷
 
 - 일반 이미지: `jpg`, `jpeg`, `png`, `gif`, `bmp`, `webp`, `heic`, `heif`, `hif`, `tif`, `tiff`
-- RAW: `arw`, `cr2`, `cr3`, `nef`, `nrw`, `dng`, `raf`, `orf`, `rw2`, `pef`, `srw`
+- RAW: `arw`, `cr2`, `cr3`, `nef`, `nrw`, `dng`, `dxo`, `raf`, `orf`, `rw2`, `pef`, `srw`
 - 동영상: `mp4`, `mov`, `m4v`는 v1.5.0부터 지원
 - 컨테이너: `zip` 내부 지원 이미지
 - 조건부: `avif`, `jxl`은 macOS 디코더 지원 시 활성화
@@ -214,7 +237,7 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 ## 설치 방법
 
 1. [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)에서 최신 DMG를 다운로드합니다.
-2. `SnapView-1.8.0.dmg`를 엽니다.
+2. `SnapView-2.0.0.dmg`를 엽니다.
 3. `SnapView.app`을 `Applications`로 드래그합니다.
 4. `Applications`에서 SnapView를 실행합니다.
 
@@ -235,9 +258,8 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 - animated `gif` / `webp`는 Main View에서만 재생되고, 다른 뷰에서는 첫 프레임 정지 이미지로 표시됩니다.
 - Finder 연동은 컬러 라벨 중심입니다.
 - Lightroom 연동은 XMP sidecar 기반 별점/Pick/Reject 중심입니다.
+- RAW+JPG 페어링은 DNG, CR3, RW2, ARW, DXO, 대문자 확장자, 단독 파일, RAW+HEIC+JPG 묶음을 포함합니다.
 - AVIF, JXL 같은 조건부 포맷은 macOS 디코더 지원 여부에 따라 달라집니다.
 - 앱 UI 언어는 한국어, 영어, 일본어, 중국어 간체, 중국어 번체, 스페인어, 프랑스어, 독일어, 포르투갈어(브라질), 이탈리아어, 네덜란드어, 터키어, 폴란드어, 스웨덴어입니다.
-- App Store 메타데이터는 인도네시아어, 말레이어, 태국어, 베트남어, 덴마크어, 노르웨이어, 핀란드어, 체코어, 헝가리어, 루마니아어, 그리스어도 포함합니다.
-- 릴리즈 후보는 출고 전에 DMG Fast + Mac App Store Stable 두 채널 검증을 모두 거칩니다.
-- DMG 릴리즈는 단일 universal 다운로드로 제공합니다. 별도 Intel 전용 DMG 또는 x86_64 standalone app 산출물은 공개하지 않습니다.
+- DMG 릴리즈는 Apple Silicon과 Intel Mac을 함께 지원하는 단일 universal 다운로드로 제공합니다.
 - 첫 실행 시 Gatekeeper 경고가 나오면 macOS 보안 설정에서 허용 후 다시 실행해 주십시오.
