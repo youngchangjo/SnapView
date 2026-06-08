@@ -294,29 +294,29 @@
                 <p data-lang="ko" hidden data-i18n="home.029">SnapView는 사진을 ‘작업’이 아니라 ‘감상’으로 유지하도록 설계되었습니다.</p>
                 <p data-lang="en">SnapView keeps photo viewing enjoyable, not a project.</p>
 
-                <div class="lightness-grid" aria-label="Why SnapView feels light">
-                    <article class="lightness-card">
+                <div class="compact-card-grid lightness-grid" aria-label="Why SnapView feels light">
+                    <article class="compact-info-card lightness-card">
                         <img src="assets/images/lightness/no-import-wait.png" alt="Instant folder open pictogram" loading="eager" decoding="async">
                         <h3 data-lang="ko" hidden data-i18n="home.025">가져오기 대기 없음</h3>
                         <h3 data-lang="en">No import wait</h3>
                         <p data-lang="ko" hidden data-i18n="home.091">폴더를 여는 순간 바로 훑습니다. 가져오기 단계가 없습니다.</p>
                         <p data-lang="en">Open a folder and start reviewing. There is no import step.</p>
                     </article>
-                    <article class="lightness-card">
+                    <article class="compact-info-card lightness-card">
                         <img src="assets/images/lightness/no-catalog-building.png" alt="No catalog database pictogram" loading="eager" decoding="async">
                         <h3 data-lang="ko" hidden data-i18n="home.026">라이브러리 생성 없음</h3>
                         <h3 data-lang="en">No catalog building</h3>
                         <p data-lang="ko" hidden data-i18n="home.092">카탈로그 파일을 만들지 않아 시작과 이동이 가볍습니다.</p>
                         <p data-lang="en">No catalog file means launch and navigation stay light.</p>
                     </article>
-                    <article class="lightness-card">
+                    <article class="compact-info-card lightness-card">
                         <img src="assets/images/lightness/mac-native-speed.png" alt="Mac-native speed pictogram" loading="eager" decoding="async">
                         <h3 data-lang="ko" hidden data-i18n="home.027">Mac-native로 빠른 반응</h3>
                         <h3 data-lang="en">Mac-native performance</h3>
                         <p data-lang="ko" hidden data-i18n="home.093">키 입력과 화면 전환이 Mac 뷰어 흐름에 맞게 즉각 반응합니다.</p>
                         <p data-lang="en">Keyboard input and view changes stay tuned for Mac-native flow.</p>
                     </article>
-                    <article class="lightness-card">
+                    <article class="compact-info-card lightness-card">
                         <img src="assets/images/lightness/focused-essentials.png" alt="Focused essentials pictogram" loading="eager" decoding="async">
                         <h3 data-lang="ko" hidden data-i18n="home.028">필요한 기능만 남긴 구조</h3>
                         <h3 data-lang="en">Only what you need</h3>
@@ -458,25 +458,37 @@
         </section>
 
         <!-- Feature: Lightroom / Finder Sync (New) -->
-        <section class="proof-band reveal" style="background: transparent;">
+        <section class="proof-band integration-band reveal">
             <div class="proof-copy">
-                <div style="display: flex; justify-content: center; align-items: center; gap: 32px; margin-bottom: 32px;">
-                    <img src="assets/images/lr_sync_notion_style.png" alt="Lightroom Sync Icon" style="width: 72px; height: 72px; border-radius: 12px; border: 1px solid var(--glass-border);">
-                    <img src="assets/images/xmp_sync_notion_style.png" alt="XMP Sidecar Icon" style="width: 72px; height: 72px; border-radius: 12px; border: 1px solid var(--glass-border);">
-                    <img src="assets/images/finder_tags_notion_style.png" alt="Finder Tags Icon" style="width: 72px; height: 72px; border-radius: 12px; border: 1px solid var(--glass-border);">
-                </div>
                 <h2 data-lang="ko" hidden data-i18n="home.035">Lightroom과 Finder로 부드럽게 이어지는 흐름</h2>
                 <h2 data-lang="en">Seamless Integration with Lightroom & Finder</h2>
 
                 <p data-lang="ko" hidden data-i18n="home.036">SnapView에서 초고속으로 진행한 1차 선별 결과는 무거운 카탈로그 이동 없이 작업용 도구와 즉시 연동됩니다.</p>
                 <p data-lang="en">Your blazing-fast first culling pass in SnapView instantly syncs with your work tools, without heavy catalog imports.</p>
 
-                <ul>
-                    <li data-lang="ko" hidden data-i18n="home.037">별점 / 픽/리젝트 ➔ XMP Sidecar 연동으로 Lightroom에 전달</li>
-                    <li data-lang="en">Ratings / Pick/Reject ➔ Passed to Lightroom via XMP Sidecar</li>
-                    <li data-lang="ko" hidden data-i18n="home.038">컬러 라벨 ➔ macOS Finder 기본 컬러 태그로 완벽 동기화</li>
-                    <li data-lang="en">Color Labels ➔ Perfectly synced to macOS Finder Color Tags</li>
-                </ul>
+                <div class="compact-card-grid integration-grid" aria-label="Lightroom and Finder integration">
+                    <article class="compact-info-card integration-card">
+                        <img src="assets/images/integration/lightroom-handoff.png" alt="Lightroom handoff pictogram" loading="eager" decoding="async">
+                        <h3 data-lang="ko" hidden data-i18n="home.095">Lightroom으로 이어가기</h3>
+                        <h3 data-lang="en">Lightroom handoff</h3>
+                        <p data-lang="ko" hidden data-i18n="home.096">1차 선별 결과를 편집 워크플로우로 바로 넘깁니다.</p>
+                        <p data-lang="en">Move first-pass selections straight into the editing workflow.</p>
+                    </article>
+                    <article class="compact-info-card integration-card">
+                        <img src="assets/images/integration/xmp-sidecar-sync.png" alt="XMP sidecar sync pictogram" loading="eager" decoding="async">
+                        <h3 data-lang="ko" hidden data-i18n="home.097">XMP Sidecar 동기화</h3>
+                        <h3 data-lang="en">XMP sidecar sync</h3>
+                        <p data-lang="ko" hidden data-i18n="home.098">별점, Pick, Reject를 XMP 기준으로 이어갑니다.</p>
+                        <p data-lang="en">Carry ratings, Pick, and Reject through XMP sidecars.</p>
+                    </article>
+                    <article class="compact-info-card integration-card">
+                        <img src="assets/images/integration/finder-color-tags.png" alt="Finder color tags pictogram" loading="eager" decoding="async">
+                        <h3 data-lang="ko" hidden data-i18n="home.099">Finder 컬러 태그</h3>
+                        <h3 data-lang="en">Finder color tags</h3>
+                        <p data-lang="ko" hidden data-i18n="home.100">컬러 라벨은 macOS Finder 태그와 맞춰집니다.</p>
+                        <p data-lang="en">Color labels stay aligned with native Finder tags.</p>
+                    </article>
+                </div>
             </div>
         </section>
 
