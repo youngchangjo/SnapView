@@ -1,6 +1,6 @@
 # SnapView Release Notes
 
-## v2.0.0 (Current) - 2026-06-08
+## v2.0.0 (Current) - 2026-06-09
 
 Language: [🇺🇸 English](#english-200) | [🇰🇷 한국어](#korean-200)
 
