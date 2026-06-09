@@ -40,108 +40,21 @@
     <link rel="manifest" href="/manifest.webmanifest">
     <link rel="alternate" type="application/rss+xml" title="SnapView Updates" href="https://snapview.snapworkslab.com/rss.xml">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .manual-container {
-            max-width: 800px;
-            margin: 120px auto 80px;
-            padding: 0 24px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .manual-content h1 {
-            font-size: 48px;
-            margin-bottom: 16px;
-            background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .manual-content .subtitle {
-            font-size: 20px;
-            color: var(--text-secondary);
-            margin-bottom: 60px;
-            line-height: 1.6;
-        }
-
-        .manual-content h2 {
-            font-family: var(--font-heading);
-            font-size: 28px;
-            margin-top: 60px;
-            margin-bottom: 24px;
-            color: var(--text-primary);
-            border-bottom: 1px solid var(--glass-border);
-            padding-bottom: 16px;
-        }
-
-        .manual-content h3 {
-            font-family: var(--font-body);
-            font-size: 20px;
-            margin-top: 40px;
-            margin-bottom: 16px;
-            color: var(--accent-blue);
-        }
-
-        .manual-content p,
-        .manual-content li {
-            font-size: 17px;
-            line-height: 1.7;
-            color: var(--text-secondary);
-            margin-bottom: 16px;
-        }
-
-        .manual-content ul {
-            padding-left: 20px;
-            margin-bottom: 24px;
-        }
-
-        .manual-content li {
-            margin-bottom: 8px;
-        }
-
-        .manual-content code {
-            background: var(--glass-bg);
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-size: 0.9em;
-            color: var(--text-primary);
-            border: 1px solid var(--glass-border);
-        }
-
-        .manual-content blockquote {
-            border-left: 4px solid var(--accent-blue);
-            margin: 24px 0;
-            padding-left: 20px;
-            color: var(--text-secondary);
-            font-style: italic;
-        }
-
-        .manual-content hr {
-            border: 0;
-            height: 1px;
-            background: var(--glass-border);
-            margin: 60px 0;
-        }
-    </style>
 </head>
 
 <body>
-    <div class="bg-orb orb-1" aria-hidden="true" style="opacity: 0.2;"></div>
-    <div class="bg-orb orb-2" aria-hidden="true" style="opacity: 0.2;"></div>
-
     <main class="page">
         <header class="topbar">
-            <a class="brand" href="/" aria-label="SnapView home">
+            <a class="brand" href="index.html" aria-label="SnapView home">
                 <img src="assets/images/snapview-icon.png" alt="SnapView icon">
                 <span>SnapView</span>
             </a>
 
             <nav class="nav" aria-label="Primary">
-                <a href="/#workflow">Features</a>
-                <a href="/#specs">Specs</a>
-                <a href="/manual" class="active">Manual</a>
-                <a href="/release_notes">Release Notes</a>
+                <a href="index.html#new">What's New</a>
+                <a href="index.html#workflow">Workflow</a>
+                <a href="manual.html" class="active">Manual</a>
+                <a href="release_notes.html">Release Notes</a>
             </nav>
 
             <div class="lang-switch" role="group" aria-label="Language">
@@ -152,7 +65,7 @@
 
         <section class="manual-container manual-content">
             <!-- Korean Content loads on demand to keep English as the primary crawlable language. -->
-            <div data-lang="ko" data-lang-src="/locales/manual.ko.html" hidden></div>
+            <div data-lang="ko" data-lang-src="locales/manual.ko.html" hidden></div>
 
             <!-- English Content -->
             <div data-lang="en">
@@ -514,7 +427,7 @@
                     <li><code>Quality Priority</code>: Prioritizes the highest resolution possible. Best when checking image quality details is critical.</li>
                 </ul>
 
-                <h4 style="font-family: var(--font-body); font-size: 18px; margin-top: 24px; margin-bottom: 12px; color: var(--text-primary);">9.1.1 Slow Storage & Large Image Behavior</h4>
+                <h4>9.1.1 Slow Storage & Large Image Behavior</h4>
                 <ul>
                     <li>On slow networks or external drives, SnapView invisibly adjusts background workload to prevent buffering and stutter.</li>
                     <li>For deeply broken formats or oversized images that refuse to load, click <code>Open Safely</code> as prompted by the screen to manually verify the image.</li>
@@ -750,13 +663,13 @@
 
         <footer class="footer">
             <div class="footer-left">
-                <a href="https://snapworkslab.com" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center;">
-                    <img src="assets/images/snapworkslab-logo.png" alt="SnapWorks Lab" style="height: 30px; opacity: 0.8; transition: opacity 0.2s;">
+                <a class="footer-brand-link" href="https://snapworkslab.com" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/images/snapworkslab-logo-v2-dark.png" alt="SnapWorks Lab" class="footer-logo">
                 </a>
             </div>
-            <div class="footer-right" style="display: flex; gap: 16px;">
-                <a href="support/" style="color: var(--text-secondary); text-decoration: none; font-size: 14px;">Support</a>
-                <a href="privacy/" style="color: var(--text-secondary); text-decoration: none; font-size: 14px;">Privacy Policy</a>
+            <div class="footer-right">
+                <a class="footer-link" href="support/">Support</a>
+                <a class="footer-link" href="privacy/">Privacy Policy</a>
             </div>
         </footer>
     </main>

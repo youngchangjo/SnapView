@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!localePayloads.has(lang)) {
       const localeURL = new URL('locales/home.ko.json', document.baseURI);
-      localePayloads.set(lang, fetch(localeURL, { cache: 'force-cache' }).then(response => {
+      localePayloads.set(lang, fetch(localeURL, { cache: 'no-cache' }).then(response => {
         if (!response.ok) {
           throw new Error(`Failed to load Korean homepage locale: ${response.status}`);
         }
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      const response = await fetch(el.getAttribute('data-lang-src'), { cache: 'force-cache' });
+      const response = await fetch(el.getAttribute('data-lang-src'), { cache: 'no-cache' });
       if (!response.ok) {
         throw new Error(`Failed to load ${el.getAttribute('data-lang-src')}: ${response.status}`);
       }
