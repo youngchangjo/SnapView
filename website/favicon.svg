@@ -1,3 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
-  <image href="/assets/images/snapview-icon.png" width="1024" height="1024"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SnapView">
+  <rect width="64" height="64" rx="12" fill="#061116"/>
+  <rect x="6" y="6" width="52" height="52" rx="9" fill="none" stroke="#11d7c6" stroke-width="4"/>
+  <path d="M43 13 20 29.5l23 5.5-23 16" fill="none" stroke="#8ffff1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M43 13 20 29.5l23 5.5-23 16" fill="none" stroke="#1bc9ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
