@@ -5,8 +5,22 @@
     <link>https://snapview.snapworkslab.com/</link>
     <description>Product updates, release notes, and support information for SnapView, a fast Mac photo viewer for RAW files and image review.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 07 Jun 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://snapview.snapworkslab.com/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SnapView Download Options</title>
+      <link>https://snapview.snapworkslab.com/download/</link>
+      <guid isPermaLink="true">https://snapview.snapworkslab.com/download/</guid>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 +0900</pubDate>
+      <description>Choose between the Mac App Store stable channel and the direct SnapView DMG download for Mac.</description>
+    </item>
+    <item>
+      <title>SnapView Features</title>
+      <link>https://snapview.snapworkslab.com/features/</link>
+      <guid isPermaLink="true">https://snapview.snapworkslab.com/features/</guid>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 +0900</pubDate>
+      <description>Explore SnapView features for RAW browsing, ZIP review, Pro Layout View, Quick Organize, Batch Actions, Map Overlay, and Quick Check.</description>
+    </item>
     <item>
       <title>SnapView v1.8.0 Release Notes</title>
       <link>https://snapview.snapworkslab.com/release_notes</link>

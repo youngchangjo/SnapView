@@ -44,21 +44,42 @@
         {
             "@context": "https://schema.org",
             "@type": "WebSite",
+            "@id": "https://snapview.snapworkslab.com/#website",
             "name": "SnapView",
             "alternateName": "SnapView for Mac",
-            "url": "https://snapview.snapworkslab.com/"
+            "url": "https://snapview.snapworkslab.com/",
+            "publisher": {
+                "@id": "https://snapview.snapworkslab.com/#organization"
+            }
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "@id": "https://snapview.snapworkslab.com/#organization",
+            "name": "SnapWorks Lab",
+            "url": "https://snapworkslab.com/",
+            "logo": "https://snapview.snapworkslab.com/assets/images/snapworkslab-logo-v2-dark.png",
+            "sameAs": [
+                "https://github.com/youngchangjo/SnapView",
+                "https://apps.apple.com/us/app/snapview-fast-image-viewer/id6762974261"
+            ]
         }
     </script>
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
+            "@id": "https://snapview.snapworkslab.com/#software",
             "name": "SnapView",
-            "applicationCategory": "PhotographyApplication",
-            "operatingSystem": "macOS",
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "macOS 15.5 or later",
+            "softwareVersion": "2.0.0",
             "description": "SnapView is a fast Mac photo viewer for RAW files, ZIP archives, videos, Pro Layout View, quick organize, GPS maps, batch export, and keyboard-first photo review.",
             "url": "https://snapview.snapworkslab.com/",
             "downloadUrl": "https://github.com/youngchangjo/SnapView/releases/latest/download/SnapView.dmg",
+            "installUrl": "https://apps.apple.com/us/app/snapview-fast-image-viewer/id6762974261",
             "image": "https://snapview.snapworkslab.com/assets/images/snapview-2-0-pro-layout.png",
             "screenshot": "https://snapview.snapworkslab.com/assets/images/snapview-2-0-pro-layout.png",
             "isAccessibleForFree": true,
@@ -73,7 +94,14 @@
                 "ratingCount": "35",
                 "bestRating": "5",
                 "worstRating": "1"
-            }
+            },
+            "publisher": {
+                "@id": "https://snapview.snapworkslab.com/#organization"
+            },
+            "sameAs": [
+                "https://github.com/youngchangjo/SnapView",
+                "https://apps.apple.com/us/app/snapview-fast-image-viewer/id6762974261"
+            ]
         }
     </script>
 </head>
@@ -87,10 +115,10 @@
             </a>
 
             <nav class="nav" aria-label="Primary">
-                <a href="#new">What's New</a>
-                <a href="#workflow">Workflow</a>
-                <a href="manual.html">Manual</a>
-                <a href="release_notes.html">Release Notes</a>
+                <a href="/features/">Features</a>
+                <a href="/download/">Download</a>
+                <a href="/manual">Manual</a>
+                <a href="/release_notes">Release Notes</a>
             </nav>
 
             <div class="lang-switch" role="group" aria-label="Language">
@@ -750,8 +778,10 @@
                 </a>
             </div>
             <div class="footer-right">
-                <a class="footer-link" href="support/">Support</a>
-                <a class="footer-link" href="privacy/">Privacy Policy</a>
+                <a class="footer-link" href="/features/">Features</a>
+                <a class="footer-link" href="/download/">Download</a>
+                <a class="footer-link" href="/support/">Support</a>
+                <a class="footer-link" href="/privacy/">Privacy Policy</a>
             </div>
         </footer>
     </main>
