@@ -17,6 +17,7 @@ Language: [🇺🇸 English](#english-250) | [🇰🇷 한국어](#korean-250)
 - `Command-P` opens the native macOS print panel for current images, selected images, folders, ZIP archives, Apple Photos collections, contact sheets, and PDF save workflows.
 - Main, Grid, and Filmstrip file transfers now use clearer drag previews, selected-count feedback, and Finder-friendly file payloads.
 - Pro Layout View adds a Select Tray for candidate, final, and excluded sets, with selected-original copy handoff for culling workflows.
+- Multi Monitor Workspace can place review tools on a second display, including Navigator, Quick Check, Histogram, Map, Filmstrip, and Select Tray panels.
 - A project folder template command can create `Capture`, `Select`, `Reject`, and `Output` folders and open the new `Capture` folder.
 
 #### Improvements
@@ -24,17 +25,11 @@ Language: [🇺🇸 English](#english-250) | [🇰🇷 한국어](#korean-250)
 - Sorting is easier to access from Main, Grid, Filmstrip, and context menus.
 - Context menus are grouped more clearly around marking, viewing, workflow, editing, and Filmstrip actions.
 - Open With, print, Photos import/export, and other file actions are easier to find from the current image or selection.
-- Performance and playback settings are split more clearly, so rendering, cache, decoding, slideshow, and video options are easier to scan.
-- Supporter Pass entries in supported App Store builds now communicate their state more clearly.
+- Performance and Playback settings are easier to scan, with viewing speed, slideshow, and video options separated more clearly.
 - RAW+JPG, WebP, info overlay, cursor-centered zoom, and fit-width behavior have been tightened based on recent user feedback.
 
-#### Visible Scope
-- Core folder, ZIP, Apple Photos, HDR, Quick Check, print, and file-transfer workflows are part of the normal viewer experience.
-- Multi Monitor Workspace is included in the direct DMG without Supporter Pass gating. Supported App Store builds may show optional Supporter Pass thank-you entries for advanced viewing preferences, app icon choices, persistent thumbnail cache controls, and Multi Monitor Workspace.
-- App Store "What's New" text is managed separately from these GitHub release notes.
-
 #### Stability And Performance
-- Apple Photos loading, HDR detection, upscaling, metadata, and thumbnail-cache work are kept behind the visible image path so browsing stays responsive.
+- Apple Photos loading, HDR, upscaling, metadata, and thumbnail work interrupt the current image less while browsing.
 - Grid and Filmstrip thumbnails are more reliable when browsing Apple Photos and large folders.
 - Opening a folder now keeps the first visible image and final sorted order more consistent.
 - HDR and upscaling state is more stable when switching photos or returning to SnapView from another window.
@@ -55,6 +50,7 @@ Language: [🇺🇸 English](#english-250) | [🇰🇷 한국어](#korean-250)
 - `Command-P`로 macOS 기본 인쇄 패널을 열어 현재 이미지, 선택 이미지, 폴더, ZIP, Apple Photos 컬렉션, 콘택트 시트, PDF 저장 흐름을 사용할 수 있습니다.
 - Main, Grid, Filmstrip의 파일 드래그와 복사/이동 흐름에 더 명확한 드래그 미리보기, 선택 개수 표시, Finder 친화 파일 전달을 적용했습니다.
 - Pro Layout View에 후보, 최종, 제외 묶음을 다루는 Select Tray를 추가했고, 선별한 원본을 복사해 넘기는 흐름을 정리했습니다.
+- Multi Monitor Workspace에서 Navigator, Quick Check, Histogram, Map, Filmstrip, Select Tray 같은 리뷰 도구를 보조 디스플레이에 배치할 수 있습니다.
 - `Capture`, `Select`, `Reject`, `Output` 폴더를 만들고 새 `Capture` 폴더를 여는 프로젝트 폴더 템플릿 명령을 추가했습니다.
 
 #### 개선된 점
@@ -62,17 +58,11 @@ Language: [🇺🇸 English](#english-250) | [🇰🇷 한국어](#korean-250)
 - Main, Grid, Filmstrip과 우클릭 메뉴에서 정렬에 더 쉽게 접근할 수 있습니다.
 - 우클릭 메뉴를 마킹, 보기, 작업, 편집, Filmstrip 동작 중심으로 정리했습니다.
 - Open With, 인쇄, Photos 가져오기/내보내기 같은 파일 작업을 현재 이미지나 선택 항목에서 더 쉽게 찾을 수 있습니다.
-- Performance와 Playback 설정을 더 명확히 나눠 렌더링, 캐시, 디코딩, 슬라이드쇼, 비디오 옵션을 더 쉽게 훑을 수 있습니다.
-- 지원되는 App Store 빌드의 Supporter Pass 항목은 상태를 더 명확하게 안내합니다.
+- Performance와 Playback 설정을 더 명확히 나눠 보기 속도, 슬라이드쇼, 비디오 옵션을 더 쉽게 훑을 수 있습니다.
 - RAW+JPG, WebP, 정보 오버레이, 커서 기준 확대, 폭 맞춤 유지 동작을 최근 사용자 피드백에 맞춰 보강했습니다.
 
-#### 보이는 범위
-- 폴더, ZIP, Apple Photos, HDR, Quick Check, 인쇄, 파일 전송은 일반 보기 경험의 기본 흐름으로 제공됩니다.
-- Multi Monitor Workspace는 직접 다운로드 DMG에 Supporter Pass 제한 없이 포함됩니다. 지원되는 App Store 빌드에서는 일부 고급 보기 설정, 앱 아이콘 선택, 썸네일 캐시 컨트롤, Multi Monitor Workspace가 선택형 Supporter Pass 감사 항목으로 표시될 수 있습니다.
-- App Store의 "What's New" 문구는 이 GitHub 릴리즈 노트와 별도로 관리합니다.
-
 #### 안정성 및 성능
-- Apple Photos 로딩, HDR 판별, 업스케일링, 메타데이터, 썸네일 캐시 작업이 현재 이미지 표시를 방해하지 않도록 정리했습니다.
+- Apple Photos 로딩, HDR, 업스케일링, 메타데이터, 썸네일 작업이 탐색 중 현재 이미지 표시를 덜 방해하도록 정리했습니다.
 - Apple Photos와 큰 폴더를 볼 때 Grid와 Filmstrip 썸네일 표시가 더 안정적으로 동작합니다.
 - 폴더를 처음 열 때 첫 화면 이미지와 최종 정렬 순서가 더 일관되게 유지됩니다.
 - 사진을 넘기거나 다른 창에서 SnapView로 돌아올 때 HDR 및 업스케일링 표시 상태가 더 안정적으로 유지됩니다.
@@ -112,8 +102,8 @@ Language: [🇺🇸 English](#english-200) | [🇰🇷 한국어](#korean-200)
 - The intro Quick Start card keeps shortcut rows readable in English and Korean, uses macOS modifier glyphs, and stays clear of the lower window text.
 - The transparent toolbar/titlebar area now uses a subtle blur-gradient shadow in light and dark mode, and vertical Filmstrip no longer draws an extra top divider.
 
-#### Visible Scope
-- The visible 2.0 release focuses on Navigator, Filmstrip, Map Overlay, Comic Reading, Quick Organize, and Batch Actions.
+#### Details
+- SnapView 2.0 centers on Navigator, Filmstrip, Map Overlay, Comic Reading, Quick Organize, and Batch Actions.
 - The temporary Simple/Normal/Pro chrome switch and old global Tab cycling were removed. Q/W/E/R/T + Tab is now the stable view, Navigator, and Pro Layout View shortcut model.
 - Action Strip and Info Strip settings are simplified to separate Off/Full choices, with placement controls kept out of normal Settings. Action Strip curation keeps rating 1-5, rating clear, Pick/Reject/Clear, and color labels; Quick Organize auto rules expose only Pick and 5-star. SnapView 2.0 keeps the visible Quick Organize preset list and Batch Actions recipe list to three entries each.
 - Comic Reading mode keeps reading direction and Webtoon selection inside the reader HUD; Last View no longer reopens Webtoon directly.
@@ -155,8 +145,8 @@ Language: [🇺🇸 English](#english-200) | [🇰🇷 한국어](#korean-200)
 - 인트로 시작하기 카드는 영어와 한국어에서 단축키 줄이 더 읽기 쉽게 유지되고, macOS 보조키 기호를 사용하며, 하단 문구와 겹치지 않게 정리했습니다.
 - 투명한 툴바/타이틀바 영역은 라이트/다크 모드에서 은은한 블러 그라데이션 그림자를 사용하고, 세로 필름스트립은 불필요한 상단 구분선을 제거했습니다.
 
-#### 보이는 범위
-- 2.0 기본 노출 범위는 내비게이터, 필름스트립, 지도 오버레이, Comic Reading, 빠른 정리, Batch Actions에 집중하고, 지원되는 App Store Supporter Pass 빌드에서는 Multi Monitor Workspace가 visible disabled/active 항목으로 표시됩니다.
+#### 세부 내용
+- SnapView 2.0은 내비게이터, 필름스트립, 지도 오버레이, Comic Reading, 빠른 정리, Batch Actions를 중심으로 구성했습니다.
 - 임시 Simple/Normal/Pro 크롬 전환 버튼과 기존 전역 Tab 순환은 제거했습니다. Q/W/E/R/T + Tab이 안정된 보기 전환, 내비게이터, 프로 레이아웃 뷰 단축키 모델입니다.
 - 액션 스트립과 정보 스트립 설정은 각각 Off/Full 선택으로 단순화했고, 배치 설정은 일반 설정에서 숨겼습니다. 액션 스트립 선별 컨트롤은 기존 별점 1-5, 별점 취소, Pick/Reject/Clear, 컬러라벨 전체 세트를 유지하고, 빠른 정리 자동 규칙은 Pick과 별점 5만 노출합니다. SnapView 2.0의 보이는 빠른 정리 프리셋과 Batch Actions 레시피는 각각 3개까지 제공합니다.
 - Comic Reading 모드의 읽기 방향과 Webtoon 선택은 리더 안의 HUD에서만 다루며, Last View가 Webtoon을 바로 다시 열지는 않습니다.
@@ -418,14 +408,14 @@ Language: [🇺🇸 English](#english-102) | [🇰🇷 한국어](#korean-102)
 #### What's New
 - **More App Languages**: SnapView now includes Japanese, Simplified Chinese, and Spanish for the main app interface.
 - **Trackpad Browsing**: Two-finger trackpad swipes can now move to the previous or next image, with an option to match macOS natural scrolling.
-- **Universal Mac Compatibility**: The Mac App Store build now includes both Apple Silicon and Intel-compatible binary slices.
+- **Universal Mac Compatibility**: SnapView now runs natively on both Apple Silicon and Intel Macs.
 
 #### Improvements
 - Compare and Reference Compare have been polished so reference/candidate labels, rating, Pick, and color label controls behave more consistently.
 - Quick Check now shows important EXIF details sooner, remembers collapsed sections, and keeps location information easier to review when GPS data is available.
 - Mouse wheel and trackpad behavior is more consistent across Main, Filmstrip, and Manage views. When zoomed in, two-finger scrolling pans the image instead of accidentally changing photos.
 - Menus, context menus, settings, and help text now follow the selected app language more consistently, including Japanese, Simplified Chinese, and Spanish.
-- File access guidance is clearer in both the direct download version and the Mac App Store version, with App Store permission recovery kept separate from direct-download access errors.
+- File access guidance is clearer when SnapView needs permission to open a file or folder.
 - Intro and overlay surfaces are easier to read on bright images, with a more consistent background style.
 - SnapView is more stable when folder contents change while browsing, including cases where images are moved or deleted outside the app.
 
@@ -436,14 +426,14 @@ Language: [🇺🇸 English](#english-102) | [🇰🇷 한국어](#korean-102)
 #### 새로운 점
 - **지원 언어 확대**: 일본어, 중국어(간체), 스페인어 UI 지원을 추가했습니다.
 - **트랙패드 탐색**: 두 손가락 스와이프로 이전/다음 사진을 이동할 수 있고, macOS의 자연스러운 스크롤 방향에 맞출 수 있습니다.
-- **Universal Mac 호환성**: Mac App Store 빌드에 Apple Silicon과 Intel Mac 호환 바이너리를 함께 포함했습니다.
+- **Universal Mac 호환성**: Apple Silicon과 Intel Mac에서 모두 네이티브로 실행됩니다.
 
 #### 개선된 점
 - Compare와 Reference Compare 화면을 더 일관되게 개선했습니다. 기준/비교 대상 표시, 별점, Pick, 컬러 라벨 조작 흐름을 맞췄습니다.
 - Quick Check에서 주요 EXIF 정보가 더 바로 보이고, 접기/펼치기 상태가 다음 실행에도 유지됩니다. GPS 정보가 있는 사진은 위치 정보를 더 쉽게 확인할 수 있습니다.
 - Main, Filmstrip, Manage에서 마우스 휠과 트랙패드 동작이 더 일관되게 동작합니다. 확대된 상태에서는 두 손가락 스크롤이 사진 이동보다 화면 이동을 우선합니다.
 - 메뉴, 우클릭 메뉴, 설정, 도움말 문구가 선택한 앱 언어를 더 일관되게 따르도록 정리했습니다. 일본어, 중국어(간체), 스페인어에서도 일부 항목이 영어로 남던 문제를 줄였습니다.
-- 직접 다운로드 버전과 Mac App Store 버전에서 파일 접근 문제를 더 이해하기 쉽게 안내합니다. App Store 권한 재허용 흐름과 직접 다운로드 버전의 접근 실패 안내도 분리했습니다.
+- 파일이나 폴더를 열기 위한 권한이 필요할 때 안내를 더 이해하기 쉽게 정리했습니다.
 - 밝은 사진 위에서도 인트로와 정보 오버레이가 더 잘 보이도록 배경과 가독성을 개선했습니다.
 - 사진을 보는 중 폴더 안의 이미지가 이동되거나 삭제되는 상황에서도 더 안정적으로 동작하도록 보강했습니다.
 
@@ -466,7 +456,7 @@ Language: [🇺🇸 English](#english-101) | [🇰🇷 한국어](#korean-101)
 - `Cmd+A` in Grid View now selects only the filtered items (by rating, flag, or label) instead of all photos in the folder.
 - Default app registration is more reliable: the app bundle is now pre-registered with Launch Services before setting file associations, and the result is verified after each attempt.
 - When default app registration partially fails, a dialog now lists the failed extensions and provides manual registration guidance.
-- The sandbox permission dialog (App Store build) now includes a brief explanation of the policy.
+- Permission dialogs now include a clearer explanation when file access needs confirmation.
 - Help menu: a "SnapView Full Manual" and "Release Notes" link are now available in the SnapView menu.
 - Light mode: the Quick Start box and intro screen now match the light appearance properly.
 <a id="korean-101"></a>
@@ -482,7 +472,7 @@ Language: [🇺🇸 English](#english-101) | [🇰🇷 한국어](#korean-101)
 - 그리드 뷰에서 별점/플래그/라벨로 필터 후 `Cmd+A`를 실행하면 전체 폴더가 아닌 필터된 항목만 선택됩니다.
 - 기본 앱 등록 안정성 향상: 등록 전 Launch Services에 앱 번들을 먼저 등록하고, 각 확장자별 등록 결과를 검증합니다.
 - 기본 앱 등록이 일부 실패하면 실패한 확장자 목록과 수동 등록 방법을 안내 다이얼로그로 표시합니다.
-- 샌드박스 권한 요청 다이얼로그(App Store 빌드)에 정책 안내 문구를 추가했습니다.
+- 파일 접근 확인이 필요할 때 권한 안내 다이얼로그가 더 명확하게 설명합니다.
 - SnapView 메뉴에 "전체 매뉴얼" 및 "릴리즈 노트" 링크가 추가되었습니다.
 - 라이트 모드: 빠른 시작 박스와 인트로 화면이 라이트 모드에 맞게 개선되었습니다.
 ---
@@ -496,7 +486,7 @@ Language: [🇺🇸 English](#english-current) | [🇰🇷 한국어](#korean-cu
 ### English
 
 #### What's New
-- **SnapView 1.0.0 Official Release & Mac App Store**: SnapView is now officially a stable 1.0.0 release! We are also introducing a dedicated Mac App Store build. Both the direct download (DMG) and Mac App Store channels provide a polished, stable experience, and all Beta badges have been removed.
+- **SnapView 1.0.0 Official Release**: SnapView is now officially a stable 1.0.0 release, with Beta badges removed.
 - **Reference Compare Mode**: Compare mode is more powerful with a new `Reference` comparison mode alongside the standard `Selection` mode. Press `R` to toggle between them.
 - **File Renaming**: You can now rename files directly within SnapView using `F2` or the context menu.
 - **Window Open Policy**: Choose how SnapView opens files from Finder—reuse a `Single Window` or open in `Multiple Windows`.
@@ -511,16 +501,12 @@ Language: [🇺🇸 English](#english-current) | [🇰🇷 한국어](#korean-cu
 - Greatly improved the visual stability when opening files from Finder in Single Window mode, reducing screen flashes and keyboard focus issues.
 - External app selection is simpler with a unified `Open with another app…` flow.
 
-#### Notes
-- The Mac App Store build is a sandboxed stable release lane. The DMG lane remains the faster direct-download lane.
-- ZIP browsing remains supported in both lanes, with different backends chosen for the distribution channel.
-
 <a id="korean-current"></a>
 
 ### 한국어
 
 #### 새로운 점
-- **SnapView 1.0.0 정식 출시 및 Mac App Store 지원**: 드디어 SnapView 1.0.0 정식 버전을 선보입니다! 더불어 Mac App Store를 위한 전용 빌드가 추가되었습니다. 이제 직접 다운로드(DMG)와 App Store 채널 모두에서 베타 꼬리표를 뗀 가장 안정적인 버전을 만나보실 수 있습니다.
+- **SnapView 1.0.0 정식 출시**: SnapView 1.0.0 정식 버전을 선보입니다. 베타 표시를 제거하고 안정판으로 전환했습니다.
 - **Reference(기준) 비교 모드**: 기존 `Selection(선택)` 모드 외에 기준 사진을 고정하고 비교하는 `Reference(기준)` 모드가 추가되었습니다. `R` 키로 쉽게 전환할 수 있습니다.
 - **파일 이름 변경**: SnapView 안에서 바로 파일 이름을 바꿀 수 있습니다 (`F2` 키 또는 우클릭 메뉴 사용).
 - **창 열기 정책**: Finder에서 파일을 열 때 기존 창을 재사용할지(단일 창) 새 창을 띄울지(멀티 창) 설정에서 선택할 수 있습니다.
@@ -534,10 +520,6 @@ Language: [🇺🇸 English](#english-current) | [🇰🇷 한국어](#korean-cu
 - 타이틀바 영역을 더 깔끔하고 평탄한 톤으로 정리해 화면 전환 시 일관성을 높였습니다.
 - 단일 창 모드에서 Finder를 통해 새 파일을 더블클릭으로 열 때, 화면이 깜빡이거나 단축키가 먹지 않던 문제를 대폭 개선했습니다.
 - 다른 앱으로 사진을 보낼 때, 한 곳으로 정리된 `다른 앱으로 열기…` 흐름으로 일관성 있게 열 수 있습니다.
-
-#### 참고
-- Mac App Store 빌드는 sandbox를 적용한 안정판 배포 lane입니다. DMG lane은 빠른 직접 다운로드 배포 lane으로 유지됩니다.
-- ZIP 탐색은 두 lane 모두에서 지원하며, 배포 채널에 맞는 backend를 사용합니다.
 
 ## v0.10.4 - 2026-04-19
 
