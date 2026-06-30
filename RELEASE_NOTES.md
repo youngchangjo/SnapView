@@ -19,6 +19,7 @@ Language: [🇺🇸 English](#english-250) | [🇰🇷 한국어](#korean-250)
 - Drag files or selections from Main, Grid, and Filmstrip to Finder, Desktop, or another editing app, and send local files into Apple Photos without leaving SnapView.
 - Pro Layout View adds a Select Tray for candidate, final, and excluded sets, with selected-original copy handoff for faster culling.
 - Multi Monitor Workspace can place review tools on a second display, including Navigator, Quick Check, Histogram, Map, Filmstrip, and Select Tray panels.
+- Supporter persistent thumbnail disk cache keeps reusable Grid, Filmstrip, and Navigator thumbnails available across relaunches, reducing repeated thumbnail preparation during repeat browsing.
 - A project folder template command can create `Capture`, `Select`, `Reject`, and `Output` folders and open the new `Capture` folder.
 
 #### Improvements
@@ -55,6 +56,7 @@ Language: [🇺🇸 English](#english-250) | [🇰🇷 한국어](#korean-250)
 - Main, Grid, Filmstrip에서 파일이나 선택 항목을 Finder, 데스크탑, 다른 편집 앱으로 드래그해 넘길 수 있고, 로컬 파일을 Apple Photos 라이브러리로 보낼 수도 있습니다.
 - Pro Layout View에 후보, 최종, 제외 묶음을 다루는 Select Tray를 추가했고, 선별한 원본을 더 빠르게 복사해 넘길 수 있습니다.
 - Multi Monitor Workspace에서 Navigator, Quick Check, Histogram, Map, Filmstrip, Select Tray 같은 리뷰 도구를 보조 디스플레이에 배치할 수 있습니다.
+- Supporter 지속 썸네일 디스크 캐시는 Grid, Filmstrip, Navigator 썸네일을 재실행 후에도 재사용할 수 있게 보관해 반복 탐색 중 썸네일을 다시 준비하는 일을 줄입니다.
 - `Capture`, `Select`, `Reject`, `Output` 폴더를 만들고 새 `Capture` 폴더를 여는 프로젝트 폴더 템플릿 명령을 추가했습니다.
 
 #### 개선된 점

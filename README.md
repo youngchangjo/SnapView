@@ -51,6 +51,7 @@ SnapView is built for the part after import: checking sharpness, comparing near-
 - Non-AI upscaling options for low-resolution images
 - Print images or save PDFs with `Command-P`
 - Quick Organize presets and Batch Actions for repeated copy, move, and export tasks
+- Supporter persistent thumbnail disk cache for repeat Grid, Filmstrip, and Navigator browsing
 - Lightroom-style XMP interoperability for rating, Pick, and Reject
 - RAW+JPG pairing for common camera workflows
 - Comic Reading Mode for folders or ZIP archives
@@ -77,6 +78,7 @@ SnapView is built for the part after import: checking sharpness, comparing near-
 - `Duplicate`: exact duplicate grouping and cleanup workflow
 - `Quick Organize`: preset-based copy and move sorting
 - `Batch Actions`: previewed export, copy, and move recipes
+- `Supporter Disk Cache`: persistent thumbnail cache for repeat Grid, Filmstrip, and Navigator browsing
 - `Comic Reading Mode`: black reading surface for folders and ZIP archives
 
 ## Supported Formats
@@ -155,6 +157,7 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 - 저해상도 이미지를 위한 non-AI 업스케일링 옵션
 - `Command-P` 인쇄와 PDF 저장
 - 반복 복사, 이동, 내보내기를 위한 Quick Organize와 Batch Actions
+- Grid, Filmstrip, Navigator 재방문 흐름을 돕는 Supporter 지속 썸네일 디스크 캐시
 - Lightroom 스타일 XMP 별점, Pick, Reject 연동
 - 주요 카메라 워크플로를 위한 RAW+JPG 페어링
 - 폴더와 ZIP을 위한 Comic Reading Mode
@@ -181,6 +184,7 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 - `Duplicate`: 동일 파일 그룹 정리 워크플로우
 - `Quick Organize`: 프리셋 기반 복사와 이동 정리
 - `Batch Actions`: 미리보기 기반 내보내기, 복사, 이동 레시피
+- `Supporter Disk Cache`: Grid, Filmstrip, Navigator 재방문용 지속 썸네일 캐시
 - `Comic Reading Mode`: 폴더와 ZIP을 검은 독서 화면으로 보기
 
 ## 지원 포맷
