@@ -30,7 +30,7 @@ Language: [🇺🇸 English](#english-250) | [🇰🇷 한국어](#korean-250)
 
 #### Visible Scope
 - Core folder, ZIP, Apple Photos, HDR, Quick Check, print, and file-transfer workflows are part of the normal viewer experience.
-- Supported App Store builds may show optional Supporter Pass thank-you entries for advanced viewing preferences, app icon choices, persistent thumbnail cache controls, and Multi Monitor Workspace. The direct DMG keeps the regular unrestricted viewer flow.
+- Multi Monitor Workspace is included in the direct DMG without Supporter Pass gating. Supported App Store builds may show optional Supporter Pass thank-you entries for advanced viewing preferences, app icon choices, persistent thumbnail cache controls, and Multi Monitor Workspace.
 - App Store "What's New" text is managed separately from these GitHub release notes.
 
 #### Stability And Performance
@@ -68,7 +68,7 @@ Language: [🇺🇸 English](#english-250) | [🇰🇷 한국어](#korean-250)
 
 #### 보이는 범위
 - 폴더, ZIP, Apple Photos, HDR, Quick Check, 인쇄, 파일 전송은 일반 보기 경험의 기본 흐름으로 제공됩니다.
-- 지원되는 App Store 빌드에서는 일부 고급 보기 설정, 앱 아이콘 선택, 썸네일 캐시 컨트롤, Multi Monitor Workspace가 선택형 Supporter Pass 감사 항목으로 표시될 수 있습니다. 직접 다운로드 DMG는 일반적인 제한 없는 보기 흐름을 유지합니다.
+- Multi Monitor Workspace는 직접 다운로드 DMG에 Supporter Pass 제한 없이 포함됩니다. 지원되는 App Store 빌드에서는 일부 고급 보기 설정, 앱 아이콘 선택, 썸네일 캐시 컨트롤, Multi Monitor Workspace가 선택형 Supporter Pass 감사 항목으로 표시될 수 있습니다.
 - App Store의 "What's New" 문구는 이 GitHub 릴리즈 노트와 별도로 관리합니다.
 
 #### 안정성 및 성능
