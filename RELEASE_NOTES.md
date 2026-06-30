@@ -11,21 +11,26 @@ Language: [🇺🇸 English](#english-250) | [🇰🇷 한국어](#korean-250)
 #### What's New
 - Apple Photos browsing is now available from Navigator, including Library, Favorites, Videos, Screenshots, and albums.
 - Photos mode uses a Photos-style Favorite heart instead of local file rating controls.
+- Apple Photos items can be copied back to disk, local files can be copied into Photos, and Photos videos now use SnapView's video playback controls.
 - HDR photos now show a compact HDR badge, with a quick HDR/SDR toggle and expandable detail.
 - Non-AI upscaling options help small or low-resolution images look cleaner while keeping the viewer responsive.
 - `Command-P` opens the native macOS print panel for current images, selected images, folders, ZIP archives, Apple Photos collections, contact sheets, and PDF save workflows.
 - Main, Grid, and Filmstrip file transfers now use clearer drag previews, selected-count feedback, and Finder-friendly file payloads.
+- Pro Layout View adds a Select Tray for candidate, final, and excluded sets, with selected-original copy handoff for culling workflows.
+- A project folder template command can create `Capture`, `Select`, `Reject`, and `Output` folders and open the new `Capture` folder.
 
 #### Improvements
 - Navigator separates local folders and Apple Photos sources so both remain easier to reach.
 - Sorting is easier to access from Main, Grid, Filmstrip, and context menus.
 - Context menus are grouped more clearly around marking, viewing, workflow, editing, and Filmstrip actions.
 - Open With, print, Photos import/export, and other file actions are easier to find from the current image or selection.
+- Performance and playback settings are split more clearly, so rendering, cache, decoding, slideshow, and video options are easier to scan.
+- Supporter Pass entries in supported App Store builds now communicate their state more clearly.
 - RAW+JPG, WebP, info overlay, cursor-centered zoom, and fit-width behavior have been tightened based on recent user feedback.
 
 #### Visible Scope
 - Core folder, ZIP, Apple Photos, HDR, Quick Check, print, and file-transfer workflows are part of the normal viewer experience.
-- Supported App Store builds may show optional Supporter Pass thank-you entries for advanced viewing preferences. The direct DMG keeps the regular unrestricted viewer flow.
+- Supported App Store builds may show optional Supporter Pass thank-you entries for advanced viewing preferences, app icon choices, persistent thumbnail cache controls, and Multi Monitor Workspace. The direct DMG keeps the regular unrestricted viewer flow.
 - App Store "What's New" text is managed separately from these GitHub release notes.
 
 #### Stability And Performance
@@ -33,6 +38,8 @@ Language: [🇺🇸 English](#english-250) | [🇰🇷 한국어](#korean-250)
 - Grid and Filmstrip thumbnails are more reliable when browsing Apple Photos and large folders.
 - Opening a folder now keeps the first visible image and final sorted order more consistent.
 - HDR and upscaling state is more stable when switching photos or returning to SnapView from another window.
+- Quick Check and Info Strip metadata are steadier during rapid navigation, with fewer temporary camera/EXIF resets.
+- HDR badges, video poster frames, and Photos preview/original promotion now avoid more visible flicker during source changes.
 - Overlay spacing, counters, toolbar hit areas, and Settings rows have been tightened for more predictable scanning and clicking.
 
 <a id="korean-250"></a>
@@ -42,21 +49,26 @@ Language: [🇺🇸 English](#english-250) | [🇰🇷 한국어](#korean-250)
 #### 새로운 점
 - Navigator에서 Apple Photos를 열 수 있습니다. Library, Favorites, Videos, Screenshots, 앨범을 SnapView 안에서 탐색할 수 있습니다.
 - Photos 모드에서는 로컬 파일용 별점 컨트롤 대신 사진 앱 스타일 Favorite 하트를 사용합니다.
+- Apple Photos 항목은 디스크로 복사할 수 있고, 로컬 파일은 Photos로 복사할 수 있으며, Photos 비디오는 SnapView의 기존 비디오 재생 컨트롤로 볼 수 있습니다.
 - HDR 사진에는 작은 HDR 배지가 표시되며, HDR/SDR 전환과 펼쳐 보는 상세 정보를 제공합니다.
 - 작은 이미지나 저해상도 이미지를 더 보기 좋게 표시하기 위한 non-AI 업스케일링 옵션을 추가했습니다.
 - `Command-P`로 macOS 기본 인쇄 패널을 열어 현재 이미지, 선택 이미지, 폴더, ZIP, Apple Photos 컬렉션, 콘택트 시트, PDF 저장 흐름을 사용할 수 있습니다.
 - Main, Grid, Filmstrip의 파일 드래그와 복사/이동 흐름에 더 명확한 드래그 미리보기, 선택 개수 표시, Finder 친화 파일 전달을 적용했습니다.
+- Pro Layout View에 후보, 최종, 제외 묶음을 다루는 Select Tray를 추가했고, 선별한 원본을 복사해 넘기는 흐름을 정리했습니다.
+- `Capture`, `Select`, `Reject`, `Output` 폴더를 만들고 새 `Capture` 폴더를 여는 프로젝트 폴더 템플릿 명령을 추가했습니다.
 
 #### 개선된 점
 - Navigator에서 로컬 폴더와 Apple Photos 소스를 분리해 두 영역을 더 쉽게 찾을 수 있습니다.
 - Main, Grid, Filmstrip과 우클릭 메뉴에서 정렬에 더 쉽게 접근할 수 있습니다.
 - 우클릭 메뉴를 마킹, 보기, 작업, 편집, Filmstrip 동작 중심으로 정리했습니다.
 - Open With, 인쇄, Photos 가져오기/내보내기 같은 파일 작업을 현재 이미지나 선택 항목에서 더 쉽게 찾을 수 있습니다.
+- Performance와 Playback 설정을 더 명확히 나눠 렌더링, 캐시, 디코딩, 슬라이드쇼, 비디오 옵션을 더 쉽게 훑을 수 있습니다.
+- 지원되는 App Store 빌드의 Supporter Pass 항목은 상태를 더 명확하게 안내합니다.
 - RAW+JPG, WebP, 정보 오버레이, 커서 기준 확대, 폭 맞춤 유지 동작을 최근 사용자 피드백에 맞춰 보강했습니다.
 
 #### 보이는 범위
 - 폴더, ZIP, Apple Photos, HDR, Quick Check, 인쇄, 파일 전송은 일반 보기 경험의 기본 흐름으로 제공됩니다.
-- 지원되는 App Store 빌드에서는 일부 고급 보기 설정이 선택형 Supporter Pass 감사 항목으로 표시될 수 있습니다. 직접 다운로드 DMG는 일반적인 제한 없는 보기 흐름을 유지합니다.
+- 지원되는 App Store 빌드에서는 일부 고급 보기 설정, 앱 아이콘 선택, 썸네일 캐시 컨트롤, Multi Monitor Workspace가 선택형 Supporter Pass 감사 항목으로 표시될 수 있습니다. 직접 다운로드 DMG는 일반적인 제한 없는 보기 흐름을 유지합니다.
 - App Store의 "What's New" 문구는 이 GitHub 릴리즈 노트와 별도로 관리합니다.
 
 #### 안정성 및 성능
@@ -64,6 +76,8 @@ Language: [🇺🇸 English](#english-250) | [🇰🇷 한국어](#korean-250)
 - Apple Photos와 큰 폴더를 볼 때 Grid와 Filmstrip 썸네일 표시가 더 안정적으로 동작합니다.
 - 폴더를 처음 열 때 첫 화면 이미지와 최종 정렬 순서가 더 일관되게 유지됩니다.
 - 사진을 넘기거나 다른 창에서 SnapView로 돌아올 때 HDR 및 업스케일링 표시 상태가 더 안정적으로 유지됩니다.
+- 빠른 탐색 중 Quick Check와 Info Strip 메타데이터가 더 안정적으로 유지되어 카메라/EXIF 표시가 잠깐 초기화되는 상황을 줄였습니다.
+- HDR 배지, 비디오 포스터 프레임, Photos 프리뷰/원본 전환이 소스 변경 중 더 자연스럽게 유지됩니다.
 - 오버레이 간격, 카운터, 툴바 클릭 영역, Settings 행 구성을 더 예측 가능하게 다듬었습니다.
 
 ## v2.0.0 - 2026-06-09
