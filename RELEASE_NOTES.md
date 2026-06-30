@@ -2,114 +2,69 @@
 
 ## v2.5.0 (Current) - 2026-06-30
 
-### Summary - Korean
+Language: [🇺🇸 English](#english-250) | [🇰🇷 한국어](#korean-250)
 
-SnapView 2.5는 사진 앱 연동과 고급 보기 품질을 확장한 업데이트입니다.
+<a id="english-250"></a>
 
-- Apple Photos 연동을 추가해 사진 앱의 라이브러리, 즐겨찾기, 비디오, 스크린샷, 앨범을 SnapView에서 바로 탐색하고 사진 앱과 같은 좋아요 하트로 즐겨찾기를 토글할 수 있습니다.
-- HDR 사진을 지원합니다. HDR 사진을 열면 작은 HDR 배지가 표시되고, `HDR` 영역으로 HDR/SDR 표시를 전환하거나 펼치기 버튼으로 자세한 정보를 확인할 수 있습니다.
-- 저해상도 이미지용 non-AI 업스케일링 옵션을 추가했습니다. 모드별 특징 설명을 배지와 설정에서 확인하며 원하는 표시 방식을 고를 수 있습니다.
-- `Command-P` 인쇄를 추가했습니다. macOS 기본 인쇄 패널에서 현재 이미지, 선택 이미지, 현재 폴더, 콘택트 시트를 인쇄하거나 PDF로 저장할 수 있습니다.
-- Grid, Main, Filmstrip의 정렬 접근을 넓히고, 우클릭 메뉴를 작업 그룹별로 정리해 필요한 파일 작업을 더 빨리 찾을 수 있습니다.
-- Main에서는 `Command`를 누른 상태에서 드래그할 때만 파일 드래그가 시작되고, Grid/Filmstrip에서는 선택 이미지를 작은 썸네일 스택과 개수 표시로 드래그합니다. 복수 선택 drop은 Finder와 외부 앱이 읽기 쉬운 파일 목록까지 전달하고, 복사/이동 완료 알림에는 클립보드나 목적지 폴더명이 표시됩니다.
-- Supporter Pass 사용자를 위한 고급 보기 옵션과 썸네일 디스크 캐시 설정을 추가했습니다.
-- 지원되는 App Store 빌드의 Supporter Pass는 선택적 응원 흐름입니다. Founding Supporter는 2026-07-01부터 2026-09-30 UTC까지, 일반 Supporter Pass는 2026-10-01 UTC부터 제공되며 가격 표시는 Apple StoreKit 구매 시트의 `Product.displayPrice`를 사용합니다.
-- Apple Photos, HDR, 업스케일링, 폴더 첫 표시, Grid/Filmstrip 썸네일 표시의 성능과 안정성을 개선했습니다.
-- 커뮤니티 피드백을 바탕으로 커서 기준 확대, 리사이즈 후에도 유지되는 폭 맞춤 보기, 안전한 프로젝트 폴더 생성, 내비게이터 레이아웃, 정보 오버레이, WebP 확인 흐름을 보강했습니다.
+### English
 
-### Details - Korean
+#### What's New
+- Apple Photos browsing is now available from Navigator, including Library, Favorites, Videos, Screenshots, and albums.
+- Photos mode uses a Photos-style Favorite heart instead of local file rating controls.
+- HDR photos now show a compact HDR badge, with a quick HDR/SDR toggle and expandable detail.
+- Non-AI upscaling options help small or low-resolution images look cleaner while keeping the viewer responsive.
+- `Command-P` opens the native macOS print panel for current images, selected images, folders, ZIP archives, Apple Photos collections, contact sheets, and PDF save workflows.
+- Main, Grid, and Filmstrip file transfers now use clearer drag previews, selected-count feedback, and Finder-friendly file payloads.
 
-SnapView 2.5는 사진을 더 넓은 라이브러리에서 불러오고, 더 정확하게 보고, 더 안정적으로 훑어볼 수 있도록 보기 흐름을 확장한 업데이트입니다.
+#### Improvements
+- Navigator separates local folders and Apple Photos sources so both remain easier to reach.
+- Sorting is easier to access from Main, Grid, Filmstrip, and context menus.
+- Context menus are grouped more clearly around marking, viewing, workflow, editing, and Filmstrip actions.
+- Open With, print, Photos import/export, and other file actions are easier to find from the current image or selection.
+- RAW+JPG, WebP, info overlay, cursor-centered zoom, and fit-width behavior have been tightened based on recent user feedback.
 
-#### Apple Photos 연동
+#### Visible Scope
+- Core folder, ZIP, Apple Photos, HDR, Quick Check, print, and file-transfer workflows are part of the normal viewer experience.
+- Supported App Store builds may show optional Supporter Pass thank-you entries for advanced viewing preferences. The direct DMG keeps the regular unrestricted viewer flow.
+- App Store "What's New" text is managed separately from these GitHub release notes.
 
-- Navigator에서 Apple Photos 라이브러리를 열 수 있습니다.
-- 사진 앱의 라이브러리, 즐겨찾기, 비디오, 스크린샷, 앨범을 SnapView 안에서 탐색할 수 있습니다.
-- 사진은 먼저 빠르게 표시하고, 가능한 경우 더 선명한 원본으로 교체합니다.
-- Apple Photos 모드에서는 SnapView 별점, Pick, 컬러 라벨 대신 사진 앱과 같은 빈 하트/채운 하트 좋아요 컨트롤을 표시합니다.
-- 로컬 드라이브와 Apple Photos는 내비게이터 안에서 별도 접힘 박스로 분리됩니다. 긴 로컬 폴더가 있어도 Apple Photos 진입점을 찾을 수 있고, 긴 경로는 한 줄로 줄이며 각 경로 조각의 전체 이름은 툴팁으로 확인할 수 있습니다.
-- Apple Photos에서 SnapView로 가져오거나, SnapView에서 사진 앱으로 추가하는 흐름을 정리했습니다. 로컬 파일 컨텍스트 메뉴는 `Photos로 복사`, Photos 항목 컨텍스트 메뉴는 `드라이브로 복사...`를 제공합니다.
-- Photos 항목을 복사하거나 드래그할 때는 원본을 준비한 뒤 클립보드, Finder, 데스크탑, 외부 앱이 읽을 수 있는 파일 URL 목록으로 전달합니다.
-- 기존 별점 5/Photos Favorite 호환 동기화는 명시적 메뉴 동작으로 남기고, 기본 Photos 선별 UI는 좋아요 하트로 단순화했습니다.
+#### Stability And Performance
+- Apple Photos loading, HDR detection, upscaling, metadata, and thumbnail-cache work are kept behind the visible image path so browsing stays responsive.
+- Grid and Filmstrip thumbnails are more reliable when browsing Apple Photos and large folders.
+- Opening a folder now keeps the first visible image and final sorted order more consistent.
+- HDR and upscaling state is more stable when switching photos or returning to SnapView from another window.
+- Overlay spacing, counters, toolbar hit areas, and Settings rows have been tightened for more predictable scanning and clicking.
 
-#### HDR 사진을 더 잘 볼 수 있습니다
+<a id="korean-250"></a>
 
-- HDR 사진을 지원합니다.
-- HDR 사진을 열면 작은 HDR 배지가 표시됩니다.
-- 화면 위의 HDR 배지로 해당 사진이 HDR인지 바로 알 수 있습니다.
-- `HDR` 영역을 누르면 HDR 표시와 원본 품질 SDR 표시를 전환할 수 있습니다.
-- 펼치기 버튼을 누르면 HDR/SDR 차이와 밝은 영역 정보를 확인할 수 있습니다.
-- 자세한 보기에서는 SDR에서 손실될 수 있는 밝은 영역을 참고할 수 있습니다.
-- HDR 배지는 접고 펼칠 수 있으며, 접으면 다시 작은 기본 배지 형태로 돌아갑니다.
+### 한국어
 
-#### 저해상도 이미지 보기 개선
+#### 새로운 점
+- Navigator에서 Apple Photos를 열 수 있습니다. Library, Favorites, Videos, Screenshots, 앨범을 SnapView 안에서 탐색할 수 있습니다.
+- Photos 모드에서는 로컬 파일용 별점 컨트롤 대신 사진 앱 스타일 Favorite 하트를 사용합니다.
+- HDR 사진에는 작은 HDR 배지가 표시되며, HDR/SDR 전환과 펼쳐 보는 상세 정보를 제공합니다.
+- 작은 이미지나 저해상도 이미지를 더 보기 좋게 표시하기 위한 non-AI 업스케일링 옵션을 추가했습니다.
+- `Command-P`로 macOS 기본 인쇄 패널을 열어 현재 이미지, 선택 이미지, 폴더, ZIP, Apple Photos 컬렉션, 콘택트 시트, PDF 저장 흐름을 사용할 수 있습니다.
+- Main, Grid, Filmstrip의 파일 드래그와 복사/이동 흐름에 더 명확한 드래그 미리보기, 선택 개수 표시, Finder 친화 파일 전달을 적용했습니다.
 
-- 작은 이미지나 저해상도 사진을 더 보기 좋게 표시하기 위한 non-AI 업스케일링 옵션을 추가했습니다.
-- Linear, Bicubic, Lanczos, Lanczos Sharp, Nearest 등 여러 알고리즘 중 원하는 방식을 선택할 수 있습니다.
-- 각 알고리즘의 추천 상황과 주의점을 배지 선택 창과 설정에서 바로 확인할 수 있습니다.
-- 업스케일링이 적용된 경우 뷰어 위에 적용 상태가 표시됩니다.
-- 업스케일링을 켜고 끌 때 현재 확대 상태가 더 안정적으로 유지됩니다.
-- AI 업스케일링이 아니라 빠른 반응을 위한 보간 기반 업스케일링입니다.
+#### 개선된 점
+- Navigator에서 로컬 폴더와 Apple Photos 소스를 분리해 두 영역을 더 쉽게 찾을 수 있습니다.
+- Main, Grid, Filmstrip과 우클릭 메뉴에서 정렬에 더 쉽게 접근할 수 있습니다.
+- 우클릭 메뉴를 마킹, 보기, 작업, 편집, Filmstrip 동작 중심으로 정리했습니다.
+- Open With, 인쇄, Photos 가져오기/내보내기 같은 파일 작업을 현재 이미지나 선택 항목에서 더 쉽게 찾을 수 있습니다.
+- RAW+JPG, WebP, 정보 오버레이, 커서 기준 확대, 폭 맞춤 유지 동작을 최근 사용자 피드백에 맞춰 보강했습니다.
 
-#### 인쇄와 PDF 저장
+#### 보이는 범위
+- 폴더, ZIP, Apple Photos, HDR, Quick Check, 인쇄, 파일 전송은 일반 보기 경험의 기본 흐름으로 제공됩니다.
+- 지원되는 App Store 빌드에서는 일부 고급 보기 설정이 선택형 Supporter Pass 감사 항목으로 표시될 수 있습니다. 직접 다운로드 DMG는 일반적인 제한 없는 보기 흐름을 유지합니다.
+- App Store의 "What's New" 문구는 이 GitHub 릴리즈 노트와 별도로 관리합니다.
 
-- `Command-P` 또는 `파일 > 인쇄…`로 macOS 기본 인쇄 패널을 열 수 있습니다.
-- 현재 이미지, Grid/프로 레이아웃 뷰에서 선택한 이미지, 현재 폴더/ZIP/Apple Photos 컬렉션을 인쇄 대상으로 고를 수 있습니다.
-- `이미지당 1페이지`와 `컨택트 시트` 구성을 지원합니다.
-- `전체 이미지 맞춤`과 `용지 채우기` 맞춤 방식을 선택할 수 있습니다.
-- 컨택트 시트에서는 파일명 표시를 켜고 끌 수 있습니다.
-- PDF 저장은 macOS 인쇄 패널 하단의 시스템 PDF 메뉴를 사용합니다.
-- SnapView 전용 옵션은 `SnapView 이미지` 섹션 안의 `이미지 범위`, `구성`, `맞춤`, `파일명 표시`로 정리해 시스템 프린터/용지 설정과 구분했습니다.
-
-#### 정렬과 파일 작업
-
-- Grid에서 쓰던 정렬 흐름을 Main과 Filmstrip에서도 더 쉽게 사용할 수 있도록 확장했습니다.
-- 정보 표시의 이미지 번호 영역과 우클릭 메뉴에서도 정렬 변경에 접근할 수 있습니다.
-- 우클릭 메뉴를 Mark, View, Workflow, Image Edit, Filmstrip Settings 같은 작업 그룹으로 정리했습니다.
-- 인쇄, Open With 앱 선택, Pro Filmstrip Map 같은 파일 작업을 우클릭 메뉴에서도 찾을 수 있습니다.
-- 파일명과 표시 순서가 달라 보일 수 있는 상황을 줄여 폴더를 처음 열었을 때와 이전/다음 이동 후의 파일 흐름이 더 일관됩니다.
-
-#### Supporter Pass 고급 옵션
-
-- Supporter Pass 사용자를 위한 고급 보기 옵션을 추가했습니다.
-- HDR 사진의 자세한 정보 확인, HDR/SDR 비교, 고급 업스케일링 알고리즘 선택을 Supporter Pass 영역으로 정리했습니다.
-- 썸네일 디스크 캐시 설정을 추가해 큰 폴더를 반복해서 볼 때 더 안정적인 준비 흐름을 사용할 수 있습니다.
-- Multi Monitor Workspace를 Supporter Pass 혜택으로 표시하고, 비활성 App Store 상태에서는 숨기지 않고 disabled 상태로 보여줍니다.
-- 비활성 App Store 상태에서도 Supporter Pass 확장 설정 항목은 숨기지 않고 disabled 상태와 Supporter Pass 배지로 보여줍니다.
-- Supporter Pass 설정에서 전용 SnapView 앱 아이콘 변형을 Dock/App Switcher 아이콘으로 선택할 수 있고, 선택한 아이콘은 인트로와 Supporter Pass 안내에도 함께 반영됩니다.
-- App Store 빌드는 `founding_supporter_lifetime`과 `supporter_pass_lifetime`을 분리해 Founding Supporter 기간과 일반 Supporter Pass 기간을 나누고, 앱 메뉴에서 Supporter Pass와 Restore Purchases 진입점을 제공합니다.
-- 기본 사진 보기, 핵심 탐색, 기본 HDR 표시 흐름은 계속 SnapView의 기본 기능으로 유지됩니다.
-
-#### 성능과 안정성
-
-- Apple Photos, HDR, 업스케일링, 정보 오버레이 작업이 사진 표시와 인덱싱을 방해하지 않도록 표시 흐름을 정리했습니다.
-- Grid와 Filmstrip에서 Apple Photos 썸네일이 멈추거나 늦게 뜨는 문제를 개선했습니다.
-- Apple Photos 원본이 준비되면 초기 프리뷰에서 더 선명한 표시로 자연스럽게 교체되도록 개선했습니다.
-- 앱이나 다른 창으로 이동했다가 돌아왔을 때 HDR 및 업스케일링 표시 상태가 더 안정적으로 유지됩니다.
-- 썸네일 캐시와 표시 상태를 더 명확하게 분리해 큰 라이브러리를 훑을 때의 불필요한 지연을 줄였습니다.
-- 폴더를 처음 열었을 때의 첫 이미지 표시와 최종 정렬 목록이 어긋날 수 있는 문제를 수정했습니다.
-- 큰 폴더를 처음 열 때 최종 정렬 기준의 첫 이미지 교체가 몇 초 늦게 따라오는 문제를 줄였습니다.
-- 하단 정보 스트립의 현재 번호/전체 개수 표시가 큰 숫자에서도 더 안정적으로 보이도록 개선했습니다.
-- 하단 카운터와 정보 오버레이의 가독성을 맞추기 위해 다른 오버레이와 같은 텍스트 그림자 처리를 적용했습니다.
-- 정보 오버레이에서 실제 촬영 초점거리를 더 쉽게 확인할 수 있도록 표시 우선순위를 조정했습니다.
-- HDR 사진 사이를 이동할 때 HDR 배지가 불필요하게 꺼졌다 켜지는 느낌을 줄였습니다.
-- 타이틀바 툴바, Grid 필터, Action Strip, Navigator, 오버레이와 설정 화면의 클릭 영역과 간격을 더 일관되게 정리했습니다.
-
-### Marketing Copy - Korean
-
-SnapView 2.5는 사진을 더 쉽게 가져오고, 더 정확하게 보고, 더 안정적으로 넘길 수 있도록 보기 흐름을 보강한 업데이트입니다.
-
-이제 Apple Photos 라이브러리를 SnapView 안에서 탐색할 수 있습니다. 사진 앱의 라이브러리, 즐겨찾기, 비디오, 스크린샷, 앨범을 SnapView의 빠른 보기 흐름 안에서 확인하고, 필요한 사진을 가져오거나 사진 앱에 추가할 수 있습니다. Photos 모드에서는 별점/Pick/컬러 대신 사진 앱과 같은 좋아요 하트만 표시합니다.
-
-HDR 사진도 더 자연스럽게 다룰 수 있습니다. HDR 사진에는 작은 HDR 배지가 표시되고, `HDR` 영역으로 HDR/SDR 표시를 전환하거나 펼치기 버튼으로 자세한 HDR 정보를 확인할 수 있습니다.
-
-저해상도 이미지를 위한 non-AI 업스케일링 옵션도 추가했습니다. 여러 보간 알고리즘 중 원하는 방식을 선택할 수 있고, 각 모드의 특징을 배지와 설정에서 확인할 수 있습니다. SnapView는 빠른 보기 흐름을 유지하면서 이미지가 더 또렷하게 보이도록 도와줍니다.
-
-인쇄도 기본 Mac 흐름에 맞췄습니다. `Command-P`로 현재 이미지, 선택 이미지, 현재 폴더, 콘택트 시트를 인쇄하거나 PDF로 저장할 수 있고, SnapView 전용 옵션은 기본 인쇄 패널 안의 `SnapView 이미지` 섹션에서 조절합니다.
-
-정렬, 내비게이터, 우클릭 메뉴도 더 넓게 정리했습니다. Grid, Main, Filmstrip에서 정렬을 더 쉽게 바꿀 수 있고, 로컬 드라이브와 Apple Photos는 별도 접힘 박스로 구분되며, 인쇄나 Open With 같은 파일 작업은 작업 그룹 안에서 찾기 쉽습니다.
-
-또한 Apple Photos, HDR, 업스케일링, 썸네일 캐시 작업이 사진 표시를 방해하지 않도록 표시 흐름을 정리했습니다. 큰 라이브러리를 훑거나 다른 창을 오가도 표시 상태가 더 안정적으로 유지됩니다.
+#### 안정성 및 성능
+- Apple Photos 로딩, HDR 판별, 업스케일링, 메타데이터, 썸네일 캐시 작업이 현재 이미지 표시를 방해하지 않도록 정리했습니다.
+- Apple Photos와 큰 폴더를 볼 때 Grid와 Filmstrip 썸네일 표시가 더 안정적으로 동작합니다.
+- 폴더를 처음 열 때 첫 화면 이미지와 최종 정렬 순서가 더 일관되게 유지됩니다.
+- 사진을 넘기거나 다른 창에서 SnapView로 돌아올 때 HDR 및 업스케일링 표시 상태가 더 안정적으로 유지됩니다.
+- 오버레이 간격, 카운터, 툴바 클릭 영역, Settings 행 구성을 더 예측 가능하게 다듬었습니다.
 
 ## v2.0.0 - 2026-06-09
 
