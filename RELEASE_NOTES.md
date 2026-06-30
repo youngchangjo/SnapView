@@ -13,6 +13,7 @@ Language: [🇺🇸 English](#english-250) | [🇰🇷 한국어](#korean-250)
 - Photos mode uses a Photos-style Favorite heart instead of local file rating controls.
 - Apple Photos items can be copied back to disk, local files can be copied into Photos, and Photos videos now use SnapView's video playback controls.
 - HDR photo viewing is now built into the main viewer, with a compact HDR badge, quick HDR/SDR toggle, and expandable detail.
+- Still-image and RAW format support is much wider, including more camera RAW variants plus PSD, JPEG 2000, DICOM, EXR/HDR, TGA, icon, and texture files.
 - Non-AI upscaling options help small or low-resolution images look cleaner while keeping the viewer responsive.
 - `Command-P` opens the native macOS print panel for current images, selected images, folders, ZIP archives, Apple Photos collections, contact sheets, and PDF save workflows.
 - Drag files or selections from Main, Grid, and Filmstrip to Finder, Desktop, or another editing app, and send local files into Apple Photos without leaving SnapView.
@@ -46,6 +47,7 @@ Language: [🇺🇸 English](#english-250) | [🇰🇷 한국어](#korean-250)
 - Photos 모드에서는 로컬 파일용 별점 컨트롤 대신 사진 앱 스타일 Favorite 하트를 사용합니다.
 - Apple Photos 항목은 디스크로 복사할 수 있고, 로컬 파일은 Photos로 복사할 수 있으며, Photos 비디오는 SnapView의 기존 비디오 재생 컨트롤로 볼 수 있습니다.
 - HDR 사진 보기를 메인 뷰어에서 지원합니다. 작은 HDR 배지, 빠른 HDR/SDR 전환, 펼쳐 보는 상세 정보를 함께 제공합니다.
+- 정지 이미지와 RAW 포맷 지원 범위를 크게 넓혔습니다. 더 많은 카메라 RAW와 PSD, JPEG 2000, DICOM, EXR/HDR, TGA, 아이콘, 텍스처 파일을 열 수 있습니다.
 - 작은 이미지나 저해상도 이미지를 더 보기 좋게 표시하기 위한 non-AI 업스케일링 옵션을 추가했습니다.
 - `Command-P`로 macOS 기본 인쇄 패널을 열어 현재 이미지, 선택 이미지, 폴더, ZIP, Apple Photos 컬렉션, 콘택트 시트, PDF 저장 흐름을 사용할 수 있습니다.
 - Main, Grid, Filmstrip에서 파일이나 선택 항목을 Finder, 데스크탑, 다른 편집 앱으로 드래그해 넘길 수 있고, 로컬 파일을 Apple Photos 라이브러리로 보낼 수도 있습니다.
