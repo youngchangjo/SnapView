@@ -53,8 +53,8 @@
             <nav class="nav" aria-label="Primary">
                 <a href="/features/">Features</a>
                 <a href="/download/">Download</a>
-                <a href="/manual">Manual</a>
-                <a href="/release_notes" class="active">Release Notes</a>
+                <a href="/manual.html">Manual</a>
+                <a href="/release_notes.html" class="active">Release Notes</a>
             </nav>
 
             <div class="lang-switch" role="group" aria-label="Language">
@@ -70,344 +70,399 @@
             <!-- English Content -->
             <div data-lang="en">
                 <h1>SnapView Release Notes</h1>
-                <h2 id="v2-0-0">v2.0.0 (Current) - 2026-06-09</h2>
+                <h2 id="v2-5-0">v2.5.0 (Current) - 2026-06-30</h2>
                 <h3>What's New</h3>
                 <ul>
-                    <li>SnapView 2.0 is a major viewer-workspace update with the common Navigator, clearer <code>Q/W/E/R/T + Tab</code> view switching, Pro Layout View, vertical Filmstrip options, denser Action/Info Strips, Grid sorting and filters, Settings tabs/search, and a searchable shortcut sheet.</li>
-                    <li>A new first-run viewing setup helps new and pre-2.0 users choose thumbnail style, Filmstrip layout, info display, QuickCheck placement, and video browsing behavior. The same setup can be reopened from Settings with <code>Get Started with SnapView</code>.</li>
-                    <li>The new <code>M</code> Map Overlay shows the current photo's GPS location in the same footprint as the Histogram overlay, and the two overlays can stack cleanly when both are visible.</li>
-                    <li>Comic Reading mode adds left-to-right and right-to-left two-page reading for folders and ZIP archives, with HUD controls, per-source page restore, and safer page navigation.</li>
-                    <li>Quick Organize adds preset-based copy/move workflows, Pick and 5-star organization actions, up to three visible presets, <code>Option</code>+<code>1</code> through <code>Option</code>+<code>3</code> shortcuts, editable destinations, preview sheets, and recent run history.</li>
-                    <li>Batch Actions adds up to three visible recipe-based JPEG/PNG workflows with preflight previews, safety confirmations, pause/resume/cancel controls, retry support, and recent run logs.</li>
+                <li>Apple Photos browsing is now available from Navigator, including Library, Favorites, Videos, Screenshots, and albums.</li>
+                <li>Photos mode uses a Photos-style Favorite heart instead of local file rating controls.</li>
+                <li>Apple Photos items can be copied back to disk, local files can be copied into Photos, and Photos videos now use SnapView's video playback controls.</li>
+                <li>HDR photo viewing is now built into the main viewer, with a compact HDR badge, quick HDR/SDR toggle, and expandable detail.</li>
+                <li>Still-image and RAW format support is much wider, including more camera RAW variants plus PSD, JPEG 2000, DICOM, EXR/HDR, TGA, icon, and texture files.</li>
+                <li>Non-AI upscaling options help small or low-resolution images look cleaner while keeping the viewer responsive.</li>
+                <li><code>Command-P</code> opens the native macOS print panel for current images, selected images, folders, ZIP archives, Apple Photos collections, contact sheets, and PDF save workflows.</li>
+                <li>Drag files or selections from Main, Grid, and Filmstrip to Finder, Desktop, or another editing app, and send local files into Apple Photos without leaving SnapView.</li>
+                <li>Pro Layout View adds a Select Tray for candidate, final, and excluded sets, with selected-original copy handoff for faster culling.</li>
+                <li>Multi Monitor Workspace can place review tools on a second display, including Navigator, Quick Check, Histogram, Map, Filmstrip, and Select Tray panels.</li>
+                <li>A project folder template command can create <code>Capture</code>, <code>Select</code>, <code>Reject</code>, and <code>Output</code> folders and open the new <code>Capture</code> folder.</li>
                 </ul>
                 <h3>Improvements</h3>
                 <ul>
-                    <li>Main, Grid, Filmstrip, and Pro Layout View now share more consistent common file actions while keeping existing toolbar and menu commands available.</li>
-                    <li><code>Q</code> opens Grid, <code>W</code> opens Main View, <code>E</code> opens Horizontal Filmstrip, <code>R</code> opens Vertical Filmstrip, <code>T</code> toggles Navigator visibility, and <code>Tab</code> toggles Pro Layout View for culling and organizing.</li>
-                    <li>The action strip supports denser file actions, rating 1-5, rating clear, Pick/Reject/Clear, color labels, Quick Organize entry points, and separate Off/Full density choices for the Action Strip and Info Strip. SnapView 2.0 keeps the visible Quick Organize preset list and Batch Actions recipe list to three entries each.</li>
-                    <li>Location labels in the Map Overlay and Info Strip are shorter and easier to scan, showing the most relevant place and country instead of a full street-style address.</li>
-                    <li>Grid has a tighter toolbar, independent quick filters, a detailed-filter popover, filter reset, persisted sort direction, and clearer selected/file count behavior.</li>
-                    <li>Settings rows, tabs, search, shortcut help, and localized HUD labels have been cleaned up so controls are easier to find and scan.</li>
+                <li>Navigator separates local folders and Apple Photos sources so both remain easier to reach.</li>
+                <li>Sorting now works across Main, Grid, and Filmstrip, with quick controls from image counters and context menus so review order stays consistent while switching views.</li>
+                <li>Select Tray is easier to use in Pro Layout View, with candidate, final, and excluded counts, cleaner strip/HUD layouts, and faster original-copy handoff for selected sets.</li>
+                <li>Context menus are grouped more clearly around marking, viewing, workflow, editing, and Filmstrip actions.</li>
+                <li>Rename and file handoff are easier to discover, including rename from the filename, <code>F2</code>, menus, and context menus, plus Open With app selection and project-folder shortcuts.</li>
+                <li>Open With, print, Photos import/export, and other file actions are easier to find from the current image or selection.</li>
+                <li>Performance and Playback settings are easier to scan, with viewing speed, slideshow, and video options separated more clearly.</li>
+                <li>Recent user feedback also tightened RAW+JPG and WebP handling, info overlay and counter behavior, cursor-centered 100% zoom, Fit Width, and keyboard panning while zoomed.</li>
                 </ul>
                 <h3>Stability And Performance</h3>
                 <ul>
-                    <li>Rapid previous/next navigation is steadier when the Action Strip, Info Strip, QuickCheck/EXIF, Histogram, or Map are visible.</li>
-                    <li><code>Q/W/E/R</code> view switching, QuickCheck, Histogram, and Map transitions now use a consistent short animation so panel changes feel closer to the Tab Pro Layout View transition.</li>
-                    <li>QuickCheck/EXIF and the bottom Info Strip keep the last useful metadata while moving between photos, then update after the next photo's data is ready to reduce loading flicker and stale states.</li>
-                    <li>Same-image app/window return preserves manual zoom and pan more reliably.</li>
-                    <li>Filmstrip scrolling is more responsive, and Grid opens with fewer first-entry stalls.</li>
+                <li>Apple Photos loading, HDR, upscaling, metadata, and thumbnail work interrupt the current image less while browsing.</li>
+                <li>Grid and Filmstrip thumbnails are more reliable when browsing Apple Photos and large folders.</li>
+                <li>Opening a folder now keeps the first visible image and final sorted order more consistent.</li>
+                <li>HDR and upscaling state is more stable when switching photos or returning to SnapView from another window.</li>
+                <li>Quick Check and Info Strip metadata are steadier during rapid navigation, with fewer temporary camera/EXIF resets.</li>
+                <li>HDR badges, video poster frames, and Photos preview/original promotion now avoid more visible flicker during source changes.</li>
+                <li>Overlay spacing, counters, toolbar hit areas, and Settings rows have been tightened for more predictable scanning and clicking.</li>
+                </ul>
+
+                <h2 id="v2-0-0">v2.0.0 - 2026-06-09</h2>
+                <h3>What's New</h3>
+                <ul>
+                <li>SnapView 2.0 is a major viewer-workspace update: common Navigator, clearer Q/W/E/R/T + Tab view switching, Pro Layout View, vertical Filmstrip options, a denser action/info strip system, Grid sorting and filters, Settings tabs/search, and a searchable shortcut sheet.</li>
+                <li>A new first-run viewing setup helps new and pre-2.0 users choose thumbnail style, Filmstrip layout, info display, QuickCheck placement, and video browsing behavior. The same setup can be reopened from Settings with <code>Get Started with SnapView</code>.</li>
+                <li>The new <code>M</code> Map Overlay shows the current photo's GPS location in the same footprint as the Histogram overlay, and the two overlays can stack cleanly when both are visible.</li>
+                <li>Comic Reading mode adds left-to-right and right-to-left two-page reading for folders and ZIP archives, with HUD controls, per-source page restore, and safer page navigation.</li>
+                <li>Quick Organize adds preset-based copy/move workflows, Pick and 5-star organization actions, up to three visible presets, <code>Option</code>+<code>1</code> through <code>Option</code>+<code>3</code> shortcuts, editable destinations, preview sheets, and recent run history.</li>
+                <li>Batch Actions adds up to three visible recipe-based JPEG/PNG workflows with preflight previews, safety confirmations, pause/resume/cancel controls, retry support, and recent run logs.</li>
+                </ul>
+                <h3>Improvements</h3>
+                <ul>
+                <li>Main, Grid, Filmstrip, and Tab-toggled Pro Layout View now share more consistent common file actions while keeping existing toolbar and menu commands available.</li>
+                <li>Q opens Grid, W opens Main View, E opens Horizontal Filmstrip, R opens Vertical Filmstrip, T toggles Navigator visibility, and Tab toggles Pro Layout View for culling and organizing.</li>
+                <li>Navigator and vertical Filmstrip panels support narrow/wide layouts, drag resizing, smoother collapse behavior, and more consistent panel surfaces in light and dark mode.</li>
+                <li>Vertical Filmstrip can scale thumbnails through 4/3/2/1-column layouts, including mouse and Command-scroll size changes.</li>
+                <li>The action strip supports denser file actions, rating 1-5, rating clear, Pick/Reject/Clear, color labels, Quick Organize entry points, and separate Off/Full density choices for the action strip and info strip.</li>
+                <li>The bottom info strip keeps its metadata density stable while resizing, keeps the navigation counter centered, separates its EXIF display from the compact <code>I</code> overlay toggle, and Pro Layout View hide the <code>I</code> info overlay even when it was enabled in Main View.</li>
+                <li>Location labels in the Map Overlay and info strip are shorter and easier to scan, showing the most relevant place and country instead of a full street-style address.</li>
+                <li>Grid has a tighter toolbar, independent quick filters, a detailed-filter popover, filter reset, persisted sort direction, and clearer selected/file count behavior.</li>
+                <li>QuickCheck/EXIF is easier to read, with a dedicated right-side panel, better light/dark panel tones, camera identity artwork, cleaner scene/score display, and an on-device AI toggle that keeps metadata quiet when analysis is off.</li>
+                <li>RAW+JPG pairing covers more real-world camera workflows, including DNG+JPG, CR3/RW2/ARW/DXO pairs, uppercase extensions, standalone RAW/JPG files, and RAW+HEIC+JPG sets.</li>
+                <li>Settings rows, tabs, search, shortcut help, and localized HUD labels have been cleaned up so controls are easier to find and scan.</li>
+                <li>The SnapView 2 app icon has been refreshed, and the intro screen now includes a SnapWorks Lab light/dark lockup.</li>
+                <li>The intro Quick Start card keeps shortcut rows readable in English and Korean, uses macOS modifier glyphs, and stays clear of the lower window text.</li>
+                <li>The transparent toolbar/titlebar area now uses a subtle blur-gradient shadow in light and dark mode, and vertical Filmstrip no longer draws an extra top divider.</li>
+                </ul>
+                <h3>Details</h3>
+                <ul>
+                <li>SnapView 2.0 centers on Navigator, Filmstrip, Map Overlay, Comic Reading, Quick Organize, and Batch Actions.</li>
+                <li>The temporary Simple/Normal/Pro chrome switch and old global Tab cycling were removed. Q/W/E/R/T + Tab is now the stable view, Navigator, and Pro Layout View shortcut model.</li>
+                <li>Action Strip and Info Strip settings are simplified to separate Off/Full choices, with placement controls kept out of normal Settings. Action Strip curation keeps rating 1-5, rating clear, Pick/Reject/Clear, and color labels; Quick Organize auto rules expose only Pick and 5-star. SnapView 2.0 keeps the visible Quick Organize preset list and Batch Actions recipe list to three entries each.</li>
+                <li>Comic Reading mode keeps reading direction and Webtoon selection inside the reader HUD; Last View no longer reopens Webtoon directly.</li>
+                </ul>
+                <h3>Stability And Performance</h3>
+                <ul>
+                <li>Rapid previous/next navigation is steadier when the action strip, info strip, QuickCheck/EXIF, Histogram, or Map are visible.</li>
+                <li>Q/W/E/R view switching, QuickCheck, Histogram, and Map transitions now use a consistent short animation so panel changes feel closer to the Tab Pro Layout View transition.</li>
+                <li>QuickCheck/EXIF and the bottom info strip now keep the last useful metadata while moving between photos, then update after the next photo's data is ready to reduce loading flicker and stale states.</li>
+                <li>Same-image app/window return preserves manual zoom and pan more reliably.</li>
+                <li>Filmstrip mouse and trackpad scrolling reacts faster with a shorter settle after wheel input, and Grid opens with fewer first-entry stalls.</li>
+                <li>Thumbnail pinch resizing, Navigator row hover feedback, side-panel resizing, empty-canvas window dragging, and Settings sidebar hit targets are more predictable.</li>
+                <li>Delete Undo is available outside Duplicate Mode, and successful image export can auto-close the export sheet while failed or cancelled exports remain visible.</li>
                 </ul>
 
                 <h2 id="v1-8-0">v1.8.0 - 2026-05-20</h2>
                 <h3>What's New</h3>
                 <ul>
-                    <li>SnapView 1.8 focuses on stability: filtered selection accuracy, RAW+JPG workflow safeguards, smoother video controls, accurate rotation display, and small viewer/UI fixes.</li>
+                <li>SnapView 1.8 focuses on stability: filtered selection accuracy, RAW+JPG workflow safeguards, smoother video controls, predictable rotation behavior, and small viewer/UI fixes.</li>
                 </ul>
                 <h3>Improvements</h3>
                 <ul>
-                    <li>Grid selection now respects the current filter, so Select All targets only the visible filtered items.</li>
-                    <li>Filmstrip now supports horizontal scrolling.</li>
-                    <li>RAW+JPG pairing is more reliable for ARW, CR3, RW2, and DNG workflows.</li>
-                    <li>Video playback restore no longer flashes the playback bar through an empty initial state when returning to SnapView.</li>
-                    <li><code>Option + Left/Right</code> video seeks briefly reveal the playback bar while preserving the existing auto-hide behavior.</li>
-                    <li>Repeated same-direction image rotations now show each 90-degree step accurately.</li>
-                    <li>Keypad <code>+</code> and <code>-</code>, viewer menu state, square thumbnail frames, Help readability, and solid viewer background behavior were tightened.</li>
+                <li>Grid selection now respects the current filter, so Select All targets only the visible filtered items.</li>
+                <li>Filmstrip now supports horizontal scrolling.</li>
+                <li>RAW+JPG pairing is more reliable for ARW, CR3, RW2, and DNG workflows.</li>
+                <li>Video playback restore no longer flashes the playback bar through an empty initial state when returning to SnapView.</li>
+                <li><code>Option + Left/Right</code> video seeks briefly reveal the playback bar while preserving the existing auto-hide behavior.</li>
+                <li>Repeated same-direction image rotations now progress predictably through each 90-degree step.</li>
+                <li>Settings and messages for saved rotations are shorter and easier to understand.</li>
+                <li>Keypad <code>+</code> and <code>-</code>, viewer menu state, square thumbnail frames, Help readability, and solid viewer background behavior were tightened.</li>
                 </ul>
 
                 <h2 id="v1-7-0">v1.7.0 - 2026-05-14</h2>
                 <h3>What's New</h3>
                 <ul>
-                    <li><strong>More App Languages</strong>: SnapView now includes app UI support for Portuguese (Brazil), Italian, Dutch, Turkish, Polish, and Swedish.</li>
-                    <li><strong>Scroll Direction Controls</strong>: Mouse wheel and trackpad navigation are more consistent across Main, Filmstrip, Manage, and Video views. Direction customization can be enabled separately for mouse/trackpad and vertical/horizontal scrolling.</li>
-                    <li><strong>Viewer Preference Memory</strong>: SnapView can remember the info overlay state, preserve image zoom while moving between images, and use a pure black dark viewer background.</li>
-                    <li><strong>Same-image Return Recovery</strong>: Returning to SnapView from another app or window now preserves the current photo's zoom and pan state even when cross-image zoom preservation is disabled.</li>
-                    <li><strong>Photo Info Overlay Flags</strong>: Photo Info Overlay visibility now also controls main-view Pick/Reject badges, so those markers no longer remain on top of the image when the info overlay is off.</li>
-                    <li><strong>Rotation Save Reliability</strong>: JPEG rotation saves are confirmed before success is shown, duplicate rotation requests are ignored, thumbnails refresh after original changes, and Current Folder rotation view can save only the current JPG/JPEG image.</li>
-                    <li><strong>Original Quality Loading</strong>: Quality-first mode now requests the current image at original quality on network drives. Balanced and Quality modes more reliably upgrade settled preview or resized images to original quality.</li>
-                    <li><strong>Video Playback Fixes</strong>: Ended videos can be replayed with the playback button or <code>Space</code>, and <code>Option</code>+Left/Right seeks videos in 5-second steps.</li>
-                    <li><strong>Move To Folder</strong>: Move the current file or explicitly selected files to another folder from inside SnapView.</li>
-                    <li><strong>Toolbar Tooltips</strong>: Top toolbar icon buttons now provide supported-language help text.</li>
+                <li><strong>More App Languages</strong>: SnapView now includes app UI support for Portuguese (Brazil), Italian, Dutch, Turkish, Polish, and Swedish.</li>
+                <li><strong>Scroll Direction Controls</strong>: Mouse wheel and trackpad navigation are more consistent across Main, Filmstrip, Manage, and Video views. Direction customization can be enabled separately for mouse/trackpad and vertical/horizontal scrolling.</li>
+                <li><strong>Viewer Preference Memory</strong>: SnapView can remember the info overlay state, preserve image zoom while moving between images, and use a pure black dark viewer background.</li>
+                <li><strong>Same-image Return Recovery</strong>: Returning to SnapView from another app or window now preserves the current photo's zoom and pan state even when cross-image zoom preservation is disabled.</li>
+                <li><strong>Photo Info Overlay Flags</strong>: Photo Info Overlay visibility now also controls main-view Pick/Reject badges, so those markers no longer remain on top of the image when the info overlay is off.</li>
+                <li><strong>Rotation Save Reliability</strong>: JPEG rotation saves are confirmed before success is shown, duplicate rotation requests are ignored, thumbnails refresh after original changes, and Current Folder rotation view can save only the current JPG/JPEG image.</li>
+                <li><strong>Original Quality Loading</strong>: Quality-first mode now requests the current image at original quality on network drives. Balanced and Quality modes more reliably upgrade settled preview or resized images to original quality, and show a clear status when original loading fails.</li>
+                <li><strong>Smoother Original Quality Transition</strong>: Original-quality upgrades now crossfade from resized images, use a shorter apply fade, and start sooner after navigation settles.</li>
+                <li><strong>Video Playback Fixes</strong>: Ended videos can be replayed with the playback button or <code>Space</code>, and <code>Option</code>+Left/Right seeks videos in 5-second steps.</li>
+                <li><strong>Default App Registration Reliability</strong>: SnapView briefly rechecks Launch Services after a successful registration request to avoid false failure alerts.</li>
+                <li><strong>Move To Folder</strong>: Move the current file or explicitly selected files to another folder from inside SnapView.</li>
+                <li><strong>Toolbar Tooltips</strong>: The runtime titlebar tooltip path now provides supported-language help text for top toolbar icon buttons.</li>
                 </ul>
                 <h3>Improvements</h3>
                 <ul>
-                    <li>Navigation arrows and video controls now hide more predictably instead of staying over images or videos while the pointer is idle.</li>
-                    <li>Fullscreen video presentation uses the available viewer surface more cleanly.</li>
-                    <li>Compare and Reference Compare now render images opened from ZIP archives correctly instead of showing black panels.</li>
-                    <li>Copy, delete, and move actions now use the current item or explicit selections more reliably.</li>
-                    <li>Optional confirmation-free <code>Delete</code>/<code>Backspace</code> moves files to macOS Trash only and remains disabled by default.</li>
+                <li>Navigation arrows and video controls now hide more predictably instead of staying over images or videos while the pointer is idle.</li>
+                <li>Fullscreen video presentation uses the available viewer surface more cleanly.</li>
+                <li>Compare and Reference Compare now render images opened from ZIP archives correctly instead of showing black panels.</li>
+                <li>Copy, delete, and move actions now use the current item or explicit selections more reliably.</li>
+                <li>Optional confirmation-free <code>Delete</code>/<code>Backspace</code> moves files to macOS Trash only and remains disabled by default.</li>
                 </ul>
 
                 <h2 id="v1-6-0">v1.6.0 - 2026-05-09</h2>
                 <h3>What's New</h3>
                 <ul>
-                    <li><strong>Rotate And Flip</strong>: Added clockwise rotation and horizontal flip for the current image.</li>
-                    <li><strong>JPEG Original Save For Rotation</strong>: Added an option to save current-file rotation directly to the JPEG original. Current-folder rotation remains screen-only.</li>
-                    <li><strong>Space Zoom Toggle</strong>: In Main, Filmstrip, and Manage image views, <code>Space</code> now toggles between 100% view and the previous zoom level.</li>
-                    <li><strong>Repeat Shortcut Clear</strong>: Added an optional setting to clear a rating or Pick by pressing the same rating/Pick shortcut again.</li>
-                    <li><strong>Reset Settings</strong>: Added a reset-all-settings button.</li>
-                    <li><strong>JPEG Finder Date Alignment</strong>: Added an advanced JPEG option to align Finder creation/modified dates with the edited capture date.</li>
+                <li><strong>Rotate And Flip</strong>: Added clockwise rotation and horizontal flip for the current image.</li>
+                <li><strong>JPEG Original Save For Rotation</strong>: Added an option to save current-file rotation directly to the JPEG original. Current-folder rotation remains screen-only.</li>
+                <li><strong>Space Zoom Toggle</strong>: In Main, Filmstrip, and Manage image views, <code>Space</code> now toggles between 100% view and the previous zoom level.</li>
+                <li><strong>Repeat Shortcut Clear</strong>: Added an optional setting to clear a rating or Pick by pressing the same rating/Pick shortcut again.</li>
+                <li><strong>Reset Settings</strong>: Added a reset-all-settings button.</li>
+                <li><strong>JPEG Finder Date Alignment</strong>: Added an advanced JPEG option to align Finder creation/modified dates with the edited capture date.</li>
                 </ul>
                 <h3>Improvements</h3>
                 <ul>
-                    <li>Reduced cases where a preview image could remain after fast browsing instead of promoting to the final image display.</li>
-                    <li>Returning to SnapView now preserves video playback position and image zoom/pan state more reliably.</li>
-                    <li>Reduced unnecessary state updates during fast browsing through small local images.</li>
-                    <li>Rating clear now works more reliably from English input and keyboard layouts using the physical <code>₩</code>/<code>\</code> key.</li>
+                <li>Reduced cases where a preview image could remain after fast browsing instead of promoting to the final image display.</li>
+                <li>Returning to SnapView now preserves video playback position and image zoom/pan state more reliably.</li>
+                <li>Reduced unnecessary state updates during fast browsing through small local images.</li>
+                <li>Rating clear now works more reliably from English input and keyboard layouts using the physical <code>₩</code>/<code>\</code> key.</li>
                 </ul>
 
-                <h2>v1.5.2 - 2026-05-06</h2>
+                <h2 id="v1-5-2">v1.5.2 - 2026-05-06</h2>
                 <h3>Improvements</h3>
                 <p>SnapView 1.5.2 focuses on smoother real-world browsing and clearer OCR support.</p>
                 <ul>
-                    <li>Fast browsing through large local folders and network folders is more consistent, with fewer cases where the index advances but the image display falls behind.</li>
-                    <li>Switching between Images Only and Include Videos now refreshes the current folder list correctly.</li>
-                    <li>Unchanged folders avoid unnecessary reindexing, and image-only network folders skip slow video merge sorting.</li>
-                    <li>Quick Check and manual OCR now explicitly support Korean and English text recognition.</li>
-                    <li>EXIF and Quick Check information timing has been restored so metadata stays useful without getting ahead of image display.</li>
+                <li>Fast browsing through large local folders and network folders is more consistent, with fewer cases where the index advances but the image display falls behind.</li>
+                <li>Switching between Images Only and Include Videos now refreshes the current folder list correctly.</li>
+                <li>Unchanged folders avoid unnecessary reindexing, and image-only network folders skip slow video merge sorting.</li>
+                <li>Quick Check and manual OCR now explicitly support Korean and English text recognition.</li>
+                <li>EXIF and Quick Check information timing has been restored so metadata stays useful without getting ahead of image display.</li>
                 </ul>
 
-                <h2>v1.5.1 - 2026-05-04</h2>
+                <h2 id="v1-5-1">v1.5.1 - 2026-05-04</h2>
                 <h3>Improvements</h3>
-                <ul>
-                    <li><strong>Smoother Browsing</strong>: Photo navigation feels more responsive, especially when holding the arrow keys to move through many images.</li>
-                    <li><strong>1.5 Polish</strong>: The new video browsing, image export, and on-device OCR features from v1.5 are now delivered with additional stability and performance tuning.</li>
-                </ul>
+                <p>Improved browsing performance when moving quickly through photos.</p>
+                <p>Image transitions now keep up more smoothly during repeated arrow-key navigation, and metadata updates are better balanced so they do not get ahead of the image display.</p>
+                <p>Also fixed an issue where the decoding mode display could appear incorrect in some screens.</p>
 
-                <h2>v1.5.0 - 2026-05-03</h2>
+                <h2 id="v1-5-0">v1.5.0 - 2026-05-03</h2>
                 <h3>What's New</h3>
                 <ul>
-                    <li><strong>Photo and video browsing</strong>: Browse videos alongside photos in the same folder. Initial video support covers <code>MP4</code>, <code>MOV</code>, and <code>M4V</code>.</li>
-                    <li><strong>Simple video playback</strong>: Play videos in Main, Filmstrip, and Manage views, with autoplay, volume, timeline seeking, and <code>Space</code> play/pause.</li>
-                    <li><strong>Image Export</strong>: Create <code>JPEG</code> or <code>PNG</code> copies using Instagram, Threads, X, blog, or custom size presets.</li>
-                    <li><strong>Date and location edits</strong>: Safely adjust capture date/time and GPS metadata for supported photos. Unsupported original-write paths are blocked.</li>
-                    <li><strong>On-device OCR</strong>: Recognize and copy text from photos in Quick Check, with optional yellow highlights directly on the image.</li>
+                <li><strong>Photo And Video Together</strong>: SnapView can now browse supported videos alongside photos in the same folder. The first supported video set is <code>MP4</code>, <code>MOV</code>, and <code>M4V</code>.</li>
+                <li><strong>Simple Video Playback</strong>: Main, Filmstrip, and Manage views now support video playback with autoplay, volume control, timeline seeking, and <code>Space</code> for play/pause.</li>
+                <li><strong>Image Export</strong>: Create resized copies as <code>JPEG</code> or <code>PNG</code> with simple presets for Instagram, Threads, X, blogs, or a custom size.</li>
+                <li><strong>Date And Location Edits</strong>: Adjust photo date/time and GPS metadata with a cautious workflow that blocks unsupported write paths.</li>
+                <li><strong>On-device OCR</strong>: Run Korean/English text recognition from Quick Check, copy recognized text, and optionally show yellow text highlights directly on the image.</li>
                 </ul>
                 <h3>Improvements</h3>
                 <ul>
-                    <li>Video items now show photo-like metadata, including resolution, file size, codec, FPS, bitrate, HDR, date, and device information.</li>
-                    <li>Quick Check OCR automatic execution is optional and remains off by default.</li>
-                    <li>Localization coverage was expanded across Settings, intro guidance, Quick Check, Compare, Duplicate, Image Export, video settings, menus, and Help.</li>
-                    <li>Traditional Chinese, French, and German UI coverage was added and refined.</li>
-                    <li>Color mode changes in Settings now apply more reliably to open windows.</li>
-                    <li>Intro, Quick Start, and information overlays are easier to read in both light and dark appearances.</li>
+                <li>Video metadata is shown in the same spirit as photo metadata, including resolution, file size, codec, FPS, bitrate, HDR, date, and device details when available.</li>
+                <li>Video-incompatible actions such as image export and rotation are disabled while a video is selected.</li>
+                <li>Export results now summarize created files, file sizes, partial failures, and quick actions to open the file or folder.</li>
+                <li>Quick Check OCR automatic execution is optional and remains off by default.</li>
+                <li>Localization coverage has been expanded across Settings, intro prompts, Quick Check, Compare, Duplicate Review, image export, video settings, menus, and help surfaces.</li>
+                <li>Traditional Chinese, French, and German are included in the broader UI language set.</li>
+                <li>Appearance updates after changing color mode in Settings are more reliable.</li>
+                <li>Intro, Quick Start, and overlay surfaces are easier to read in both light and dark mode.</li>
                 </ul>
 
-                <h2>v1.0.2 - 2026-04-29</h2>
+                <h2 id="v1-0-2">v1.0.2 - 2026-04-29</h2>
                 <h3>What's New</h3>
                 <ul>
-                    <li><strong>More App Languages</strong>: SnapView now includes Japanese, Simplified Chinese, and Spanish for the main app interface.</li>
-                    <li><strong>Trackpad Browsing</strong>: Two-finger trackpad swipes can now move to the previous or next image, with an option to match macOS natural scrolling.</li>
-                    <li><strong>Universal Mac Compatibility</strong>: The Mac App Store build now includes both Apple Silicon and Intel-compatible binary slices.</li>
+                <li><strong>More App Languages</strong>: SnapView now includes Japanese, Simplified Chinese, and Spanish for the main app interface.</li>
+                <li><strong>Trackpad Browsing</strong>: Two-finger trackpad swipes can now move to the previous or next image, with an option to match macOS natural scrolling.</li>
+                <li><strong>Universal Mac Compatibility</strong>: SnapView now runs natively on both Apple Silicon and Intel Macs.</li>
                 </ul>
                 <h3>Improvements</h3>
                 <ul>
-                    <li>Compare and Reference Compare have been polished so reference/candidate labels, rating, Pick, and color label controls behave more consistently.</li>
-                    <li>Quick Check now shows important EXIF details sooner, remembers collapsed sections, and keeps location information easier to review when GPS data is available.</li>
-                    <li>Mouse wheel and trackpad behavior is more consistent across Main, Filmstrip, and Manage views. When zoomed in, two-finger scrolling pans the image instead of accidentally changing photos.</li>
-                    <li>Menus, context menus, settings, and help text now follow the selected app language more consistently, including Japanese, Simplified Chinese, and Spanish.</li>
-                    <li>File access guidance is clearer in both the direct download version and the Mac App Store version, with App Store permission recovery kept separate from direct-download access errors.</li>
-                    <li>Intro and overlay surfaces are easier to read on bright images, with a more consistent background style.</li>
-                    <li>SnapView is more stable when folder contents change while browsing, including cases where images are moved or deleted outside the app.</li>
+                <li>Compare and Reference Compare have been polished so reference/candidate labels, rating, Pick, and color label controls behave more consistently.</li>
+                <li>Quick Check now shows important EXIF details sooner, remembers collapsed sections, and keeps location information easier to review when GPS data is available.</li>
+                <li>Mouse wheel and trackpad behavior is more consistent across Main, Filmstrip, and Manage views. When zoomed in, two-finger scrolling pans the image instead of accidentally changing photos.</li>
+                <li>Menus, context menus, settings, and help text now follow the selected app language more consistently, including Japanese, Simplified Chinese, and Spanish.</li>
+                <li>File access guidance is clearer when SnapView needs permission to open a file or folder.</li>
+                <li>Intro and overlay surfaces are easier to read on bright images, with a more consistent background style.</li>
+                <li>SnapView is more stable when folder contents change while browsing, including cases where images are moved or deleted outside the app.</li>
                 </ul>
 
-                <h2>v1.0.1 - 2026-04-27</h2>
+                <h2 id="v1-0-1">v1.0.1 - 2026-04-27</h2>
                 <h3>What's New</h3>
                 <ul>
-                    <li><strong>Window On Launch</strong>: Choose how SnapView starts — default, restore last window, or full screen.</li>
-                    <li><strong>Window Size Shortcuts</strong>: <code>Ctrl+1</code>~<code>4</code>, <code>Ctrl+0</code> for Default / 1.5&times; / 2&times; / 2.5&times; / Fill Screen.</li>
-                    <li><strong>Window Size</strong> submenu added to the View menu (EN/KO).</li>
-                    <li><strong>Full Manual</strong> and <strong>Release Notes</strong> links added to the SnapView menu.</li>
+                <li><strong>Window Size Shortcuts</strong>: Quickly resize the SnapView window with <code>Ctrl+1</code> (default), <code>Ctrl+2</code> (1.5×), <code>Ctrl+3</code> (2×), <code>Ctrl+4</code> (2.5×), or <code>Ctrl+0</code> (fill screen). Also available from View &gt; Window Size in the menu bar.</li>
+                <li><strong>Window On Launch Setting</strong>: Choose whether SnapView starts with the system default size, restores your last window size, or opens fullscreen. Find it in Settings &gt; General.</li>
                 </ul>
                 <h3>Improvements</h3>
                 <ul>
-                    <li>Rating UI default changed from <code>Always</code> to <code>Auto (when rating exists)</code>.</li>
-                    <li>Auto-advance navigation and include subfolders are now enabled by default.</li>
-                    <li>Color labels are now properly localized in English mode.</li>
-                    <li>Default app registration is more reliable with a troubleshooting dialog on failure.</li>
-                    <li>Permission dialog now clearly explains sandbox policy and the DMG alternative.</li>
-                    <li>Fixed <code>Ctrl+0</code> conflicting with image zoom.</li>
+                <li>Color labels (Red, Orange, Yellow, Green, Blue, Purple, Gray) now display in English when the app language is set to English, and integrate correctly with Finder tags in both languages.</li>
+                <li><code>Cmd+A</code> in Grid View now selects only the filtered items (by rating, flag, or label) instead of all photos in the folder.</li>
+                <li>Default app registration is more reliable: the app bundle is now pre-registered with Launch Services before setting file associations, and the result is verified after each attempt.</li>
+                <li>When default app registration partially fails, a dialog now lists the failed extensions and provides manual registration guidance.</li>
+                <li>Permission dialogs now include a clearer explanation when file access needs confirmation.</li>
+                <li>Help menu: a &quot;SnapView Full Manual&quot; and &quot;Release Notes&quot; link are now available in the SnapView menu.</li>
+                <li>Light mode: the Quick Start box and intro screen now match the light appearance properly.</li>
                 </ul>
 
-                <h2>v1.0.0 - 2026-04-25</h2>
+                <h2 id="v1-0-0">v1.0.0 - 2026-04-25</h2>
                 <h3>What's New</h3>
                 <ul>
-                    <li><strong>SnapView 1.0.0 Official Release & Mac App Store</strong>: SnapView is now officially a stable 1.0.0 release! We are also introducing a dedicated Mac App Store build. Both the direct download (DMG) and Mac App Store channels provide a polished, stable experience, and all Beta badges have been removed.</li>
-                    <li><strong>Reference Compare Mode</strong>: Compare mode is more powerful with a new <code>Reference</code> comparison mode alongside the standard <code>Selection</code> mode. Press <code>R</code> to toggle between them.</li>
-                    <li><strong>File Renaming</strong>: You can now rename files directly within SnapView using <code>F2</code> or the context menu.</li>
-                    <li><strong>Window Open Policy</strong>: Choose how SnapView opens files from Finder—reuse a <code>Single Window</code> or open in <code>Multiple Windows</code>.</li>
-                    <li><strong>Smarter External App Handoff</strong>: You can now set whether to prioritize the RAW or JPG file when opening a pair in an external app. Use <code>⌥⌘O</code> to quickly choose another app.</li>
+                <li><strong>SnapView 1.0.0 Official Release</strong>: SnapView is now officially a stable 1.0.0 release, with Beta badges removed.</li>
+                <li><strong>Reference Compare Mode</strong>: Compare mode is more powerful with a new <code>Reference</code> comparison mode alongside the standard <code>Selection</code> mode. Press <code>R</code> to toggle between them.</li>
+                <li><strong>File Renaming</strong>: You can now rename files directly within SnapView using <code>F2</code> or the context menu.</li>
+                <li><strong>Window Open Policy</strong>: Choose how SnapView opens files from Finder—reuse a <code>Single Window</code> or open in <code>Multiple Windows</code>.</li>
+                <li><strong>Smarter External App Handoff</strong>: You can now set whether to prioritize the RAW or JPG file when opening a pair in an external app. Use <code>⌥⌘O</code> to quickly choose another app.</li>
                 </ul>
                 <h3>Improvements</h3>
                 <ul>
-                    <li>In <code>Reference</code> compare mode, you can anchor one photo and move through candidates, using arrow keys and <code>Tab</code> to easily shift focus between panels.</li>
-                    <li>Choose whether to resume your last compare session or start fresh based on your current context when entering Compare mode.</li>
-                    <li>The photo count overlay is now customizable: show <code>Current / Total</code>, just <code>Current</code>, or hide it entirely.</li>
-                    <li>Added a <code>Resort After Rename</code> preference to automatically keep your files in order when names change.</li>
-                    <li>Restyled the title bar for a flatter, cleaner look that matches modern macOS surfaces.</li>
-                    <li>Greatly improved the visual stability when opening files from Finder in Single Window mode, reducing screen flashes and keyboard focus issues.</li>
-                    <li>External app selection is simpler with a unified <code>Open with another app…</code> flow.</li>
+                <li>In <code>Reference</code> compare mode, you can anchor one photo and move through candidates, using arrow keys and <code>Tab</code> to easily shift focus between panels.</li>
+                <li>Choose whether to resume your last compare session or start fresh based on your current context when entering Compare mode.</li>
+                <li>The photo count overlay is now customizable: show <code>Current / Total</code>, just <code>Current</code>, or hide it entirely.</li>
+                <li>Added a <code>Resort After Rename</code> preference to automatically keep your files in order when names change.</li>
+                <li>Restyled the title bar for a flatter, cleaner look that matches modern macOS surfaces.</li>
+                <li>Greatly improved the visual stability when opening files from Finder in Single Window mode, reducing screen flashes and keyboard focus issues.</li>
+                <li>External app selection is simpler with a unified <code>Open with another app…</code> flow.</li>
+                </ul>
+
+                <h2 id="v0-10-4">v0.10.4 - 2026-04-19</h2>
+                <h3>What's New</h3>
+                <ul>
+                <li>File browsing now follows Finder-style natural filename order, so numbered files move in the expected sequence.</li>
+                <li>Reopening SnapView from Finder or Dock after closing the window is steadier and less likely to show a blank viewer.</li>
+                <li>Opening another image while SnapView is already running now switches to the requested photo more directly.</li>
+                <li>Grid and Filmstrip navigation feel more immediate during keyboard and mouse selection.</li>
+                </ul>
+                <h3>Improvements</h3>
+                <ul>
+                <li>Folder and ZIP image lists now sort filenames like <code>photo-1</code>, <code>photo-2</code>, <code>photo-10</code> instead of <code>photo-1</code>, <code>photo-10</code>, <code>photo-2</code>.</li>
+                <li>RAW+JPG pairing, normal folder browsing, ZIP browsing, Grid, Filmstrip, and keyboard navigation now share the same natural ordering behavior.</li>
+                <li>External file opens after <code>Cmd+W</code> avoid reloading the previous image first, reducing the visible “old photo then new photo” flash.</li>
+                <li>The visible image canvas is recovered more reliably when a new file is opened while the previous SnapView window is closed or hidden.</li>
+                <li>Grid Up/Down keyboard movement now refreshes its column count when entering Grid, so movement follows the current window width instead of an older layout.</li>
+                <li>Grid single-click selection now responds immediately instead of waiting to see whether the click becomes a double-click.</li>
+                <li>Filmstrip key-repeat navigation now moves the thumbnail focus first and commits the final image after input settles, reducing visible stutter while holding arrow keys.</li>
+                <li>Intermittent “file not found” overlays are retried briefly when the file reappears, reducing cases where a valid image stays stuck behind an error dialog.</li>
+                <li>Adjusted the app icon footprint so it sits more naturally beside other apps in Finder and the Dock on legacy macOS.</li>
                 </ul>
                 <h3>Notes</h3>
                 <ul>
-                    <li>The Mac App Store build is a sandboxed stable release lane. The DMG lane remains the faster direct-download lane.</li>
-                    <li>ZIP browsing remains supported in both lanes, with different backends chosen for the distribution channel.</li>
+                <li>Natural sorting is now the default behavior. There is no separate setting to enable.</li>
+                <li>The sorting change affects browsing order anywhere SnapView uses the current folder or ZIP image list.</li>
                 </ul>
 
-                <h2>v0.10.4 - 2026-04-19</h2>
+                <h2 id="v0-10-3">v0.10.3 - 2026-04-15</h2>
                 <h3>What's New</h3>
                 <ul>
-                    <li>File browsing now follows Finder-style natural filename order, so numbered files move in the expected sequence.</li>
-                    <li>Reopening SnapView from Finder or Dock after closing the window is steadier and less likely to show a blank viewer.</li>
-                    <li>Opening another image while SnapView is already running now switches to the requested photo more directly.</li>
-                    <li>Grid and Filmstrip navigation feel more immediate during keyboard and mouse selection.</li>
+                <li><code>Show in Finder</code> lets you jump from the current photo straight to its file in Finder.</li>
+                <li>Overlay text is easier to read on bright photos with new shadow controls and smarter automatic contrast.</li>
+                <li>HEIC and long-idle window restore behavior feel more reliable during real browsing.</li>
                 </ul>
                 <h3>Improvements</h3>
                 <ul>
-                    <li>Folder and ZIP image lists now sort filenames like <code>photo-1</code>, <code>photo-2</code>, <code>photo-10</code>.</li>
-                    <li>RAW+JPG pairing, normal folder browsing, ZIP browsing, Grid, Filmstrip, and keyboard navigation now share the same natural ordering behavior.</li>
-                    <li>External file opens after <code>Cmd+W</code> avoid reloading the previous image first, reducing the visible old-photo flash.</li>
-                    <li>The visible image canvas is recovered more reliably when a new file is opened while the previous SnapView window is closed or hidden.</li>
-                    <li>Grid Up/Down keyboard movement now refreshes its column count when entering Grid, so movement follows the current window width.</li>
-                    <li>Grid single-click selection now responds immediately instead of waiting to see whether the click becomes a double-click.</li>
-                    <li>Filmstrip key-repeat navigation now moves the thumbnail focus first and commits the final image after input settles, reducing visible stutter while holding arrow keys.</li>
-                    <li>Intermittent <code>file not found</code> overlays are retried briefly when the file reappears.</li>
-                    <li>Adjusted the app icon footprint so it sits more naturally beside other apps in Finder and the Dock on legacy macOS.</li>
+                <li>Added <code>Show in Finder</code> to menus, context menus, and <code>⌘↩</code> for faster handoff to Finder.</li>
+                <li>Added overlay text shadow controls with <code>Normal</code>, <code>Strong</code>, and <code>Auto</code> modes so filenames and compact EXIF stay readable on bright images.</li>
+                <li>Added rating UI options so you can keep rating controls always visible, show them only on rated items, or hide them while preserving keyboard and menu rating actions.</li>
+                <li>Added an optional <code>Quit when all windows are closed</code> preference. It stays off by default.</li>
+                <li>Refined the app icon shape so it feels more natural in recent macOS icon presentation.</li>
                 </ul>
                 <h3>Notes</h3>
                 <ul>
-                    <li>Natural sorting is now the default behavior. There is no separate setting to enable.</li>
-                    <li>The sorting change affects browsing order anywhere SnapView uses the current folder or ZIP image list.</li>
+                <li>HEIC/HEIF/HIF browsing remains supported and this release focuses on making restore/reopen behavior steadier, not changing the supported-format list.</li>
+                <li>Animated playback is still limited to Main View.</li>
+                <li>AVIF and JPEG XL remain dependent on macOS decoder support.</li>
                 </ul>
 
-                <h2>v0.10.3 - 2026-04-15</h2>
+                <h2 id="v0-10-2">v0.10.2 - 2026-04-12</h2>
                 <h3>What's New</h3>
                 <ul>
-                    <li><code>Show in Finder</code> lets you jump from the current photo straight to its file in Finder.</li>
-                    <li>Overlay text is easier to read on bright photos with new shadow controls and smarter automatic contrast.</li>
-                    <li>HEIC and long-idle window restore behavior feel more reliable during real browsing.</li>
+                <li>Animated GIF and animated WebP now play directly in Main View.</li>
+                <li>Default app setup is easier with a simpler <code>Major Formats</code> option first, plus better visibility in Finder's <code>Open With</code> recommendations.</li>
+                <li>Quick Check and file-opening behavior feel steadier during real photo review.</li>
                 </ul>
                 <h3>Improvements</h3>
                 <ul>
-                    <li>Added <code>Show in Finder</code> to menus, context menus, and <code>⌘↩</code> for faster handoff to Finder.</li>
-                    <li>Added overlay text shadow controls with <code>Normal</code>, <code>Strong</code>, and <code>Auto</code> modes so filenames and compact EXIF stay readable on bright images.</li>
-                    <li>Added rating UI options so you can keep rating controls always visible, show them only on rated items, or hide them while preserving keyboard and menu rating actions.</li>
-                    <li>Added an optional <code>Quit when all windows are closed</code> preference. It stays off by default.</li>
-                    <li>Refined the app icon shape so it feels more natural in recent macOS icon presentation.</li>
+                <li>Main View can now play animated GIF and WebP without leaving your normal review flow.</li>
+                <li>You can register common image formats first, then choose a broader registration only if you want it.</li>
+                <li>Unsupported files now stop earlier with a clear message instead of feeling stuck or inconsistent.</li>
+                <li>Reduced a Quick Check crash path that could happen while detailed review data was updating.</li>
+                <li>Improved how the main window behaves while the file-open panel is on screen.</li>
+                <li>Improved recovery when the currently open image's parent folder path changes.</li>
                 </ul>
                 <h3>Notes</h3>
                 <ul>
-                    <li>HEIC/HEIF/HIF browsing remains supported and this release focuses on making restore/reopen behavior steadier, not changing the supported-format list.</li>
-                    <li>Animated playback is still limited to Main View.</li>
-                    <li>AVIF and JPEG XL remain dependent on macOS decoder support.</li>
+                <li>Animated playback is limited to Main View in this release. Other views still show a still frame.</li>
+                <li>AVIF and JPEG XL remain dependent on macOS decoder support.</li>
                 </ul>
 
-                <h2>v0.10.2 - 2026-04-12</h2>
-                <h3>What's New</h3>
-                <ul>
-                    <li>Animated GIF and animated WebP now play directly in Main View.</li>
-                    <li>Default app setup is easier with a simpler <code>Major Formats</code> option first, plus better visibility in Finder's <code>Open With</code> recommendations.</li>
-                    <li>Quick Check and file-opening behavior feel steadier during real photo review.</li>
-                </ul>
-                <h3>Improvements</h3>
-                <ul>
-                    <li>Main View can now play animated GIF and WebP without leaving your normal review flow.</li>
-                    <li>You can register common image formats first, then choose a broader registration only if you want it.</li>
-                    <li>Unsupported files now stop earlier with a clear message instead of feeling stuck or inconsistent.</li>
-                    <li>Reduced a Quick Check crash path that could happen while detailed review data was updating.</li>
-                    <li>Improved how the main window behaves while the file-open panel is on screen.</li>
-                    <li>Improved recovery when the currently open image's parent folder path changes.</li>
-                </ul>
-                <h3>Notes</h3>
-                <ul>
-                    <li>Animated playback is limited to Main View in this release. Other views still show a still frame.</li>
-                    <li>AVIF and JPEG XL remain dependent on macOS decoder support.</li>
-                </ul>
-                <h2>v0.10.1 - 2026-04-11</h2>
+                <h2 id="v0-10-1">v0.10.1 - 2026-04-11</h2>
                 <h3>Highlights</h3>
                 <ul>
-                    <li>Added a new <code>Appearance Mode</code> setting so you can choose <code>System</code>, <code>Light</code>, or <code>Dark</code> and keep the app on the look you prefer.</li>
-                    <li>Improved light mode so Main, Grid, Filmstrip, and Manage feel more balanced and easier to read.</li>
-                    <li>Made <code>Reject</code> marks easier to notice and improved a few rough edges around fast review and image-open warnings.</li>
+                <li>Added a new <code>Appearance Mode</code> setting so you can choose <code>System</code>, <code>Light</code>, or <code>Dark</code> and keep the app on the look you prefer.</li>
+                <li>Improved light mode so Main, Grid, Filmstrip, and Manage feel more balanced and easier to read.</li>
+                <li>Made <code>Reject</code> marks easier to notice and improved a few rough edges around fast review and image-open warnings.</li>
                 </ul>
                 <h3>UX / UI</h3>
                 <ul>
-                    <li>Light mode now uses a softer desktop-style surface instead of looking too dark or too bright.</li>
-                    <li>Manage view text and status summaries are easier to read, especially in light mode and inactive windows.</li>
-                    <li><code>Pick</code> and <code>Reject</code> markings are easier to spot while reviewing in the main view, Grid, and Filmstrip.</li>
+                <li>Light mode now uses a softer desktop-style surface instead of looking too dark or too bright.</li>
+                <li>Manage view text and status summaries are easier to read, especially in light mode and inactive windows.</li>
+                <li><code>Pick</code> and <code>Reject</code> markings are easier to spot while reviewing in the main view, Grid, and Filmstrip.</li>
                 </ul>
                 <h3>Performance</h3>
                 <ul>
-                    <li>Moving quickly after <code>Cmd+Delete</code> is more reliable, with the next image updating more consistently.</li>
-                    <li>Opening or reattaching images is more stable during fast browsing.</li>
-                    <li>Light mode surfaces now behave more consistently across the app.</li>
+                <li>Moving quickly after <code>Cmd+Delete</code> is more reliable, with the next image updating more consistently.</li>
+                <li>Opening or reattaching images is more stable during fast browsing.</li>
+                <li>Light mode surfaces now behave more consistently across the app.</li>
                 </ul>
                 <h3>Fixes</h3>
                 <ul>
-                    <li>Fixed cases where <code>Reject</code> was too easy to miss during review.</li>
-                    <li>Fixed cases where the next image did not refresh correctly after rapid deletes.</li>
-                    <li>Reduced a crash path that could happen while reopening or attaching images.</li>
-                    <li>Added <code>Close</code> and <code>Esc</code> support to the <code>Could not open image</code> warning so it can be dismissed more easily.</li>
-                    <li>Improved Manage view readability in light mode.</li>
+                <li>Fixed cases where <code>Reject</code> was too easy to miss during review.</li>
+                <li>Fixed cases where the next image did not refresh correctly after rapid deletes.</li>
+                <li>Reduced a crash path that could happen while reopening or attaching images.</li>
+                <li>Added <code>Close</code> and <code>Esc</code> support to the <code>Could not open image</code> warning so it can be dismissed more easily.</li>
+                <li>Improved Manage view readability in light mode.</li>
                 </ul>
                 <h3>Known Issues</h3>
                 <ul>
-                    <li>ZIP browsing can still be slower than normal folders.</li>
-                    <li>Some very large or unusual files may still open in a more compatible display mode.</li>
+                <li>ZIP browsing can still be slower than normal folders.</li>
+                <li>Some very large or unusual files may still open in a more compatible display mode.</li>
                 </ul>
                 <h3>Install / Update</h3>
                 <ol>
-                    <li>Download <code>SnapView-0.10.1.dmg</code>.</li>
-                    <li>Drag <code>SnapView.app</code> into <code>Applications</code>.</li>
-                    <li>Replace the previous version if needed.</li>
-                    <li>Future updates are checked automatically and shown with a user confirmation prompt.</li>
+                <li>Download <code>SnapView-0.10.1.dmg</code>.</li>
+                <li>Drag <code>SnapView.app</code> into <code>Applications</code>.</li>
+                <li>Replace the previous version if needed.</li>
+                <li>Future updates are checked automatically and shown with a user confirmation prompt.</li>
                 </ol>
                 <h3>Notes</h3>
                 <ul>
-                    <li>This update is mainly focused on making everyday review work feel steadier and easier to read.</li>
+                <li>This update is mainly focused on making everyday review work feel steadier and easier to read.</li>
                 </ul>
-                <h2>v0.10.0 - 2026-04-09</h2>
+
+                <h2 id="v0-10-0">v0.10.0 - 2026-04-09</h2>
                 <h3>Highlights</h3>
                 <ul>
-                    <li>Introduced fullscreen <code>Slideshow v1</code> for hands-off review of the current folder, selection, or browsing context.</li>
-                    <li>Added slideshow controls for speed, transitions, loop, shuffle, and on-screen playback status.</li>
-                    <li>Improved slideshow smoothness and fullscreen presentation, including better handling for smaller images.</li>
+                <li>Introduced fullscreen <code>Slideshow v1</code> for hands-off review of the current folder, selection, or browsing context.</li>
+                <li>Added slideshow controls for speed, transitions, loop, shuffle, and on-screen playback status.</li>
+                <li>Improved slideshow smoothness and fullscreen presentation, including better handling for smaller images.</li>
                 </ul>
                 <h3>UX / UI</h3>
                 <ul>
-                    <li>Slideshow can be started from the titlebar, Tools menu, and major review views.</li>
-                    <li>The slideshow HUD was simplified so speed and transition choices are easier to read at a glance.</li>
-                    <li>Added a <code>Scale Small Images to Fit</code> option for fuller fullscreen playback.</li>
-                    <li>Standardized slideshow start and exit around <code>Shift + Enter</code>.</li>
+                <li>Slideshow can be started from the titlebar, Tools menu, and major review views.</li>
+                <li>The slideshow HUD was simplified so speed and transition choices are easier to read at a glance.</li>
+                <li>Added a <code>Scale Small Images to Fit</code> option for fuller fullscreen playback.</li>
+                <li>Standardized slideshow start and exit around <code>Shift + Enter</code>.</li>
                 </ul>
                 <h3>Performance</h3>
                 <ul>
-                    <li>Crossfade playback is more reliable during normal browsing and shuffle playback.</li>
-                    <li>The next image is prepared more intelligently to reduce rough transitions.</li>
-                    <li>When a smooth transition is not possible in time, slideshow playback falls back more cleanly.</li>
+                <li>Crossfade playback is more reliable during normal browsing and shuffle playback.</li>
+                <li>The next image is prepared more intelligently to reduce rough transitions.</li>
+                <li>When a smooth transition is not possible in time, slideshow playback falls back more cleanly.</li>
                 </ul>
                 <h3>Fixes</h3>
                 <ul>
-                    <li>Fixed <code>Fade to Black</code> so it feels distinct from <code>Crossfade</code>.</li>
-                    <li>Fixed slideshow start behavior for paused and autoplay entry cases.</li>
-                    <li>Fixed fullscreen playback for smaller images so they fill the screen more naturally.</li>
-                    <li>Improved window recovery behavior after closing and reopening the main view.</li>
+                <li>Fixed <code>Fade to Black</code> so it feels distinct from <code>Crossfade</code>.</li>
+                <li>Fixed slideshow start behavior for paused and autoplay entry cases.</li>
+                <li>Fixed fullscreen playback for smaller images so they fill the screen more naturally.</li>
+                <li>Improved window recovery behavior after closing and reopening the main view.</li>
                 </ul>
                 <h3>Known Issues</h3>
                 <ul>
-                    <li>Large ZIP-based sets can still transition less smoothly than normal folders.</li>
-                    <li>Very heavy image sets may still look less smooth than normal folders.</li>
+                <li>Large ZIP-based sets can still transition less smoothly than normal folders.</li>
+                <li>Very heavy image sets may still look less smooth than normal folders.</li>
                 </ul>
                 <h3>Install / Update</h3>
                 <ol>
-                    <li>Download <code>SnapView-0.10.0.dmg</code>.</li>
-                    <li>Drag <code>SnapView.app</code> into <code>Applications</code>.</li>
-                    <li>Replace the previous version if needed.</li>
-                    <li>Future updates are checked automatically and shown with a user confirmation prompt.</li>
+                <li>Download <code>SnapView-0.10.0.dmg</code>.</li>
+                <li>Drag <code>SnapView.app</code> into <code>Applications</code>.</li>
+                <li>Replace the previous version if needed.</li>
+                <li>Future updates are checked automatically and shown with a user confirmation prompt.</li>
                 </ol>
                 <h3>Notes</h3>
                 <ul>
-                    <li>This release introduced slideshow as a new fullscreen review mode.</li>
+                <li>This release introduced slideshow as a new fullscreen review mode.</li>
                 </ul>
+
             </div>
         </section>
 

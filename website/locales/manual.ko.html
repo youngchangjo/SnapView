@@ -1,590 +1,746 @@
-                <h1>SnapView 사용자 매뉴얼</h1>
-                <p class="subtitle">이 문서는 SnapView를 처음 사용하는 사용자가 설치부터 선별 작업까지 혼자 진행할 수 있도록 만든 실사용 안내서입니다.</p>
-
-                <h2>1. SnapView가 무엇인가요?</h2>
-                <ul>
-                    <li>SnapView는 macOS용 초고속 이미지 뷰어입니다.</li>
-                    <li>무거운 카탈로그 생성 없이 폴더/ZIP을 바로 열어 빠르게 감상하고 선별할 수 있습니다.</li>
-                    <li>Lightroom 같은 편집 도구를 대체하기보다, 그 전에 빠르게 보고 고르는 단계에 집중합니다.</li>
-                </ul>
-
-                <h2>2. 이런 분께 추천합니다</h2>
-                <ul>
-                    <li>여행/일상/가족 사진을 많이 찍는 분</li>
-                    <li>RAW 파일도 보지만 무거운 워크플로우가 부담스러운 분</li>
-                    <li>빠르게 훑고 좋은 컷만 남기고 싶은 분</li>
-                    <li>폴더 기반으로 간단히 관리하고 싶은 분</li>
-                </ul>
-
-                <h2>3. 설치와 첫 실행</h2>
-
-                <h3>3.0 배포 채널 선택 (중요)</h3>
-                <ul>
-                    <li>Mac App Store 버전은 sandbox 안정판 채널입니다.</li>
-                    <li>DMG 버전은 직접 다운로드 채널이며, 빠른 배포와 Sparkle 업데이트 흐름을 사용합니다.</li>
-                    <li>DMG 버전은 단일 유니버설 앱으로 제공되며 Apple Silicon과 Intel Mac을 같은 다운로드로 지원합니다.</li>
-                </ul>
-
-                <h3>3.1 설치</h3>
-                <p>채널별 설치 방법은 아래와 같습니다.</p>
-                <ol>
-                    <li><strong>DMG 채널(Fast)</strong>: 릴리즈에서 <code>SnapView.dmg</code>를 내려받아 <code>SnapView.app</code>을 <code>Applications</code>로 드래그해 설치합니다.</li>
-                    <li><strong>Mac App Store 채널(Stable)</strong>: Mac App Store에서 SnapView를 설치합니다.</li>
-                    <li>DMG 채널은 Apple Silicon과 Intel Mac을 포함한 단일 유니버설 앱으로 제공합니다.</li>
-                </ol>
-
-                <h3>3.2 처음 실행 시</h3>
-                <ul>
-                    <li>최신 DMG와 Mac App Store 릴리즈는 Apple Developer ID 서명과 공증을 거치므로 일반 설치 흐름에서 macOS 보안 경고가 뜨지 않는 것이 정상입니다.</li>
-                    <li>보안 경고가 계속 보이면 오래된 파일이나 손상된 다운로드일 수 있으므로 최신 DMG를 다시 내려받거나 Mac App Store 버전을 설치해 주세요.</li>
-                    <li>첫 실행 화면에서 기본 이미지 앱 등록 제안을 볼 수 있습니다.</li>
-                    <li>원치 않으면 건너뛰어도 사용에 문제 없습니다.</li>
-                </ul>
-
-                <h2>4. 5분 빠른 시작</h2>
-                <ol>
-                    <li><img src="assets/icons/view-main.svg" class="inline-icon" alt=""> <code>열기(Open)</code>로 폴더 또는 ZIP 파일을 엽니다.</li>
-                    <li><img src="assets/icons/view-grid.svg" class="inline-icon" alt=""> <img src="assets/icons/view-main.svg" class="inline-icon" alt=""> <img src="assets/icons/view-filmstrip.svg" class="inline-icon" alt=""> <img src="assets/icons/view-manage.svg" class="inline-icon" alt=""> <code>Q/W/E/R</code>로 뷰 모드를 바꾸고, <code>T</code>로 Navigator를 켜고 끕니다. 정리용 레이아웃이 필요하면 <code>Tab</code>으로 프로 레이아웃 뷰를 엽니다.</li>
-                    <li>파일명에 숫자가 들어간 경우 Finder식 자연 정렬을 사용하므로 <code>클리앙-1</code>, <code>클리앙-2</code>, <code>클리앙-10</code> 순서로 이동합니다.</li>
-                    <li><code>좌/우 화살표</code>로 넘기며 확인합니다.</li>
-                    <li>만화 폴더나 ZIP은 <code>B</code>로 Comic Reading에 들어가고, 일반 사진 검토로 돌아오려면 다시 <code>B</code>를 누릅니다.</li>
-                    <li>좋은 컷은 <img src="assets/icons/star-filled.svg" class="inline-icon" alt=""> <code>1~5</code>로 별점, 불필요한 컷은 <img src="assets/icons/reject.svg" class="inline-icon" alt=""> <code>X</code>로 Reject 표시합니다.</li>
-                    <li>반복 복사/이동이 필요하면 빠른 정리 프리셋을 사용합니다. SnapView 2.0에서는 보이는 빠른 정리 프리셋을 3개까지 제공합니다.</li>
-                    <li>Lightroom과 함께 쓰는 경우, SnapView에서 준 별점/Pick/Reject가 XMP sidecar 기준으로 그대로 이어집니다.</li>
-                    <li>Finder에서도 결과를 바로 보고 싶다면 태그를 함께 적용합니다. SnapView는 Finder의 7색 태그(빨간색/주황색/노란색/초록색/파란색/보라색/회색)를 그대로 따릅니다.</li>
-                    <li>현재 보고 있는 파일을 Finder에서 바로 찾고 싶으면 <code>Cmd + Return</code> 또는 메뉴의 <code>Show in Finder</code>를 사용합니다.</li>
-                    <li>비교가 필요하면 <img src="assets/icons/compare.svg" class="inline-icon" alt=""> <code>C</code>로 Compare 모드에서 1~4장 비교합니다.</li>
-                    <li><code>Delete</code>로 삭제하거나 <code>Cmd+C</code>로 복사해 정리합니다.</li>
-                    <li>완전히 동일한 파일 정리는 <code>Cmd+Shift+D</code>로 중복사진정리에서 처리합니다.</li>
-                    <li>동영상이 섞인 폴더는 사진과 함께 넘겨보고, <code>Space</code>로 재생/일시정지합니다. 재생이 끝난 뒤에도 <code>Space</code> 또는 재생 버튼으로 처음부터 다시 재생할 수 있고, <code>Option + ←/→</code>로 5초 단위 탐색을 할 수 있습니다.</li>
-                    <li>공유용 작은 복사본이 필요하면 <code>이미지 내보내기</code>에서 JPEG/PNG와 프리셋 크기를 선택합니다.</li>
-                </ol>
-
-                <h3>4.1 주요 기능 한눈에 보기</h3>
-                <ul>
-                    <li><code>Q/W/E/R/T + Tab</code>: Grid, Main View, 가로 Filmstrip, 세로 Filmstrip, Navigator, 프로 레이아웃 뷰를 빠르게 전환합니다.</li>
-                    <li><code>B</code>: Comic Reading으로 폴더나 ZIP을 읽기 화면으로 전환합니다. 읽기 방향과 Webtoon 선택은 리더 HUD에서만 바꿉니다.</li>
-                    <li><code>M</code>: GPS가 있는 사진의 지도 오버레이를 표시합니다.</li>
-                    <li><code>K</code>: Quick Check, 상세 EXIF, 히스토그램을 함께 열어 사진 상태를 빠르게 점검합니다.</li>
-                    <li><code>C</code>: Compare에서 1~4장을 비교하거나 Reference 모드로 기준 사진과 후보 사진을 순차 비교합니다.</li>
-                    <li><code>Cmd+Shift+D</code>: 중복사진정리에서 완전히 같은 파일 또는 유사 컷 후보를 검토합니다.</li>
-                    <li>빠른 정리: 선택한 파일을 자주 쓰는 폴더로 복사/이동합니다. SnapView 2.0에서는 보이는 프리셋을 3개까지 제공합니다.</li>
-                    <li>Batch Actions: JPEG/PNG 변환, 메타데이터 제거, 이름 변경, 복사/이동을 레시피로 묶어 미리보기 후 실행합니다. SnapView 2.0에서는 보이는 레시피를 3개까지 제공합니다.</li>
-                    <li>Action Strip과 Info Strip은 일반 설정에서 <code>Off</code> / <code>Full</code> 중심으로 선택합니다. 프로 레이아웃 뷰에서는 Main View의 <code>I</code> 정보 오버레이 대신 액션/정보 스트립을 우선합니다.</li>
-                    <li>설정 상단의 <code>SnapView 시작하기</code>에서 첫 실행 보기 설정 흐름을 다시 열 수 있습니다.</li>
-                </ul>
-
-                <h2>5. 화면 구성 이해하기</h2>
-                <ul>
-                    <li><strong>상단 툴바</strong>: 열기, 이전/다음, 뷰 모드 전환<img src="assets/icons/view-grid.svg" class="inline-icon" alt="">, 줌, 정보<img src="assets/icons/info.svg" class="inline-icon" alt="">/퀵체크<img src="assets/icons/quickcheck.svg" class="inline-icon" alt="">/히스토그램<img src="assets/icons/histogram.svg" class="inline-icon" alt=""> 토글, 선별 액션</li>
-                    <li><strong>중앙 캔버스</strong>: 현재 이미지 표시</li>
-                    <li><strong>모드별 보조 영역</strong>:
-                        <ul>
-                            <li>Grid: 썸네일 격자</li>
-                            <li>Filmstrip/프로 레이아웃 뷰: 하단 또는 사이드 영역에서 연속 탐색</li>
-                            <li>상세 EXIF/Quick Check 패널: 정보 분석용</li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <h2>6. 뷰 모드별 사용법</h2>
-                <h3>6.1 Main View (<img src="assets/icons/view-main.svg" class="inline-icon" alt=""> <code>W</code>)</h3>
-                <ul>
-                    <li>한 장에 집중해서 확인할 때 사용합니다.</li>
-                    <li><code>0</code>으로 Fit, <code>9</code>로 100%를 빠르게 전환합니다.</li>
-                    <li><img src="assets/icons/info.svg" class="inline-icon" alt=""> <code>I</code>로 간단 정보 오버레이를 켜고 끌 수 있습니다.</li>
-                    <li>큰 이미지를 열 때 로딩으로 인해 이전 작업이 끊기지 않습니다.</li>
-                    <li>지원되지 않는 포맷이거나 너무 커서 바로 열리지 않는 이미지는 화면 안내에 따라 <code>안전하게 열기</code>를 눌러 확인해 보세요.</li>
-                </ul>
-
-                <h3>6.2 Grid View (<img src="assets/icons/view-grid.svg" class="inline-icon" alt=""> <code>Q</code>)</h3>
-                <ul>
-                    <li>많은 사진을 한 번에 훑을 때 사용합니다.</li>
-                    <li>화살표/마우스로 빠르게 이동하고 여러 장을 선택할 수 있습니다.</li>
-                    <li><code>=</code>/<code>-</code>로 썸네일 크기를 조절해 밀도를 맞춥니다.</li>
-                </ul>
-
-                <h3>6.3 Filmstrip View (<img src="assets/icons/view-filmstrip.svg" class="inline-icon" alt=""> <code>E</code>)</h3>
-                <ul>
-                    <li>메인 이미지 + 연속 스트립으로 흐름을 유지하며 볼 때 좋습니다.</li>
-                    <li>연사/유사 컷을 빠르게 넘기며 감으로 선별하기 좋습니다.</li>
-                    <li>동영상이 포함된 폴더에서는 사진과 같은 흐름으로 동영상을 확인하고 재생할 수 있습니다.</li>
-                </ul>
-
-                <h3>6.4 세로 Filmstrip / Navigator / 프로 레이아웃 뷰 (<img src="assets/icons/view-manage.svg" class="inline-icon" alt=""> <code>R</code>)</h3>
-                <ul>
-                    <li>폴더/필터/선택 상태를 보며 정리할 때 사용합니다.</li>
-                    <li>별점/플래그/태그를 적용하고 필터링해 결과를 정돈합니다.</li>
-                    <li>Lightroom과 함께 사용하는 경우, SnapView에서 끝낸 1차 선별 결과를 sidecar(XMP) 기준으로 그대로 넘기기 좋습니다.</li>
-                    <li>폴더 태그를 같이 쓰면 SnapView 밖에서도 Finder 기준 폴더 단위 정리 상태가 즉시 보입니다.</li>
-                    <li>관리뷰 왼쪽 네비게이터에서는 폴더 row의 색상 점과 <code>폴더 태그</code> 필터로 현재 작업 상태를 빠르게 좁힐 수 있습니다.</li>
-                    <li>동영상 파일도 사진과 같은 목록 안에서 확인하고 재생할 수 있습니다.</li>
-                </ul>
-
-                <h3>6.5 중복사진정리 Duplicate (<code>Cmd+Shift+D</code>)</h3>
-                <ul>
-                    <li>상단에서 <code>Exact</code>와 <code>Same Photo</code>를 전환할 수 있습니다.</li>
-                    <li><code>Exact</code>는 현재 소스에서 <strong>완전히 동일한 파일</strong>만 그룹으로 보여줍니다.</li>
-                    <li><code>Same Photo</code>는 용량/해상도/포맷이 달라도 같은 컷으로 보이는 사진을 검토용으로 묶습니다.</li>
-                    <li>좌측 그룹 목록에서 항목 수/절감 용량을 보고 그룹을 선택합니다.</li>
-                    <li>행 오른쪽의 미니 썸네일(<code>5x2</code>, 최대 10칸 + <code>+N</code>)로 그룹 구성을 빠르게 확인할 수 있습니다.</li>
-                    <li>상단 정렬/필터(정렬, 멤버 수, 날짜)로 먼저 범위를 좁히고 작업하면 안전합니다.</li>
-                    <li>그룹이 4장 이하면 중앙 메인 영역에서 바로 다중 비교하고, 5장 이상이면 하단 스트립이 추가로 표시됩니다.</li>
-                    <li>기준이미지는 <code>기준이미지로 지정</code>으로 변경할 수 있고, 각 카드의 <code>X</code>로 개별 즉시 삭제할 수 있습니다.</li>
-                    <li>우측 <code>처리</code> 패널에서 <code>Exact</code> 모드일 때만 <code>현재이미지 병합</code> / <code>중복사진 일괄 정리</code> / <code>삭제 되돌리기</code>를 수행합니다.</li>
-                    <li><code>Same Photo</code>는 검토/비교 중심 모드이며 자동 병합과 일괄 정리는 제공하지 않습니다.</li>
-                    <li><code>삭제 되돌리기(⌘Z)</code>는 직전에 삭제한 사진 그룹만 복원합니다.</li>
-                </ul>
-
-                <h3>6.6 슬라이드쇼 (<code>Shift + Enter</code>)</h3>
-                <ul>
-                    <li>슬라이드쇼는 <code>전체화면</code>으로 실행됩니다.</li>
-                    <li>기본 시작/종료 키는 <code>Shift + Enter</code>입니다.</li>
-                    <li><code>Shift + Space</code>는 레거시 호환용으로 남아 있지만, 한국어 입력 환경에서는 <code>Shift + Enter</code> 쪽이 더 안정적입니다.</li>
-                    <li>기본값은 <code>진입 시 바로 재생</code> ON이라 시작과 동시에 재생되고, 설정에서 끄면 전체화면 진입 직후 일시정지 상태로 시작합니다.</li>
-                    <li>현재 화면에 표시되고 있는 사진 결과를 기준으로 슬라이드쇼가 시작됩니다.</li>
-                    <li><code>Compare</code>와 <code>중복사진정리</code>에서는 시작하지 않습니다.</li>
-                    <li>시작 직후 상단 중앙에 <code>무엇이 재생되는지</code>를 보여주는 scope chip이 잠깐 나타나고, 좌상단에는 현재 위치 배지가 보입니다.</li>
-                    <li>하단 재생 컨트롤 도구(HUD)는 항상 화면에 보입니다.
-                        <ul>
-                            <li>이전 / 재생·일시정지 / 다음</li>
-                            <li>속도 (<code>3초</code>처럼 현재 선택값 표시)</li>
-                            <li>전환 (<code>하드 컷</code>, <code>크로스페이드</code>, <code>블랙 페이드</code> 같은 현재 선택값 표시)</li>
-                            <li>루프 (원형 아이콘 토글)</li>
-                            <li>셔플 (원형 아이콘 토글)</li>
-                            <li>작은 이미지 확대 (원형 아이콘 토글)</li>
-                            <li>종료</li>
-                        </ul>
-                    </li>
-                    <li>재생 중 1.2초 정도 입력이 없으면 커서는 자동으로 숨겨질 수 있습니다.</li>
-                    <li>슬라이드쇼 중에는 재생 전용 키가 우선이므로, 별점 / Pick / Reject / 태그 편집은 하지 않는 것이 기본입니다.</li>
-                    <li>전환은 설정에서 <code>하드 컷</code> / <code>크로스페이드</code> / <code>블랙 페이드</code> 중에서 선택할 수 있습니다.</li>
-                    <li>부드러운 화면 전환을 원하면 <code>크로스페이드</code>를 사용해 보세요.</li>
-                    <li>작은 이미지는 기본적으로 전체화면에 맞게 확대됩니다. 원본 100% 크기로 보고 싶으면 HUD 또는 <code>도구 > 작은 이미지 확대 끄기</code>로 바로 바꿀 수 있습니다.</li>
-                </ul>
-
-                <h2>7. 선별 도구 (가장 많이 쓰는 기능)</h2>
-                <h3>7.1 별점</h3>
-                <ul>
-                    <li><img src="assets/icons/star-filled.svg" class="inline-icon" alt=""> <code>1~5</code>: 별점 부여</li>
-                    <li><img src="assets/icons/star-slash.svg" class="inline-icon" alt=""> <code>0</code> 또는 <code>\</code>(원화키 포함): 별점 해제</li>
-                    <li>별점은 sidecar(XMP)에 저장되어 Lightroom 계열 도구에서도 그대로 이어집니다.</li>
-                    <li>즉, SnapView에서 빠르게 고르고 Lightroom에서 후반 작업하는 흐름에 잘 맞습니다.</li>
-                </ul>
-
-                <h3>7.2 Pick / Reject / Unflag</h3>
-                <ul>
-                    <li><img src="assets/icons/pick.svg" class="inline-icon" alt=""> <code>P</code>: Pick</li>
-                    <li><img src="assets/icons/reject.svg" class="inline-icon" alt=""> <code>X</code>: Reject</li>
-                    <li><img src="assets/icons/unflag.svg" class="inline-icon" alt=""> <code>U</code>: Unflag</li>
-                    <li>Pick/Reject도 sidecar(XMP) 기준으로 저장됩니다.</li>
-                    <li>빠른 선별은 SnapView에서 하고, 선택 결과 확인과 보정은 Lightroom으로 넘기는 방식에 유리합니다.</li>
-                </ul>
-
-                <h3>7.3 Finder 태그</h3>
-                <ul>
-                    <li>SnapView는 Finder의 태그 이름과 색상 순서를 그대로 사용합니다.</li>
-                    <li>지원 색상은 <code>빨간색 / 주황색 / 노란색 / 초록색 / 파란색 / 보라색 / 회색</code>입니다.</li>
-                    <li>파일 태그는 Finder와 연동되어 macOS Finder에서도 같은 색과 이름으로 보입니다.</li>
-                    <li>Finder에서 태그 이름을 바꾸면 SnapView도 새로고침 후 같은 이름으로 보입니다.</li>
-                    <li>관리뷰에서는 폴더 태그도 지원합니다.
-                        <ul>
-                            <li>네비게이터 row 우클릭 -> <code>태그</code></li>
-                            <li>네비게이터 헤더의 <code>폴더 태그</code> 필터</li>
-                            <li>메인뷰 정보 오버레이의 현재 폴더 태그 배지</li>
-                            <li>메인뷰 우클릭 메뉴의 <code>현재 폴더 태그</code></li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <h3>7.4 Lightroom / Finder 연동</h3>
-                <ul>
-                    <li>Lightroom과는 <code>별점 / Pick / Reject</code>를 XMP sidecar 기준으로 연동합니다.</li>
-                    <li>Finder와는 <code>태그(색상 포함)</code>를 연동합니다.</li>
-                    <li>SnapView의 강점은 여기서 드러납니다. 빠른 선별은 SnapView에서 끝내고, 결과는 Lightroom과 Finder에서 그대로 이어서 사용할 수 있습니다.</li>
-                    <li>즉, 별점/플래그는 Lightroom 워크플로우와 연결되고, Finder 태그는 macOS 파일 관리와 연결됩니다.</li>
-                </ul>
-
-                <h3>7.6 슬라이드쇼 전용 키</h3>
-                <ul>
-                    <li><code>Shift + Enter</code>: 시작 / 종료</li>
-                    <li><code>Shift + Space</code>: 레거시 시작 / 종료 호환</li>
-                    <li><code>Space</code>: 슬라이드쇼 활성 중 재생 / 일시정지</li>
-                    <li><code>Esc</code>: 종료</li>
-                    <li><code>← / →</code>: 이전 / 다음</li>
-                    <li><code>[</code> / <code>]</code>: 느리게 / 빠르게</li>
-                    <li><code>L</code>: 루프 토글</li>
-                    <li><code>S</code>: 셔플 토글</li>
-                    <li><img src="assets/icons/info.svg" class="inline-icon" alt=""> <code>I</code>: 정보 오버레이 토글</li>
-                    <li><code>0</code>: Fit 재적용</li>
-                    <li>전환 종류는 HUD 메뉴에서 <code>하드 컷</code> / <code>크로스페이드</code> / <code>블랙 페이드</code> 중 선택합니다.</li>
-                </ul>
-
-                <h3>7.6 복사/삭제/이동</h3>
-                <ul>
-                    <li><code>Cmd+C</code>: 선택 항목 복사</li>
-                    <li><code>Cmd+V</code>: 붙여넣기 (Grid/사진관리모드에서 주로 사용)</li>
-                    <li><code>Delete</code> 또는 <code>D</code>: 삭제</li>
-                    <li><code>Cmd+Delete</code>: 확인 없이 휴지통으로 이동</li>
-                    <li>설정 &gt; 일반의 <code>삭제 확인 없이 휴지통으로 이동</code>을 켜면 <code>Delete</code> 또는 <code>Backspace</code>도 확인창 없이 macOS 휴지통으로 이동합니다.</li>
-                    <li>확인 없는 삭제 옵션은 기본 꺼짐이며, 영구 삭제를 수행하지 않습니다.</li>
-                    <li><code>Move to Folder</code>: 현재 이미지 또는 명시 선택 항목을 앱 내부에서 지정 폴더로 이동합니다.</li>
-                    <li>Grid/프로 레이아웃 뷰에서는 사용자가 명시 선택한 항목이 파일 작업 대상입니다. 선택이 없을 때만 현재 항목을 대상으로 삼습니다.</li>
-                </ul>
-
-                <h3>7.7 외부 앱으로 열기</h3>
-                <ul>
-                    <li><code>다른 앱으로 열기…</code>는 현재 파일을 외부 앱으로 엽니다.</li>
-                    <li>같은 확장자 그룹에 대해 이전에 선택한 앱이 있으면 그 앱으로 바로 열고, 저장된 앱이 없으면 앱 선택창을 표시합니다.</li>
-                    <li><code>Cmd + Option + O</code>는 저장된 앱과 관계없이 앱 선택창을 직접 엽니다.</li>
-                    <li>RAW+JPG 페어는 설정 &gt; 일반 &gt; <code>외부 앱으로 열 RAW+JPG 대상</code>에서 RAW 우선 또는 JPG 우선으로 선택할 수 있습니다.</li>
-                    <li>기본값은 RAW 우선입니다.</li>
-                    <li>ZIP 내부 항목은 외부 앱 열기 미지원입니다.</li>
-                </ul>
-
-                <h3>7.8 파일명 변경 (<code>F2</code> / <code>Rename…</code>)</h3>
-                <ul>
-                    <li>Main/Grid/Filmstrip/Compare 어디서든 <code>F2</code> 또는 메뉴 <code>Rename…</code>로 현재 파일명을 변경할 수 있습니다.</li>
-                    <li>ZIP 내부 항목은 실제 파일 시스템 대상이 아니므로 이름 변경을 지원하지 않습니다.</li>
-                    <li>확장자는 유지되며, basename만 변경됩니다.</li>
-                    <li>설정 &gt; Navigation의 <code>파일명 변경 후 재정렬(Resort After Rename)</code>이 켜져 있으면 rename 직후 현재 정렬 규칙으로 목록을 재평가하고 변경한 파일을 다시 선택합니다.</li>
-                    <li>옵션이 꺼져 있으면 현재 목록 순서를 최대한 유지한 채 파일명/경로만 갱신합니다.</li>
-                </ul>
-
-                <h3>7.9 촬영 시각과 위치 정보 편집</h3>
-                <ul>
-                    <li>지원되는 사진에서는 상세 정보 패널의 <code>촬영시각/GPS</code> 편집 버튼으로 날짜, 시간, 위치 정보를 수정할 수 있습니다.</li>
-                    <li>원본 파일에 안전하게 쓸 수 없는 형식이나 위치에서는 편집을 막고 안내를 표시합니다.</li>
-                    <li>동영상, ZIP 내부 항목, 접근 권한이 없는 파일은 메타데이터 편집 대상에서 제외될 수 있습니다.</li>
-                    <li>위치 정보를 고칠 때는 지도나 주소 검색 결과를 다시 확인한 뒤 저장하는 것을 권장합니다.</li>
-                </ul>
-
-                <h3>7.10 빠른 정리 프리셋</h3>
-                <ul>
-                    <li>빠른 정리는 <code>현재 이미지</code> 또는 <code>선택한 항목</code>을 자주 쓰는 폴더로 빠르게 복사/이동하는 기능입니다.</li>
-                    <li>사진을 보면서 Pick, 별점 5, 보관 폴더 같은 반복 분류를 빠르게 처리할 때 사용합니다.</li>
-                    <li>SnapView 2.0에서는 화면에 보이는 빠른 정리 프리셋을 최대 3개까지 제공합니다.</li>
-                    <li>프리셋마다 이름, 대상 폴더, 복사/이동 방식을 정할 수 있습니다.</li>
-                    <li><code>Option+1</code>부터 <code>Option+3</code>까지는 보이는 빠른 정리 프리셋을 실행하는 단축키입니다.</li>
-                    <li>실행 전에는 대상 파일과 저장 위치를 확인하는 미리보기를 거치므로, 의도하지 않은 대량 이동을 줄일 수 있습니다.</li>
-                    <li>RAW+JPG 묶음 관리가 켜져 있으면 연결된 파일도 같은 정리 계획에 포함될 수 있습니다.</li>
-                    <li>자동 정리 규칙은 SnapView 2.0 표면에서 Pick과 별점 5 중심으로 제공합니다.</li>
-                </ul>
-
-                <h3>7.11 Batch Actions</h3>
-                <ul>
-                    <li>Batch Actions는 여러 작업을 하나의 레시피로 묶어 JPEG/PNG 변환, 메타데이터 제거, 이름 변경, 복사/이동을 한 번에 실행하는 기능입니다.</li>
-                    <li>빠른 정리가 <code>폴더로 보내기</code> 중심이라면, Batch Actions는 <code>변환/정리/이름 변경/저장</code>을 함께 처리하는 흐름입니다.</li>
-                    <li>SnapView 2.0에서는 화면에 보이는 Batch Actions 레시피를 최대 3개까지 제공합니다.</li>
-                    <li>기본 레시피 예시는 웹 공유용 JPEG처럼 자주 쓰는 변환 작업을 빠르게 시작하기 위한 출발점입니다.</li>
-                    <li>실행 전에는 저장 위치를 선택하고 <code>결과 미리보기</code>로 예상 파일명, 처리 개수, 건너뛰는 항목, 경고를 확인합니다.</li>
-                    <li>미리보기 이후 레시피, 대상, 저장 위치를 바꾸면 다시 미리보기를 갱신한 뒤 실행해야 합니다.</li>
-                    <li>실행 중에는 일시정지, 재개, 취소를 사용할 수 있고, 최근 실행 기록에서 결과 폴더 열기, 상세 보기, 재시도를 할 수 있습니다.</li>
-                    <li>원본 이동이나 덮어쓰기처럼 되돌리기 어려운 작업은 별도 확인을 거칩니다.</li>
-                </ul>
-
-                <h2>8. Quick Check와 Compare 사용법</h2>
-                <h3>8.1 Quick Check</h3>
-                <ul>
-                    <li><img src="assets/icons/quickcheck.svg" class="inline-icon" alt=""> <code>K</code>로 Quick Check 세트를 켭니다.</li>
-                    <li>Quick Check 세트는 <code>Quick Check + 상세 EXIF + 히스토그램</code>을 함께 켜는 빠른 점검 모드입니다.</li>
-                    <li>점수와 경고 원인(초점/노출/눈감음/구도 등)을 확인합니다.</li>
-                    <li>Quick Check는 보조 도구이며 최종 선택은 사용자가 합니다.</li>
-                    <li>OCR 옵션을 켜면 Quick Check에서 사진 속 문자를 인식할 수 있습니다. 자동 OCR은 기본값이 꺼짐이며, 필요할 때만 켜는 것을 권장합니다.</li>
-                    <li>인식된 텍스트 하이라이트에 마우스를 올리면 텍스트를 확인할 수 있고, 클릭하면 클립보드에 복사됩니다.</li>
-                </ul>
-
-                <h3>8.2 Compare 모드</h3>
-                <ul>
-                    <li><img src="assets/icons/compare.svg" class="inline-icon" alt=""> <code>C</code>로 Compare 모드 진입/종료</li>
-                    <li>기본 <code>Selection</code> 모드에서는 1~4장을 나란히 비교해 한 장을 고릅니다.</li>
-                    <li>Compare 모드 안에서 <code>R</code>을 누르면 <code>Selection</code>과 <code>Reference</code>를 전환할 수 있습니다.</li>
-                    <li>Compare 상단에는 <code>Selection / Reference</code> 세그먼트와 상태 텍스트가 표시되어 현재 비교 문맥을 바로 확인할 수 있습니다.</li>
-                    <li><code>Reference</code> 모드에서는 한 장을 기준으로 고정하고, 다른 후보를 좌/우로 넘기며 순차 비교할 수 있습니다.</li>
-                    <li><code>Reference</code> 모드에서는 <code>Tab</code>으로 기준/후보 포커스를 전환할 수 있습니다.</li>
-                    <li><code>Reference</code> 모드에서 <code>↑</code>는 기준 포커스, <code>↓</code>는 후보 포커스로 즉시 지정합니다.</li>
-                    <li><code>Reference</code> 모드에서 <code>←</code>/<code>→</code>는 현재 포커스된 패널(기준 또는 후보) 이미지를 이동합니다.</li>
-                    <li>Reference 모드의 평점/픽/리젝트/태그/삭제는 현재 포커스된 패널(기준 또는 후보)에만 적용됩니다.</li>
-                    <li>Compare 삭제 확인 팝업에서 취소하면 비교 모드와 포커스 상태가 유지됩니다.</li>
-                    <li>새 소스(다른 파일/ZIP)로 전환하면 이전 Compare 상태는 자동으로 정리됩니다. 단, <code>Resume Last Session</code> 설정이 켜져 있고 같은 소스를 다시 열면 마지막 세션을 복원할 수 있습니다.</li>
-                    <li>확대해서 디테일까지 확인할 수 있습니다.</li>
-                </ul>
-
-                <h3>8.3 중복사진정리</h3>
-                <ul>
-                    <li><code>Cmd+Shift+D</code>: 중복 모드 진입(모드 내에서는 재스캔)</li>
-                    <li><code>Shift+D</code> 또는 <code>ESC</code>: 중복 모드 종료</li>
-                    <li><code>←</code> / <code>→</code>: 이전/다음 중복 그룹 이동</li>
-                    <li><code>Cmd+←</code> / <code>Cmd+→</code>: 이전/다음 중복 그룹 이동</li>
-                    <li><code>P</code>: 현재 이미지를 기준이미지(Keep)로 지정</li>
-                    <li>우측 패널 하단에서 마지막 삭제를 <code>Cmd+Z</code>로 되돌릴 수 있습니다.</li>
-                </ul>
-
-                <h2>9. 설정과 동작 이해하기</h2>
-                <h3>9.1 디코딩 모드</h3>
-                <ul>
-                    <li><code>속도 우선</code>: 빠른 탐색이 우선입니다. 기본적으로 더 작은 리사이즈 이미지를 먼저 보여줍니다.</li>
-                    <li><code>보통</code>: 일반적인 추천값입니다. 기본은 리사이즈 이미지로 보고, 확대를 할 때 필요한 해상도로 점진적으로 화질을 올립니다.</li>
-                    <li><code>화질 최우선</code>: 가능한 한 높은 해상도를 우선합니다. 화질 확인이 가장 중요할 때 적합합니다.</li>
-                </ul>
-
-                <h4 style="font-family: var(--font-body); font-size: 18px; margin-top: 24px; margin-bottom: 12px; color: var(--text-primary);">9.1.1 느린 저장장치 및 대형 이미지 동작 안내</h4>
-                <ul>
-                    <li>느린 네트워크나 외장하드에서는 스냅뷰가 버벅임을 방지하기 위해 사용자가 알아채지 못하게 화면 너머의 백그라운드 작업량을 자동으로 조절합니다.</li>
-                    <li>열리지 않는 손상된 포맷이나 너무 큰 대형 이미지의 경우, 화면에 나타나는 안내에 따라 <code>안전하게 열기</code> 버튼을 눌러 수동으로 이미지를 확인할 수 있습니다.</li>
-                </ul>
-
-                <h3>9.2 빠른 키보드 이동 프리뷰</h3>
-                <ul>
-                    <li><code>Off</code>: 빠른 이동 중 프리뷰를 쓰지 않습니다.</li>
-                    <li><code>Auto</code>: 일반적인 추천값입니다. 상황에 따라 프리뷰를 사용해 이동 체감을 부드럽게 만듭니다.</li>
-                    <li><code>Aggressive</code>: 빠른 연속 이동에서 프리뷰를 더 적극적으로 사용합니다.</li>
-                </ul>
-                <p>이 설정은 연속 이동 체감에 영향을 주며, 사진을 한 장씩 천천히 보는 경우보다 빠르게 넘길 때 차이가 큽니다.</p>
-
-                <h3>9.3 정보 오버레이 토글</h3>
-                <ul>
-                    <li><img src="assets/icons/info.svg" class="inline-icon" alt=""> <code>I</code>: 파일 정보/EXIF 표시</li>
-                    <li><img src="assets/icons/histogram.svg" class="inline-icon" alt=""> <code>H</code>: 히스토그램 토글</li>
-                    <li><img src="assets/icons/quickcheck.svg" class="inline-icon" alt=""> <code>K</code>: Quick Check 세트 토글</li>
-                </ul>
-                <p>즉, <code>K</code>는 Quick Check만 따로 켜는 것이 아니라 점검에 필요한 정보 패널을 한 번에 여는 용도입니다.</p>
-
-                <h3>9.4 오버레이 가독성 / 별점 UI</h3>
-                <ul>
-                    <li>설정 &gt; 일반에서 <code>오버레이 텍스트 그림자</code>를 <code>기본 / 강하게 / 자동</code>으로 고를 수 있습니다.</li>
-                    <li><code>자동</code>은 밝은 이미지에서만 그림자를 더 강하게 적용해 파일명과 간단 정보가 더 잘 보이게 합니다.</li>
-                    <li>설정 &gt; 일반에서 <code>별점 UI</code>를 <code>항상 표시 / 자동 / 숨김</code>으로 조절할 수 있습니다.</li>
-                    <li>설정 &gt; 일반에서 별점 UI 아래 <code>사진 수 UI</code>를 <code>현재/전체 / 현재 / 미표기</code>로 조절할 수 있습니다.</li>
-                    <li><code>자동</code>은 별점이 있는 사진에서만 별점 UI가 보입니다.</li>
-                    <li><code>숨김</code>을 써도 <code>1~5</code>, <code>0</code>, <code>\</code>, 메뉴의 별점 기능은 그대로 사용할 수 있습니다.</li>
-                </ul>
-
-                <h3>9.5 창 닫기 동작</h3>
-                <ul>
-                    <li>설정 &gt; 일반에 <code>모든 창을 닫으면 종료</code> 옵션이 있습니다.</li>
-                    <li>기본값은 꺼져 있습니다. 원할 때만 자동 종료로 바꿀 수 있습니다.</li>
-                </ul>
-
-                <h3>9.6 하위 폴더 이미지 포함</h3>
-                <ul>
-                    <li>설정에서 <code>하위 폴더 이미지 포함</code>을 켜면 현재 폴더뿐 아니라 하위 폴더의 이미지도 함께 탐색합니다.</li>
-                    <li>라이브러리 범위가 넓어져 편리하지만, 큰 폴더에서는 초기 스캔 범위와 결과 개수가 달라질 수 있습니다.</li>
-                </ul>
-
-                <h3>9.7 창 열기 정책 / 파일명 변경 후 재정렬</h3>
-                <ul>
-                    <li>설정 &gt; 일반 &gt; <code>창 열기 정책</code>에서 <code>단일 창(재사용)</code> 또는 <code>멀티 창(새 창 열기)</code>를 선택할 수 있습니다.</li>
-                    <li>설정 &gt; Navigation &gt; <code>파일명 변경 후 재정렬</code>을 켜면 rename 직후 목록을 재정렬합니다.</li>
-                </ul>
-
-                <h3>9.8 별점 후 자동 이동</h3>
-                <ul>
-                    <li><code>별점 후 자동 이동</code>을 켜면 별점을 준 뒤 자동으로 다음 사진으로 넘어갑니다.</li>
-                    <li>빠른 1차 선별에서는 매우 유용하고, 세밀하게 비교할 때는 끄는 편이 좋습니다.</li>
-                    <li><code>Cmd+A</code>로도 토글할 수 있습니다.</li>
-                </ul>
-
-                <h3>9.9 컴페어 재진입 동작</h3>
-                <ul>
-                    <li>설정 &gt; Navigation &gt; <code>컴페어 진입 동작</code>에서 진입 정책을 선택할 수 있습니다.</li>
-                    <li><code>현재 선택 기준(Current Context)</code>은 현재 선택/현재 인덱스를 기준으로 컴페어를 시작합니다. (기본값)</li>
-                    <li><code>마지막 세션 복원(Resume Last Session)</code>은 같은 소스(같은 폴더/ZIP)를 다시 열 때 마지막 Compare 구성과 포커스를 복원합니다.</li>
-                </ul>
-
-                <h3>9.10 화면 맨위 고정</h3>
-                <ul>
-                    <li>다른 앱과 함께 비교하거나 Finder/Lightroom과 번갈아 볼 때 유용합니다.</li>
-                    <li><code>Cmd+Shift+T</code>로 빠르게 켜고 끌 수 있습니다.</li>
-                </ul>
-
-                <h3>9.11 Pro JPG / ZIP 해상도</h3>
-                <ul>
-                    <li>Pro 레이아웃에서는 일반 디코딩 모드와 별도로 <code>Pro JPG 해상도</code>, <code>Pro ZIP 해상도</code> 설정이 적용될 수 있습니다.</li>
-                    <li>즉, 일반 모드의 디코딩 우선순위와 Pro 모드의 해상도 정책은 완전히 같은 개념이 아닙니다.</li>
-                </ul>
-
-                <h3>9.12 스크롤 방향과 확대 유지</h3>
-                <ul>
-                    <li>설정 &gt; Navigation에서 마우스 휠 동작을 <code>이전/다음 이미지</code>, <code>스크롤</code>, <code>줌</code> 중 선택할 수 있습니다.</li>
-                    <li><code>자연스러운 스크롤</code>은 Apple 설정과 같은 의미로 동작합니다. 켜면 손가락/휠이 움직이는 방향을 콘텐츠 이동 방향처럼 해석해 이전/다음 방향을 반대로 적용합니다.</li>
-                    <li><code>스크롤 방향 직접 설정</code>을 켜면 자연스러운 스크롤과 별개로 마우스/트랙패드, 상하/좌우 축의 이전/다음 방향을 각각 지정합니다.</li>
-                    <li><code>이미지 이동 시 확대 비율 유지</code>를 켜면 다음 이미지로 넘어가도 현재 확대 비율을 유지합니다. 꺼져 있으면 이미지마다 기본 맞춤 표시로 돌아갑니다.</li>
-                </ul>
-
-                <h3>9.13 다크 배경과 툴팁</h3>
-                <ul>
-                    <li>설정 &gt; 일반에서 다크 모드 뷰어 배경을 완전 검은색으로 바꿀 수 있습니다.</li>
-                    <li>상단 툴바 아이콘 위에 커서를 올리면 해당 버튼의 기능을 툴팁으로 확인할 수 있습니다.</li>
-                </ul>
-
-                <h2>10. ZIP 파일 사용 시 주의점</h2>
-                <ul>
-                    <li>ZIP 내부 이미지도 일반 폴더처럼 탐색할 수 있습니다.</li>
-                    <li>ZIP은 구조 특성상 폴더보다 느릴 수 있습니다.</li>
-                    <li>ZIP 환경에서는 일부 정리 기능이 제한됩니다.</li>
-                    <li>ZIP에서는 별점/Pick/Reject/Finder 태그 저장이 제한됩니다.</li>
-                    <li>ZIP 내부 항목은 실제 파일이 아니므로 Finder 태그 연동 대상이 아닙니다.</li>
-                    <li>ZIP에서는 복사/붙여넣기/삭제가 제한됩니다.</li>
-                    <li>중복사진정리에서 ZIP 항목은 스캔은 가능하지만 삭제 단계에서 자동 건너뜀 처리될 수 있습니다.</li>
-                </ul>
-
-                <h2>11. 성능을 높이는 방법</h2>
-                <ol>
-                    <li>대용량/ZIP 탐색이 느리면 디코딩 모드를 <code>속도 우선</code>으로 변경합니다.</li>
-                    <li>그리드에서는 썸네일 크기를 적당히 줄여 한 화면 밀도를 높입니다.</li>
-                    <li>필요한 오버레이만 켜고(<img src="assets/icons/info.svg" class="inline-icon" alt=""> <code>I</code>, <img src="assets/icons/quickcheck.svg" class="inline-icon" alt=""> <code>K</code>, <img src="assets/icons/histogram.svg" class="inline-icon" alt=""> <code>H</code>) 불필요한 패널은 끕니다.</li>
-                    <li>느린 외장 저장장치에서는 먼저 작은 폴더 단위로 정리합니다.</li>
-                </ol>
-
-                <h2>12. 자주 쓰는 단축키 요약</h2>
-                <ul>
-                    <li>뷰 전환: <code>Q</code> Grid, <code>W</code> Main View, <code>E</code> 가로 Filmstrip, <code>R</code> 세로 Filmstrip, <code>T</code> Navigator, <code>Tab</code> 프로 레이아웃 뷰</li>
-                    <li>중복사진정리: <code>Cmd+Shift+D</code> (진입/재스캔), <code>Shift+D</code> (종료)</li>
-                    <li>비교 모드: <code>C</code></li>
-                    <li>이동: <code>좌/우</code>, <code>상/하</code> = 이전/다음, <code>Cmd+상/하</code> = 처음/끝, <code>⌥+상/하</code> = 이전/다음 폴더 첫 이미지</li>
-                    <li>점프 이동: <code>Cmd+좌/우</code>(10장), <code>Cmd+Shift+좌/우</code>(50장)</li>
-                    <li>줌: <code>=</code> / <code>-</code>, Fit <code>0</code>, 100% <code>9</code></li>
-                    <li>정보 토글: <img src="assets/icons/info.svg" class="inline-icon" alt=""> <code>I</code>(정보), <img src="assets/icons/quickcheck.svg" class="inline-icon" alt=""> <code>K</code>(퀵체크 세트), <img src="assets/icons/histogram.svg" class="inline-icon" alt=""> <code>H</code>(히스토그램), <code>M</code>(지도)</li>
-                    <li>만화책 보기: <code>B</code> (진입/종료)</li>
-                    <li>동영상: <code>Space</code> (재생/일시정지/종료 후 다시 재생), <code>Option+좌/우</code> (5초 탐색)</li>
-                    <li>화면: <code>Enter</code>(전체화면), <code>Cmd+Shift+T</code>(맨위 고정)</li>
-                    <li>선별: <code>1~5</code>, <code>0</code>, <code>P</code>, <code>X</code>, <code>U</code>, <code>Cmd+1~6</code></li>
-                    <li>작업: <code>Cmd+C</code>, <code>Cmd+V</code>, <code>Delete</code>/<code>Backspace</code>/<code>D</code>, <code>Cmd+Delete</code>, <code>Cmd+O</code>, <code>Cmd+Return</code>(<code>Show in Finder</code>), 빠른 정리 <code>Option+1~3</code></li>
-                    <li>선택: <code>Cmd+A</code> (Main=Auto Advance 토글, Grid/프로 레이아웃 뷰=전체 선택)</li>
-                </ul>
-                <p>전체 목록은 <code>docs/release/SHORTCUTS.md</code>를 참고하세요.</p>
-
-                <h2>13. 추천 워크플로우 (실전)</h2>
-                <h3>13.1 여행/일상 사진 빠른 정리</h3>
-                <ol>
-                    <li>Grid(<img src="assets/icons/view-grid.svg" class="inline-icon" alt=""> <code>Q</code>)에서 전체를 훑습니다.</li>
-                    <li>Reject(<img src="assets/icons/reject.svg" class="inline-icon" alt=""> <code>X</code>)를 먼저 표시해 불필요 컷을 줄입니다.</li>
-                    <li>Main(<img src="assets/icons/view-main.svg" class="inline-icon" alt=""> <code>W</code>) 또는 Filmstrip(<img src="assets/icons/view-filmstrip.svg" class="inline-icon" alt=""> <code>E</code>)으로 좋은 컷에 별점 <img src="assets/icons/star-filled.svg" class="inline-icon" alt=""> <code>3~5</code>를 줍니다.</li>
-                    <li>애매한 컷은 Compare(<img src="assets/icons/compare.svg" class="inline-icon" alt=""> <code>C</code>)로 2~4장만 비교합니다.</li>
-                    <li>최종 선택본을 복사/이동해 보관 폴더로 정리합니다.</li>
-                </ol>
-
-                <h3>13.2 RAW+JPG 혼합 촬영 정리</h3>
-                <ol>
-                    <li>폴더를 열고 빠르게 탐색합니다.</li>
-                    <li>Quick Check(<img src="assets/icons/quickcheck.svg" class="inline-icon" alt=""> <code>K</code>)로 문제 컷을 빠르게 찾습니다.</li>
-                    <li>별점/플래그로 선택 결과를 만든 뒤 Manage(<img src="assets/icons/view-manage.svg" class="inline-icon" alt=""> <code>R</code>)에서 필터로 점검합니다.</li>
-                </ol>
-
-                <h3>13.3 Lightroom 연계 선별</h3>
-                <ol>
-                    <li>SnapView에서 <img src="assets/icons/star-filled.svg" class="inline-icon" alt=""> <code>1~5</code>, <img src="assets/icons/pick.svg" class="inline-icon" alt=""> <code>P</code>, <img src="assets/icons/reject.svg" class="inline-icon" alt=""> <code>X</code>, <img src="assets/icons/unflag.svg" class="inline-icon" alt=""> <code>U</code>로 먼저 선별합니다.</li>
-                    <li>이 상태는 sidecar(XMP)에 저장되어 Lightroom 계열 도구에서 이어서 확인할 수 있습니다.</li>
-                    <li>후반 보정은 Lightroom에서 하고, 가장 시간이 많이 드는 1차 선별은 SnapView에서 훨씬 빠르게 끝내는 흐름에 적합합니다.</li>
-                </ol>
-
-                <h3>13.4 Finder 태그 중심 정리</h3>
-                <ol>
-                    <li>SnapView에서 <code>Cmd+1~6</code>으로 Finder 태그를 적용하거나 해제합니다.</li>
-                    <li>Finder에서도 같은 태그 이름과 색상이 보여 폴더 정리와 전달 단계가 쉬워집니다.</li>
-                    <li>SnapView 안에서는 별점/Pick/Reject와 함께 선별하고, Finder 밖에서는 태그로 상태를 즉시 이어갈 수 있습니다.</li>
-                </ol>
-
-                <h3>13.5 중복사진 정리 워크플로우</h3>
-                <ol>
-                    <li><code>Cmd+Shift+D</code>로 중복사진정리 모드에 진입합니다.</li>
-                    <li>좌측 그룹 리스트에서 용량이 큰 그룹부터 선택합니다.</li>
-                    <li><code>P</code>로 기준이미지를 지정한 뒤, 카드 <code>X</code> 또는 우측 <code>현재이미지 병합</code>으로 정리합니다.</li>
-                    <li>여러 그룹을 한 번에 정리할 때는 <code>중복사진 일괄 정리</code>를 사용합니다.</li>
-                    <li>방금 삭제를 되돌려야 하면 즉시 <code>Cmd+Z</code>를 사용합니다.</li>
-                </ol>
-
-                <h2>14. 문제 해결 (FAQ)</h2>
-
-                <h3>Q1. DMG와 Mac App Store 버전은 무엇이 다른가요?</h3>
-                <ul>
-                    <li>Mac App Store 버전은 sandbox 안정판 채널입니다.</li>
-                    <li>DMG 버전은 직접 다운로드 채널이며 Sparkle 업데이트를 사용합니다.</li>
-                    <li>둘 다 같은 SnapView 기능을 기준으로 하지만, 업데이트 배포 속도와 설치 경로가 다릅니다.</li>
-                </ul>
-
-                <h3>Q2. macOS 보안 경고가 뜨나요?</h3>
-                <ul>
-                    <li>최신 릴리즈는 Apple Developer ID 서명과 공증을 거치므로 일반 설치 흐름에서 보안 경고가 뜨지 않는 것이 정상입니다.</li>
-                    <li>경고가 계속 보이면 오래된 DMG, 손상된 다운로드, 개발 빌드일 수 있습니다.</li>
-                    <li>최신 GitHub 릴리즈 DMG를 다시 내려받거나 Mac App Store 버전을 설치해 주세요.</li>
-                </ul>
-
-                <h3>Q3. Apple Silicon과 Intel Mac을 모두 지원하나요?</h3>
-                <ul>
-                    <li>DMG는 Apple Silicon과 Intel Mac을 함께 지원하는 단일 유니버설 앱으로 제공합니다.</li>
-                    <li>Mac App Store 버전도 현재 지원 macOS 기준을 만족하는 Mac에서 설치할 수 있습니다.</li>
-                </ul>
-
-                <h3>Q4. 앱이 열리지만 파일이 안 보입니다</h3>
-                <ul>
-                    <li>지원 포맷인지 확인합니다.</li>
-                    <li>animated <code>gif</code> / <code>webp</code>는 Main View에서만 움직이고, 다른 뷰에서는 첫 프레임만 보일 수 있습니다.</li>
-                    <li>파일 권한 문제면 폴더를 다시 선택해 권한을 허용합니다.</li>
-                </ul>
-
-                <h3>Q5. 키보드 단축키가 안 먹습니다</h3>
-                <ul>
-                    <li>앱 창이 포커스를 가지고 있는지 확인합니다.</li>
-                    <li>다른 입력창(텍스트 필드)에 커서가 있으면 먼저 해제합니다.</li>
-                    <li>이미 다른 창에 포커스가 있으면 먼저 SnapView 창을 한 번 클릭해 주세요.</li>
-                </ul>
-
-                <h3>Q6. ZIP이 느리거나 실패 메시지가 나옵니다</h3>
-                <ul>
-                    <li>손상 ZIP인지 확인합니다.</li>
-                    <li>다시 압축하거나 파일을 다시 받아 테스트합니다.</li>
-                    <li>디코딩 모드를 <code>속도 우선</code>으로 낮춰봅니다.</li>
-                    <li>ZIP 내부 항목은 실제 파일 시스템 항목이 아니므로 Finder 태그, 외부 앱 열기, 일부 저장/삭제 기능이 제한될 수 있습니다.</li>
-                </ul>
-
-                <h3>Q7. 빠른 정리와 Batch Actions는 어떻게 다른가요?</h3>
-                <ul>
-                    <li>빠른 정리는 선택한 파일을 자주 쓰는 폴더로 복사/이동하는 기능입니다.</li>
-                    <li>Batch Actions는 JPEG/PNG 변환, 메타데이터 제거, 이름 변경, 복사/이동을 레시피로 묶어 실행하는 기능입니다.</li>
-                    <li>간단히 폴더로 보내려면 빠른 정리, 변환과 이름 변경까지 함께 하려면 Batch Actions를 사용하세요.</li>
-                </ul>
-
-                <h3>Q8. 빠른 정리 프리셋과 Batch Actions 레시피는 몇 개까지 쓸 수 있나요?</h3>
-                <ul>
-                    <li>SnapView 2.0에서는 보이는 빠른 정리 프리셋을 최대 3개까지 제공합니다.</li>
-                    <li>SnapView 2.0에서는 보이는 Batch Actions 레시피를 최대 3개까지 제공합니다.</li>
-                    <li>자주 쓰는 작업 3개를 먼저 등록해 반복 작업을 단순하게 유지하는 방식입니다.</li>
-                </ul>
-
-                <h3>Q9. RAW+JPG를 같이 찍은 파일은 어떻게 처리되나요?</h3>
-                <ul>
-                    <li>RAW+JPG 묶음 관리가 켜져 있으면 연결된 파일을 하나의 촬영 묶음처럼 다룹니다.</li>
-                    <li>별점/Pick/Reject, 빠른 정리, 삭제, 외부 앱 열기에서 묶음 처리 여부가 영향을 줄 수 있습니다.</li>
-                    <li>외부 편집 앱으로 보낼 때는 설정에서 RAW 우선 또는 JPG 우선을 선택할 수 있습니다.</li>
-                </ul>
-
-                <h3>Q10. Lightroom이나 Finder와 이어서 쓸 수 있나요?</h3>
-                <ul>
-                    <li>별점, Pick, Reject는 XMP sidecar를 기준으로 Lightroom 계열 도구와 이어서 쓸 수 있습니다.</li>
-                    <li>색상 태그는 macOS Finder 태그와 연결됩니다.</li>
-                    <li>SnapView에서 1차 선별을 끝내고 Lightroom 또는 Finder에서 후속 작업을 이어가는 흐름에 맞습니다.</li>
-                </ul>
-
-                <h3>Q11. 아이콘이나 버전 표기가 이상합니다</h3>
-                <ul>
-                    <li>macOS가 이전 아이콘이나 버전 정보를 잠시 캐시할 수 있습니다. SnapView를 완전히 종료한 뒤 다시 실행해 보세요.</li>
-                    <li><code>Applications</code> 폴더에 SnapView가 하나만 있는지 확인하고, DMG 안의 앱이나 오래된 복사본을 실행 중이 아닌지 확인합니다.</li>
-                    <li>DMG 버전은 앱 메뉴의 <code>업데이트 확인(Check for Updates)</code> 또는 최신 DMG 재설치로 확인합니다.</li>
-                    <li>Mac App Store 버전은 App Store의 업데이트 화면에서 최신 버전인지 확인합니다.</li>
-                </ul>
-
-                <h2>15. 업데이트</h2>
-                <ul>
-                    <li><strong>DMG 채널(Fast)</strong>: 앱 메뉴 <code>업데이트 확인(Check for Updates)</code>로 수동/자동 업데이트를 확인합니다. GitHub 릴리즈에서 <code>SnapView.dmg</code>로 수동 업데이트할 수도 있습니다.</li>
-                    <li><strong>Mac App Store 채널(Stable)</strong>: Mac App Store의 업데이트 경로를 따릅니다.</li>
-                    <li>DMG 채널은 별도 Intel 전용 파일 없이 최신 <code>SnapView.dmg</code> 하나로 업데이트합니다.</li>
-                </ul>
-
-                <h2>16. 데이터/안전 관련 참고</h2>
-                <ul>
-                    <li>SnapView는 빠른 보기/선별 중심 도구입니다.</li>
-                    <li>삭제/즉시 삭제 전에는 선택 항목을 한 번 더 확인하세요.</li>
-                    <li>중요한 작업 전에는 원본 백업을 권장합니다.</li>
-                </ul>
+<!-- Generated from docs/product/USER_MANUAL_KO.md. Keep this file synced with the source manual. -->
+<h1>SnapView 사용자 매뉴얼</h1>
+<p>이 문서는 SnapView를 처음 사용하는 사용자가 설치부터 선별 작업까지 혼자 진행할 수 있도록 만든 실사용 안내서입니다.</p>
+<hr />
+<h2>1. SnapView가 무엇인가요?</h2>
+<ul>
+<li>SnapView는 macOS용 초고속 이미지 뷰어입니다.</li>
+<li>무거운 카탈로그 생성 없이 폴더/ZIP을 바로 열어 빠르게 감상하고 선별할 수 있습니다.</li>
+<li>Lightroom 같은 편집 도구를 대체하기보다, 그 전에 빠르게 보고 고르는 단계에 집중합니다.</li>
+</ul>
+<hr />
+<h2>2. 이런 분께 추천합니다</h2>
+<ul>
+<li>여행/일상/가족 사진을 많이 찍는 분</li>
+<li>RAW 파일도 보지만 무거운 워크플로우가 부담스러운 분</li>
+<li>빠르게 훑고 좋은 컷만 남기고 싶은 분</li>
+<li>폴더 기반으로 간단히 관리하고 싶은 분</li>
+</ul>
+<hr />
+<h2>3. 설치와 첫 실행</h2>
+<h3>3.0 배포 채널 선택 (중요)</h3>
+<ul>
+<li>Mac App Store 버전은 sandbox 안정판 채널입니다.</li>
+<li>DMG 버전은 직접 다운로드 채널이며, 빠른 배포와 Sparkle 업데이트 흐름을 사용합니다.</li>
+<li>DMG 버전은 단일 유니버설 앱으로 제공되며 Apple Silicon과 Intel Mac을 같은 다운로드로 지원합니다.</li>
+</ul>
+<h3>3.1 설치</h3>
+<p>채널별 설치 방법은 아래와 같습니다.</p>
+<ol>
+<li><code>DMG 채널(Fast)</code>: 릴리즈에서 <code>SnapView.dmg</code>를 내려받아 <code>SnapView.app</code>을 <code>Applications</code>로 드래그해 설치합니다.</li>
+<li><code>Mac App Store 채널(Stable)</code>: Mac App Store에서 SnapView를 설치합니다.</li>
+<li>DMG 채널은 Apple Silicon과 Intel Mac을 포함한 단일 유니버설 앱으로 제공합니다.</li>
+</ol>
+<h3>3.2 처음 실행 시</h3>
+<ul>
+<li>
+<p>최신 DMG와 Mac App Store 릴리즈는 Apple Developer ID 서명과 공증을 거치므로 일반 설치 흐름에서 macOS 보안 경고가 뜨지 않는 것이 정상입니다.</p>
+</li>
+<li>
+<p>보안 경고가 계속 보이면 오래된 파일이나 손상된 다운로드일 수 있으므로 최신 DMG를 다시 내려받거나 Mac App Store 버전을 설치해 주세요.</p>
+</li>
+<li>
+<p>첫 실행 화면에서 기본 이미지 앱 등록 제안을 볼 수 있습니다.</p>
+</li>
+<li>
+<p>원치 않으면 건너뛰어도 사용에 문제 없습니다.</p>
+</li>
+</ul>
+<hr />
+<h2>4. 5분 빠른 시작</h2>
+<ol>
+<li><code>열기(Open)</code>로 폴더 또는 ZIP 파일을 열거나, 인트로의 <code>Apple 사진</code> 버튼 또는 Navigator의 <code>Apple Photos</code>에서 사진 앱 라이브러리를 엽니다.</li>
+<li><code>Q/W/E/R</code>로 Grid, Main, 가로 Filmstrip, 세로 Filmstrip을 바꾸고, <code>T</code>로 Navigator를 켜고 끕니다. 액션/정보/선별 구성이 필요하면 <code>Tab</code>으로 프로 레이아웃 뷰를 켭니다.</li>
+<li><code>좌/우 화살표</code>로 넘기며 확인합니다.
+<ul>
+<li>파일명에 숫자가 들어간 경우 Finder식 자연 정렬을 사용하므로 <code>클리앙-1</code>, <code>클리앙-2</code>, <code>클리앙-10</code> 순서로 이동합니다.</li>
+</ul>
+</li>
+<li>만화 폴더나 ZIP은 <code>B</code>로 Comic Reading에 들어가고, 일반 사진 검토로 돌아오려면 다시 <code>B</code>를 누릅니다.</li>
+<li>좋은 컷은 <code>1~5</code>로 별점, 불필요한 컷은 <code>X</code>로 Reject 표시합니다.</li>
+<li>반복 복사/이동이 필요하면 빠른 정리 프리셋을 사용합니다. SnapView 2.0에서는 보이는 빠른 정리 프리셋을 3개까지 제공합니다.</li>
+<li>Lightroom과 함께 쓰는 경우, SnapView에서 준 별점/Pick/Reject가 XMP sidecar 기준으로 그대로 이어집니다.</li>
+<li>Finder에서도 결과를 바로 보고 싶다면 태그를 함께 적용합니다. SnapView는 Finder의 7색 태그(빨간색/주황색/노란색/초록색/파란색/보라색/회색)를 그대로 따릅니다.</li>
+<li>현재 보고 있는 파일을 Finder에서 바로 찾고 싶으면 <code>Cmd + Return</code> 또는 메뉴의 <code>Show in Finder</code>를 사용합니다.</li>
+<li>비교가 필요하면 <code>C</code>로 Compare 모드에서 1~4장 비교합니다.</li>
+<li><code>Delete</code>로 삭제하거나 <code>Cmd+C</code>로 복사해 정리합니다.</li>
+<li>완전히 동일한 파일 정리는 <code>Cmd+Shift+D</code>로 중복사진정리에서 처리합니다.</li>
+<li>동영상이 섞인 폴더는 사진과 함께 넘겨보고, <code>Space</code>로 재생/일시정지합니다. 재생이 끝난 뒤에도 <code>Space</code> 또는 재생 버튼으로 처음부터 다시 재생할 수 있고, <code>Option + ←/→</code>로 5초 단위 탐색을 할 수 있습니다.</li>
+<li>공유용 작은 복사본이 필요하면 <code>이미지 내보내기</code>에서 JPEG/PNG와 프리셋 크기를 선택합니다.</li>
+<li>종이 출력이나 PDF가 필요하면 <code>Cmd + P</code>로 macOS 인쇄 패널을 열고, <code>SnapView 이미지</code> 섹션에서 현재 이미지, 선택 이미지, 현재 폴더, 콘택트 시트를 고릅니다.</li>
+</ol>
+<h3>4.1 주요 기능 한눈에 보기</h3>
+<ul>
+<li><code>Q/W/E/R/T + Tab</code>: Grid, Main View, 가로 Filmstrip, 세로 Filmstrip, Navigator, 프로 레이아웃 뷰를 빠르게 전환합니다. 프로레이아웃은 <code>Tab</code>으로 켜는 Action Strip, Info Strip, 셀렉트레이이며 Navigator와 Filmstrip은 프로레이아웃이 아닙니다.</li>
+<li><code>B</code>: Comic Reading으로 폴더나 ZIP을 읽기 화면으로 전환합니다. 읽기 방향과 Webtoon 선택은 리더 HUD에서만 바꿉니다.</li>
+<li><code>M</code>: GPS가 있는 사진의 지도 오버레이를 표시합니다.</li>
+<li>Multi Monitor Workspace는 두 대 이상의 디스플레이에서 보조 작업 공간을 여는 Supporter Pass 혜택입니다. App Store 비활성 상태에서는 항목이 보이지만 disabled로 표시되고, DMG 빌드는 제한 없이 사용할 수 있습니다.</li>
+<li><code>K</code>: Quick Check, 상세 EXIF, 히스토그램을 함께 열어 사진 상태를 빠르게 점검합니다.</li>
+<li>HDR 사진에는 작은 <code>HDR</code> 배지가 표시됩니다. <code>HDR</code> 영역을 누르면 HDR/SDR 표시를 전환하고, 펼치기 버튼을 누르면 자세한 HDR 정보를 확인합니다.</li>
+<li>Apple Photos: 사진 앱의 Library, Favorites, Videos, Screenshots, 앨범을 SnapView 안에서 열고, Photos 항목은 별점/Pick/컬러 대신 좋아요 하트로 표시합니다.</li>
+<li><code>C</code>: Compare에서 1~4장을 비교하거나 Reference 모드로 기준 사진과 후보 사진을 순차 비교합니다.</li>
+<li><code>Cmd+Shift+D</code>: 중복사진정리에서 완전히 같은 파일 또는 유사 컷 후보를 검토합니다.</li>
+<li>빠른 정리: 선택한 파일을 자주 쓰는 폴더로 복사/이동합니다. SnapView 2.0에서는 보이는 프리셋을 3개까지 제공합니다.</li>
+<li>Batch Actions: JPEG/PNG 변환, 메타데이터 제거, 이름 변경, 복사/이동을 레시피로 묶어 미리보기 후 실행합니다. SnapView 2.0에서는 보이는 레시피를 3개까지 제공합니다.</li>
+<li><code>Cmd + P</code>: macOS 기본 인쇄 패널을 열어 현재 이미지, 선택 이미지, 현재 폴더, 콘택트 시트를 인쇄하거나 PDF로 저장합니다. SnapView 전용 선택은 <code>SnapView 이미지</code> 섹션 안의 <code>이미지 범위</code>, <code>구성</code>, <code>맞춤</code>, <code>파일명 표시</code>에서 조절합니다.</li>
+<li>Action Strip과 Info Strip은 설정 &gt; 보기 &gt; 프로 레이아웃 뷰에서 <code>Off</code> / <code>Full</code> 중심으로 선택합니다. 같은 위치에서 Action Strip 위치, 셀렉트레이 표시 방식, 최종 기준도 설정할 수 있습니다. 프로 레이아웃 뷰가 켜져 있으면 Main View의 <code>I</code> 정보 오버레이 대신 액션/정보 스트립을 우선합니다.</li>
+<li>설정 상단의 <code>SnapView 시작하기</code>에서 첫 실행 보기 설정 흐름을 다시 열 수 있습니다.</li>
+</ul>
+<hr />
+<h2>5. 화면 구성 이해하기</h2>
+<ul>
+<li>상단 툴바:
+<ul>
+<li>열기, 이전/다음, 뷰 모드 전환, 줌, 정보/퀵체크/히스토그램 토글, 선별 액션</li>
+<li>타이틀바 chrome은 Main/Grid/Filmstrip과 관련 작업 공간에서 같은 평탄화 톤으로 유지됩니다.</li>
+</ul>
+</li>
+<li>중앙 캔버스:
+<ul>
+<li>현재 이미지 또는 지원 동영상 표시</li>
+</ul>
+</li>
+<li>모드별 보조 영역:
+<ul>
+<li>Grid: 썸네일 격자</li>
+<li>Filmstrip/Navigator: 하단 또는 사이드 영역에서 연속 탐색과 폴더 이동</li>
+<li>상세 EXIF/Quick Check 패널: 정보 분석용</li>
+</ul>
+</li>
+<li>Navigator:
+<ul>
+<li>로컬 디스크와 Apple Photos를 별도 접힘 박스로 표시합니다.</li>
+<li>긴 경로는 한 줄로 유지하고 앞쪽 또는 긴 폴더명 일부를 <code>...</code>로 줄입니다. 각 경로 조각 위에 마우스를 올리면 전체 이름을 확인할 수 있습니다.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2>6. 뷰 모드별 사용법</h2>
+<h3>6.1 Main View (<code>W</code>)</h3>
+<ul>
+<li>한 장에 집중해서 확인할 때 사용합니다.</li>
+<li><code>0</code>으로 Fit, <code>9</code>로 100%를 빠르게 전환합니다.</li>
+<li><code>Space</code>로 100% 보기와 이전 확대 비율을 오갈 수 있습니다.</li>
+<li><code>I</code>로 간단 정보 오버레이를 켜고 끌 수 있습니다.</li>
+<li>정보 오버레이 표시 상태는 다음 실행에도 기억됩니다.</li>
+<li>큰 이미지를 열 때 로딩으로 인해 이전 작업이 끊기지 않습니다.</li>
+<li>지원되지 않는 포맷이거나 너무 커서 바로 열리지 않는 이미지는 화면 안내에 따라 <code>안전하게 열기</code>를 눌러 확인해 보세요.</li>
+</ul>
+<h3>6.1.1 HDR 사진 보기</h3>
+<ul>
+<li>HDR 신호가 있는 사진을 열면 화면 위에 작은 <code>HDR</code> 배지가 표시될 수 있습니다.</li>
+<li><code>HDR</code> 글자/배지 영역을 누르면 현재 사진의 HDR 표시와 SDR 호환 표시를 전환합니다.</li>
+<li>배지 안의 펼치기 버튼을 누르면 자세한 HDR 정보 카드가 열립니다.</li>
+<li>자세한 정보 카드에서는 HDR 소스 정보, 디스플레이 상태, 밝은 영역 참고 정보, HDR/SDR 비교를 확인할 수 있습니다.</li>
+<li>자세한 HDR 정보와 비교는 Supporter Pass 영역입니다. 기본 HDR 사진 보기와 HDR/SDR 표시 전환은 일반 보기 품질 흐름에 포함됩니다.</li>
+<li>SnapView는 사진을 먼저 빠르게 표시한 뒤, 필요한 HDR 표시 처리를 백그라운드에서 이어갑니다. 사진을 천천히 넘길 때 배지 상태나 표시 품질이 잠시 뒤 갱신될 수 있지만, 현재 이미지 표시와 탐색을 막지 않는 것이 우선입니다.</li>
+</ul>
+<h3>6.2 Grid View (<code>Q</code>)</h3>
+<ul>
+<li>많은 사진을 한 번에 훑을 때 사용합니다.</li>
+<li>화살표/마우스로 빠르게 이동하고 여러 장을 선택할 수 있습니다.</li>
+<li><code>=</code>/<code>-</code>로 썸네일 크기를 조절해 밀도를 맞춥니다.</li>
+<li>기본 설정에서는 썸네일에서 <code>Pick</code>과 <code>Reject</code> 플래그를 함께 바로 볼 수 있습니다.</li>
+</ul>
+<h3>6.3 Filmstrip View (<code>E</code>)</h3>
+<ul>
+<li>메인 이미지 + 연속 스트립으로 흐름을 유지하며 볼 때 좋습니다.</li>
+<li>연사/유사 컷을 빠르게 넘기며 감으로 선별하기 좋습니다.</li>
+<li>마우스 휠/트랙패드 이전·다음 이동은 Main View와 같은 스크롤 방향 기준을 따릅니다.</li>
+<li>하단 스트립 썸네일에서도 <code>Pick</code>과 <code>Reject</code> 상태를 함께 확인할 수 있습니다.</li>
+<li>동영상이 선택된 경우 Main View와 같은 방식으로 현재 동영상을 재생할 수 있습니다.</li>
+</ul>
+<h3>6.4 세로 Filmstrip / Navigator / 프로 레이아웃 뷰 (<code>R</code> / <code>T</code> / <code>Tab</code>)</h3>
+<ul>
+<li><code>R</code>은 세로 Filmstrip을 엽니다. <code>T</code>는 현재 뷰와 별개로 Navigator 표시를 켜고 끕니다.</li>
+<li><code>Tab</code>은 현재 보기 위에 Action Strip, Info Strip, 셀렉트레이를 켜는 프로 레이아웃 뷰 전환입니다.</li>
+<li>Navigator와 Filmstrip은 프로레이아웃이 아닙니다. Navigator는 <code>T</code>, Filmstrip은 <code>E</code>/<code>R</code> 기준으로 독립 동작합니다.</li>
+<li>Main View의 <code>I</code> 정보 오버레이가 켜져 있어도 프로 레이아웃 뷰가 켜지면 정보 오버레이는 숨기고, 액션/정보 스트립을 우선 표시합니다.</li>
+<li>별점/플래그/태그를 적용하고 필터링해 결과를 정돈합니다.</li>
+<li>Lightroom과 함께 사용하는 경우, SnapView에서 끝낸 1차 선별 결과를 sidecar(XMP) 기준으로 그대로 넘기기 좋습니다.</li>
+<li>폴더 태그를 같이 쓰면 SnapView 밖에서도 Finder 기준 폴더 단위 정리 상태가 즉시 보입니다.</li>
+<li>Navigator에서는 폴더 row의 색상 점과 폴더 단위 상태를 보며 작업 위치를 빠르게 바꿀 수 있습니다.</li>
+<li>Navigator의 로컬 디스크와 Apple Photos는 서로 독립된 접힘 박스로 표시됩니다. 한쪽 목록이 길어도 다른 소스 헤더가 사라지지 않도록 각 박스 내부에서 스크롤합니다.</li>
+<li>Apple Photos 모드에서도 로컬 파일/폴더를 다시 열 수 있도록 로컬 디스크 박스와 경로 영역은 유지됩니다. 로컬 파일이나 폴더를 열면 active source가 디스크로 전환됩니다.</li>
+<li>Apple Photos row 전체를 클릭하면 필요한 경우 Photos 권한 요청 또는 새로고침 흐름으로 들어갑니다.</li>
+<li>마우스 휠/트랙패드 이전·다음 이동은 Main View와 같은 스크롤 방향 기준을 따릅니다.</li>
+<li>동영상이 선택된 경우 Main View와 같은 방식으로 현재 동영상을 재생할 수 있습니다.</li>
+</ul>
+<h4>셀렉 트레이</h4>
+<p>프로 레이아웃 뷰에서는 셀렉트레이로 현재 폴더의 <code>전체</code>, <code>후보</code>, <code>최종</code>, <code>제외</code> 개수를 확인할 수 있습니다. 기본 표시 방식은 하단 Strip이며, 설정에서 HUD 트레이 또는 안보기를 선택할 수 있습니다. <code>후보</code>는 별점이 있는 사진, <code>최종</code>은 Pick 또는 설정된 별점 5 기준, <code>제외</code>는 Reject 사진입니다. 활성 칩의 원본 복사는 sheet에서 대상 폴더, RAW만/RAW+JPG/현재 표시 파일, 같은 이름 처리 방식을 선택한 뒤 실행합니다. Strip은 <code>?</code> 버튼으로 짧은 가이드를 열고, HUD 트레이는 <code>?</code> 없이 접기/펼치기와 각 컨트롤의 툴팁으로 설명을 제공합니다.</p>
+<h3>6.5 만화책 보기 Comic Reading (<code>B</code>)</h3>
+<ul>
+<li>열린 폴더나 ZIP을 검은 리더 표면으로 전환해 읽습니다.</li>
+<li><code>B</code> 또는 전역 <code>만화책 보기</code> 버튼/메뉴는 리더 진입과 종료만 담당합니다.</li>
+<li>좌-&gt;우, 우-&gt;좌 2페이지 펼침과 Webtoon 기반 선택은 리더 HUD에서 바꿉니다.</li>
+<li>펼침 모드는 <code>1-2 -&gt; 3-4</code>처럼 겹치지 않고 이동합니다.</li>
+<li>Comic Reading 중에는 Action Strip / Info Strip이 숨겨져 읽기 화면을 가리지 않습니다.</li>
+<li>같은 소스를 다시 열면 마지막 페이지를 복원할 수 있지만, 앱 실행 시 소스를 자동으로 다시 열지는 않습니다.</li>
+<li>끝에서 <code>다음</code>을 누르면 다음 형제 폴더나 ZIP으로 이동할지 확인합니다.</li>
+</ul>
+<h3>6.6 중복사진정리 Duplicate (<code>Cmd+Shift+D</code>)</h3>
+<ul>
+<li>상단에서 <code>Exact</code>와 <code>Same Photo</code>를 전환할 수 있습니다.</li>
+<li><code>Exact</code>는 현재 소스에서 <strong>완전히 동일한 파일</strong>만 그룹으로 보여줍니다.</li>
+<li><code>Same Photo</code>는 용량/해상도/포맷이 달라도 같은 컷으로 보이는 사진을 검토용으로 묶습니다.</li>
+<li>좌측 그룹 목록에서 항목 수/절감 용량을 보고 그룹을 선택합니다.</li>
+<li>행 오른쪽의 미니 썸네일(<code>5x2</code>, 최대 10칸 + <code>+N</code>)로 그룹 구성을 빠르게 확인할 수 있습니다.</li>
+<li>상단 정렬/필터(정렬, 멤버 수, 날짜)로 먼저 범위를 좁히고 작업하면 안전합니다.</li>
+<li>그룹이 4장 이하면 중앙 메인 영역에서 바로 다중 비교하고, 5장 이상이면 하단 스트립이 추가로 표시됩니다.</li>
+<li>기준이미지는 <code>기준이미지로 지정</code>으로 변경할 수 있고, 각 카드의 <code>X</code>로 개별 즉시 삭제할 수 있습니다.</li>
+<li>우측 <code>처리</code> 패널에서 <code>Exact</code> 모드일 때만 <code>현재이미지 병합</code> / <code>중복사진 일괄 정리</code> / <code>삭제 되돌리기</code>를 수행합니다.</li>
+<li><code>Same Photo</code>는 검토/비교 중심 모드이며 자동 병합과 일괄 정리는 제공하지 않습니다.</li>
+<li><code>삭제 되돌리기(⌘Z)</code>는 직전에 삭제한 사진 그룹만 복원합니다.</li>
+</ul>
+<h3>6.7 슬라이드쇼 (<code>Shift + Enter</code>)</h3>
+<ul>
+<li>슬라이드쇼는 <code>전체화면</code>으로 실행됩니다.</li>
+<li>기본 시작/종료 키는 <code>Shift + Enter</code>입니다.</li>
+<li><code>Shift + Space</code>는 레거시 호환용으로 남아 있지만, 한국어 입력 환경에서는 <code>Shift + Enter</code> 쪽이 더 안정적입니다.</li>
+<li>기본값은 <code>진입 시 바로 재생</code> ON이라 시작과 동시에 재생되고, 설정에서 끄면 전체화면 진입 직후 일시정지 상태로 시작합니다.</li>
+<li>현재 화면에 표시되고 있는 사진 결과를 기준으로 슬라이드쇼가 시작됩니다.
+<ul>
+<li>Main: 현재 표시 순서 전체</li>
+<li>Grid / Filmstrip 워크스페이스: 선택 우선, 선택이 없으면 현재 결과 전체</li>
+<li>ZIP: ZIP 내부 현재 순서만</li>
+</ul>
+</li>
+<li><code>Compare</code>와 <code>중복사진정리</code>에서는 시작하지 않습니다.</li>
+<li>시작 직후 상단 중앙에 <code>무엇이 재생되는지</code>를 보여주는 scope chip이 잠깐 나타나고, 좌상단에는 현재 위치 배지가 보입니다.</li>
+<li>하단 재생 컨트롤 도구(HUD)는 항상 화면에 보입니다.
+<ul>
+<li>이전 / 재생·일시정지 / 다음</li>
+<li>속도 (<code>3초</code>처럼 현재 선택값 표시)</li>
+<li>전환 (<code>하드 컷</code>, <code>크로스페이드</code>, <code>블랙 페이드</code> 같은 현재 선택값 표시)</li>
+<li>루프 (원형 아이콘 토글)</li>
+<li>셔플 (원형 아이콘 토글)</li>
+<li>작은 이미지 확대 (원형 아이콘 토글)</li>
+<li>종료</li>
+</ul>
+</li>
+<li>재생 중 1.2초 정도 입력이 없으면 커서는 자동으로 숨겨질 수 있습니다.</li>
+<li>슬라이드쇼 중에는 재생 전용 키가 우선이므로, 별점 / Pick / Reject / 태그 편집은 하지 않는 것이 기본입니다.</li>
+<li>전환은 설정에서 <code>하드 컷</code> / <code>크로스페이드</code> / <code>블랙 페이드</code> 중에서 선택할 수 있습니다.</li>
+<li>부드러운 화면 전환을 원하면 <code>크로스페이드</code>를 사용해 보세요.</li>
+<li>작은 이미지는 기본적으로 전체화면에 맞게 확대됩니다. 원본 100% 크기로 보고 싶으면 HUD 또는 <code>도구 &gt; 작은 이미지 확대 끄기</code>로 바로 바꿀 수 있습니다.</li>
+</ul>
+<h3>6.8 동영상 탐색과 재생</h3>
+<ul>
+<li>지원 동영상 포맷은 <code>MP4</code>, <code>MOV</code>, <code>M4V</code>입니다.</li>
+<li><code>AVI</code>, <code>MKV</code>, <code>WebM</code>, <code>WMV</code>, <code>FLV</code>는 별도 디코더나 트랜스코딩 설계 전까지 지원 범위에 포함하지 않습니다.</li>
+<li>설정에서 동영상 포함 여부를 <code>이미지만 / 동영상 포함</code>으로 선택할 수 있습니다. 기본값은 <code>동영상 포함</code>입니다.</li>
+<li>설정에서 <code>시작 시 동영상 바로 재생</code>을 켜고 끌 수 있습니다. 기본값은 켜짐입니다.</li>
+<li>Main과 Filmstrip 워크스페이스에서 현재 동영상을 재생할 수 있습니다. 프로 레이아웃 뷰는 동영상 보기 모드가 아니라 액션/정보/셀렉트레이 구성 레이어입니다.</li>
+<li><code>Space</code>: 재생 / 일시정지</li>
+<li>재생이 끝난 뒤 <code>Space</code> 또는 재생 버튼을 누르면 처음부터 다시 재생합니다.</li>
+<li><code>Option + ←</code>: 5초 뒤로 이동</li>
+<li><code>Option + →</code>: 5초 앞으로 이동</li>
+<li>동영상에서도 마우스 휠/트랙패드 이전·다음 이동은 Main View와 같은 스크롤 방향 기준을 따릅니다.</li>
+<li>동영상 컨트롤에서 재생 위치를 이동할 수 있고, 음량을 조절할 수 있습니다.</li>
+<li>재생 중 컨트롤은 일정 시간 후 자동으로 사라지고, 마우스를 올리거나 재생/일시정지 같은 조작을 하면 다시 표시됩니다.</li>
+<li>동영상 선택 시 상단 정보 영역에는 해상도, 파일 크기, 코덱, FPS, 비트레이트, HDR, 날짜, 기기 정보가 가능한 범위에서 표시됩니다.</li>
+<li>회전, 이미지 내보내기처럼 동영상에 맞지 않는 기능은 동영상 선택 중에는 실행하지 않습니다.</li>
+</ul>
+<h3>6.9 Apple Photos 탐색</h3>
+<ul>
+<li>인트로 화면의 <code>Apple 사진</code> 버튼 또는 Navigator의 <code>Apple Photos</code> row에서 사진 앱 라이브러리를 엽니다.</li>
+<li>처음 접근할 때만 macOS Photos 권한을 요청합니다. 이미 허용된 상태에서는 같은 권한 안내를 반복하지 않고 기존 권한 상태를 사용합니다.</li>
+<li>기본 컬렉션은 Library, Favorites, Videos, Screenshots이며, 사용자가 만든 앨범도 함께 표시됩니다.</li>
+<li>Apple Photos와 로컬 디스크는 동시에 선택되지 않습니다. Photos 컬렉션을 열면 Photos 쪽 row가 선택되고, 로컬 폴더를 열면 로컬 디스크 쪽 row가 선택됩니다.</li>
+<li>Photos 항목은 먼저 빠른 썸네일/프리뷰로 표시되고, 현재 항목이 안정되면 원본 또는 더 높은 품질 데이터로 교체됩니다. 원본 준비가 필요한 작업은 백그라운드에서 진행됩니다.</li>
+<li>Videos 컬렉션의 <code>MOV</code>, <code>MP4</code>, <code>M4V</code>는 SnapView의 기존 동영상 컨트롤로 재생합니다.</li>
+<li>Photos 모드의 선별 UI는 사진 앱과 같은 좋아요 하트입니다. SnapView 별점, Pick/Reject, Finder 컬러 라벨은 로컬 파일 중심 기능으로 남습니다.</li>
+<li>Photos 항목을 <code>Cmd+C</code>로 복사하면 가능한 경우 원본을 준비해 클립보드에 파일 URL로 넣습니다. 준비가 필요하면 완료 또는 실패 토스트가 표시됩니다.</li>
+<li>로컬 파일 우클릭 메뉴에서는 <code>Photos로 복사</code>, Photos 항목 우클릭 메뉴에서는 <code>드라이브로 복사...</code>를 사용할 수 있습니다.</li>
+<li>Photos 항목을 Finder, Desktop, 외부 앱으로 드래그하면 앱이 받을 수 있는 파일 URL payload로 전달합니다. 원본 준비가 필요한 항목은 준비 후 전달되며, 실패하면 토스트로 알려줍니다.</li>
+<li>개수가 <code>0</code>인 Photos 앨범이나 컬렉션을 열면 이전 사진을 계속 보여주지 않고 빈 결과 상태로 전환합니다.</li>
+</ul>
+<hr />
+<h2>7. 선별 도구 (가장 많이 쓰는 기능)</h2>
+<h3>7.1 별점</h3>
+<ul>
+<li><code>1~5</code>: 별점 부여</li>
+<li><code>0</code> 또는 <code>\</code>(원화키 포함): 별점 해제</li>
+<li>별점은 sidecar(XMP)에 저장되어 Lightroom 계열 도구에서도 그대로 이어집니다.</li>
+<li>즉, SnapView에서 빠르게 고르고 Lightroom에서 후반 작업하는 흐름에 잘 맞습니다.</li>
+</ul>
+<h3>7.2 Pick / Reject / Unflag</h3>
+<ul>
+<li><code>P</code>: Pick</li>
+<li><code>X</code>: Reject</li>
+<li><code>U</code>: Unflag</li>
+<li>Pick/Reject도 sidecar(XMP) 기준으로 저장됩니다.</li>
+<li>빠른 선별은 SnapView에서 하고, 선택 결과 확인과 보정은 Lightroom으로 넘기는 방식에 유리합니다.</li>
+</ul>
+<h3>7.3 Finder 태그</h3>
+<ul>
+<li>SnapView는 Finder의 태그 이름과 색상 순서를 그대로 사용합니다.</li>
+<li>지원 색상은 <code>빨간색 / 주황색 / 노란색 / 초록색 / 파란색 / 보라색 / 회색</code>입니다.</li>
+<li>파일 태그는 Finder와 연동되어 macOS Finder에서도 같은 색과 이름으로 보입니다.</li>
+<li>Finder에서 태그 이름을 바꾸면 SnapView도 새로고침 후 같은 이름으로 보입니다.</li>
+<li>Navigator와 Filmstrip 워크스페이스에서는 폴더 태그도 지원합니다. 프로 레이아웃 뷰 자체는 폴더 탐색 표면이 아닙니다.
+<ul>
+<li>내비게이터 row 우클릭 -&gt; <code>태그</code></li>
+<li>내비게이터 헤더의 <code>폴더 태그</code> 필터</li>
+<li>메인뷰 정보 오버레이의 현재 폴더 태그 배지</li>
+<li>메인뷰 우클릭 메뉴의 <code>현재 폴더 태그</code></li>
+</ul>
+</li>
+</ul>
+<h3>7.4 Lightroom / Finder 연동</h3>
+<ul>
+<li>Lightroom과는 <code>별점 / Pick / Reject</code>를 XMP sidecar 기준으로 연동합니다.</li>
+<li>Finder와는 <code>태그(색상 포함)</code>를 연동합니다.</li>
+<li>SnapView의 강점은 여기서 드러납니다. 빠른 선별은 SnapView에서 끝내고, 결과는 Lightroom과 Finder에서 그대로 이어서 사용할 수 있습니다.</li>
+<li>즉, 별점/플래그는 Lightroom 워크플로우와 연결되고, Finder 태그는 macOS 파일 관리와 연결됩니다.</li>
+</ul>
+<h3>7.5 슬라이드쇼 전용 키</h3>
+<ul>
+<li><code>Shift + Enter</code>: 시작 / 종료</li>
+<li><code>Shift + Space</code>: 레거시 시작 / 종료 호환</li>
+<li><code>Space</code>: 슬라이드쇼 활성 중 재생 / 일시정지</li>
+<li><code>Esc</code>: 종료</li>
+<li><code>← / →</code>: 이전 / 다음</li>
+<li><code>[</code> / <code>]</code>: 느리게 / 빠르게</li>
+<li><code>L</code>: 루프 토글</li>
+<li><code>S</code>: 셔플 토글</li>
+<li><code>I</code>: 정보 오버레이 토글</li>
+<li><code>0</code>: Fit 재적용</li>
+<li>전환 종류는 HUD 메뉴에서 <code>하드 컷</code> / <code>크로스페이드</code> / <code>블랙 페이드</code> 중 선택합니다.</li>
+</ul>
+<h3>7.6 복사/삭제/이동</h3>
+<ul>
+<li><code>Cmd+C</code>: 선택 항목 복사</li>
+<li><code>Cmd+V</code>: 붙여넣기 (Grid/Filmstrip 워크스페이스에서 주로 사용)</li>
+<li><code>Delete</code> 또는 <code>D</code>: 삭제</li>
+<li><code>Cmd+Delete</code>: 확인 없이 휴지통으로 이동</li>
+<li>설정 &gt; 일반의 <code>삭제 확인 없이 휴지통으로 이동</code>을 켜면 <code>Delete</code> 또는 <code>Backspace</code>도 확인창 없이 macOS 휴지통으로 이동합니다.</li>
+<li>확인 없는 삭제 옵션은 기본 꺼짐이며, 영구 삭제를 수행하지 않습니다.</li>
+<li>RAW+JPG 묶음 관리가 켜져 있으면 연결된 쌍도 같은 파일 작업에 포함될 수 있습니다.</li>
+<li><code>Move to Folder</code>: 현재 이미지 또는 명시 선택 항목을 앱 내부에서 지정 폴더로 이동합니다.</li>
+<li>Grid/Filmstrip 워크스페이스에서는 사용자가 명시 선택한 항목이 파일 작업 대상입니다. 선택이 없을 때만 현재 항목을 대상으로 삼습니다.</li>
+<li>Main 캔버스에서 파일 드래그를 시작하려면 <code>Command</code>를 누른 상태로 드래그합니다. 실수로 이미지를 잡아 끄는 것을 줄이기 위한 정책입니다.</li>
+<li>Grid/Filmstrip에서 드래그하면 현재 선택 항목이 유지되고, 작은 썸네일 스택과 전체 선택 장수 표시가 드래그 프리뷰로 나타납니다.</li>
+<li>Finder나 Desktop으로 드롭하면 대상 폴더로 파일을 복사/이동하고, 외부 앱으로 드롭하면 해당 앱이 열 수 있는 파일 URL 목록으로 전달합니다.</li>
+<li>복사/이동 완료 토스트는 <code>1개 파일을 Downloads로 복사 완료</code>처럼 개수와 목적지를 함께 표시합니다.</li>
+<li>Apple Photos 항목은 원본을 준비한 뒤 클립보드나 드래그 payload로 전달합니다. 프리뷰 파일을 원본처럼 조용히 복사하지 않습니다.</li>
+</ul>
+<h3>7.7 외부 앱으로 열기</h3>
+<ul>
+<li><code>다른 앱으로 열기…</code>는 현재 파일을 외부 앱으로 엽니다.</li>
+<li>같은 확장자 그룹에 대해 이전에 선택한 앱이 있으면 그 앱으로 바로 열고, 저장된 앱이 없으면 앱 선택창을 표시합니다.</li>
+<li><code>Cmd + Option + O</code>는 저장된 앱과 관계없이 앱 선택창을 직접 엽니다.</li>
+<li>RAW+JPG 페어는 설정 &gt; 일반 &gt; <code>외부 앱으로 열 RAW+JPG 대상</code>에서 RAW 우선 또는 JPG 우선으로 선택할 수 있습니다.</li>
+<li>기본값은 RAW 우선입니다.</li>
+<li>ZIP 내부 항목은 외부 앱 열기 미지원입니다.</li>
+</ul>
+<h3>7.8 파일명 변경 (<code>F2</code> / <code>Rename…</code>)</h3>
+<ul>
+<li>Main/Grid/Filmstrip/Compare 어디서든 <code>F2</code> 또는 메뉴 <code>Rename…</code>로 현재 파일명을 변경할 수 있습니다.</li>
+<li>ZIP 내부 항목은 실제 파일 시스템 대상이 아니므로 이름 변경을 지원하지 않습니다.</li>
+<li>확장자는 유지되며, basename만 변경됩니다.</li>
+<li>설정 &gt; Navigation의 <code>파일명 변경 후 재정렬(Resort After Rename)</code>이 켜져 있으면 rename 직후 현재 정렬 규칙으로 목록을 재평가하고 변경한 파일을 다시 선택합니다.</li>
+<li>옵션이 꺼져 있으면 현재 목록 순서를 최대한 유지한 채 파일명/경로만 갱신합니다.</li>
+</ul>
+<h3>7.9 이미지 내보내기</h3>
+<ul>
+<li>이미지 내보내기는 원본을 덮어쓰지 않고 별도 복사본을 만듭니다.</li>
+<li>대상은 <code>현재 이미지</code>, <code>선택한 이미지</code>, <code>현재 폴더</code> 중에서 고를 수 있습니다.</li>
+<li>형식은 <code>JPEG</code>와 <code>PNG</code>를 지원합니다.</li>
+<li>JPEG를 선택한 경우 품질을 조절할 수 있으며 기본값은 <code>95%</code>입니다.</li>
+<li>프리셋은 Instagram, Threads, X, 블로그, 용량 우선, 수동 크기 등을 제공합니다.</li>
+<li>프리셋을 선택하면 적용될 최대 너비와 높이가 입력칸에 표시됩니다.</li>
+<li><code>수동</code>에서는 너비와 높이를 직접 입력할 수 있고, 마지막으로 사용한 수동 값은 다음 실행 때 다시 제안됩니다.</li>
+<li>저장 위치는 내보내기 실행 시 선택합니다. 마지막 선택 위치는 다음 내보내기 때 다시 제안됩니다.</li>
+<li>내보내기 완료 후에는 파일명과 용량 요약을 보여주며, 1개 파일이면 <code>파일 열기</code>, 여러 파일이면 <code>폴더 열기</code> 흐름을 사용할 수 있습니다.</li>
+<li>일부 파일만 실패한 경우 성공/실패를 분리해서 보여주고 실패 사유를 함께 표시합니다.</li>
+<li>동영상, ZIP 내부 항목, 접근할 수 없는 파일처럼 내보내기에 맞지 않는 대상은 실행을 막거나 실패 사유를 표시합니다.</li>
+</ul>
+<h3>7.10 인쇄와 PDF 저장 (<code>Cmd + P</code>)</h3>
+<ul>
+<li><code>Cmd + P</code> 또는 메뉴 <code>파일 &gt; 인쇄…</code>로 macOS 기본 인쇄 패널을 엽니다.</li>
+<li>왼쪽에는 출력 미리보기가 표시되고, 오른쪽에는 프린터, 프리셋, 매수, 페이지, 용지 관련 시스템 설정이 표시됩니다.</li>
+<li>하단 <code>PDF</code> 메뉴에서 PDF 저장을 선택할 수 있습니다. 별도 SnapView PDF 내보내기 창을 쓰지 않고 macOS 표준 PDF 흐름을 사용합니다.</li>
+<li>SnapView 전용 설정은 <code>SnapView 이미지</code> 섹션에 모여 있습니다.
+<ul>
+<li><code>이미지 범위</code>: <code>현재 이미지</code>, <code>선택한 이미지</code>, <code>현재 폴더</code></li>
+<li><code>구성</code>: <code>이미지당 1페이지</code>, <code>컨택트 시트</code></li>
+<li><code>맞춤</code>: <code>전체 이미지 맞춤</code>, <code>용지 채우기</code></li>
+<li><code>파일명 표시</code>: 컨택트 시트에서 각 이미지 아래 파일명을 표시</li>
+</ul>
+</li>
+<li>Grid 또는 Filmstrip 워크스페이스에서 여러 장을 선택한 상태로 인쇄하면 <code>선택한 이미지</code>를 기준으로 출력할 수 있습니다.</li>
+<li><code>현재 폴더</code>는 현재 SnapView에 로드된 폴더, ZIP 항목, Apple Photos 컬렉션을 의미합니다.</li>
+<li>동영상은 인쇄 대상에서 제외됩니다.</li>
+</ul>
+<h3>7.11 빠른 정리 프리셋</h3>
+<ul>
+<li>빠른 정리는 <code>현재 이미지</code> 또는 <code>선택한 항목</code>을 자주 쓰는 폴더로 빠르게 복사/이동하는 기능입니다.</li>
+<li>사진을 보면서 Pick, 별점 5, 보관 폴더 같은 반복 분류를 빠르게 처리할 때 사용합니다.</li>
+<li>SnapView 2.0에서는 화면에 보이는 빠른 정리 프리셋을 최대 3개까지 제공합니다.</li>
+<li>프리셋마다 이름, 대상 폴더, 복사/이동 방식을 정할 수 있습니다.</li>
+<li><code>Option+1</code>부터 <code>Option+3</code>까지는 보이는 빠른 정리 프리셋을 실행하는 단축키입니다.</li>
+<li>실행 전에는 대상 파일과 저장 위치를 확인하는 미리보기를 거치므로, 의도하지 않은 대량 이동을 줄일 수 있습니다.</li>
+<li>RAW+JPG 묶음 관리가 켜져 있으면 연결된 파일도 같은 정리 계획에 포함될 수 있습니다.</li>
+<li>자동 정리 규칙은 SnapView 2.0 표면에서 Pick과 별점 5 중심으로 제공합니다.</li>
+</ul>
+<h3>7.12 Batch Actions</h3>
+<ul>
+<li>Batch Actions는 여러 작업을 하나의 레시피로 묶어 JPEG/PNG 변환, 메타데이터 제거, 이름 변경, 복사/이동을 한 번에 실행하는 기능입니다.</li>
+<li>빠른 정리가 <code>폴더로 보내기</code> 중심이라면, Batch Actions는 <code>변환/정리/이름 변경/저장</code>을 함께 처리하는 흐름입니다.</li>
+<li>SnapView 2.0에서는 화면에 보이는 Batch Actions 레시피를 최대 3개까지 제공합니다.</li>
+<li>기본 레시피 예시는 웹 공유용 JPEG처럼 자주 쓰는 변환 작업을 빠르게 시작하기 위한 출발점입니다.</li>
+<li>실행 전에는 저장 위치를 선택하고 <code>결과 미리보기</code>로 예상 파일명, 처리 개수, 건너뛰는 항목, 경고를 확인합니다.</li>
+<li>미리보기 이후 레시피, 대상, 저장 위치를 바꾸면 다시 미리보기를 갱신한 뒤 실행해야 합니다.</li>
+<li>실행 중에는 일시정지, 재개, 취소를 사용할 수 있고, 최근 실행 기록에서 결과 폴더 열기, 상세 보기, 재시도를 할 수 있습니다.</li>
+<li>원본 이동이나 덮어쓰기처럼 되돌리기 어려운 작업은 별도 확인을 거칩니다.</li>
+</ul>
+<hr />
+<h2>8. Quick Check와 Compare 사용법</h2>
+<h3>8.1 Quick Check</h3>
+<ul>
+<li><code>K</code>로 Quick Check 세트를 켭니다.</li>
+<li>Quick Check 세트는 <code>Quick Check + 상세 EXIF + 히스토그램</code>을 함께 켜는 빠른 점검 모드입니다.</li>
+<li>점수와 경고 원인(초점/노출/눈감음/구도 등)을 확인합니다.</li>
+<li>Quick Check는 보조 도구이며 최종 선택은 사용자가 합니다.</li>
+</ul>
+<h3>8.1.1 사진 속 텍스트 OCR</h3>
+<ul>
+<li>OCR은 macOS Vision 기반 온디바이스 인식으로 동작합니다.</li>
+<li>현재 명시 지원 언어는 한국어(<code>ko-KR</code>)와 영어(<code>en-US</code>)입니다. 일본어, 중국어 등 추가 언어는 별도 품질 확인 전까지 지원 범위로 안내하지 않습니다.</li>
+<li>기본값은 자동 실행 꺼짐입니다.</li>
+<li>설정에서 <code>Quick Check에서 OCR 자동 실행</code>을 켜면 Quick Check 패널이 열린 상태에서 현재 이미지에 대해 OCR을 실행합니다.</li>
+<li>자동 실행 결과는 EXIF 정보를 가리지 않도록 OCR 목록을 자동으로 펼치지 않고, 이미지 위 하이라이트와 간단한 상태로만 표시합니다.</li>
+<li>수동 OCR 실행은 기존처럼 인식된 텍스트 목록을 확인하고 전체 또는 개별 항목을 복사할 수 있습니다.</li>
+<li>인식된 영역은 이미지 위에 노란 하이라이트로 표시됩니다.</li>
+<li>하이라이트 위로 마우스를 올리면 인식된 텍스트와 <code>클릭해서 복사</code> 안내가 표시됩니다.</li>
+<li>하이라이트를 클릭하면 해당 텍스트가 클립보드에 복사됩니다.</li>
+<li>동영상, 지원하지 않는 ZIP 내부 항목, 접근할 수 없는 파일에서는 OCR을 실행하지 않습니다.</li>
+</ul>
+<h3>8.1.2 촬영 시각과 GPS 보정</h3>
+<ul>
+<li>Quick Check/상세 EXIF 흐름에서 촬영 시각과 GPS 정보를 보정할 수 있습니다.</li>
+<li>기본 흐름은 안전 저장을 우선합니다. 앱 내부 override에 저장해 SnapView 표시 정보에 반영하고, 원본을 직접 바꾸지 않습니다.</li>
+<li>JPEG 원본 반영은 지원 가능한 경우에만 별도 확인 후 진행합니다.</li>
+<li>HEIC, RAW, ZIP 내부 항목, 읽기 전용 파일, 접근할 수 없는 파일처럼 안전하게 원본을 다시 쓸 수 없는 경우에는 원본 쓰기를 막고 사유를 표시합니다.</li>
+<li>위치 정보는 위도/경도 입력 또는 위치 지우기 흐름으로 관리합니다.</li>
+</ul>
+<h3>8.2 Compare 모드</h3>
+<ul>
+<li><code>C</code>로 Compare 모드 진입/종료</li>
+<li>기본 <code>Selection</code> 모드에서는 1~4장을 나란히 비교해 한 장을 고릅니다.</li>
+<li>Compare 모드 안에서 <code>R</code>을 누르면 <code>Selection</code>과 <code>Reference</code>를 전환할 수 있습니다.</li>
+<li>Compare 상단에는 <code>Selection / Reference</code> 세그먼트와 상태 텍스트가 표시되어 현재 비교 문맥을 바로 확인할 수 있습니다.</li>
+<li><code>Reference</code> 모드에서는 한 장을 기준으로 고정하고, 다른 후보를 좌/우로 넘기며 순차 비교할 수 있습니다.</li>
+<li><code>Reference</code> 모드에서는 <code>Tab</code>으로 기준/후보 포커스를 전환할 수 있습니다.</li>
+<li><code>Reference</code> 모드에서 <code>↑</code>는 기준 포커스, <code>↓</code>는 후보 포커스로 즉시 지정합니다.</li>
+<li><code>Reference</code> 모드에서 <code>←</code>/<code>→</code>는 현재 포커스된 패널(기준 또는 후보) 이미지를 이동합니다.</li>
+<li>Reference 모드의 평점/픽/리젝트/태그/삭제는 현재 포커스된 패널(기준 또는 후보)에만 적용됩니다.</li>
+<li>Compare 삭제 확인 팝업에서 취소하면 비교 모드와 포커스 상태가 유지됩니다.</li>
+<li>새 소스(다른 파일/ZIP)로 전환하면 이전 Compare 상태는 자동으로 정리됩니다. 단, <code>Resume Last Session</code> 설정이 켜져 있고 같은 소스를 다시 열면 마지막 세션을 복원할 수 있습니다.</li>
+<li>확대해서 디테일까지 확인할 수 있습니다.</li>
+</ul>
+<h3>8.3 중복사진정리</h3>
+<ul>
+<li><code>Cmd+Shift+D</code>: 중복 모드 진입(모드 내에서는 재스캔)</li>
+<li><code>Shift+D</code> 또는 <code>ESC</code>: 중복 모드 종료</li>
+<li><code>←</code> / <code>→</code>: 이전/다음 중복 그룹 이동</li>
+<li><code>Cmd+←</code> / <code>Cmd+→</code>: 이전/다음 중복 그룹 이동</li>
+<li><code>P</code>: 현재 이미지를 기준이미지(Keep)로 지정</li>
+<li>우측 패널 하단에서 마지막 삭제를 <code>Cmd+Z</code>로 되돌릴 수 있습니다.</li>
+</ul>
+<hr />
+<h2>9. 설정과 동작 이해하기</h2>
+<ul>
+<li>설정 &gt; 일반 &gt; <code>화면 모드</code>에서 <code>시스템 / 라이트 / 다크</code>를 직접 선택할 수 있습니다.</li>
+<li><code>시스템</code>은 macOS appearance를 따르고, <code>라이트</code>와 <code>다크</code>는 SnapView 창과 설정 창 모두를 즉시 같은 톤으로 바꿉니다.</li>
+</ul>
+<h3>9.1 디코딩 모드</h3>
+<ul>
+<li><code>속도 우선</code>: 빠른 탐색이 우선입니다. 기본적으로 더 작은 리사이즈 이미지를 먼저 보여줍니다.</li>
+<li><code>보통</code>: 일반적인 추천값입니다. 기본은 리사이즈 이미지로 보고, 확대를 할 때 필요한 해상도로 점진적으로 화질을 올립니다.</li>
+<li><code>화질 최우선</code>: 가능한 한 높은 해상도를 우선합니다. 화질 확인이 가장 중요할 때 적합합니다.</li>
+</ul>
+<h4>9.1.1 느린 저장장치 및 대형 이미지 동작 안내</h4>
+<ul>
+<li>느린 네트워크나 외장하드에서는 스냅뷰가 버벅임을 방지하기 위해 사용자가 알아채지 못하게 화면 너머의 백그라운드 작업량을 자동으로 조절합니다.</li>
+<li>열리지 않는 손상된 포맷이나 너무 큰 대형 이미지의 경우, 화면에 나타나는 안내에 따라 <code>안전하게 열기</code> 버튼을 눌러 수동으로 이미지를 확인할 수 있습니다.</li>
+</ul>
+<h3>9.2 빠른 키보드 이동 프리뷰</h3>
+<ul>
+<li><code>Off</code>: 빠른 이동 중 프리뷰를 쓰지 않습니다.</li>
+<li><code>Auto</code>: 일반적인 추천값입니다. 상황에 따라 프리뷰를 사용해 이동 체감을 부드럽게 만듭니다.</li>
+<li><code>Aggressive</code>: 빠른 연속 이동에서 프리뷰를 더 적극적으로 사용합니다.</li>
+</ul>
+<p>이 설정은 연속 이동 체감에 영향을 주며, 사진을 한 장씩 천천히 보는 경우보다 빠르게 넘길 때 차이가 큽니다.</p>
+<h3>9.3 정보 오버레이 토글</h3>
+<ul>
+<li><code>I</code>: 파일 정보/EXIF 표시</li>
+<li><code>H</code>: 히스토그램 토글</li>
+<li><code>K</code>: Quick Check 세트 토글</li>
+</ul>
+<p>즉, <code>K</code>는 Quick Check만 따로 켜는 것이 아니라 점검에 필요한 정보 패널을 한 번에 여는 용도입니다.</p>
+<p>정보 오버레이 표시 상태는 설정에 저장됩니다. Main View에서 정보 오버레이를 끄면 파일명/EXIF뿐 아니라 별점, 컬러 라벨, Pick/Reject 표시도 이미지 위에 함께 남지 않습니다. 프로 레이아웃 뷰가 켜져 있으면 <code>I</code> 정보 오버레이를 숨기고 액션/정보 스트립으로 정보를 확인합니다.</p>
+<h3>9.4 오버레이 가독성 / 별점 UI</h3>
+<ul>
+<li>설정 &gt; 일반에서 <code>오버레이 텍스트 그림자</code>를 <code>기본 / 강하게 / 자동</code>으로 고를 수 있습니다.</li>
+<li><code>자동</code>은 밝은 이미지에서만 그림자를 더 강하게 적용해 파일명과 간단 정보가 더 잘 보이게 합니다.</li>
+<li>설정 &gt; 일반에서 <code>별점 UI</code>를 <code>항상 표시 / 자동 / 숨김</code>으로 조절할 수 있습니다.</li>
+<li>설정 &gt; 일반에서 별점 UI 아래 <code>사진 수 UI</code>를 <code>현재/전체 / 현재 / 미표기</code>로 조절할 수 있습니다.
+<ul>
+<li><code>현재/전체</code>: 좌상단 카운트를 <code>&lt;현재/전체&gt;</code>로 표시</li>
+<li><code>현재</code>: 좌상단 카운트를 현재 인덱스만 표시</li>
+<li><code>미표기</code>: 좌상단 카운트 숨김</li>
+<li><code>항상 표시</code>: 별점 UI가 항상 보입니다.</li>
+<li><code>자동</code>: 별점이 있는 사진에서만 별점 UI가 보입니다.</li>
+<li><code>숨김</code>: 화면 위 별점 UI는 숨기지만, <code>1~5</code>, <code>0</code>, <code>\</code>, 메뉴의 별점 기능은 그대로 사용할 수 있습니다.</li>
+</ul>
+</li>
+</ul>
+<h3>9.5 창 닫기 동작</h3>
+<ul>
+<li>설정 &gt; 일반에 <code>모든 창을 닫으면 종료</code> 옵션이 있습니다.</li>
+<li>기본값은 꺼져 있습니다.</li>
+<li>macOS Preview처럼 창만 닫고 앱은 남겨두는 쪽이 기본이며, 원할 때만 자동 종료로 바꿀 수 있습니다.</li>
+</ul>
+<h3>9.6 하위 폴더 이미지 포함</h3>
+<ul>
+<li>설정에서 <code>하위 폴더 이미지 포함</code>을 켜면 현재 폴더뿐 아니라 하위 폴더의 이미지도 함께 탐색합니다.</li>
+<li>라이브러리 범위가 넓어져 편리하지만, 큰 폴더에서는 초기 스캔 범위와 결과 개수가 달라질 수 있습니다.</li>
+</ul>
+<h3>9.7 창 열기 정책 / 파일명 변경 후 재정렬</h3>
+<ul>
+<li>설정 &gt; 일반 &gt; <code>창 열기 정책</code>
+<ul>
+<li><code>단일 창(재사용)</code>(기본): 기존 창을 재사용해 엽니다.</li>
+<li><code>멀티 창(새 창 열기)</code>: 열기 요청마다 새 창을 엽니다.</li>
+<li>멀티 창이 떠 있는 상태에서 <code>단일 창(재사용)</code>으로 바꿔도 기존 창은 자동으로 닫히지 않습니다. 이후 Finder 더블클릭/열기 요청부터 활성 또는 메인 창을 재사용합니다.</li>
+</ul>
+</li>
+<li>설정 &gt; Navigation &gt; <code>파일명 변경 후 재정렬</code>
+<ul>
+<li>ON(기본): rename 후 현재 정렬 규칙으로 목록 재정렬</li>
+<li>OFF: rename 후 현재 순서 최대 유지</li>
+</ul>
+</li>
+</ul>
+<h3>9.8 별점 후 자동 이동</h3>
+<ul>
+<li><code>별점 후 자동 이동</code>을 켜면 별점을 준 뒤 자동으로 다음 사진으로 넘어갑니다.</li>
+<li>빠른 1차 선별에서는 매우 유용하고, 세밀하게 비교할 때는 끄는 편이 좋습니다.</li>
+<li><code>Cmd+A</code>로도 토글할 수 있습니다.</li>
+</ul>
+<h3>9.9 컴페어 재진입 동작</h3>
+<ul>
+<li>설정 &gt; Navigation &gt; <code>컴페어 진입 동작</code>에서 진입 정책을 선택할 수 있습니다.</li>
+<li><code>현재 선택 기준(Current Context)</code>은 현재 선택/현재 인덱스를 기준으로 컴페어를 시작합니다. (기본값)</li>
+<li><code>마지막 세션 복원(Resume Last Session)</code>은 같은 소스(같은 폴더/ZIP)를 다시 열 때 마지막 Compare 구성과 포커스를 복원합니다.</li>
+</ul>
+<h3>9.10 화면 맨위 고정</h3>
+<ul>
+<li>다른 앱과 함께 비교하거나 Finder/Lightroom과 번갈아 볼 때 유용합니다.</li>
+<li><code>Cmd+Shift+T</code>로 빠르게 켜고 끌 수 있습니다.</li>
+</ul>
+<h3>9.11 세로 Filmstrip과 Strip 표시 설정</h3>
+<ul>
+<li>세로 Filmstrip은 위치, 폭, 열 수를 조절해 작은 화면과 큰 화면에 맞출 수 있습니다.</li>
+<li><code>Cmd + 스크롤</code>로 Grid/Filmstrip 썸네일 크기를 조절할 수 있으며, 세로 Filmstrip은 4/3/2/1열 단계로 바뀝니다.</li>
+<li>일반 사용자가 보는 2.0 설정에서는 설정 &gt; 보기 &gt; 프로 레이아웃 뷰에서 Action Strip / Info Strip을 <code>Off</code> / <code>Full</code> 중심으로 선택하고, 셀렉트레이 표시 방식과 최종 기준을 함께 고릅니다.</li>
+</ul>
+<h3>9.12 스크롤 방향과 확대 유지</h3>
+<ul>
+<li>설정 &gt; Navigation에서 마우스 휠 동작을 <code>이전/다음 이미지</code>, <code>스크롤</code>, <code>줌</code> 중 선택할 수 있습니다.</li>
+<li>이전/다음 이미지 이동으로 사용할 때는 마우스와 트랙패드를 같은 기준으로 처리합니다.</li>
+<li><code>자연스러운 스크롤</code>은 Apple 설정과 같은 의미로 동작합니다. 켜면 손가락/휠이 움직이는 방향을 콘텐츠 이동 방향처럼 해석해 이전/다음 방향을 반대로 적용합니다.</li>
+<li><code>스크롤 방향 직접 설정</code>을 켜면 자연스러운 스크롤과 별개로 마우스/트랙패드, 상하/좌우 축의 이전/다음 방향을 각각 지정합니다.</li>
+<li>직접 설정이 꺼져 있으면 위의 <code>자연스러운 스크롤</code> 옵션만 기준으로 방향을 맞춥니다.</li>
+<li><code>이미지 이동 시 확대 비율 유지</code>를 켜면 다음 이미지로 넘어가도 현재 확대 비율을 유지합니다. 꺼져 있으면 이미지마다 기본 맞춤 표시로 돌아갑니다.</li>
+</ul>
+<h3>9.13 다크 배경과 툴팁</h3>
+<ul>
+<li>설정 &gt; 일반에서 다크 모드 뷰어 배경을 완전 검은색으로 바꿀 수 있습니다.</li>
+<li>상단 툴바 아이콘 위에 커서를 올리면 해당 버튼의 기능을 툴팁으로 확인할 수 있습니다.</li>
+</ul>
+<h3>9.14 Supporter Pass와 구입 항목 복원</h3>
+<ul>
+<li>Supporter Pass는 SnapView의 지속 개발을 지원하기 위한 선택형 평생 패스입니다.</li>
+<li>기본 보기, 탐색, 가벼운 선별 흐름은 구독형 강제 흐름 없이 유지됩니다.</li>
+<li>Mac App Store 빌드에서는 앱 메뉴 또는 설정에서 Supporter Pass를 열거나 이전 구입 항목을 복원할 수 있습니다.</li>
+<li>구매 가격은 결제 시 Mac App Store가 표시하며, 복원은 구매에 사용한 Apple 계정을 기준으로 처리됩니다.</li>
+</ul>
+<hr />
+<h2>10. ZIP 파일 사용 시 주의점</h2>
+<ul>
+<li>ZIP 내부 이미지도 일반 폴더처럼 탐색할 수 있습니다.</li>
+<li>ZIP은 구조 특성상 폴더보다 느릴 수 있습니다.</li>
+<li>ZIP 환경에서는 일부 정리 기능이 제한됩니다.</li>
+<li>ZIP에서는 별점/Pick/Reject/Finder 태그 저장이 제한됩니다.</li>
+<li>ZIP 내부 항목은 실제 파일이 아니므로 Finder 태그 연동 대상이 아닙니다.</li>
+<li>ZIP에서는 복사/붙여넣기/삭제가 제한됩니다.</li>
+<li>ZIP 내부 항목은 외부 앱 열기 미지원입니다.</li>
+<li>중복사진정리에서 ZIP 항목은 스캔은 가능하지만 삭제 단계에서 자동 건너뜀 처리될 수 있습니다.</li>
+</ul>
+<hr />
+<h2>11. 성능을 높이는 방법</h2>
+<ol>
+<li>대용량/ZIP 탐색이 느리면 디코딩 모드를 <code>속도 우선</code>으로 변경합니다.</li>
+<li>그리드에서는 썸네일 크기를 적당히 줄여 한 화면 밀도를 높입니다.</li>
+<li>필요한 오버레이만 켜고(<code>I</code>, <code>K</code>, <code>H</code>) 불필요한 패널은 끕니다.</li>
+<li>느린 외장 저장장치에서는 먼저 작은 폴더 단위로 정리합니다.</li>
+</ol>
+<hr />
+<h2>12. 자주 쓰는 단축키 요약</h2>
+<ul>
+<li>뷰 전환: <code>Q</code> Grid, <code>W</code> Main, <code>E</code> 가로 Filmstrip, <code>R</code> 세로 Filmstrip, <code>T</code> Navigator, <code>Tab</code> 프로 레이아웃 뷰, <code>B</code> Comic Reading, 비교 <code>C</code>, 레이아웃 전환 <code>L</code> 또는 <code>Cmd+L</code></li>
+<li>중복사진정리: <code>Cmd+Shift+D</code> (진입/재스캔), <code>Shift+D</code> (종료)</li>
+<li>비교 모드: <code>C</code>(진입/종료), <code>R</code>(Selection/Reference 전환), <code>Tab</code>(Reference/Candidate 포커스 전환), <code>↑/↓</code>(Reference/Candidate 포커스), <code>←/→</code>(포커스 패널 이동)</li>
+<li>이동: <code>좌/우</code>, <code>상/하</code> = 이전/다음, <code>Cmd+상/하</code> = 처음/끝, <code>⌥+상/하</code> = 이전/다음 폴더 첫 이미지</li>
+<li>점프 이동: <code>Cmd+좌/우</code>(10장), <code>Cmd+Shift+좌/우</code>(50장)</li>
+<li>줌/썸네일: <code>=</code> / <code>-</code>, Fit <code>0</code>, 폭 맞춤 <code>8</code>, 100% <code>9</code>, <code>Space</code>(100%/이전 배율), <code>Cmd+스크롤</code>(Grid/Filmstrip 썸네일 크기)</li>
+<li>동영상: <code>Space</code>(재생/일시정지/종료 후 다시 재생), <code>Option+좌/우</code>(5초 뒤/앞)</li>
+<li>정보 토글: <code>I</code>(정보), <code>K</code>(퀵체크 세트), <code>H</code>(히스토그램)</li>
+<li>화면: <code>Enter</code>(전체화면), <code>Cmd+Shift+T</code>(Always On Top)</li>
+<li>인쇄/PDF: <code>Cmd+P</code> (macOS 인쇄 패널, 현재 이미지/선택 이미지/현재 폴더/콘택트 시트)</li>
+<li>선별: <code>1~5</code>, <code>0</code>, <code>P</code>, <code>X</code>, <code>U</code>, <code>Cmd+1~6</code></li>
+<li>작업: <code>Cmd+C</code>, <code>Cmd+V</code>, <code>Delete</code>/<code>Backspace</code>/<code>D</code>, <code>Cmd+Delete</code>, <code>Cmd+O</code>, 빠른 정리 <code>Option+1~3</code></li>
+<li>드래그: Main 캔버스는 <code>Command</code>를 누른 상태에서 드래그, Grid/Filmstrip은 선택 썸네일 드래그</li>
+<li>외부 앱 열기: <code>Cmd+Option+O</code> (<code>다른 앱 선택…</code>)</li>
+<li>선택: <code>Cmd+A</code> (Main=Auto Advance 토글, Grid/프로 레이아웃 뷰=전체 선택)</li>
+<li>도움말: <code>Cmd+/</code> (전체 단축키 Sheet)</li>
+</ul>
+<p>전체 목록은 <code>docs/release/SHORTCUTS.md</code>를 참고하세요.</p>
+<hr />
+<h2>13. 추천 워크플로우 (실전)</h2>
+<h3>13.1 여행/일상 사진 빠른 정리</h3>
+<ol>
+<li>Grid(<code>Q</code>)에서 전체를 훑습니다.</li>
+<li>Reject(<code>X</code>)를 먼저 표시해 불필요 컷을 줄입니다.</li>
+<li>Main(<code>W</code>) 또는 Filmstrip(<code>E</code>)으로 좋은 컷에 별점 <code>3~5</code>를 줍니다.</li>
+<li>애매한 컷은 Compare(<code>C</code>)로 2~4장만 비교합니다.</li>
+<li>최종 선택본을 복사/이동해 보관 폴더로 정리합니다.</li>
+</ol>
+<h3>13.2 RAW+JPG 혼합 촬영 정리</h3>
+<ol>
+<li>폴더를 열고 빠르게 탐색합니다.</li>
+<li>Quick Check(<code>K</code>)로 문제 컷을 빠르게 찾습니다.</li>
+<li>별점/플래그로 선택 결과를 만든 뒤 Grid(<code>Q</code>)와 세로 Filmstrip(<code>R</code>)에서 필터와 Navigator를 함께 보며 점검합니다.</li>
+<li>외부 편집 앱으로 넘길 때는 기본적으로 RAW 파일을 우선 사용합니다.</li>
+<li>JPG 편집을 선호하는 워크플로우라면 설정 &gt; 일반 &gt; <code>외부 앱으로 열 RAW+JPG 대상</code>을 JPG 우선으로 바꿀 수 있습니다.</li>
+</ol>
+<h3>13.3 Lightroom 연계 선별</h3>
+<ol>
+<li>SnapView에서 <code>1~5</code>, <code>P</code>, <code>X</code>, <code>U</code>로 먼저 선별합니다.</li>
+<li>이 상태는 sidecar(XMP)에 저장되어 Lightroom 계열 도구에서 이어서 확인할 수 있습니다.</li>
+<li>후반 보정은 Lightroom에서 하고, 가장 시간이 많이 드는 1차 선별은 SnapView에서 훨씬 빠르게 끝내는 흐름에 적합합니다.</li>
+</ol>
+<h3>13.4 Finder 태그 중심 정리</h3>
+<ol>
+<li>SnapView에서 <code>Cmd+1~6</code>으로 Finder 태그를 적용하거나 해제합니다.</li>
+<li>Finder에서도 같은 태그 이름과 색상이 보여 폴더 정리와 전달 단계가 쉬워집니다.</li>
+<li>SnapView 안에서는 별점/Pick/Reject와 함께 선별하고, Finder 밖에서는 태그로 상태를 즉시 이어갈 수 있습니다.</li>
+</ol>
+<h3>13.5 중복사진 정리 워크플로우</h3>
+<ol>
+<li><code>Cmd+Shift+D</code>로 중복사진정리 모드에 진입합니다.</li>
+<li>좌측 그룹 리스트에서 용량이 큰 그룹부터 선택합니다.</li>
+<li><code>P</code>로 기준이미지를 지정한 뒤, 카드 <code>X</code> 또는 우측 <code>현재이미지 병합</code>으로 정리합니다.</li>
+<li>여러 그룹을 한 번에 정리할 때는 <code>중복사진 일괄 정리</code>를 사용합니다.</li>
+<li>방금 삭제를 되돌려야 하면 즉시 <code>Cmd+Z</code>를 사용합니다.</li>
+</ol>
+<hr />
+<h2>14. 문제 해결 (FAQ)</h2>
+<h3>Q1. DMG와 Mac App Store 버전은 무엇이 다른가요?</h3>
+<ul>
+<li>Mac App Store 버전은 sandbox 안정판 채널입니다.</li>
+<li>DMG 버전은 직접 다운로드 채널이며 Sparkle 업데이트를 사용합니다.</li>
+<li>둘 다 같은 SnapView 기능을 기준으로 하지만, 업데이트 배포 속도와 설치 경로가 다릅니다.</li>
+</ul>
+<h3>Q2. macOS 보안 경고가 뜨나요?</h3>
+<ul>
+<li>최신 릴리즈는 Apple Developer ID 서명과 공증을 거치므로 일반 설치 흐름에서 보안 경고가 뜨지 않는 것이 정상입니다.</li>
+<li>경고가 계속 보이면 오래된 DMG, 손상된 다운로드, 개발 빌드일 수 있습니다.</li>
+<li>최신 GitHub 릴리즈 DMG를 다시 내려받거나 Mac App Store 버전을 설치해 주세요.</li>
+</ul>
+<h3>Q3. Apple Silicon과 Intel Mac을 모두 지원하나요?</h3>
+<ul>
+<li>DMG는 Apple Silicon과 Intel Mac을 함께 지원하는 단일 유니버설 앱으로 제공합니다.</li>
+<li>Mac App Store 버전도 현재 지원 macOS 기준을 만족하는 Mac에서 설치할 수 있습니다.</li>
+</ul>
+<h3>Q4. 앱이 열리지만 파일이 안 보입니다</h3>
+<ul>
+<li>지원 포맷인지 확인합니다.</li>
+<li>정지 이미지는 macOS ImageIO가 제공하는 포맷을 기준으로 열며, RAW는 3FR, DNG, CR3, RW2, ARW, DXO 등을 포함한 ImageIO RAW 확장자를 RAW+JPG 묶음 대상으로 처리합니다.</li>
+<li>AI, SVG는 이번 ImageIO 디코더 지원 범위에서 제외합니다.</li>
+<li>animated <code>gif</code> / <code>webp</code>는 Main View에서만 움직이고, 다른 뷰에서는 첫 프레임만 보일 수 있습니다.</li>
+<li>파일 권한 문제면 폴더를 다시 선택해 권한을 허용합니다.</li>
+</ul>
+<h3>Q5. 키보드 단축키가 안 먹습니다</h3>
+<ul>
+<li>앱 창이 포커스를 가지고 있는지 확인합니다.</li>
+<li>다른 입력창(텍스트 필드)에 커서가 있으면 먼저 해제합니다.</li>
+<li>최근 버전에서는 <code>Cmd+W</code> 뒤 Finder에서 다시 열어도 보이는 메인 창을 우선 복구하도록 정리됐지만, 이미 다른 창에 포커스가 있으면 먼저 SnapView 창을 한 번 클릭해 주세요.</li>
+</ul>
+<h3>Q6. ZIP이 느리거나 실패 메시지가 나옵니다</h3>
+<ul>
+<li>손상 ZIP인지 확인합니다.</li>
+<li>다시 압축하거나 파일을 다시 받아 테스트합니다.</li>
+<li>디코딩 모드를 <code>속도 우선</code>으로 낮춰봅니다.</li>
+<li>ZIP 내부 항목은 실제 파일 시스템 항목이 아니므로 Finder 태그, 외부 앱 열기, 일부 저장/삭제 기능이 제한될 수 있습니다.</li>
+</ul>
+<h3>Q7. 빠른 정리와 Batch Actions는 어떻게 다른가요?</h3>
+<ul>
+<li>빠른 정리는 선택한 파일을 자주 쓰는 폴더로 복사/이동하는 기능입니다.</li>
+<li>Batch Actions는 JPEG/PNG 변환, 메타데이터 제거, 이름 변경, 복사/이동을 레시피로 묶어 실행하는 기능입니다.</li>
+<li>간단히 폴더로 보내려면 빠른 정리, 변환과 이름 변경까지 함께 하려면 Batch Actions를 사용하세요.</li>
+</ul>
+<h3>Q8. 빠른 정리 프리셋과 Batch Actions 레시피는 몇 개까지 쓸 수 있나요?</h3>
+<ul>
+<li>SnapView 2.0에서는 보이는 빠른 정리 프리셋을 최대 3개까지 제공합니다.</li>
+<li>SnapView 2.0에서는 보이는 Batch Actions 레시피를 최대 3개까지 제공합니다.</li>
+<li>자주 쓰는 작업 3개를 먼저 등록해 반복 작업을 단순하게 유지하는 방식입니다.</li>
+</ul>
+<h3>Q9. RAW+JPG를 같이 찍은 파일은 어떻게 처리되나요?</h3>
+<ul>
+<li>RAW+JPG 묶음 관리가 켜져 있으면 연결된 파일을 하나의 촬영 묶음처럼 다룹니다.</li>
+<li>별점/Pick/Reject, 빠른 정리, 삭제, 외부 앱 열기에서 묶음 처리 여부가 영향을 줄 수 있습니다.</li>
+<li>외부 편집 앱으로 보낼 때는 설정에서 RAW 우선 또는 JPG 우선을 선택할 수 있습니다.</li>
+</ul>
+<h3>Q10. Lightroom이나 Finder와 이어서 쓸 수 있나요?</h3>
+<ul>
+<li>별점, Pick, Reject는 XMP sidecar를 기준으로 Lightroom 계열 도구와 이어서 쓸 수 있습니다.</li>
+<li>색상 태그는 macOS Finder 태그와 연결됩니다.</li>
+<li>SnapView에서 1차 선별을 끝내고 Lightroom 또는 Finder에서 후속 작업을 이어가는 흐름에 맞습니다.</li>
+</ul>
+<h3>Q11. 아이콘/버전 표기가 이상합니다</h3>
+<ul>
+<li>앱 재실행 후 확인합니다.</li>
+<li>개발 빌드 사용 시 클린 빌드 후 다시 실행합니다.</li>
+</ul>
+<hr />
+<h2>15. 업데이트</h2>
+<ul>
+<li><code>DMG 채널(Fast)</code>:
+<ul>
+<li>앱 메뉴 <code>업데이트 확인(Check for Updates)</code>로 Sparkle 업데이트를 확인합니다.</li>
+<li>GitHub 릴리즈의 최신 <code>SnapView.dmg</code>로 수동 업데이트할 수도 있습니다.</li>
+</ul>
+</li>
+<li><code>Mac App Store 채널(Stable)</code>:
+<ul>
+<li>Mac App Store의 업데이트 경로(자동/수동)를 따릅니다.</li>
+</ul>
+</li>
+<li>DMG 채널은 별도 Intel 전용 파일 없이 최신 <code>SnapView.dmg</code> 하나로 업데이트합니다.</li>
+</ul>
+<hr />
+<h2>16. 데이터/안전 관련 참고</h2>
+<ul>
+<li>SnapView는 빠른 보기/선별 중심 도구입니다.</li>
+<li>확인 없는 삭제 옵션을 켠 상태에서는 선택 항목을 한 번 더 확인하세요.</li>
+<li>중요한 작업 전에는 원본 백업을 권장합니다.</li>
+</ul>
+<hr />
+<h2>17. 문서 버전</h2>
+<ul>
+<li>기준 버전: <code>v2.5.0 (2026-06-30)</code></li>
+</ul>

@@ -53,8 +53,8 @@
             <nav class="nav" aria-label="Primary">
                 <a href="/features/">Features</a>
                 <a href="/download/">Download</a>
-                <a href="/manual" class="active">Manual</a>
-                <a href="/release_notes">Release Notes</a>
+                <a href="/manual.html" class="active">Manual</a>
+                <a href="/release_notes.html">Release Notes</a>
             </nav>
 
             <div class="lang-switch" role="group" aria-label="Language">
@@ -75,7 +75,7 @@
                 <h2>1. What is SnapView?</h2>
                 <ul>
                     <li>SnapView is a blazing-fast image viewer for macOS.</li>
-                    <li>Open folders or ZIP files instantly to view and select photos without creating heavy catalogs.</li>
+                    <li>Open folders, Apple Photos collections, or ZIP files instantly to view and select photos without creating heavy catalogs.</li>
                     <li>Rather than replacing editing tools like Lightroom, it focuses on the quick viewing and culling stage before editing.</li>
                 </ul>
 
@@ -114,13 +114,13 @@
 
                 <h2>4. 5-Minute Quick Start</h2>
                 <ol>
-                    <li>Use <img src="assets/icons/view-main.svg" class="inline-icon" alt=""> <code>Open</code> to open a folder or ZIP file.</li>
+                    <li>Use <img src="assets/icons/view-main.svg" class="inline-icon" alt=""> <code>Open</code> to open a folder or ZIP file, or use Navigator to browse Apple Photos sources when permission is granted.</li>
                     <li>Switch views with <img src="assets/icons/view-grid.svg" class="inline-icon" alt=""> <img src="assets/icons/view-main.svg" class="inline-icon" alt=""> <img src="assets/icons/view-filmstrip.svg" class="inline-icon" alt=""> <img src="assets/icons/view-manage.svg" class="inline-icon" alt=""> <code>Q/W/E/R</code>, toggle Navigator with <code>T</code>, and open Pro Layout View with <code>Tab</code>.</li>
                     <li>Navigate using <code>Left/Right Arrow</code> keys.</li>
                     <li>Numbered filenames use Finder-style natural sorting, so <code>photo-1</code>, <code>photo-2</code>, and <code>photo-10</code> appear in the expected order.</li>
                     <li>For comic folders or ZIPs, press <code>B</code> to enter Comic Reading and press <code>B</code> again to return to normal review.</li>
                     <li>Rate good shots with <img src="assets/icons/star-filled.svg" class="inline-icon" alt=""> <code>1~5</code>, or mark unwanted ones with <img src="assets/icons/reject.svg" class="inline-icon" alt=""> <code>X</code> (Reject).</li>
-                    <li>Use Quick Organize presets for repeated copy/move sorting. SnapView 2.0 shows up to three visible Quick Organize presets.</li>
+                    <li>Use Quick Organize presets for repeated copy/move sorting. The standard visible surface keeps up to three presets easy to scan.</li>
                     <li>When using Lightroom, star ratings, Picks, and Rejects assigned in SnapView carry over directly via XMP sidecars.</li>
                     <li>To view results directly in Finder, apply tags. SnapView supports Finder's standard 7 color tags (Red/Orange/Yellow/Green/Blue/Purple/Gray).</li>
                     <li>Use <code>Cmd+Return</code> or <code>Show in Finder</code> when you want to locate the current file in Finder.</li>
@@ -139,8 +139,11 @@
                     <li><code>K</code>: open Quick Check, detailed EXIF, and Histogram as one review set.</li>
                     <li><code>C</code>: compare 1-4 photos or use Reference mode to review candidates against an anchor photo.</li>
                     <li><code>Cmd+Shift+D</code>: open Duplicate cleanup for exact files or same-photo candidates.</li>
-                    <li>Quick Organize copies or moves selected files to frequent folders. SnapView 2.0 shows up to three visible presets.</li>
-                    <li>Batch Actions combines JPEG/PNG conversion, metadata stripping, rename, copy, and move steps into previewed recipes. SnapView 2.0 shows up to three visible recipes.</li>
+                    <li>Apple Photos sources, HDR photos, and wider file formats can be reviewed in the same lightweight browsing flow.</li>
+                    <li>Select Tray keeps candidate, final, and excluded sets together while drag handoff sends selected files to Finder, Desktop, Photos, or another app.</li>
+                    <li>Quick Organize copies or moves selected files to frequent folders. The standard visible surface keeps up to three presets.</li>
+                    <li>Batch Actions combines JPEG/PNG conversion, metadata stripping, rename, copy, and move steps into previewed recipes. The standard visible surface keeps up to three recipes.</li>
+                    <li>Supporter Pass is optional. Core viewing remains included, and Mac App Store purchases can be restored from the same Apple account.</li>
                     <li>Action Strip and Info Strip use simple <code>Off</code> / <code>Full</code> controls in normal Settings. Pro Layout View prioritizes these strips over the Main View <code>I</code> info overlay.</li>
                     <li>Use <code>Get Started with SnapView</code> in Settings to reopen the first-run viewing setup.</li>
                 </ul>
@@ -360,24 +363,31 @@
                 <ul>
                     <li>Quick Organize copies or moves the current image or explicit selection to folders you use often.</li>
                     <li>Use it for repeated sorting such as Pick, 5-star, archive, or delivery folders while reviewing photos.</li>
-                    <li>SnapView 2.0 shows up to three visible Quick Organize presets.</li>
+                    <li>The standard visible surface keeps up to three Quick Organize presets.</li>
                     <li>Each preset has a name, destination folder, and copy/move behavior.</li>
                     <li><code>Option+1</code> through <code>Option+3</code> run the visible Quick Organize presets.</li>
                     <li>A preview confirms the target files and destination before execution.</li>
                     <li>If RAW+JPG pairing is enabled, linked files can be included in the same organize plan.</li>
-                    <li>Visible automatic organize rules focus on Pick and 5-star in SnapView 2.0.</li>
+                    <li>Visible automatic organize rules focus on Pick and 5-star so repeated review work stays simple.</li>
                 </ul>
 
                 <h3>7.11 Batch Actions</h3>
                 <ul>
                     <li>Batch Actions combines JPEG/PNG conversion, metadata stripping, rename, copy, and move steps into reusable recipes.</li>
                     <li>Quick Organize is best for sending files to folders; Batch Actions is for conversion, cleanup, naming, and delivery workflows.</li>
-                    <li>SnapView 2.0 shows up to three visible Batch Actions recipes.</li>
+                    <li>The standard visible surface keeps up to three Batch Actions recipes.</li>
                     <li>The default recipe is a starting point for common web JPEG delivery.</li>
                     <li>Before running, choose a destination and use the result preview to check expected filenames, counts, skipped items, and warnings.</li>
                     <li>If the recipe, target, or destination changes after preview, refresh the preview before running.</li>
                     <li>During execution, you can pause, resume, or cancel; recent runs support opening the folder, viewing details, and retrying.</li>
                     <li>Risky work such as moving originals or overwriting files asks for confirmation.</li>
+                </ul>
+
+                <h3>7.12 Select Tray and Drag Handoff</h3>
+                <ul>
+                    <li>Select Tray keeps candidate, final, and excluded groups close to the current review flow.</li>
+                    <li>Selections from Main, Grid, or Filmstrip can be dragged to Finder, Desktop, editing apps, or Photos when the source supports it.</li>
+                    <li>Photos items can be copied back to disk, and local files can be sent into Photos from supported handoff actions.</li>
                 </ul>
 
                 <h2>8. Quick Check & Compare</h2>
@@ -484,6 +494,14 @@
                 <ul>
                     <li>In Settings &gt; General, the dark-mode viewer background can be changed to pure black.</li>
                     <li>Hover over top toolbar icons to see tooltips for each button.</li>
+                </ul>
+
+                <h3>9.10 Supporter Pass and Restore Purchases</h3>
+                <ul>
+                    <li>Supporter Pass is an optional lifetime pass for supporting SnapView's continued development.</li>
+                    <li>Core viewing, browsing, and lightweight culling remain included without forcing a subscription-style workflow.</li>
+                    <li>In the Mac App Store build, use the App menu or Settings to open Supporter Pass or restore previous purchases.</li>
+                    <li>Purchase prices are shown by the Mac App Store at checkout, and restore uses the Apple account that made the purchase.</li>
                 </ul>
 
                 <h2>10. Notes on ZIP Files</h2>
@@ -615,10 +633,10 @@
                     <li>Use Quick Organize for simple folder sorting, and Batch Actions when conversion or renaming is part of the task.</li>
                 </ul>
 
-                <h3>Q8. How many Quick Organize presets and Batch Actions recipes are visible in SnapView 2.0?</h3>
+                <h3>Q8. How many Quick Organize presets and Batch Actions recipes are visible?</h3>
                 <ul>
-                    <li>SnapView 2.0 shows up to three visible Quick Organize presets.</li>
-                    <li>SnapView 2.0 shows up to three visible Batch Actions recipes.</li>
+                    <li>The standard visible surface shows up to three Quick Organize presets.</li>
+                    <li>The standard visible surface shows up to three Batch Actions recipes.</li>
                     <li>The visible surface is kept small so frequent workflows stay easy to scan.</li>
                 </ul>
 
