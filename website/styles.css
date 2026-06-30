@@ -280,6 +280,16 @@ h1 {
   max-width: 100%;
 }
 
+.inline-feature-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.inline-feature-link:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--accent-blue);
+}
+
 .btn {
   padding: 14px 24px;
   border-radius: 30px;
@@ -929,6 +939,7 @@ h1 {
 .footer-left {
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 
 .footer-brand-link {
@@ -956,6 +967,328 @@ h1 {
   color: var(--text-secondary);
   text-decoration: none;
   font-size: var(--type-small);
+}
+
+.footer-highlight-link {
+  color: var(--accent-green);
+  font-size: var(--type-small);
+  font-weight: 800;
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.footer-highlight-link:hover {
+  color: var(--text-primary);
+}
+
+/* Supporter Pass Detail Page */
+.supportpass-page {
+  position: relative;
+  z-index: 1;
+}
+
+.supportpass-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.58fr);
+  gap: 84px;
+  align-items: center;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 180px 32px 116px;
+}
+
+.supportpass-hero-copy {
+  min-width: 0;
+}
+
+.supportpass-hero h1 {
+  max-width: 760px;
+  margin-bottom: var(--space-6);
+  font-size: clamp(42px, 4.8vw, 60px);
+  line-height: 1.08;
+}
+
+.supportpass-hero .lead {
+  max-width: 680px;
+  margin: 0 0 42px;
+  color: var(--text-secondary);
+  text-align: left;
+  line-height: 1.72;
+}
+
+.supportpass-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+.supportpass-text-link {
+  color: var(--accent-green);
+  font-weight: 800;
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.supportpass-text-link:hover {
+  color: var(--text-primary);
+}
+
+.supportpass-hero-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 440px;
+  padding: 48px;
+  border: 1px solid rgba(242, 221, 163, 0.26);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 68% 12%, rgba(215, 168, 76, 0.28), transparent 42%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04)),
+    var(--glass-bg);
+  box-shadow: 0 36px 110px rgba(0, 0, 0, 0.24);
+}
+
+.supportpass-hero-card img {
+  display: block;
+  width: 132px;
+  height: 132px;
+  margin: 0 0 var(--space-8);
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 28px 70px rgba(215, 168, 76, 0.24);
+}
+
+.supportpass-hero-card span,
+.supportpass-clarity span,
+.supportpass-benefit-grid span {
+  display: inline-flex;
+  color: var(--accent-green);
+  font-size: var(--type-micro);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.supportpass-hero-card strong {
+  display: block;
+  margin: var(--space-3) 0 var(--space-4);
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-size: clamp(34px, 3.4vw, 52px);
+  line-height: 1.04;
+}
+
+.supportpass-hero-card p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: var(--type-body-large);
+  line-height: 1.62;
+}
+
+.supportpass-clarity,
+.supportpass-benefit-grid {
+  display: grid;
+  gap: 24px;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.supportpass-clarity {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.supportpass-clarity article,
+.supportpass-benefit-grid article {
+  min-width: 0;
+  padding: 34px;
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.supportpass-clarity h2,
+.supportpass-benefit-grid h3 {
+  margin: var(--space-4) 0 var(--space-3);
+  color: var(--text-primary);
+  font-size: var(--type-card-title);
+  line-height: 1.16;
+}
+
+.supportpass-clarity p,
+.supportpass-benefit-grid p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.supportpass-benefits,
+.supportpass-version-compare,
+.supportpass-final {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 132px 32px 0;
+}
+
+.supportpass-benefit-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 0;
+}
+
+.supportpass-table-card {
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  border-radius: 28px;
+  background:
+    linear-gradient(135deg, rgba(100, 210, 255, 0.09), transparent 32%),
+    linear-gradient(225deg, rgba(126, 227, 161, 0.08), transparent 42%),
+    var(--glass-bg);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.2);
+}
+
+.supporter-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.supporter-table caption {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.supporter-table th,
+.supporter-table td {
+  padding: 28px 24px;
+  border-bottom: 1px solid var(--glass-border);
+  vertical-align: middle;
+}
+
+.supporter-table thead th {
+  color: var(--text-secondary);
+  font-size: var(--type-micro);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.supporter-table thead th:first-child,
+.supporter-table tbody th {
+  width: 34%;
+  text-align: left;
+}
+
+.supporter-table td {
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.supporter-table tbody th strong {
+  display: block;
+  color: var(--text-primary);
+  font-size: var(--type-body);
+  line-height: 1.3;
+}
+
+.supporter-table tbody th span {
+  display: block;
+  margin-top: 6px;
+  color: var(--text-secondary);
+  font-size: var(--type-small);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.supporter-table td b {
+  display: inline;
+  color: var(--text-primary);
+  font-size: var(--type-body);
+  line-height: 1.35;
+}
+
+.supporter-table td small {
+  display: block;
+  margin-top: 6px;
+  color: var(--text-secondary);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.supporter-check {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  margin: 0 8px 0 0;
+  border-radius: 50%;
+  background: var(--accent-blue);
+  vertical-align: middle;
+}
+
+.supporter-check::before {
+  content: '';
+  width: 12px;
+  height: 7px;
+  margin-top: -1px;
+  border-left: 2px solid var(--bg-deep);
+  border-bottom: 2px solid var(--bg-deep);
+  transform: rotate(-45deg);
+}
+
+.supporter-tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 22px;
+  margin: 0 8px 0 0;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(126, 227, 161, 0.16);
+  color: var(--accent-green);
+  font-size: 12px;
+  font-weight: 800;
+  vertical-align: middle;
+}
+
+.supporter-tag--soft {
+  color: #F2DDA3;
+  background: rgba(215, 168, 76, 0.16);
+}
+
+.supportpass-detail-table thead th:nth-child(3) {
+  color: var(--accent-blue);
+}
+
+.supportpass-detail-table thead th:nth-child(4) {
+  color: var(--accent-green);
+}
+
+.supportpass-detail-table thead th:nth-child(5) {
+  color: #F2DDA3;
+}
+
+.supportpass-final {
+  max-width: 880px;
+  padding-bottom: 132px;
+  text-align: center;
+}
+
+.supportpass-final h2 {
+  margin: 0;
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-size: var(--type-section);
+  line-height: 1.08;
+}
+
+.supportpass-final p {
+  max-width: 760px;
+  margin: var(--space-5) auto var(--space-8);
+  color: var(--text-secondary);
+  font-size: var(--type-body-large);
+  line-height: 1.7;
 }
 
 /* Documentation Pages */
@@ -1629,6 +1962,122 @@ h1 {
 
   .story-card.reverse .card-copy {
     order: 1;
+  }
+
+  .supportpass-hero {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 188px 22px 86px;
+  }
+
+  .supportpass-hero h1 {
+    max-width: 350px;
+    font-size: 34px;
+    text-align: center;
+  }
+
+  .supportpass-hero .lead {
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 34px;
+    text-align: center;
+  }
+
+  .supportpass-actions {
+    justify-content: center;
+  }
+
+  .supportpass-actions .btn {
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+  }
+
+  .supportpass-hero-card {
+    min-height: auto;
+    padding: 30px;
+    border-radius: 22px;
+  }
+
+  .supportpass-hero-card img {
+    width: 96px;
+    height: 96px;
+    margin-bottom: 24px;
+  }
+
+  .supportpass-clarity,
+  .supportpass-benefit-grid {
+    grid-template-columns: 1fr;
+    max-width: 350px;
+    padding: 0;
+  }
+
+  .supportpass-benefits,
+  .supportpass-version-compare,
+  .supportpass-final {
+    padding-top: 92px;
+  }
+
+  .supportpass-table-card {
+    overflow: visible;
+    padding: 24px;
+    border-radius: 22px;
+  }
+
+  .supporter-table,
+  .supporter-table thead,
+  .supporter-table tbody,
+  .supporter-table tr,
+  .supporter-table th,
+  .supporter-table td {
+    display: block;
+  }
+
+  .supporter-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  .supporter-table tr {
+    padding: 22px 0;
+    border-bottom: 1px solid var(--glass-border);
+  }
+
+  .supporter-table tr:last-child {
+    border-bottom: 0;
+  }
+
+  .supporter-table th,
+  .supporter-table td,
+  .supporter-table thead th:first-child,
+  .supporter-table tbody th {
+    width: 100%;
+    padding: 0;
+    border-bottom: 0;
+  }
+
+  .supporter-table td {
+    margin-top: 10px;
+    padding: 16px;
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.045);
+    text-align: left;
+  }
+
+  .supporter-table td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 8px;
+    color: var(--accent-blue);
+    font-size: var(--type-micro);
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
   }
 
   .footer {
