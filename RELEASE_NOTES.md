@@ -17,17 +17,19 @@ Language: [🇺🇸 English](#english-250) | [🇰🇷 한국어](#korean-250)
 - Non-AI upscaling options help small or low-resolution images look cleaner while keeping the viewer responsive.
 - `Command-P` opens the native macOS print panel for current images, selected images, folders, ZIP archives, Apple Photos collections, contact sheets, and PDF save workflows.
 - Drag files or selections from Main, Grid, and Filmstrip to Finder, Desktop, or another editing app, and send local files into Apple Photos without leaving SnapView.
-- Pro Layout View adds a Select Tray for candidate, final, and excluded sets, with selected-original copy handoff for culling workflows.
+- Pro Layout View adds a Select Tray for candidate, final, and excluded sets, with selected-original copy handoff for faster culling.
 - Multi Monitor Workspace can place review tools on a second display, including Navigator, Quick Check, Histogram, Map, Filmstrip, and Select Tray panels.
 - A project folder template command can create `Capture`, `Select`, `Reject`, and `Output` folders and open the new `Capture` folder.
 
 #### Improvements
 - Navigator separates local folders and Apple Photos sources so both remain easier to reach.
-- Sorting is easier to access from Main, Grid, Filmstrip, and context menus.
+- Sorting now works across Main, Grid, and Filmstrip, with quick controls from image counters and context menus so review order stays consistent while switching views.
+- Select Tray is easier to use in Pro Layout View, with candidate, final, and excluded counts, cleaner strip/HUD layouts, and faster original-copy handoff for selected sets.
 - Context menus are grouped more clearly around marking, viewing, workflow, editing, and Filmstrip actions.
+- Rename and file handoff are easier to discover, including rename from the filename, `F2`, menus, and context menus, plus Open With app selection and project-folder shortcuts.
 - Open With, print, Photos import/export, and other file actions are easier to find from the current image or selection.
 - Performance and Playback settings are easier to scan, with viewing speed, slideshow, and video options separated more clearly.
-- RAW+JPG, WebP, info overlay, cursor-centered zoom, and fit-width behavior have been tightened based on recent user feedback.
+- Recent user feedback also tightened RAW+JPG and WebP handling, info overlay and counter behavior, cursor-centered 100% zoom, Fit Width, and keyboard panning while zoomed.
 
 #### Stability And Performance
 - Apple Photos loading, HDR, upscaling, metadata, and thumbnail work interrupt the current image less while browsing.
@@ -51,17 +53,19 @@ Language: [🇺🇸 English](#english-250) | [🇰🇷 한국어](#korean-250)
 - 작은 이미지나 저해상도 이미지를 더 보기 좋게 표시하기 위한 non-AI 업스케일링 옵션을 추가했습니다.
 - `Command-P`로 macOS 기본 인쇄 패널을 열어 현재 이미지, 선택 이미지, 폴더, ZIP, Apple Photos 컬렉션, 콘택트 시트, PDF 저장 흐름을 사용할 수 있습니다.
 - Main, Grid, Filmstrip에서 파일이나 선택 항목을 Finder, 데스크탑, 다른 편집 앱으로 드래그해 넘길 수 있고, 로컬 파일을 Apple Photos 라이브러리로 보낼 수도 있습니다.
-- Pro Layout View에 후보, 최종, 제외 묶음을 다루는 Select Tray를 추가했고, 선별한 원본을 복사해 넘기는 흐름을 정리했습니다.
+- Pro Layout View에 후보, 최종, 제외 묶음을 다루는 Select Tray를 추가했고, 선별한 원본을 더 빠르게 복사해 넘길 수 있습니다.
 - Multi Monitor Workspace에서 Navigator, Quick Check, Histogram, Map, Filmstrip, Select Tray 같은 리뷰 도구를 보조 디스플레이에 배치할 수 있습니다.
 - `Capture`, `Select`, `Reject`, `Output` 폴더를 만들고 새 `Capture` 폴더를 여는 프로젝트 폴더 템플릿 명령을 추가했습니다.
 
 #### 개선된 점
 - Navigator에서 로컬 폴더와 Apple Photos 소스를 분리해 두 영역을 더 쉽게 찾을 수 있습니다.
-- Main, Grid, Filmstrip과 우클릭 메뉴에서 정렬에 더 쉽게 접근할 수 있습니다.
+- 정렬이 Main, Grid, Filmstrip 전반에 적용되어 보기를 바꿔도 같은 순서로 리뷰할 수 있고, 이미지 카운터와 우클릭 메뉴에서 빠르게 바꿀 수 있습니다.
+- Select Tray는 후보, 최종, 제외 카운트와 더 깔끔한 Strip/HUD 레이아웃을 제공하고, 선택한 묶음의 원본 복사를 더 빠르게 이어갈 수 있습니다.
 - 우클릭 메뉴를 마킹, 보기, 작업, 편집, Filmstrip 동작 중심으로 정리했습니다.
+- 파일명 변경과 파일 전달 흐름을 더 찾기 쉽게 다듬었습니다. 파일명, `F2`, 메뉴/우클릭에서 이름을 바꾸고, Open With 앱 선택과 프로젝트 폴더 만들기도 더 빨리 접근할 수 있습니다.
 - Open With, 인쇄, Photos 가져오기/내보내기 같은 파일 작업을 현재 이미지나 선택 항목에서 더 쉽게 찾을 수 있습니다.
 - Performance와 Playback 설정을 더 명확히 나눠 보기 속도, 슬라이드쇼, 비디오 옵션을 더 쉽게 훑을 수 있습니다.
-- RAW+JPG, WebP, 정보 오버레이, 커서 기준 확대, 폭 맞춤 유지 동작을 최근 사용자 피드백에 맞춰 보강했습니다.
+- 최근 사용자 피드백을 반영해 RAW+JPG와 WebP 처리, 정보 오버레이와 카운터, 커서 기준 100% 확대, Fit Width, 확대 상태 키보드 이동을 다듬었습니다.
 
 #### 안정성 및 성능
 - Apple Photos 로딩, HDR, 업스케일링, 메타데이터, 썸네일 작업이 탐색 중 현재 이미지 표시를 덜 방해하도록 정리했습니다.
