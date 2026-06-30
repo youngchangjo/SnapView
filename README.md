@@ -81,7 +81,7 @@ SnapView is built for the part after import: checking sharpness, comparing near-
 
 ## Supported Formats
 
-- ImageIO still images: `astc`, `avci`, `avif`, `bmp`, `dcm`, `dds`, `dib`, `dicom`, `exr`, `gif`, `hdr`, `heic`, `heics`, `heif`, `hif`, `icns`, `ico`, `j2c`, `j2k`, `jp2`, `jpe`, `jpeg`, `jpf`, `jpg`, `jpx`, `jxl`, `ktx`, `mpo`, `pbm`, `pct`, `pfm`, `pgm`, `pic`, `pict`, `png`, `ppm`, `psd`, `pvr`, `sgi`, `tga`, `tif`, `tiff`, `webp`
+- Still images: `astc`, `avci`, `avif`, `bmp`, `dcm`, `dds`, `dib`, `dicom`, `exr`, `gif`, `hdr`, `heic`, `heics`, `heif`, `hif`, `icns`, `ico`, `j2c`, `j2k`, `jp2`, `jpe`, `jpeg`, `jpf`, `jpg`, `jpx`, `jxl`, `ktx`, `mpo`, `pbm`, `pct`, `pfm`, `pgm`, `pic`, `pict`, `png`, `ppm`, `psd`, `pvr`, `sgi`, `tga`, `tif`, `tiff`, `webp`
 - RAW: `3fr`, `arw`, `axr`, `cr2`, `cr3`, `crw`, `dcr`, `dng`, `dxo`, `erf`, `fff`, `iiq`, `mos`, `mrw`, `nef`, `nefx`, `nrw`, `orf`, `ori`, `pef`, `raf`, `raw`, `rw2`, `rwl`, `sr2`, `srf`, `srw`
 - Video: `mp4`, `mov`, `m4v`
 - Container: `zip` for supported images inside archives
@@ -110,7 +110,7 @@ SnapView is built for the part after import: checking sharpness, comparing near-
 - ZIP browsing can be slower than normal folders because archive contents must be read before display.
 - ZIP items are not normal filesystem files, so some save and interoperability features are limited there.
 - Animated `gif` and `webp` play in Main View only. Other views show a still first frame.
-- ImageIO-backed formats depend on the macOS decoder set available on the running system.
+- Some format support can vary by macOS version.
 
 ---
 
@@ -185,7 +185,7 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 
 ## 지원 포맷
 
-- ImageIO 정지 이미지: `astc`, `avci`, `avif`, `bmp`, `dcm`, `dds`, `dib`, `dicom`, `exr`, `gif`, `hdr`, `heic`, `heics`, `heif`, `hif`, `icns`, `ico`, `j2c`, `j2k`, `jp2`, `jpe`, `jpeg`, `jpf`, `jpg`, `jpx`, `jxl`, `ktx`, `mpo`, `pbm`, `pct`, `pfm`, `pgm`, `pic`, `pict`, `png`, `ppm`, `psd`, `pvr`, `sgi`, `tga`, `tif`, `tiff`, `webp`
+- 정지 이미지: `astc`, `avci`, `avif`, `bmp`, `dcm`, `dds`, `dib`, `dicom`, `exr`, `gif`, `hdr`, `heic`, `heics`, `heif`, `hif`, `icns`, `ico`, `j2c`, `j2k`, `jp2`, `jpe`, `jpeg`, `jpf`, `jpg`, `jpx`, `jxl`, `ktx`, `mpo`, `pbm`, `pct`, `pfm`, `pgm`, `pic`, `pict`, `png`, `ppm`, `psd`, `pvr`, `sgi`, `tga`, `tif`, `tiff`, `webp`
 - RAW: `3fr`, `arw`, `axr`, `cr2`, `cr3`, `crw`, `dcr`, `dng`, `dxo`, `erf`, `fff`, `iiq`, `mos`, `mrw`, `nef`, `nefx`, `nrw`, `orf`, `ori`, `pef`, `raf`, `raw`, `rw2`, `rwl`, `sr2`, `srf`, `srw`
 - 동영상: `mp4`, `mov`, `m4v`
 - 컨테이너: `zip` 내부 지원 이미지
@@ -214,4 +214,4 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 - ZIP 탐색은 일반 폴더보다 구조적으로 느릴 수 있습니다.
 - ZIP 내부 항목은 실제 파일이 아니므로 일부 저장과 연동 기능이 제한됩니다.
 - animated `gif` / `webp`는 Main View에서만 재생되고, 다른 뷰에서는 첫 프레임 정지 이미지로 표시됩니다.
-- ImageIO 기반 포맷은 실행 중인 macOS가 제공하는 디코더 집합에 따라 달라질 수 있습니다.
+- 일부 포맷 지원은 실행 중인 macOS 버전에 따라 달라질 수 있습니다.
