@@ -404,6 +404,11 @@ h1 {
   font-weight: 800;
 }
 
+.new-release .feature-keyword {
+  color: var(--text-primary);
+  font-weight: 800;
+}
+
 .feature-showcase img,
 .feature-tiles img {
   width: 100%;
@@ -447,6 +452,59 @@ h1 {
   aspect-ratio: 16 / 10;
   object-fit: cover;
   object-position: center;
+}
+
+.supporter-pass-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 112px 20px 116px;
+}
+
+.supporter-heading {
+  max-width: 860px;
+}
+
+.supporter-principle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 42px;
+}
+
+.supporter-principle-grid article {
+  min-width: 0;
+  padding: 28px;
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.supporter-principle-grid span {
+  display: inline-flex;
+  color: var(--accent-green);
+  font-size: var(--type-micro);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.supporter-principle-grid h3 {
+  margin: 14px 0 12px;
+  color: var(--text-primary);
+  font-size: var(--type-card-title);
+  line-height: 1.18;
+}
+
+.supporter-principle-grid p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.supporter-detail-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
 }
 
 .lightness-band {
@@ -1664,6 +1722,7 @@ h1 {
   .section-heading [data-lang="ko"],
   .showcase-copy [data-lang="ko"],
   .feature-tiles [data-lang="ko"],
+  .supporter-principle-grid [data-lang="ko"],
   .compact-info-card [data-lang="ko"] {
     word-break: keep-all;
     overflow-wrap: break-word;
@@ -1749,6 +1808,33 @@ h1 {
 
   .feature-tiles img {
     max-width: 100%;
+  }
+
+  .supporter-pass-section {
+    max-width: 100vw;
+    padding: 86px 20px 92px;
+    overflow: hidden;
+  }
+
+  .supporter-principle-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 350px;
+    margin: 34px auto 0;
+  }
+
+  .supporter-principle-grid article {
+    padding: 24px;
+  }
+
+  .supporter-principle-grid h3 {
+    font-size: var(--type-card-title);
+    line-height: 1.24;
+  }
+
+  .supporter-detail-cta {
+    margin-top: 30px;
+    text-align: center;
   }
 
   .lightness-grid {
@@ -1922,6 +2008,7 @@ h1 {
   }
 
   .new-release,
+  .supporter-pass-section,
   .story-grid,
   .reviews-section,
   .specs-section,
