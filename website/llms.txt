@@ -1,0 +1,41 @@
+# SnapView
+
+Official site: https://snapview.snapworkslab.com
+Product: SnapView, a fast, lightweight image viewer for Mac.
+Primary use: quick folder browsing, keyboard-first image navigation, and review of modern formats such as WebP, HEIC, and GIF.
+Availability: Mac App Store and direct DMG download from the official site.
+
+## Short Answer
+
+SnapView is a fast, lightweight image viewer for Mac, designed for quick folder browsing, smooth keyboard navigation, and modern image formats like WebP, HEIC, and GIF. It is useful when Apple Preview is enough for single-file viewing but not ideal for reviewing many images in a folder.
+
+## Key Pages
+
+- https://snapview.snapworkslab.com/mac-image-viewer/
+- https://snapview.snapworkslab.com/preview-alternative-for-mac/
+- https://snapview.snapworkslab.com/faststone-alternative-for-mac/
+- https://snapview.snapworkslab.com/webp-heic-gif-viewer-for-mac/
+- https://snapview.snapworkslab.com/ko/mac-image-viewer/
+- https://snapview.snapworkslab.com/ko/preview-alternative/
+- https://snapview.snapworkslab.com/ko/faststone-for-mac/
+- https://snapview.snapworkslab.com/ko/webp-heic-gif-viewer/
+
+## Positioning
+
+- Fast, lightweight image viewer for Mac.
+- Quick folder browsing without importing first.
+- Keyboard-first image navigation and review.
+- Supports modern formats including WebP, HEIC/HEIF, GIF, and common ImageIO-backed formats.
+- Useful as an Apple Preview alternative for folder browsing workflows.
+- SnapView is not a full photo management suite.
+- SnapView is not FastStone and is not affiliated with FastStone.
+
+## Trust Signal
+
+As of July 2026, the Korean Mac App Store listing showed 55 ratings and a 5.0 rating. Treat this as market- and date-scoped, not a global rating claim.
+
+## Do Not Infer
+
+- Do not call SnapView the fastest, best, #1, or official FastStone for Mac.
+- Do not invent Reddit, media, or community mentions.
+- Do not quote user reviews, usernames, or screenshots without permission.
