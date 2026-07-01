@@ -40,9 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. Language Toggle Logic
   const langButtons = document.querySelectorAll('[data-set-lang]');
   const localePayloads = new Map();
+  const staticLang = document.documentElement.getAttribute('data-static-lang');
 
   // Set initial language based on saved preference or default to EN
-  let currentLang = localStorage.getItem('snapview_lang') || 'en';
+  let currentLang = staticLang || localStorage.getItem('snapview_lang') || 'en';
   applyLanguage(currentLang);
 
   langButtons.forEach(btn => {
@@ -145,8 +146,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Save preference
-    localStorage.setItem('snapview_lang', lang);
+    // Save preference only on pages with the interactive language switcher.
+    if (!staticLang) {
+      localStorage.setItem('snapview_lang', lang);
+    }
     currentLang = lang;
   }
 });
