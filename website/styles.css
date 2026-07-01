@@ -1471,7 +1471,123 @@ h1 {
   flex-wrap: wrap;
   gap: 12px;
   justify-content: center;
+  margin: 0 auto 14px;
+}
+
+.seo-social-proof {
+  max-width: 680px;
   margin: 0 auto 54px;
+  color: var(--text-secondary);
+  font-size: var(--type-small);
+  line-height: 1.6;
+  text-align: center;
+}
+
+.seo-answer {
+  margin: 0 0 32px;
+  padding: 24px 28px;
+  border: 1px solid rgba(100, 210, 255, 0.22);
+  border-radius: 18px;
+  background: rgba(100, 210, 255, 0.07);
+}
+
+.seo-answer h2,
+.seo-final-cta h2 {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.seo-use-list {
+  margin-bottom: 34px;
+}
+
+.seo-table-wrap {
+  margin: 0 0 32px;
+  overflow-x: auto;
+}
+
+.seo-compare-table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.seo-compare-table caption {
+  margin-bottom: 12px;
+  color: var(--text-secondary);
+  font-size: var(--type-small);
+  text-align: left;
+}
+
+.seo-compare-table th,
+.seo-compare-table td {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+  font-size: var(--type-small);
+  line-height: 1.55;
+  text-align: left;
+  vertical-align: top;
+}
+
+.seo-compare-table th {
+  color: var(--text-primary);
+  font-weight: 800;
+}
+
+.seo-compare-table tr:last-child th,
+.seo-compare-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.seo-final-cta {
+  margin: 44px 0 0;
+  padding: 28px;
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  background: rgba(126, 227, 161, 0.07);
+  text-align: center;
+}
+
+.seo-final-cta p {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.review-facts {
+  display: block;
+  margin-top: 28px;
+}
+
+.review-facts article {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 28px;
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.review-facts h3 {
+  margin: 0 0 10px;
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-size: var(--type-card-title);
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.review-facts p {
+  margin: 0 0 16px;
+  color: var(--text-secondary);
+  font-size: var(--type-body);
+  line-height: 1.65;
 }
 
 .seo-visual {
@@ -2449,6 +2565,16 @@ h1 {
   .seo-comparison,
   .seo-related {
     padding: 20px;
+  }
+
+  .seo-answer,
+  .seo-final-cta,
+  .review-facts article {
+    padding: 20px;
+  }
+
+  .seo-compare-table {
+    min-width: 620px;
   }
 }
 
