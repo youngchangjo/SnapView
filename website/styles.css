@@ -1048,11 +1048,11 @@ h1 {
 .supportpass-hero {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.58fr);
-  gap: 84px;
+  gap: 72px;
   align-items: center;
   max-width: 1240px;
   margin: 0 auto;
-  padding: 180px 32px 116px;
+  padding: 156px 32px 78px;
 }
 
 .supportpass-hero-copy {
@@ -1159,7 +1159,7 @@ h1 {
 .supportpass-clarity article,
 .supportpass-benefit-grid article {
   min-width: 0;
-  padding: 34px;
+  padding: 30px;
   border: 1px solid var(--glass-border);
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.05);
@@ -1185,7 +1185,7 @@ h1 {
 .supportpass-final {
   max-width: 1240px;
   margin: 0 auto;
-  padding: 132px 32px 0;
+  padding: 104px 32px 0;
 }
 
 .supportpass-benefit-grid {
@@ -1220,7 +1220,7 @@ h1 {
 
 .supporter-table th,
 .supporter-table td {
-  padding: 28px 24px;
+  padding: 22px 20px;
   border-bottom: 1px solid var(--glass-border);
   vertical-align: middle;
 }
@@ -1329,7 +1329,7 @@ h1 {
 
 .supportpass-final {
   max-width: 880px;
-  padding-bottom: 132px;
+  padding-bottom: 112px;
   text-align: center;
 }
 
@@ -1463,12 +1463,37 @@ h1 {
   padding: 24px 28px;
 }
 
+.feature-page-content {
+  max-width: 1280px;
+}
+
+.feature-page-content > [data-lang] {
+  max-width: 1160px;
+}
+
 .feature-page-list {
   columns: 2;
   column-gap: 34px;
   margin: 0;
   padding-left: 20px;
   color: var(--text-secondary);
+}
+
+@media (min-width: 1180px) {
+  .feature-page-content .feature-page-list {
+    columns: 1;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .feature-page-content .feature-page-list li {
+    margin-bottom: 8px;
+    white-space: nowrap;
+  }
+
+  .feature-page-content .feature-page-panel {
+    overflow-x: auto;
+  }
 }
 
 .feature-page-list li {
@@ -2054,7 +2079,7 @@ h1 {
   .supportpass-hero {
     grid-template-columns: 1fr;
     gap: 36px;
-    padding: 188px 22px 86px;
+    padding: 150px 22px 72px;
   }
 
   .supportpass-hero h1 {
@@ -2103,12 +2128,12 @@ h1 {
   .supportpass-benefits,
   .supportpass-version-compare,
   .supportpass-final {
-    padding-top: 92px;
+    padding-top: 76px;
   }
 
   .supportpass-table-card {
     overflow: visible;
-    padding: 24px;
+    padding: 20px;
     border-radius: 22px;
   }
 
