@@ -119,5 +119,6 @@
   "home.118": "Rust 기반 빠른 썸네일 처리, 지속 썸네일 디스크 캐시, 더 많은 Quick Organize 프리셋과 Batch Actions 레시피를 더합니다.",
   "home.119": "작업 공간 확장",
   "home.120": "리뷰와 전달 흐름을 더 넓게 씁니다.",
-  "home.121": "보조 모니터 작업공간에서 Navigator, Quick Check, Histogram, Map, Filmstrip, Select Tray를 나눠 보고, 클라이언트 리뷰와 전달 흐름도 더 편하게 이어갑니다."
+  "home.121": "보조 모니터 작업공간에서 Navigator, Quick Check, Histogram, Map, Filmstrip, Select Tray를 나눠 보고, 클라이언트 리뷰와 전달 흐름도 더 편하게 이어갑니다.",
+  "home.122": "<strong style=\"color: var(--accent-blue);\">Rust 기반 빠른 썸네일 처리</strong>로 큰 폴더의 Grid/Filmstrip 준비 시간 단축 <span class=\"key-feature-new\">NEW 2.5</span>"
 }
