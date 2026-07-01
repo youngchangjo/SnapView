@@ -56,23 +56,19 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 
 - Fast folder and ZIP browsing
 - Apple Photos browsing for Library, Favorites, Videos, Screenshots, and albums, with a Photos-style Favorite heart in Photos mode
-- Image display comes first: metadata parsing, quality analysis, cache warming, and optional enhancements are designed to stay out of the browsing hot path
-- Advanced performance settings can keep rapid preview while optionally skipping the intermediate resized promotion after the settled preview
+- Image display comes first, with heavier analysis and cache work kept in the background during browsing
 - HDR-aware main display for supported sources, with a compact HDR badge whose HDR region toggles HDR/SDR display, returns SDR to original-quality display, and whose expand control opens detailed inspection
 - Quick Check for quality diagnosis with reasons, not just EXIF fields
 - Map Overlay for GPS-backed photo location review
 - Compare mode for picking the best frame from similar shots
 - Duplicate workspace for exact-file cleanup
-- Comic Reading Mode for opened folders or ZIP archives, with a focused black reader, HUD-local left-to-right/right-to-left controls, Webtoon selection kept inside the reader HUD, same-source last page restore, and next folder/ZIP handoff
-- HUD hover help for review tools follows the selected app language
+- Comic Reading Mode for opened folders or ZIP archives, with a focused black reader, HUD-local left-to-right/right-to-left controls, same-source last page restore, and next folder/ZIP handoff
 - Keyboard-first rating, pick, reject, and Finder tag workflow
-- Q/W/E/R/T + Tab viewer policy: Q=Grid, W=Main View, E=Horizontal Filmstrip, R=Vertical Filmstrip, T=Navigator toggle, Tab=Pro Layout View. Pro Layout means the Tab-toggled Action Strip, Info Strip, and Select Tray layer; Navigator and Filmstrip are independent viewer surfaces. Info Strip metadata refresh is post-frame/background work, not first-frame or priority image-display work.
-- Selection-focus dimming stays optional and default-off so unselected thumbnails keep their original brightness unless the user enables the focus aid.
-- Quick Organize presets for repeated copy/move sorting from the current selection, with up to three visible presets in SnapView 2.0
-- Batch Actions for previewed JPEG/PNG export and copy/move recipes, with up to three visible recipes in SnapView 2.0 and up to ten as a Supporter Pass thank-you benefit in supported App Store builds
-- Print images or save PDFs with `Command-P` through the native macOS print panel. The `SnapView Images` section controls image range, arrangement, scaling, and filename captions without replacing system printer/page settings.
-- Intro Supporter Pass entry for supported App Store builds, with a SnapWorks Lab support CTA before purchase, a Founding Supporter window from 2026-07-01 through 2026-09-30 UTC, and the selected Supporter app icon in active supporter surfaces while keeping the Basic viewer generous
-- Multi Monitor Workspace appears as a Supporter Pass benefit in supported App Store builds; inactive builds show the entry disabled instead of hiding it, while DMG builds remain unrestricted.
+- Q/W/E/R/T + Tab viewer policy: Q=Grid, W=Main View, E=Horizontal Filmstrip, R=Vertical Filmstrip, T=Navigator toggle, Tab=Pro Layout View
+- Quick Organize presets for repeated copy/move sorting, with up to three visible presets and auto rules limited to Pick and 5-star
+- Batch Actions for previewed JPEG/PNG export and copy/move recipes, with up to three visible recipes in SnapView 2.0
+- Print images or save PDFs with `Command-P` through the native macOS print panel. The `SnapView Images` section controls image range, arrangement, scaling, and filename captions.
+- Intro Supporter Pass is optional support for SnapView in supported App Store builds. Founding Supporter runs from 2026-07-01 through 2026-09-30 UTC, regular Supporter Pass is available from 2026-10-01 UTC, and the App Store shows the purchase price before checkout.
 - Lightroom-style XMP interoperability for rating, Pick, and Reject
 - Finder tag interoperability so file and folder status remain visible outside the app
 - Decoding modes that let you choose between speed, balanced review, and quality-first inspection
@@ -82,7 +78,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 1. Open a folder, image, ZIP archive, or Apple Photos collection.
 2. Move quickly in Main, Grid, horizontal/vertical Filmstrip, and Navigator.
 3. Mark keepers with rating, Pick, Reject, or color labels for local files, or the Photos Favorite heart for Apple Photos items.
-4. Run Quick Organize presets when repeated folder sorting is needed.
+4. Run Quick Organize presets or Batch Actions when repeated sorting or export is needed.
 5. Open Quick Check or Compare when you need a closer call.
 6. Continue in Lightroom with XMP-backed ratings and flags, or keep organizing in Finder with color labels.
 7. Print or save a PDF from `Command-P` when you need a current-image print, selected-image pages, or a contact sheet.
@@ -95,18 +91,16 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 - `Filmstrip View`: main image plus horizontal or vertical strip for quick pass review
 - `Apple Photos`: Navigator source for Library, Favorites, Videos, Screenshots, and albums; SnapView shows fast previews first, promotes originals when ready, and uses a Photos-style Favorite heart instead of file-based rating/Pick/color controls
 - `File Transfer`: drag, copy, and move selected images with compact thumbnail previews, selected-count feedback, Finder/external-app friendly file payloads, and destination-aware completion messages
-- `Pro Layout View`: `Tab` turns on the Action Strip, Info Strip, and Select Tray over the current viewer surface. Navigator (`T`) and horizontal/vertical Filmstrip (`E`/`R`) are not Pro Layout. Action/Info Strips keep separate Off/Full controls, the default credit name stays editable, and Select Tray can be Off, Strip, or HUD Tray, with Pick or 5-star as the final-select policy. The Main View `I` info overlay is hidden temporarily while Pro Layout View is on, returns when leaving if the saved setting is enabled, and Info Strip metadata loads only after the visible frame settles.
+- `Pro Layout View`: `Tab` turns on the Action Strip, Info Strip, and Select Tray over the current viewer surface. Navigator (`T`) and horizontal/vertical Filmstrip (`E`/`R`) are independent surfaces, not Pro Layout. The Main View `I` info overlay stays out of the way while Pro Layout View is on.
 - `Quick Check`: score, warnings, and supporting reasons, plus histogram and detailed EXIF in one review set
 - `Map Overlay`: `M` shows the current photo GPS location in a Histogram-sized overlay
 - `Compare`: side-by-side review and best-shot recommendation
 - `Duplicate`: exact duplicate grouping and cleanup workflow
-- `Comic Reading Mode`: switch an opened folder or ZIP into a black reading surface; choose left-to-right or right-to-left two-page spreads from the HUD, advance spreads as `1-2 -> 3-4` without page-surface click turns, restore the last page for that same source, and confirm moving to the next folder/ZIP at the end
-- `Quick Organize`: preset-based copy/move sorting, with up to three visible presets and auto rules limited to Pick and 5-star for the 2.0 surface
-- `Batch Actions`: previewed export/copy/move recipes for repeatable delivery tasks, with up to three visible recipes in SnapView 2.0 and up to ten as a Supporter Pass thank-you benefit in supported App Store builds
+- `Comic Reading Mode`: switch an opened folder or ZIP into a black reading surface; choose left-to-right or right-to-left two-page spreads from the HUD, advance spreads as `1-2 -> 3-4`, restore the last page for that same source, and confirm moving to the next folder/ZIP at the end
+- `Quick Organize`: preset-based copy/move sorting, with up to three visible presets and auto rules limited to Pick and 5-star
+- `Batch Actions`: previewed export/copy/move recipes for repeatable delivery tasks, with up to three visible recipes in SnapView 2.0
 - `Supporter Pass`: optional support for SnapView in supported App Store builds, with Founding Supporter and regular Supporter Pass purchase periods while keeping the Basic viewer generous
 - `Decoding Modes`: speed-first, balanced, and quality-first viewing behavior
-
-SnapView 2.0 also improves first-run setup, shortcut help, light/dark toolbar surfaces, Filmstrip scrolling, optional selection-focus dimming, Quick Check readability, Batch Actions localization, and optional last-image restore for ordinary photo folders. Slice 5 specifically covers Quick Check, Histogram, Quick Organize, thumbnail-safe toast placement, actual-position vertical strip icons, and the optional bottom Info Strip.
 
 ## Good Fit For
 
@@ -136,8 +130,6 @@ SnapView 2.0 also improves first-run setup, shortcut help, light/dark toolbar su
 
 - macOS `14.0` or later
 
-Release candidate note: do not publish a new GitHub Release, App Store build, or appcast with this support floor until a real or VM macOS 14 installed-app smoke test is recorded.
-
 ## Security And Privacy
 
 - Release builds are signed with Apple Developer ID.
@@ -152,10 +144,9 @@ Release candidate note: do not publish a new GitHub Release, App Store build, or
 - Animated `gif` and `webp` play in Main View only. Other views currently show a still first frame.
 - Finder interoperability is centered on color labels.
 - Lightroom interoperability is centered on XMP sidecars for rating, Pick, and Reject.
-- RAW+JPG pairing covers ImageIO RAW extensions such as 3FR, DNG, CR3, RW2, ARW, DXO, uppercase extensions, standalone files, and RAW+HEIC+JPG sets, with fixtures under `test-assets/raw-jpg-pairs`.
+- RAW+JPG pairing supports common ImageIO RAW extensions, uppercase extensions, standalone RAW files, and mixed RAW+HEIC+JPG sets.
 - ImageIO-backed formats depend on the macOS decoder set available on the running system.
-- Specific faster-browsing claims are kept out of public copy until current release evidence supports them.
-- App Store builds use separate Founding Supporter and regular Supporter Pass products. The Founding Supporter window runs from 2026-07-01 through 2026-09-30 UTC, then the regular Supporter Pass is available from 2026-10-01 UTC. StoreKit `Product.displayPrice` supplies the purchase price shown to users.
+- Supporter Pass is optional support, not a feature lock.
 - App UI languages: Korean, English, Japanese, Simplified Chinese, Traditional Chinese, Spanish, French, German, Portuguese (Brazil), Italian, Dutch, Turkish, Polish, Swedish.
 - App Store metadata also covers Indonesian, Malay, Thai, Vietnamese, Danish, Norwegian, Finnish, Czech, Hungarian, Romanian, and Greek.
 - DMG releases are shipped as one universal download for Apple silicon and Intel Macs.
@@ -199,18 +190,16 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 
 - 폴더와 ZIP 이미지를 빠르게 탐색
 - Apple Photos의 Library, Favorites, Videos, Screenshots, 앨범을 SnapView 안에서 탐색하고, Photos 모드에서는 사진 앱과 같은 좋아요 하트로 선별
-- 지원되는 HDR 사진의 기본 표시와 작은 HDR 배지. `HDR` 영역으로 HDR/SDR 표시를 전환하고, SDR은 원본 품질 표시로 돌아가며, 펼치기 버튼으로 자세한 정보를 확인
+- 현재 이미지 표시를 먼저 처리하고, 무거운 분석과 캐시 작업은 탐색 중 백그라운드로 분리
+- 지원되는 HDR 사진의 기본 표시와 작은 HDR 배지. `HDR` 영역으로 HDR/SDR 표시를 전환하고, SDR은 원본 품질 표시로 돌아가며, 펼치기 버튼으로 자세한 정보 확인
 - EXIF 나열이 아니라 점수와 근거를 보여주는 Quick Check
 - GPS가 있는 사진을 확인하기 위한 지도 오버레이
 - 비슷한 컷에서 베스트샷을 고르기 위한 Compare
 - 동일 파일 정리를 위한 Duplicate 워크스페이스
 - 열린 폴더나 ZIP을 검은 독서 화면으로 전환하는 만화책 보기
-- `Q/W/E/R/T + Tab` 기준 탐색: Grid, Main, 가로 Filmstrip, 세로 Filmstrip, Navigator, 프로 레이아웃 뷰를 분리. 프로레이아웃은 `Tab`으로 켜는 액션 스트립, 정보 스트립, 셀렉트레이이며 Navigator와 Filmstrip은 프로레이아웃이 아닙니다.
-- 선택 집중 어둡게 처리는 선택형이며 기본 OFF라서, 사용자가 직접 켜기 전에는 선택되지 않은 썸네일도 원래 밝기를 유지합니다.
-- 빠른 정리 프리셋과 Batch Actions로 반복 복사/이동/내보내기 작업 정리. SnapView 2.0에서는 보이는 빠른 정리 프리셋과 Batch Actions 레시피를 각각 3개까지 제공하고, 지원되는 App Store 빌드에서는 Supporter Pass 감사 혜택으로 Batch Actions를 10개까지 확장할 수 있습니다
-- `Command-P`로 macOS 기본 인쇄 패널에서 현재 이미지, 선택 이미지, 현재 폴더, 콘택트 시트를 인쇄하거나 PDF로 저장. `SnapView 이미지` 섹션은 이미지 범위, 구성, 맞춤, 파일명 표시만 담당하고 프린터/용지 설정은 시스템 패널을 그대로 사용합니다
-- 지원되는 App Store 빌드에서는 구매 전에는 SnapWorks Lab 응원 CTA를, 활성 후원자에게는 선택한 Supporter 앱 아이콘이 반영된 인트로 표시를 제공합니다. Founding Supporter 기간은 2026-07-01부터 2026-09-30 UTC까지이며, 일반 Supporter Pass는 2026-10-01 UTC부터 사용할 수 있습니다
-- 지원되는 App Store 빌드에서는 Multi Monitor Workspace를 Supporter Pass 혜택으로 표시하며, 비활성 상태에서는 숨기지 않고 disabled 상태로 보여줍니다. DMG 빌드는 계속 제한 없이 사용할 수 있습니다
+- `Q/W/E/R/T + Tab` 기준 탐색: Grid, Main, 가로 Filmstrip, 세로 Filmstrip, Navigator, 프로 레이아웃 뷰를 분리
+- 빠른 정리 프리셋과 Batch Actions로 반복 복사/이동/내보내기 작업 정리. SnapView 2.0에서는 보이는 빠른 정리 프리셋과 Batch Actions 레시피를 각각 3개까지 제공하고, 빠른 정리 자동 규칙은 Pick과 별점 5만 노출
+- `Command-P`로 macOS 기본 인쇄 패널에서 현재 이미지, 선택 이미지, 현재 폴더, 콘택트 시트를 인쇄하거나 PDF로 저장
 - 별점, Pick, Reject, Finder 태그 중심의 키보드 선별
 - Lightroom 스타일 XMP 연동으로 별점, Pick, Reject 결과를 그대로 이어가기
 - Finder 태그 연동으로 macOS 파일/폴더 정리 단계까지 상태 유지
@@ -234,18 +223,15 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 - `Filmstrip View`: 메인 이미지와 가로/세로 스트립 기반 빠른 검토
 - `Apple Photos`: Library, Favorites, Videos, Screenshots, 앨범을 Navigator 소스로 열고 빠른 프리뷰 후 원본을 준비하며, Photos 항목은 별점/Pick/컬러 대신 좋아요 하트를 사용
 - `파일 전송`: 선택 이미지를 드래그, 복사, 이동할 때 작은 썸네일 프리뷰, 선택 장수 표시, Finder/외부 앱 친화 파일 전달, 목적지 기반 완료 피드백 제공
-- `Pro Layout View`: `Tab`으로 현재 보기 위에 액션 스트립, 정보 스트립, 셀렉트레이를 켭니다. Navigator(`T`)와 가로/세로 Filmstrip(`E`/`R`)은 프로레이아웃이 아닙니다. 셀렉트레이는 안보기/스트립/HUD 트레이와 Pick/별점 5 최종 기준을 선택할 수 있습니다. Main View의 `I` 정보 오버레이가 켜져 있어도 프로 레이아웃 뷰 중에는 표시만 임시로 숨기고, 일반 보기로 돌아오면 저장된 상태대로 다시 표시합니다. 정보 스트립 메타데이터는 첫 화면 표시 뒤 background/utility 경로에서만 갱신합니다.
+- `Pro Layout View`: `Tab`으로 현재 보기 위에 액션 스트립, 정보 스트립, 셀렉트레이를 켭니다. Navigator(`T`)와 가로/세로 Filmstrip(`E`/`R`)은 독립 표면이며 프로레이아웃이 아닙니다. Main View의 `I` 정보 오버레이가 켜져 있어도 Pro Layout View 동안에는 숨기고, 정보 스트립 메타데이터는 첫 화면 표시 뒤 갱신합니다.
 - `Quick Check`: 점수, 경고, 근거 기반 촬영 품질 진단과 히스토그램/상세 EXIF 점검 세트
 - `지도 오버레이`: `M`으로 현재 사진의 GPS 위치를 히스토그램 크기 오버레이에 표시
 - `Compare`: 나란히 비교하며 베스트샷 선택
 - `Duplicate`: 동일 파일 그룹 정리 워크플로우
-- `만화책 보기`: 열린 폴더나 ZIP을 검은 독서 화면으로 전환하고 HUD에서 좌->우/우->좌 2페이지 펼침을 선택하며, 펼침 이동은 `1-2 -> 3-4`처럼 겹치지 않고 화면 클릭으로 넘기지 않으며, 같은 소스의 마지막 페이지 복원과 다음 폴더/ZIP 이동 확인을 지원
-- `빠른 정리`: 반복 복사/이동 선별을 최대 3개의 보이는 프리셋으로 실행하며, 2.0 표면의 자동 규칙은 Pick과 별점 5만 노출
-- `Batch Actions`: 최대 3개의 보이는 JPEG/PNG 내보내기, 복사, 이동 레시피를 프리뷰 후 실행하며, 지원되는 App Store 빌드에서는 Supporter Pass 감사 혜택으로 10개까지 확장
+- `만화책 보기`: 열린 폴더나 ZIP을 검은 독서 화면으로 전환하고 HUD에서 좌->우/우->좌 2페이지 펼침을 선택하며, 같은 소스의 마지막 페이지 복원과 다음 폴더/ZIP 이동 확인을 지원
+- `빠른 정리`: 반복 복사/이동 선별을 최대 3개의 보이는 프리셋으로 실행하며, 빠른 정리 자동 규칙은 Pick과 별점 5만 노출
+- `Batch Actions`: 최대 3개의 보이는 JPEG/PNG 내보내기, 복사, 이동 레시피를 프리뷰 후 실행
 - `디코딩 모드`: 속도 우선, 보통, 화질 최우선
-
-SnapView 2.0 보기 경험은 콘텐츠가 열린 뒤에만 상태를 복원합니다. 일반 사진 폴더의 마지막 사진 복원은 선택 옵션이며, 복원 순서는 소스 식별, 마지막 사진, 마지막 보기 모드, 내비게이터 표시 가능 여부 순서로 유지됩니다.
-SnapView 2.0 Slice 5는 퀵체크, 히스토그램, 빠른 정리, 썸네일 안전 토스트 위치, 실제 위치 기반 세로 스트립 아이콘, 하단 정보 스트립을 정리한 기준입니다.
 
 ## 이런 경우에 잘 맞습니다
 
@@ -275,15 +261,12 @@ SnapView 2.0 Slice 5는 퀵체크, 히스토그램, 빠른 정리, 썸네일 안
 
 - macOS `14.0` 이상
 
-릴리즈 후보 참고: 실제 또는 VM macOS 14 설치 앱 스모크 테스트를 기록하기 전에는 이 지원 기준으로 새 GitHub Release, App Store 빌드, appcast를 공개하지 않습니다.
-
 ## 보안 및 개인정보
 
 - 릴리즈 빌드는 Apple Developer ID 서명 상태입니다.
 - 릴리즈 빌드는 notarization을 거쳐 일반적인 macOS 설치 흐름을 따릅니다.
 - SnapView는 사용자가 연 로컬 파일을 기준으로 탐색, 검토, 정리하는 워크플로우를 중심으로 동작합니다.
 - Apple Photos 권한은 Apple Photos 기능을 열 때만 요청하며, Photos 항목은 명시적인 탐색/가져오기/추가/좋아요 흐름 안에서만 처리합니다.
-- Supporter Pass purchase state is handled by Apple StoreKit and does not add a SnapWorks Lab account, analytics SDK, diagnostics upload, or purchase-history upload. `NSPrivacyCollectedDataTypes` remains empty for the current App Store privacy manifest.
 
 ## 참고 사항
 
@@ -292,12 +275,8 @@ SnapView 2.0 Slice 5는 퀵체크, 히스토그램, 빠른 정리, 썸네일 안
 - animated `gif` / `webp`는 Main View에서만 재생되고, 다른 뷰에서는 첫 프레임 정지 이미지로 표시됩니다.
 - Finder 연동은 컬러 라벨 중심입니다.
 - Lightroom 연동은 XMP sidecar 기반 별점/Pick/Reject 중심입니다.
-- RAW+JPG 페어링은 3FR, DNG, CR3, RW2, ARW, DXO 같은 ImageIO RAW 확장자와 대문자 확장자, 단독 파일, RAW+HEIC+JPG 묶음을 포함하며 `test-assets/raw-jpg-pairs` fixture로 보호합니다.
+- RAW+JPG 페어링은 주요 ImageIO RAW 확장자, 대문자 확장자, 단독 RAW 파일, RAW+HEIC+JPG 묶음을 지원합니다.
 - ImageIO 기반 포맷은 실행 중인 macOS가 제공하는 디코더 집합에 따라 달라질 수 있습니다.
-- Supporter Pass 혜택도 기본 보기 성능을 늦추지 않는 범위에서만 추가하며, 공개 속도 문구는 별도 반복 측정으로 확인된 뒤 반영합니다.
-- Intro Supporter Pass 표시는 App Store 인트로 화면에만 표시되며, SnapWorks Lab 응원 CTA와 Basic / Supporter Pass 비교 안내를 제공합니다.
-- Supporter Pass 설정에서는 전용 SnapView 앱 아이콘 변형을 Dock/App Switcher 아이콘으로 선택할 수 있으며, 선택한 아이콘은 인트로와 Supporter Pass 안내에도 함께 반영됩니다.
-- Supporter Pass는 SnapView를 선택적으로 응원하는 흐름이며, App Store 빌드는 Apple StoreKit `Product.displayPrice` 가격 표시를 사용합니다.
 - 앱 UI 언어는 한국어, 영어, 일본어, 중국어 간체, 중국어 번체, 스페인어, 프랑스어, 독일어, 포르투갈어(브라질), 이탈리아어, 네덜란드어, 터키어, 폴란드어, 스웨덴어입니다.
 - App Store 메타데이터는 인도네시아어, 말레이어, 태국어, 베트남어, 덴마크어, 노르웨이어, 핀란드어, 체코어, 헝가리어, 루마니아어, 그리스어도 포함합니다.
 - DMG 릴리즈는 Apple Silicon과 Intel Mac을 함께 지원하는 단일 universal 다운로드로 제공합니다.
