@@ -1048,11 +1048,11 @@ h1 {
 .supportpass-hero {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.58fr);
-  gap: 72px;
+  gap: var(--space-8);
   align-items: center;
-  max-width: 1240px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 156px 32px 78px;
+  padding: 156px 20px 88px;
 }
 
 .supportpass-hero-copy {
@@ -1067,11 +1067,10 @@ h1 {
 }
 
 .supportpass-hero .lead {
-  max-width: 680px;
-  margin: 0 0 42px;
+  max-width: 720px;
+  margin: 0 0 var(--space-8);
   color: var(--text-secondary);
   text-align: left;
-  line-height: 1.72;
 }
 
 .supportpass-actions {
@@ -1095,8 +1094,8 @@ h1 {
 .supportpass-hero-card {
   position: relative;
   overflow: hidden;
-  min-height: 440px;
-  padding: 48px;
+  min-height: 420px;
+  padding: var(--space-8);
   border: 1px solid rgba(242, 221, 163, 0.26);
   border-radius: 28px;
   background:
@@ -1146,10 +1145,10 @@ h1 {
 .supportpass-clarity,
 .supportpass-benefit-grid {
   display: grid;
-  gap: 24px;
-  max-width: 1240px;
+  gap: 18px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 20px;
 }
 
 .supportpass-clarity {
@@ -1159,7 +1158,7 @@ h1 {
 .supportpass-clarity article,
 .supportpass-benefit-grid article {
   min-width: 0;
-  padding: 30px;
+  padding: var(--space-6);
   border: 1px solid var(--glass-border);
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.05);
@@ -1183,9 +1182,9 @@ h1 {
 .supportpass-benefits,
 .supportpass-version-compare,
 .supportpass-final {
-  max-width: 1240px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 104px 32px 0;
+  padding: 104px 20px 0;
 }
 
 .supportpass-benefit-grid {
@@ -1329,7 +1328,7 @@ h1 {
 
 .supportpass-final {
   max-width: 880px;
-  padding-bottom: 112px;
+  padding-bottom: 108px;
   text-align: center;
 }
 
@@ -1464,42 +1463,28 @@ h1 {
 }
 
 .feature-page-content {
-  max-width: 1280px;
+  max-width: 1180px;
 }
 
 .feature-page-content > [data-lang] {
-  max-width: 1160px;
+  max-width: 1020px;
 }
 
 .feature-page-list {
-  columns: 2;
-  column-gap: 34px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 30px;
   margin: 0;
   padding-left: 20px;
   color: var(--text-secondary);
 }
 
-@media (min-width: 1180px) {
-  .feature-page-content .feature-page-list {
-    columns: 1;
-    font-size: 15px;
-    line-height: 1.5;
-  }
-
-  .feature-page-content .feature-page-list li {
-    margin-bottom: 8px;
-    white-space: nowrap;
-  }
-
-  .feature-page-content .feature-page-panel {
-    overflow-x: auto;
-  }
-}
-
 .feature-page-list li {
   break-inside: avoid;
-  margin: 0 0 12px;
-  line-height: 1.58;
+  min-width: 0;
+  margin: 0;
+  padding-right: 4px;
+  line-height: 1.56;
 }
 
 .feature-page-list strong {
@@ -2024,7 +2009,8 @@ h1 {
   }
 
   .feature-page-list {
-    columns: 1;
+    grid-template-columns: 1fr;
+    gap: 9px;
     padding-left: 18px;
   }
 
@@ -2078,21 +2064,24 @@ h1 {
 
   .supportpass-hero {
     grid-template-columns: 1fr;
-    gap: 36px;
-    padding: 150px 22px 72px;
+    gap: 24px;
+    max-width: 100vw;
+    padding: 182px 20px 72px;
+    overflow: hidden;
   }
 
   .supportpass-hero h1 {
-    max-width: 350px;
-    font-size: 34px;
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: clamp(30px, 9vw, 34px);
     text-align: center;
   }
 
   .supportpass-hero .lead {
-    max-width: 350px;
+    max-width: 340px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 34px;
     text-align: center;
   }
 
@@ -2102,39 +2091,63 @@ h1 {
 
   .supportpass-actions .btn {
     width: 100%;
-    max-width: 350px;
-    text-align: center;
+    max-width: 340px;
+    justify-content: center;
   }
 
   .supportpass-hero-card {
     min-height: auto;
-    padding: 30px;
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 24px;
     border-radius: 22px;
   }
 
   .supportpass-hero-card img {
-    width: 96px;
-    height: 96px;
-    margin-bottom: 24px;
+    width: 104px;
+    height: 104px;
+    margin-bottom: 22px;
+  }
+
+  .supportpass-hero-card strong {
+    font-size: 32px;
   }
 
   .supportpass-clarity,
   .supportpass-benefit-grid {
     grid-template-columns: 1fr;
-    max-width: 350px;
+    max-width: calc(100vw - 40px);
     padding: 0;
   }
 
   .supportpass-benefits,
   .supportpass-version-compare,
   .supportpass-final {
-    padding-top: 76px;
+    max-width: 100vw;
+    padding: 78px 20px 0;
+    overflow: hidden;
   }
 
   .supportpass-table-card {
-    overflow: visible;
-    padding: 20px;
     border-radius: 22px;
+  }
+
+  .supportpass-detail-table {
+    min-width: 0;
+  }
+
+  .supportpass-final {
+    padding-bottom: 78px;
+  }
+
+  .supportpass-final h2 {
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .supportpass-final p {
+    max-width: 340px;
   }
 
   .supporter-table,
