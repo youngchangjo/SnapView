@@ -113,11 +113,11 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 
 ## Supported Formats
 
-- ImageIO still images: `astc`, `avci`, `avif`, `bmp`, `dcm`, `dds`, `dib`, `dicom`, `exr`, `gif`, `hdr`, `heic`, `heics`, `heif`, `hif`, `icns`, `ico`, `j2c`, `j2k`, `jp2`, `jpe`, `jpeg`, `jpf`, `jpg`, `jpx`, `jxl`, `ktx`, `mpo`, `pbm`, `pct`, `pfm`, `pgm`, `pic`, `pict`, `png`, `ppm`, `psd`, `pvr`, `sgi`, `tga`, `tif`, `tiff`, `webp`
+- Still images: `astc`, `avci`, `avif`, `bmp`, `dcm`, `dds`, `dib`, `dicom`, `exr`, `gif`, `hdr`, `heic`, `heics`, `heif`, `hif`, `icns`, `ico`, `j2c`, `j2k`, `jp2`, `jpe`, `jpeg`, `jpf`, `jpg`, `jpx`, `jxl`, `ktx`, `mpo`, `pbm`, `pct`, `pfm`, `pgm`, `pic`, `pict`, `png`, `ppm`, `psd`, `pvr`, `sgi`, `tga`, `tif`, `tiff`, `webp`
 - RAW: `3fr`, `arw`, `axr`, `cr2`, `cr3`, `crw`, `dcr`, `dng`, `dxo`, `erf`, `fff`, `iiq`, `mos`, `mrw`, `nef`, `nefx`, `nrw`, `orf`, `ori`, `pef`, `raf`, `raw`, `rw2`, `rwl`, `sr2`, `srf`, `srw`
 - Video: `mp4`, `mov`, `m4v` from v1.5.0
 - Container: `zip` for supported images inside archives
-- Excluded: `ai`, `svg` are intentionally out of scope for this ImageIO decoder slice
+- Excluded: `ai`, `svg`
 
 ## Install
 
@@ -144,8 +144,8 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 - Animated `gif` and `webp` play in Main View only. Other views currently show a still first frame.
 - Finder interoperability is centered on color labels.
 - Lightroom interoperability is centered on XMP sidecars for rating, Pick, and Reject.
-- RAW+JPG pairing supports common ImageIO RAW extensions, uppercase extensions, standalone RAW files, and mixed RAW+HEIC+JPG sets.
-- ImageIO-backed formats depend on the macOS decoder set available on the running system.
+- RAW+JPG pairing supports common RAW extensions, uppercase extensions, standalone RAW files, and mixed RAW+HEIC+JPG sets.
+- Some formats depend on the decoder support available in the running macOS version.
 - Supporter Pass is optional support, not a feature lock.
 - App UI languages: Korean, English, Japanese, Simplified Chinese, Traditional Chinese, Spanish, French, German, Portuguese (Brazil), Italian, Dutch, Turkish, Polish, Swedish.
 - App Store metadata also covers Indonesian, Malay, Thai, Vietnamese, Danish, Norwegian, Finnish, Czech, Hungarian, Romanian, and Greek.
@@ -244,11 +244,11 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 
 ## 지원 포맷
 
-- ImageIO 정지 이미지: `astc`, `avci`, `avif`, `bmp`, `dcm`, `dds`, `dib`, `dicom`, `exr`, `gif`, `hdr`, `heic`, `heics`, `heif`, `hif`, `icns`, `ico`, `j2c`, `j2k`, `jp2`, `jpe`, `jpeg`, `jpf`, `jpg`, `jpx`, `jxl`, `ktx`, `mpo`, `pbm`, `pct`, `pfm`, `pgm`, `pic`, `pict`, `png`, `ppm`, `psd`, `pvr`, `sgi`, `tga`, `tif`, `tiff`, `webp`
+- 정지 이미지: `astc`, `avci`, `avif`, `bmp`, `dcm`, `dds`, `dib`, `dicom`, `exr`, `gif`, `hdr`, `heic`, `heics`, `heif`, `hif`, `icns`, `ico`, `j2c`, `j2k`, `jp2`, `jpe`, `jpeg`, `jpf`, `jpg`, `jpx`, `jxl`, `ktx`, `mpo`, `pbm`, `pct`, `pfm`, `pgm`, `pic`, `pict`, `png`, `ppm`, `psd`, `pvr`, `sgi`, `tga`, `tif`, `tiff`, `webp`
 - RAW: `3fr`, `arw`, `axr`, `cr2`, `cr3`, `crw`, `dcr`, `dng`, `dxo`, `erf`, `fff`, `iiq`, `mos`, `mrw`, `nef`, `nefx`, `nrw`, `orf`, `ori`, `pef`, `raf`, `raw`, `rw2`, `rwl`, `sr2`, `srf`, `srw`
 - 동영상: `mp4`, `mov`, `m4v`는 v1.5.0부터 지원
 - 컨테이너: `zip` 내부 지원 이미지
-- 제외: `ai`, `svg`는 이번 ImageIO 디코더 범위에서 의도적으로 제외
+- 제외: `ai`, `svg`
 
 ## 설치 방법
 
@@ -275,8 +275,8 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 - animated `gif` / `webp`는 Main View에서만 재생되고, 다른 뷰에서는 첫 프레임 정지 이미지로 표시됩니다.
 - Finder 연동은 컬러 라벨 중심입니다.
 - Lightroom 연동은 XMP sidecar 기반 별점/Pick/Reject 중심입니다.
-- RAW+JPG 페어링은 주요 ImageIO RAW 확장자, 대문자 확장자, 단독 RAW 파일, RAW+HEIC+JPG 묶음을 지원합니다.
-- ImageIO 기반 포맷은 실행 중인 macOS가 제공하는 디코더 집합에 따라 달라질 수 있습니다.
+- RAW+JPG 페어링은 주요 RAW 확장자, 대문자 확장자, 단독 RAW 파일, RAW+HEIC+JPG 묶음을 지원합니다.
+- 일부 포맷은 실행 중인 macOS 버전의 디코더 지원 범위에 따라 달라질 수 있습니다.
 - 앱 UI 언어는 한국어, 영어, 일본어, 중국어 간체, 중국어 번체, 스페인어, 프랑스어, 독일어, 포르투갈어(브라질), 이탈리아어, 네덜란드어, 터키어, 폴란드어, 스웨덴어입니다.
 - App Store 메타데이터는 인도네시아어, 말레이어, 태국어, 베트남어, 덴마크어, 노르웨이어, 핀란드어, 체코어, 헝가리어, 루마니아어, 그리스어도 포함합니다.
 - DMG 릴리즈는 Apple Silicon과 Intel Mac을 함께 지원하는 단일 universal 다운로드로 제공합니다.
