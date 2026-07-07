@@ -1,6 +1,58 @@
 # SnapView Release Notes
 
-## v2.5.1 (Current) - 2026-07-01
+## v2.6.0 (Current) - 2026-07-07
+
+Language: [🇺🇸 English](#english-260) | [🇰🇷 한국어](#korean-260)
+
+<a id="english-260"></a>
+
+### English
+
+#### What's New
+- Apple Photos browsing is clearer and more usable: SnapView now shows access/indexing progress and can request higher-resolution Photos previews with Supporter Pass.
+- RAW files can render from the file's embedded preview or embedded JPG first, with the new Files·RAW setting enabled by default for faster first display.
+- Supporter Pass adds more polished app icon handling, including the original SnapView 1.0 app icon and immediate Dock/intro updates.
+
+#### Improvements
+- Large folders feel steadier after opening. SnapView protects the first visible image and immediate previous/next navigation before starting heavier background work.
+- Folder startup now lands on the final sorted first image more consistently instead of briefly flashing an early temporary image.
+- The default window opens larger, restores manual window size/position more reliably, and keeps the intro layout calmer in tight windows.
+- Navigator, toolbar, Filmstrip, Supporter Pass purchase, and indexing UI have been tightened so common review surfaces are easier to scan.
+- Trackpad horizontal navigation now follows the same previous/next direction model as vertical navigation under Natural scrolling.
+- RAW preview mode changes apply to the current image immediately and remain selected across relaunches.
+
+#### Fixes
+- Fixed high-resolution images that could still show the upscaling badge because empty canvas space was counted as image display area.
+- Fixed precise mouse-wheel navigation for Logitech wheels and reverse-scroll utilities that do not send a scroll-end event, so previous/next wheel navigation no longer works only once.
+- Fixed the mouse context rating submenu so rating clear plus 1-5 choices are available instead of only the 5-star item.
+- Fixed Apple Photos original orientation in preview-to-original switches, reducing sideways or incorrectly fitted Photos images.
+- Restored the next-folder-first-image menu icon and cleaned up several small toolbar, Filmstrip, and divider inconsistencies.
+
+<a id="korean-260"></a>
+
+### 한국어
+
+#### 새로운 점
+- Apple Photos 보기가 더 명확해졌습니다. 접근/인덱싱 진행 상황을 보여주고, Supporter Pass에서는 더 높은 해상도의 Photos 프리뷰를 요청할 수 있습니다.
+- RAW 파일은 파일 안의 내장 프리뷰나 내장 JPG를 먼저 사용해 더 빠르게 첫 화면을 보여줄 수 있습니다. 새 파일·RAW 설정은 기본으로 켜져 있습니다.
+- Supporter Pass 앱 아이콘 경험을 다듬었습니다. SnapView 1.0 원본 아이콘을 추가했고, Dock/인트로 아이콘 반영을 정리했습니다.
+
+#### 개선된 점
+- 사진이 많은 폴더를 열 때 첫 화면과 바로 이어지는 전/후 탐색이 더 안정적으로 유지됩니다. 무거운 작업은 현재 보기와 탐색을 방해하지 않도록 뒤로 미뤘습니다.
+- 폴더를 열 때 임시 이미지가 잠깐 보였다가 바뀌는 상황을 줄이고, 최종 정렬 기준의 첫 이미지를 더 일관되게 표시합니다.
+- 기본 창 크기를 키웠고, 사용자가 조정한 창 크기와 위치가 다음 실행에서 더 안정적으로 유지됩니다. 좁은 창에서도 인트로 화면이 덜 흔들립니다.
+- Navigator, 툴바, Filmstrip, Supporter Pass 구매 화면, 인덱싱 UI를 더 간결하게 정리해 자주 쓰는 리뷰 화면을 빠르게 훑기 좋게 했습니다.
+- 자연스러운 스크롤 기준에서 트랙패드 좌우 탐색 방향이 상하 탐색과 같은 이전/다음 기준을 따르도록 맞췄습니다.
+- RAW 프리뷰 설정 변경이 현재 이미지에 바로 반영되고 다음 실행에서도 유지됩니다.
+
+#### 수정된 문제
+- 고해상도 이미지에서도 빈 캔버스 영역 때문에 업스케일 뱃지가 보일 수 있던 문제를 수정했습니다.
+- Logitech 휠이나 reverse-scroll 유틸리티처럼 스크롤 종료 신호를 보내지 않는 입력에서 이전/다음 휠 탐색이 한 번만 동작하고 멈추는 문제를 수정했습니다.
+- 마우스 컨텍스트 메뉴의 별점 하위 메뉴가 5점만 표시되던 문제를 수정해 N/A와 1-5점 전체를 선택할 수 있게 했습니다.
+- Apple Photos 프리뷰에서 원본으로 바뀔 때 일부 사진이 돌아가 보이거나 맞춤이 어긋날 수 있던 문제를 수정했습니다.
+- 다음 폴더 첫 이미지 메뉴 아이콘이 비어 보이던 문제와 툴바, Filmstrip, 디바이더 주변의 작은 표시 불일치를 정리했습니다.
+
+## v2.5.1 - 2026-07-01
 
 Language: [🇺🇸 English](#english-251) | [🇰🇷 한국어](#korean-251)
 

@@ -8,7 +8,7 @@
 
 Fast macOS image viewer for real photo culling work.
 
-Current Version: `v2.5.1`
+Current Version: `v2.6.0`
 
 
 Language: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
@@ -22,7 +22,7 @@ Mac App Store: [SnapView on the App Store](https://apps.apple.com/us/app/snapvie
 ## Download
 
 - Latest release: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
-- Install package: open the latest release page and download `SnapView-2.5.1.dmg`
+- Install package: open the latest release page and download `SnapView-2.6.0.dmg`
 - Homebrew: `brew tap youngchangjo/snapview` then `brew install --cask snapview` (run `brew trust youngchangjo/snapview` first if Homebrew asks)
 - Official website: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
 
@@ -55,7 +55,7 @@ SnapView is built for the part after import: checking sharpness, comparing near-
 The key idea is simple: do the fastest first-pass cull in SnapView, then carry the result forward instead of starting over somewhere else.
 
 - Fast folder and ZIP browsing
-- Apple Photos browsing for Library, Favorites, Videos, Screenshots, and albums, with a Photos-style Favorite heart in Photos mode
+- Apple Photos browsing for Library, Favorites, Videos, Screenshots, and albums, with a Photos-style Favorite heart and optional higher-resolution Photos previews in Photos mode
 - Image display comes first, with heavier analysis and cache work kept in the background during browsing
 - HDR-aware main display for supported sources, with a compact HDR badge whose HDR region toggles HDR/SDR display, returns SDR to original-quality display, and whose expand control opens detailed inspection
 - Quick Check for quality diagnosis with reasons, not just EXIF fields
@@ -89,7 +89,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 - `Main View`: single-image browsing with zoom, fit, rotate, and overlay tools
 - `Grid View`: thumbnail selection for fast triage
 - `Filmstrip View`: main image plus horizontal or vertical strip for quick pass review
-- `Apple Photos`: Navigator source for Library, Favorites, Videos, Screenshots, and albums; SnapView shows fast previews first, promotes originals when ready, and uses a Photos-style Favorite heart instead of file-based rating/Pick/color controls
+- `Apple Photos`: Navigator source for Library, Favorites, Videos, Screenshots, and albums; SnapView shows Photos previews first, can request higher-resolution previews with Supporter Pass, promotes originals when ready, and uses a Photos-style Favorite heart instead of file-based rating/Pick/color controls
 - `File Transfer`: drag, copy, and move selected images with compact thumbnail previews, selected-count feedback, Finder/external-app friendly file payloads, and destination-aware completion messages
 - `Pro Layout View`: `Tab` turns on the Action Strip, Info Strip, and Select Tray over the current viewer surface. Navigator (`T`) and horizontal/vertical Filmstrip (`E`/`R`) are independent surfaces, not Pro Layout. The Main View `I` info overlay stays out of the way while Pro Layout View is on.
 - `Quick Check`: score, warnings, and supporting reasons, plus histogram and detailed EXIF in one review set
@@ -122,7 +122,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 ## Install
 
 1. Download the latest DMG from [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest).
-2. Open `SnapView-2.5.1.dmg`.
+2. Open `SnapView-2.6.0.dmg`.
 3. Drag `SnapView.app` into `Applications`.
 4. Launch SnapView from `Applications`.
 
@@ -143,7 +143,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 - ZIP items are not normal filesystem files, so some save/interoperability features are limited there.
 - Animated `gif` and `webp` play in Main View only. Other views currently show a still first frame.
 - Finder interoperability is centered on color labels.
-- Lightroom interoperability is centered on XMP sidecars for rating, Pick, and Reject.
+- Lightroom interoperability is centered on XMP sidecars for rating, Pick, and Reject, while large-folder refresh protects first display and immediate previous/next navigation.
 - RAW+JPG pairing supports common RAW extensions, uppercase extensions, standalone RAW files, and mixed RAW+HEIC+JPG sets.
 - Some formats depend on the decoder support available in the running macOS version.
 - Supporter Pass is optional support, not a feature lock.
@@ -160,7 +160,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 
 실사용 사진 선별 작업에 맞춘 macOS용 고속 이미지 뷰어입니다.
 
-현재 버전: `v2.5.1`
+현재 버전: `v2.6.0`
 
 
 언어: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
@@ -174,7 +174,7 @@ Mac App Store: [App Store에서 SnapView 보기](https://apps.apple.com/us/app/s
 ## 다운로드
 
 - 최신 릴리즈: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
-- 설치 파일: 최신 릴리즈 페이지에서 `SnapView-2.5.1.dmg`를 다운로드해 설치합니다
+- 설치 파일: 최신 릴리즈 페이지에서 `SnapView-2.6.0.dmg`를 다운로드해 설치합니다
 - Homebrew: `brew tap youngchangjo/snapview` 후 `brew install --cask snapview` (Homebrew가 요구하면 먼저 `brew trust youngchangjo/snapview`)
 - 공식 사이트: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
 
@@ -253,7 +253,7 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 ## 설치 방법
 
 1. [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)에서 최신 DMG를 다운로드합니다.
-2. `SnapView-2.5.1.dmg`를 엽니다.
+2. `SnapView-2.6.0.dmg`를 엽니다.
 3. `SnapView.app`을 `Applications`로 드래그합니다.
 4. `Applications`에서 SnapView를 실행합니다.
 
@@ -274,7 +274,7 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 - ZIP 내부 항목은 실제 파일이 아니므로 일부 저장/연동 기능이 제한됩니다.
 - animated `gif` / `webp`는 Main View에서만 재생되고, 다른 뷰에서는 첫 프레임 정지 이미지로 표시됩니다.
 - Finder 연동은 컬러 라벨 중심입니다.
-- Lightroom 연동은 XMP sidecar 기반 별점/Pick/Reject 중심입니다.
+- Lightroom 연동은 XMP sidecar 기반 별점/Pick/Reject 중심이며, 대용량 폴더에서는 첫 표시와 즉시 전/후 탐색을 먼저 보호합니다.
 - RAW+JPG 페어링은 주요 RAW 확장자, 대문자 확장자, 단독 RAW 파일, RAW+HEIC+JPG 묶음을 지원합니다.
 - 일부 포맷은 실행 중인 macOS 버전의 디코더 지원 범위에 따라 달라질 수 있습니다.
 - 앱 UI 언어는 한국어, 영어, 일본어, 중국어 간체, 중국어 번체, 스페인어, 프랑스어, 독일어, 포르투갈어(브라질), 이탈리아어, 네덜란드어, 터키어, 폴란드어, 스웨덴어입니다.
