@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SnapView Privacy Policy | Local Mac Image Viewer</title>
-    <meta name="description" content="Read how SnapView for Mac handles privacy: local-only app behavior, file access permissions, and website analytics disclosure.">
+    <meta name="description" content="Read how SnapView handles local photos, optional Firebase Analytics and Crashlytics diagnostics, consent, retention, and deletion choices.">
     <link rel="canonical" href="https://snapview.snapworkslab.com/privacy/">
     <meta name="theme-color" content="#050507">
     <meta property="og:type" content="website">
     <meta property="og:title" content="SnapView Privacy Policy | Local Mac Image Viewer">
-    <meta property="og:description" content="Read how SnapView for Mac handles privacy: local-only app behavior, file access permissions, and website analytics disclosure.">
+    <meta property="og:description" content="Read how SnapView handles local photos, optional Firebase Analytics and Crashlytics diagnostics, consent, retention, and deletion choices.">
     <meta property="og:url" content="https://snapview.snapworkslab.com/privacy/">
     <meta property="og:site_name" content="SnapView">
     <meta property="og:image" content="https://snapview.snapworkslab.com/assets/images/snapview-icon.png">
@@ -21,7 +21,7 @@
     <meta property="og:image:alt" content="SnapView app icon">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="SnapView Privacy Policy | Local Mac Image Viewer">
-    <meta name="twitter:description" content="Read how SnapView for Mac handles privacy: local-only app behavior, file access permissions, and website analytics disclosure.">
+    <meta name="twitter:description" content="Read how SnapView handles local photos, optional Firebase Analytics and Crashlytics diagnostics, consent, retention, and deletion choices.">
     <meta name="twitter:image" content="https://snapview.snapworkslab.com/assets/images/snapview-icon.png">
     <meta name="twitter:image:alt" content="SnapView app icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -116,24 +116,51 @@
             <!-- English Content -->
             <div data-lang="en">
                 <h1>Privacy Policy</h1>
-                <p class="subtitle">Our commitment to your privacy when using SnapView.</p>
+                <p class="subtitle">How SnapView handles local photos and optional app analytics and diagnostics.</p>
 
-                <h2>Data Collection and Usage</h2>
-                <p>SnapView is a purely local macOS application designed to run entirely offline on your device.</p>
+                <h2>Local Photos and Files</h2>
+                <p>SnapView processes the photos, folders, ZIP archives, Apple Photos items, thumbnails, and metadata that you choose to open locally on your Mac.</p>
                 <ul>
-                    <li>The app does <strong>not</strong> collect, store, or transmit any of your personal information, photos, or device data to any external servers.</li>
-                    <li>All image processing, caching, and metadata reading operations are performed locally on your Mac.</li>
-                    <li>The SnapView app itself does <strong>not</strong> include third-party tracking analytics or crash reporting tools.</li>
-                    <li>However, the public SnapView website (<code>snapview.snapworkslab.com</code>) may use Google Analytics to understand site visits and page usage.</li>
-                    <li>This website analytics setup does not upload your local photo library or files inside the app, and is separate from the app's offline behavior.</li>
+                    <li>Your photos, file names, file paths, folder names, image metadata, EXIF data, location data, account information, and payment information are not included in SnapView app analytics or stability diagnostics.</li>
+                    <li>Image decoding, thumbnail generation, caching, metadata reading, and on-device review tools remain local.</li>
+                    <li>SnapView does not sell personal data, use advertising identifiers, personalize ads, set a Firebase user ID, or use collected data to track you across apps or websites.</li>
+                </ul>
+
+                <h2>Optional App Analytics and Diagnostics</h2>
+                <p>SnapView includes Google Firebase Analytics and Firebase Crashlytics to help understand broad product usage and improve app stability. These two options are controlled separately.</p>
+                <ul>
+                    <li><strong>Anonymous usage analytics:</strong> may include app launches and sessions, viewer activation, opened source type, view mode, navigation milestones, feature-use categories, memory-pressure events, app version, operating-system information, and a Firebase app-instance measurement identifier.</li>
+                    <li><strong>App stability diagnostics:</strong> may include crash data, stack traces, app and build information, operating-system and device environment, memory and performance measurements, the current view state, and other bounded diagnostic values.</li>
+                    <li>These categories correspond to Product Interaction, Other Usage Data, Device ID, Crash Data, Performance Data, and Other Diagnostic Data. They are used for Analytics or App Functionality, are not linked to an account, and are not used for tracking.</li>
+                </ul>
+
+                <h2>Consent and Channel Defaults</h2>
+                <ul>
+                    <li>In the Mac App Store build, the initial choices for analytics and automatic diagnostics are OFF.</li>
+                    <li>In the direct DMG build, the initial draft choices are ON, but <strong>no Firebase remote collection starts until you select Apply</strong>.</li>
+                    <li>Skipping or closing the privacy step saves both choices as OFF.</li>
+                    <li>You can turn analytics and automatic diagnostics off independently at any time in SnapView Settings.</li>
+                    <li>After an unexpected termination, SnapView may offer Send Once, Always Send Automatically, or Don't Send. Send Once does not enable ongoing automatic diagnostics.</li>
+                </ul>
+
+                <h2>Retention and Deletion</h2>
+                <ul>
+                    <li>SnapView keeps consent choices locally until you change them or remove the app's settings.</li>
+                    <li>When automatic diagnostics are off, SnapView may keep one bounded local snapshot of the previous unexpected termination so that you can decide whether to send it. A newer incident replaces an older unanswered one, and the local snapshot is removed after you make a choice.</li>
+                    <li>Choosing Don't Send or turning diagnostics off removes pending Crashlytics reports managed by the app and stops future automatic uploads. Turning analytics off stops future analytics collection.</li>
+                    <li>Data already sent is processed by Google Firebase under its service controls and retention policies. SnapWorks Lab keeps remote analytics and diagnostic data only as needed to operate and improve SnapView. You may contact us to request deletion or ask about applicable records.</li>
                 </ul>
 
                 <h2>System Permissions</h2>
-                <p>SnapView may request access to your files and folders (e.g., Desktop, Documents, Downloads, or external drives) to function properly. This access is strictly used to display and manage the photos you choose to open with the app.</p>
+                <p>SnapView may request access to user-selected files and folders, external drives, or Apple Photos. These permissions are used only to provide the viewing and organization actions that you request.</p>
+
+                <h2>Website Analytics</h2>
+                <p>The public SnapView website (<code>snapview.snapworkslab.com</code>) may use Google Analytics to understand visits and page usage. Website analytics is separate from the app and cannot access the photos or files opened in SnapView.</p>
 
                 <h2>Contact Us</h2>
                 <p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
                 <p><a href="mailto:sunset@snapworkslab.com" style="color: var(--accent-blue);">sunset@snapworkslab.com</a></p>
+                <p>Effective date: July 13, 2026.</p>
             </div>
         </section>
 
