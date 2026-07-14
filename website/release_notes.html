@@ -93,6 +93,31 @@
                 <li>Fixed stale Histogram and Quick Check results appearing on a newer image or revision during rapid navigation.</li>
                 </ul>
 
+                <h2 id="v2-6-0">v2.6.0 - 2026-07-07</h2>
+                <h3>What's New</h3>
+                <ul>
+                <li>Apple Photos browsing is clearer and more usable: SnapView now shows access/indexing progress and can request higher-resolution Photos previews with Supporter Pass.</li>
+                <li>RAW files can render from the file's embedded preview or embedded JPG first, with the new Files·RAW setting enabled by default for faster first display.</li>
+                <li>Supporter Pass adds more polished app icon handling, including the original SnapView 1.0 app icon and immediate Dock/intro updates.</li>
+                </ul>
+                <h3>Improvements</h3>
+                <ul>
+                <li>Large folders feel steadier after opening. SnapView protects the first visible image and immediate previous/next navigation before starting heavier background work.</li>
+                <li>Folder startup now lands on the final sorted first image more consistently instead of briefly flashing an early temporary image.</li>
+                <li>The default window opens larger, restores manual window size/position more reliably, and keeps the intro layout calmer in tight windows.</li>
+                <li>Navigator, toolbar, Filmstrip, Supporter Pass purchase, and indexing UI have been tightened so common review surfaces are easier to scan.</li>
+                <li>Trackpad horizontal navigation now follows the same previous/next direction model as vertical navigation under Natural scrolling.</li>
+                <li>RAW preview mode changes apply to the current image immediately and remain selected across relaunches.</li>
+                </ul>
+                <h3>Fixes</h3>
+                <ul>
+                <li>Fixed high-resolution images that could still show the upscaling badge because empty canvas space was counted as image display area.</li>
+                <li>Fixed precise mouse-wheel navigation for Logitech wheels and reverse-scroll utilities that do not send a scroll-end event, so previous/next wheel navigation no longer works only once.</li>
+                <li>Fixed the mouse context rating submenu so rating clear plus 1-5 choices are available instead of only the 5-star item.</li>
+                <li>Fixed Apple Photos original orientation in preview-to-original switches, reducing sideways or incorrectly fitted Photos images.</li>
+                <li>Restored the next-folder-first-image menu icon and cleaned up several small toolbar, Filmstrip, and divider inconsistencies.</li>
+                </ul>
+
                 <h2 id="v2-5-1">v2.5.1 - 2026-07-01</h2>
                 <h3>What's New</h3>
                 <ul>
