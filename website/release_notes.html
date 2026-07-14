@@ -70,29 +70,27 @@
             <!-- English Content -->
             <div data-lang="en">
                 <h1>SnapView Release Notes</h1>
-                <h2 id="v2-6-0">v2.6.0 (Current) - 2026-07-07</h2>
-                <h3>What's New</h3>
-                <ul>
-                <li>Apple Photos browsing is clearer and more usable: SnapView now shows access/indexing progress and can request higher-resolution Photos previews with Supporter Pass.</li>
-                <li>RAW files can render from the file's embedded preview or embedded JPG first, with the new Files·RAW setting enabled by default for faster first display.</li>
-                <li>Supporter Pass adds more polished app icon handling, including the original SnapView 1.0 app icon and immediate Dock/intro updates.</li>
-                </ul>
+                <h2 id="v2-6-1">v2.6.1 (Current) - 2026-07-14</h2>
                 <h3>Improvements</h3>
                 <ul>
-                <li>Large folders feel steadier after opening. SnapView protects the first visible image and immediate previous/next navigation before starting heavier background work.</li>
-                <li>Folder startup now lands on the final sorted first image more consistently instead of briefly flashing an early temporary image.</li>
-                <li>The default window opens larger, restores manual window size/position more reliably, and keeps the intro layout calmer in tight windows.</li>
-                <li>Navigator, toolbar, Filmstrip, Supporter Pass purchase, and indexing UI have been tightened so common review surfaces are easier to scan.</li>
-                <li>Trackpad horizontal navigation now follows the same previous/next direction model as vertical navigation under Natural scrolling.</li>
-                <li>RAW preview mode changes apply to the current image immediately and remain selected across relaunches.</li>
+                <li>Preserved unrelated Lightroom, Capture One, and custom metadata when updating XMP ratings, flags, color labels, or artist values.</li>
+                <li>Made partial delete recovery available across Main, Grid, Compare, Duplicate, and Workspace flows without overwriting a file that now occupies the original location.</li>
+                <li>Added relaunch-safe recovery for interrupted local deletes. SnapView records RAW+JPG, related, and XMP Trash moves and restores them only after you choose Restore in the same folder.</li>
+                <li>Made regular exports and Batch Actions honor orientation, ICC, metadata, and size-limit settings; an output that cannot meet a hard size limit now fails explicitly.</li>
+                <li>Made HDR export behavior explicit: current resize/convert exports disclose SDR conversion, while unsupported HDR-preservation requests fail instead of silently flattening.</li>
+                <li>Preserved capture-date sorting after restoring deleted RAW+JPG and ordinary local photos.</li>
+                <li>Reduced background list-maintenance work when large folders change so it does not interrupt photo navigation.</li>
+                <li>Reduced unnecessary memory buildup during long, sequential browsing of large JPEGs in Quality-first mode.</li>
+                <li>Reduced thumbnail memory retained while browsing large folders for a long time in Grid and Filmstrip views.</li>
+                <li>Made Quick Organize and Batch Actions report success, partial, failure, and skipped results once per logical photo row, with safer retry authority.</li>
+                <li>After an unexpected termination, SnapView can now ask on the next launch whether to send the retained diagnostic once, always send diagnostics automatically, or not send it.</li>
                 </ul>
                 <h3>Fixes</h3>
                 <ul>
-                <li>Fixed high-resolution images that could still show the upscaling badge because empty canvas space was counted as image display area.</li>
-                <li>Fixed precise mouse-wheel navigation for Logitech wheels and reverse-scroll utilities that do not send a scroll-end event, so previous/next wheel navigation no longer works only once.</li>
-                <li>Fixed the mouse context rating submenu so rating clear plus 1-5 choices are available instead of only the 5-star item.</li>
-                <li>Fixed Apple Photos original orientation in preview-to-original switches, reducing sideways or incorrectly fitted Photos images.</li>
-                <li>Restored the next-folder-first-image menu icon and cleaned up several small toolbar, Filmstrip, and divider inconsistencies.</li>
+                <li>Fixed a thumbnail-loading issue that could cause SnapView to close unexpectedly while browsing large folders.</li>
+                <li>Fixed a problem where Apple Photos and ZIP items could be mistaken for local files during delete, move, and rename actions.</li>
+                <li>Fixed a problem where an older or overlapping delete request could expose the wrong Restore action.</li>
+                <li>Fixed stale Histogram and Quick Check results appearing on a newer image or revision during rapid navigation.</li>
                 </ul>
 
                 <h2 id="v2-5-1">v2.5.1 - 2026-07-01</h2>
