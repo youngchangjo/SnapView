@@ -1,6 +1,60 @@
 # SnapView Release Notes
 
-## v2.6.0 (Current) - 2026-07-07
+## Channel Privacy Onboarding Policy
+
+DMG와 Mac App Store는 서로 다른 배포 채널이며 개인정보 및 권한 화면 구조를 공유합니다. Mac App Store 초기 초안: Analytics OFF / 진단 자동 전송 OFF. DMG 초기 초안: Analytics ON / 진단 자동 전송 ON. 두 채널 모두 선택 적용 전에는 Firebase로 원격 전송하지 않습니다. 건너뛰기 또는 창 닫기는 OFF/OFF로 저장합니다. 두 채널 모두 설정에서 Analytics와 진단 자동 전송을 별도로 끌 수 있고, 원격 진단이 OFF여도 로컬 비정상 종료 상태는 유지됩니다. 진단의 크래시 정보는 가능한 경우에만 포함됩니다.
+
+## v2.6.1 (Current) - 2026-07-14
+
+Language: [🇺🇸 English](#english-261) | [🇰🇷 한국어](#korean-261)
+
+<a id="english-261"></a>
+
+### English
+
+#### Improvements
+- Preserved unrelated Lightroom, Capture One, and custom metadata when updating XMP ratings, flags, color labels, or artist values.
+- Made partial delete recovery available across Main, Grid, Compare, Duplicate, and Workspace flows without overwriting a file that now occupies the original location.
+- Added relaunch-safe recovery for interrupted local deletes. SnapView records RAW+JPG, related, and XMP Trash moves and restores them only after you choose Restore in the same folder.
+- Made regular exports and Batch Actions honor orientation, ICC, metadata, and size-limit settings; an output that cannot meet a hard size limit now fails explicitly.
+- Made HDR export behavior explicit: current resize/convert exports disclose SDR conversion, while unsupported HDR-preservation requests fail instead of silently flattening.
+- Preserved capture-date sorting after restoring deleted RAW+JPG and ordinary local photos.
+- Reduced background list-maintenance work when large folders change so it does not interrupt photo navigation.
+- Reduced unnecessary memory buildup during long, sequential browsing of large JPEGs in Quality-first mode.
+- Reduced thumbnail memory retained while browsing large folders for a long time in Grid and Filmstrip views.
+- Made Quick Organize and Batch Actions report success, partial, failure, and skipped results once per logical photo row, with safer retry authority.
+- After an unexpected termination, SnapView can now ask on the next launch whether to send the retained diagnostic once, always send diagnostics automatically, or not send it.
+
+#### Fixes
+- Fixed a thumbnail-loading issue that could cause SnapView to close unexpectedly while browsing large folders.
+- Fixed a problem where Apple Photos and ZIP items could be mistaken for local files during delete, move, and rename actions.
+- Fixed a problem where an older or overlapping delete request could expose the wrong Restore action.
+- Fixed stale Histogram and Quick Check results appearing on a newer image or revision during rapid navigation.
+
+<a id="korean-261"></a>
+
+### 한국어
+
+#### 개선된 점
+- XMP 별점·플래그·컬러 라벨·작가 정보를 바꿀 때 Lightroom, Capture One 및 사용자 정의 메타데이터를 그대로 보존합니다.
+- Main, Grid, 비교, 중복사진정리, 작업 공간에서 삭제가 일부만 끝난 경우에도 이동된 파일을 복원할 수 있게 했고, 원래 위치에 새 파일이 있으면 덮어쓰지 않습니다.
+- 로컬 삭제가 도중에 중단되어도 다음 실행에서 복구할 수 있습니다. RAW+JPG, 관련 파일, XMP의 휴지통 이동을 기록하고 같은 폴더에서 사용자가 복구를 선택한 경우에만 되돌립니다.
+- 일반 내보내기와 Batch Actions의 방향, ICC, 메타데이터, 용량 제한 설정이 실제 출력에 반영됩니다. 반드시 지켜야 하는 용량을 맞출 수 없으면 초과 파일을 성공으로 처리하지 않고 명확히 실패합니다.
+- HDR 내보내기 동작을 명확히 표시합니다. 현재 크기 조정·변환 내보내기는 SDR 변환을 안내하며, 지원하지 않는 HDR 보존 요청은 조용히 SDR로 바꾸지 않고 실패합니다.
+- RAW+JPG와 일반 로컬 사진을 삭제 후 복원할 때 촬영일 정렬 순서가 유지되도록 했습니다.
+- 큰 폴더의 사진 목록이 바뀔 때 목록 정리 작업이 사진 탐색을 방해하지 않도록 개선했습니다.
+- 화질 우선 모드에서 대용량 JPEG를 오래 연속으로 볼 때 불필요한 메모리 누적을 줄였습니다.
+- 큰 폴더를 Grid와 Filmstrip으로 오래 탐색할 때 썸네일 메모리가 계속 쌓이는 현상을 줄였습니다.
+- Quick Organize와 Batch Actions가 사진 한 장을 기준으로 성공·일부 성공·실패·건너뜀을 한 번만 집계하고, 오래된 권한을 재시도에 쓰지 않도록 했습니다.
+- 예상치 못한 종료가 감지되면 다음 실행에서 진단 정보를 `이번만 보내기`, `항상 자동 전송`, `보내지 않기` 중 하나로 선택할 수 있게 했습니다.
+
+#### 수정된 문제
+- 큰 폴더에서 썸네일을 불러올 때 SnapView가 예기치 않게 종료될 수 있던 문제를 수정했습니다.
+- Apple Photos와 ZIP 항목을 로컬 파일로 오해해 삭제·이동·이름 변경할 수 있던 문제를 수정했습니다.
+- 오래된 삭제나 겹쳐 실행된 삭제가 현재 작업과 다른 복원 버튼을 표시할 수 있던 문제를 수정했습니다.
+- 빠르게 사진을 넘길 때 이전 사진이나 수정본의 히스토그램·퀵체크 결과가 현재 화면에 나타날 수 있던 문제를 수정했습니다.
+
+## v2.6.0 - 2026-07-07
 
 Language: [🇺🇸 English](#english-260) | [🇰🇷 한국어](#korean-260)
 
