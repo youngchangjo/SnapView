@@ -1,9 +1,5 @@
 # SnapView Release Notes
 
-## Channel Privacy Onboarding Policy
-
-DMG와 Mac App Store는 서로 다른 배포 채널이며 개인정보 및 권한 화면 구조를 공유합니다. Mac App Store 초기 초안: Analytics OFF / 진단 자동 전송 OFF. DMG 초기 초안: Analytics ON / 진단 자동 전송 ON. 두 채널 모두 선택 적용 전에는 Firebase로 원격 전송하지 않습니다. 건너뛰기 또는 창 닫기는 OFF/OFF로 저장합니다. 두 채널 모두 설정에서 Analytics와 진단 자동 전송을 별도로 끌 수 있고, 원격 진단이 OFF여도 로컬 비정상 종료 상태는 유지됩니다. 진단의 크래시 정보는 가능한 경우에만 포함됩니다.
-
 ## v2.6.1 (Current) - 2026-07-14
 
 Language: [🇺🇸 English](#english-261) | [🇰🇷 한국어](#korean-261)
