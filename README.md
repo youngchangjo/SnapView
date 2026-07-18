@@ -8,7 +8,9 @@
 
 Fast macOS image viewer for real photo culling work.
 
-Current Version: `v2.6.1`
+Current App Store Candidate: `v2.6.2` · Latest DMG Release: `v2.6.1`
+
+The 2.6.2 candidate bounds background preparation for large local still images and avoids full-source Rust thumbnail decoding for large JPG files.
 
 Language: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
 
@@ -135,7 +137,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 - Release builds are notarized for standard macOS installation flow.
 - SnapView works with files you open locally. It is designed around local browsing, review, and cleanup workflows.
 - Apple Photos access is requested only when you open Apple Photos features, and Photos items stay in explicit browse/import/add/favorite workflows.
-- The distinct DMG and Mac App Store distribution channels share the privacy-and-permissions page structure but use different initial drafts: DMG starts Analytics/diagnostics ON and Mac App Store starts both OFF. Neither channel sends remotely before Apply; skip or close saves OFF/OFF, and Settings keeps separate withdrawal toggles. After an unexpected termination, the next launch can offer send-once, always-send, or don't-send choices; send-once leaves automatic diagnostics off. Neither service receives photos, file names, paths, photo metadata, location, account, or purchase information; SnapView does not use advertising tracking, ad personalization, IDFV collection, or a user ID.
+- The distinct DMG and Mac App Store distribution channels share the privacy-and-permissions page structure but use different initial drafts: DMG starts Analytics/diagnostics ON and Mac App Store starts both OFF. Automatic collection remains off until Apply; skip or close saves OFF/OFF, and Settings keeps separate withdrawal toggles. After an unexpected termination, the next launch offers send-once, always-send, or don't-send before any incomplete privacy onboarding. Send-once explicitly sends only that report and leaves automatic diagnostics off; always-send enables diagnostics without implicitly enabling Analytics. Neither service receives photos, file names, paths, photo metadata, location, account, or purchase information; SnapView does not use advertising tracking, ad personalization, IDFV collection, or a user ID.
 
 ## Notes
 
@@ -161,8 +163,9 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 
 실사용 사진 선별 작업에 맞춘 macOS용 고속 이미지 뷰어입니다.
 
-현재 버전: `v2.6.1`
+현재 App Store 후보: `v2.6.2` · 최신 DMG 릴리즈: `v2.6.1`
 
+2.6.2 후보는 큰 로컬 정적 이미지의 백그라운드 준비량을 제한하고, 대형 JPG 썸네일이 Rust에서 원본 전체로 먼저 디코드되지 않도록 처리합니다.
 
 언어: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
 
@@ -268,7 +271,7 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 - 릴리즈 빌드는 notarization을 거쳐 일반적인 macOS 설치 흐름을 따릅니다.
 - SnapView는 사용자가 연 로컬 파일을 기준으로 탐색, 검토, 정리하는 워크플로우를 중심으로 동작합니다.
 - Apple Photos 권한은 Apple Photos 기능을 열 때만 요청하며, Photos 항목은 명시적인 탐색/가져오기/추가/좋아요 흐름 안에서만 처리합니다.
-- DMG와 Mac App Store는 서로 다른 배포 채널이며 개인정보 및 권한 화면 구조를 공유합니다. Mac App Store 초기 초안: Analytics OFF / 진단 자동 전송 OFF. DMG 초기 초안: Analytics ON / 진단 자동 전송 ON. 두 채널 모두 선택 적용 전에는 Firebase로 원격 전송하지 않고, 건너뛰기 또는 창 닫기는 OFF/OFF로 저장합니다. 두 채널 모두 설정에서 Analytics와 진단 자동 전송을 별도로 끌 수 있습니다. 예상치 못한 종료 뒤에는 다음 실행에서 이번만 보내기, 항상 자동 전송, 보내지 않기를 선택할 수 있으며 이번만 보내기는 자동 전송 설정을 켜지 않습니다. 원격 진단이 OFF여도 로컬 비정상 종료 상태는 유지합니다. 사진, 파일명, 경로, EXIF, GPS, 계정·결제 정보는 전송하지 않습니다.
+- DMG와 Mac App Store는 서로 다른 배포 채널이며 개인정보 및 권한 화면 구조를 공유합니다. Mac App Store 초기 초안: Analytics OFF / 진단 자동 전송 OFF. DMG 초기 초안: Analytics ON / 진단 자동 전송 ON. 자동 수집은 선택 적용 전 Firebase로 원격 전송하지 않고, 건너뛰기 또는 창 닫기는 OFF/OFF로 저장합니다. 두 채널 모두 설정에서 Analytics와 진단 자동 전송을 별도로 끌 수 있습니다. 예상치 못한 종료 뒤에는 개인정보 선택이 끝나지 않았더라도 다음 실행에서 먼저 이번만 보내기, 항상 자동 전송, 보내지 않기를 선택할 수 있습니다. 이번만 보내기는 해당 보고서만 전송하고 자동 전송 설정을 켜지 않으며, 항상 자동 전송은 Analytics를 임의로 켜지 않고 진단만 켭니다. 원격 진단이 OFF여도 로컬 비정상 종료 상태는 유지합니다. 사진, 파일명, 경로, EXIF, GPS, 계정·결제 정보는 전송하지 않습니다.
 
 ## 참고 사항
 

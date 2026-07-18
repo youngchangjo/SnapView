@@ -1,6 +1,38 @@
 # SnapView Release Notes
 
-## v2.6.1 (Current) - 2026-07-14
+## v2.6.2 (Current) - 2026-07-18
+
+Language: [🇺🇸 English](#english-262) | [🇰🇷 한국어](#korean-262)
+
+<a id="english-262"></a>
+
+### English
+
+#### Improvements
+- Reduced interruptions to first display, rapid navigation, and Grid entry when browsing folders with many photos.
+- Reduced memory spikes from high-resolution JPG and other large local images by limiting off-screen original preparation and using a size-bounded thumbnail path for large sources.
+- Made Pick/Reject, ratings, and color labels more reliable when you continue browsing, close a window, or quit soon after making a selection.
+- Original copy now finishes pending selection and XMP updates first, then includes the matching XMP sidecar when one is available.
+
+#### Fixes
+- Fixed a delayed metadata refresh that could restore an older selection state after a recent change.
+- Fixed original copy sometimes starting before the latest XMP update had finished.
+
+<a id="korean-262"></a>
+
+### 한국어
+
+#### 개선된 점
+- 사진이 많은 폴더에서 첫 화면 표시, 빠른 사진 넘김, Grid 진입이 끊기는 현상을 줄였습니다.
+- 고해상도 JPG를 포함한 큰 로컬 이미지에서 화면 밖 원본 준비가 겹치지 않도록 하고, 큰 썸네일 원본은 크기가 제한된 경로로 처리해 메모리 급증을 줄였습니다.
+- Pick/Reject, 별점, 컬러 라벨을 지정한 직후 계속 탐색하거나 창을 닫고 앱을 종료해도 선택 정보가 더 안정적으로 저장됩니다.
+- 선택한 원본을 복사할 때 진행 중인 선택 정보와 XMP 저장을 먼저 마치고, 대응하는 XMP 사이드카가 있으면 함께 복사합니다.
+
+#### 수정된 문제
+- 늦게 완료된 메타데이터 새로고침이 최근 선택 상태를 이전 값으로 되돌릴 수 있던 문제를 수정했습니다.
+- 최신 XMP 저장이 끝나기 전에 원본 복사가 시작될 수 있던 문제를 수정했습니다.
+
+## v2.6.1 - 2026-07-14
 
 Language: [🇺🇸 English](#english-261) | [🇰🇷 한국어](#korean-261)
 
@@ -42,7 +74,7 @@ Language: [🇺🇸 English](#english-261) | [🇰🇷 한국어](#korean-261)
 - 화질 우선 모드에서 대용량 JPEG를 오래 연속으로 볼 때 불필요한 메모리 누적을 줄였습니다.
 - 큰 폴더를 Grid와 Filmstrip으로 오래 탐색할 때 썸네일 메모리가 계속 쌓이는 현상을 줄였습니다.
 - Quick Organize와 Batch Actions가 사진 한 장을 기준으로 성공·일부 성공·실패·건너뜀을 한 번만 집계하고, 오래된 권한을 재시도에 쓰지 않도록 했습니다.
-- 예상치 못한 종료가 감지되면 다음 실행에서 진단 정보를 `이번만 보내기`, `항상 자동 전송`, `보내지 않기` 중 하나로 선택할 수 있게 했습니다.
+- 예상치 못한 종료가 감지되면 개인정보 선택을 아직 마치지 않았더라도 다음 실행에서 먼저 진단 정보를 `이번만 보내기`, `항상 자동 전송`, `보내지 않기` 중 하나로 선택할 수 있게 했습니다.
 
 #### 수정된 문제
 - 큰 폴더에서 썸네일을 불러올 때 SnapView가 예기치 않게 종료될 수 있던 문제를 수정했습니다.
