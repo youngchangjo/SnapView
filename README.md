@@ -8,7 +8,7 @@
 
 Fast macOS image viewer for real photo culling work.
 
-Current App Store Candidate: `v2.6.2` · Latest DMG Release: `v2.6.1`
+Current Version: `v2.6.2`
 
 The 2.6.2 candidate bounds background preparation for large local still images and avoids full-source Rust thumbnail decoding for large JPG files.
 
@@ -23,7 +23,7 @@ Mac App Store: [SnapView on the App Store](https://apps.apple.com/us/app/snapvie
 ## Download
 
 - Latest release: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
-- Install package: open the latest release page and download `SnapView-2.6.1.dmg`
+- Install package: open the latest release page and download `SnapView-2.6.2.dmg`
 - Homebrew: `brew tap youngchangjo/snapview` then `brew install --cask snapview` (run `brew trust youngchangjo/snapview` first if Homebrew asks)
 - Official website: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
 
@@ -123,7 +123,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 ## Install
 
 1. Download the latest DMG from [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest).
-2. Open `SnapView-2.6.1.dmg`.
+2. Open `SnapView-2.6.2.dmg`.
 3. Drag `SnapView.app` into `Applications`.
 4. Launch SnapView from `Applications`.
 
@@ -163,7 +163,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 
 실사용 사진 선별 작업에 맞춘 macOS용 고속 이미지 뷰어입니다.
 
-현재 App Store 후보: `v2.6.2` · 최신 DMG 릴리즈: `v2.6.1`
+현재 버전: `v2.6.2`
 
 2.6.2 후보는 큰 로컬 정적 이미지의 백그라운드 준비량을 제한하고, 대형 JPG 썸네일이 Rust에서 원본 전체로 먼저 디코드되지 않도록 처리합니다.
 
@@ -178,7 +178,7 @@ Mac App Store: [App Store에서 SnapView 보기](https://apps.apple.com/us/app/s
 ## 다운로드
 
 - 최신 릴리즈: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
-- 설치 파일: 최신 릴리즈 페이지에서 `SnapView-2.6.1.dmg`를 다운로드해 설치합니다
+- 설치 파일: 최신 릴리즈 페이지에서 `SnapView-2.6.2.dmg`를 다운로드해 설치합니다
 - Homebrew: `brew tap youngchangjo/snapview` 후 `brew install --cask snapview` (Homebrew가 요구하면 먼저 `brew trust youngchangjo/snapview`)
 - 공식 사이트: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
 
@@ -257,7 +257,7 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 ## 설치 방법
 
 1. [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)에서 최신 DMG를 다운로드합니다.
-2. `SnapView-2.6.1.dmg`를 엽니다.
+2. `SnapView-2.6.2.dmg`를 엽니다.
 3. `SnapView.app`을 `Applications`로 드래그합니다.
 4. `Applications`에서 SnapView를 실행합니다.
 
