@@ -1,6 +1,40 @@
 # SnapView Release Notes
 
-## v2.6.2 (Current) - 2026-07-18
+## v2.6.3 (Current) - 2026-07-22
+
+Language: [🇺🇸 English](#english-263) | [🇰🇷 한국어](#korean-263)
+
+<a id="english-263"></a>
+
+### English
+
+#### Improvements
+- Horizontal and vertical Filmstrip now release offscreen thumbnails and pending work more promptly, reducing memory retained during long browsing sessions.
+- Filmstrip stays more responsive during long browsing sessions in folders with thousands of photos.
+- Thumbnail-cache shutdown and cleanup are better coordinated, while cancelled ZIP and Apple Photos operations now release in-flight requests and temporary resources.
+- RAW+JPG and XMP association is more consistent across filename case or Unicode differences, original copy, and delete flows.
+- The compact Info Overlay now includes the current image index. The `I` key shows or hides the file information and index together, while the existing Pro Layout Info Strip index remains unchanged.
+- Users without a saved decision can choose after launch whether to share anonymized crash and app-improvement data. DMG and Mac App Store use the same opt-in default, Skip keeps both disabled, and the saved choice is reflected when the privacy page is opened later.
+
+#### Fixes
+- Removed the light-mode titlebar separator, made saved Supporter app-icon choices survive relaunch, and aligned the default DMG and Mac App Store icons.
+
+<a id="korean-263"></a>
+
+### 한국어
+
+#### 개선된 점
+- 가로·세로 필름스트립에서 화면 밖 썸네일과 대기 작업을 더 빠르게 정리해, 많은 사진을 오래 넘길 때의 메모리 사용을 줄였습니다.
+- 수천 장이 있는 폴더를 오래 탐색할 때도 필름스트립의 후반부 반응성을 개선했습니다.
+- 썸네일 캐시의 종료·정리 경합을 보강하고, ZIP 및 Apple Photos 작업이 취소되면 진행 중인 처리와 임시 리소스도 함께 정리하도록 개선했습니다.
+- RAW+JPG와 XMP 연결 규칙을 다듬어 파일명 대소문자·Unicode 차이와 일반 복사·삭제 흐름에서 관련 파일을 더 일관되게 처리합니다.
+- compact 정보 오버레이에 현재 사진 인덱스를 추가했습니다. `I` 키로 파일 정보와 인덱스를 함께 표시하거나 숨길 수 있으며, Pro Layout 정보 스트립의 기존 인덱스는 그대로 유지됩니다.
+- 개인정보 선택 기록이 없는 사용자는 앱 실행 직후 익명화된 비정상 종료 및 앱 개선 데이터 사용 여부를 선택할 수 있습니다. DMG와 Mac App Store 모두 동일한 opt-in 기본값을 사용하며, `건너뛰기`는 두 항목을 끈 상태로 저장하고 이후 개인정보 화면에는 저장된 선택이 그대로 표시됩니다.
+
+#### 수정된 문제
+- 라이트 모드 타이틀바 아래 선을 제거하고, 설정에서 고른 Supporter 앱 아이콘이 재실행 후에도 유지되도록 수정했으며, DMG와 Mac App Store의 기본 아이콘도 동일하게 맞췄습니다.
+
+## v2.6.2 - 2026-07-18
 
 Language: [🇺🇸 English](#english-262) | [🇰🇷 한국어](#korean-262)
 
@@ -9,10 +43,12 @@ Language: [🇺🇸 English](#english-262) | [🇰🇷 한국어](#korean-262)
 ### English
 
 #### Improvements
-- Reduced interruptions to first display, rapid navigation, and Grid entry when browsing folders with many photos.
+- Grid View now opens the visible surface first while large-folder filtering and sorting continue in the background.
+- External and slow storage, including non-network external drives, use a conservative thumbnail lane. Thunderbolt storage keeps the local fast path, and constrained storage is limited to two thumbnail requests at a time.
+- Reduced interruptions to first display and rapid navigation when browsing folders with many photos.
 - Reduced memory spikes from high-resolution JPG and other large local images by limiting off-screen original preparation and using a size-bounded thumbnail path for large sources.
-- Made Pick/Reject, ratings, and color labels more reliable when you continue browsing, close a window, or quit soon after making a selection.
-- Original copy now finishes pending selection and XMP updates first, then includes the matching XMP sidecar when one is available.
+- Pick/Reject, ratings, and color labels now use a serial writer so they remain reliable when you keep browsing, close a window, or quit soon after making a selection.
+- Original copy waits for pending selection and XMP updates, then runs in the background and includes the matching `.xmp` sidecar when available.
 
 #### Fixes
 - Fixed a delayed metadata refresh that could restore an older selection state after a recent change.
@@ -23,14 +59,19 @@ Language: [🇺🇸 English](#english-262) | [🇰🇷 한국어](#korean-262)
 ### 한국어
 
 #### 개선된 점
-- 사진이 많은 폴더에서 첫 화면 표시, 빠른 사진 넘김, Grid 진입이 끊기는 현상을 줄였습니다.
+- 대량 폴더의 그리드가 먼저 열리고, 필터와 정렬 계산은 백그라운드에서 이어지도록 다듬었습니다.
+- 네트워크 드라이브뿐 아니라 일반 외장 하드·SSD도 보수적인 썸네일 처리 경로를 사용합니다. Thunderbolt 저장장치는 기존 로컬 빠른 경로를 유지하며, 제한 경로의 동시 썸네일 요청은 2개로 제한합니다.
+- 사진이 많은 폴더에서 첫 화면 표시와 빠른 사진 넘김이 끊기는 현상을 줄였습니다.
 - 고해상도 JPG를 포함한 큰 로컬 이미지에서 화면 밖 원본 준비가 겹치지 않도록 하고, 큰 썸네일 원본은 크기가 제한된 경로로 처리해 메모리 급증을 줄였습니다.
-- Pick/Reject, 별점, 컬러 라벨을 지정한 직후 계속 탐색하거나 창을 닫고 앱을 종료해도 선택 정보가 더 안정적으로 저장됩니다.
-- 선택한 원본을 복사할 때 진행 중인 선택 정보와 XMP 저장을 먼저 마치고, 대응하는 XMP 사이드카가 있으면 함께 복사합니다.
+- Pick/Reject, 별점, 컬러 라벨은 하나의 직렬 writer로 저장해 선택 직후 계속 탐색하거나 창을 닫고 앱을 종료해도 더 안정적으로 보존됩니다.
+- 선택한 원본 복사는 진행 중인 선택 정보와 XMP 저장을 먼저 마친 뒤 백그라운드에서 실행하며, 대응하는 `.xmp` sidecar가 있으면 함께 복사합니다.
 
 #### 수정된 문제
 - 늦게 완료된 메타데이터 새로고침이 최근 선택 상태를 이전 값으로 되돌릴 수 있던 문제를 수정했습니다.
 - 최신 XMP 저장이 끝나기 전에 원본 복사가 시작될 수 있던 문제를 수정했습니다.
+
+#### 개인정보 및 권한
+- DMG와 Mac App Store는 서로 다른 배포 채널이며 개인정보 및 권한 화면 구조를 공유합니다. Mac App Store 초기 초안: Analytics OFF / 진단 자동 전송 OFF. DMG 초기 초안: Analytics ON / 진단 자동 전송 ON. 두 채널 모두 선택 적용 전에는 Firebase로 원격 전송하지 않고, 건너뛰기 또는 창 닫기는 OFF/OFF로 저장합니다. 두 채널 모두 설정에서 Analytics와 진단 자동 전송을 별도로 끌 수 있습니다.
 
 ## v2.6.1 - 2026-07-14
 

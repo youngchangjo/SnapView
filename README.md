@@ -8,9 +8,11 @@
 
 Fast macOS image viewer for real photo culling work.
 
-Current Version: `v2.6.2`
+Current Version: `v2.6.3`
 
-The 2.6.2 candidate bounds background preparation for large local still images and avoids full-source Rust thumbnail decoding for large JPG files.
+SnapView 2.6.3 reduces memory retained during long Filmstrip sessions, improves responsiveness in folders with thousands of photos, and strengthens thumbnail-cache, ZIP, Apple Photos, RAW+JPG, and XMP cleanup paths.
+
+This release also restores saved app-icon choices after relaunch, aligns the default DMG and Mac App Store icons, and adds an `I`-linked image index to the compact Info Overlay without changing the Pro Layout Info Strip.
 
 Language: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
 
@@ -23,7 +25,7 @@ Mac App Store: [SnapView on the App Store](https://apps.apple.com/us/app/snapvie
 ## Download
 
 - Latest release: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
-- Install package: open the latest release page and download `SnapView-2.6.2.dmg`
+- Install package: open the latest release page and download the versioned `SnapView-X.Y.Z.dmg` shown there
 - Homebrew: `brew tap youngchangjo/snapview` then `brew install --cask snapview` (run `brew trust youngchangjo/snapview` first if Homebrew asks)
 - Official website: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
 
@@ -56,8 +58,11 @@ SnapView is built for the part after import: checking sharpness, comparing near-
 The key idea is simple: do the fastest first-pass cull in SnapView, then carry the result forward instead of starting over somewhere else.
 
 - Fast folder and ZIP browsing
+- App Store ZIP extraction is bounded and cancellable, and cancelled Apple Photos preview/original work releases its in-flight request and temporary resources.
 - Apple Photos browsing for Library, Favorites, Videos, Screenshots, and albums, with a Photos-style Favorite heart and optional higher-resolution Photos previews in Photos mode
 - Image display comes first, with heavier analysis and cache work kept in the background during browsing
+- The thumbnail disk cache drains admitted work before closing and coordinates lookup with cleanup across its worker handles.
+- Cold source-dimension checks and original JPEG/Finder metadata writes stay off the browsing UI path
 - HDR-aware main display for supported sources, with a compact HDR badge whose HDR region toggles HDR/SDR display, returns SDR to original-quality display, and whose expand control opens detailed inspection
 - Quick Check for quality diagnosis with reasons, not just EXIF fields
 - Map Overlay for GPS-backed photo location review
@@ -66,11 +71,12 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 - Comic Reading Mode for opened folders or ZIP archives, with a focused black reader, HUD-local left-to-right/right-to-left controls, same-source last page restore, and next folder/ZIP handoff
 - Keyboard-first rating, pick, reject, and Finder tag workflow
 - Q/W/E/R/T + Tab viewer policy: Q=Grid, W=Main View, E=Horizontal Filmstrip, R=Vertical Filmstrip, T=Navigator toggle, Tab=Pro Layout View
+- Horizontal and vertical Filmstrip thumbnail work stays bounded to the visible viewport and releases offscreen image state as you browse or leave the mode
 - Quick Organize presets for repeated copy/move sorting, with up to three visible presets and auto rules limited to Pick and 5-star
 - Batch Actions for previewed JPEG/PNG export and copy/move recipes, with up to three visible recipes in SnapView 2.0
 - Print images or save PDFs with `Command-P` through the native macOS print panel. The `SnapView Images` section controls image range, arrangement, scaling, and filename captions.
 - Intro Supporter Pass is optional support for SnapView in supported App Store builds. Founding Supporter runs from 2026-07-01 through 2026-09-30 UTC, regular Supporter Pass is available from 2026-10-01 UTC, and the App Store shows the purchase price before checkout.
-- Lightroom-style XMP interoperability for rating, Pick, and Reject while preserving unrelated existing sidecar metadata
+- Namespace-aware XMP interoperability for ratings and Adobe color labels, with SnapView Pick/Reject stored separately and unrelated sidecar metadata preserved
 - Finder tag interoperability so file and folder status remain visible outside the app
 - Decoding modes that let you choose between speed, balanced review, and quality-first inspection
 
@@ -81,7 +87,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 3. Mark keepers with rating, Pick, Reject, or color labels for local files, or the Photos Favorite heart for Apple Photos items.
 4. Run Quick Organize presets or Batch Actions when repeated sorting or export is needed.
 5. Open Quick Check or Compare when you need a closer call.
-6. Continue in Lightroom with XMP-backed ratings and flags, or keep organizing in Finder with color labels.
+6. Continue with XMP-backed ratings and compatible Adobe labels in Lightroom or Capture One; SnapView Pick/Reject stays separate from Adobe's collection-label field.
 7. Print or save a PDF from `Command-P` when you need a current-image print, selected-image pages, or a contact sheet.
 8. Use Duplicate mode to clean up exact duplicates.
 
@@ -123,7 +129,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 ## Install
 
 1. Download the latest DMG from [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest).
-2. Open `SnapView-2.6.2.dmg`.
+2. Open the downloaded versioned `SnapView-X.Y.Z.dmg`.
 3. Drag `SnapView.app` into `Applications`.
 4. Launch SnapView from `Applications`.
 
@@ -133,20 +139,22 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 
 ## Security And Privacy
 
+- The DMG and Mac App Store channels use the same opt-in privacy defaults and saved-choice behavior: without a recorded choice both controls start off, and a launch decision is reused by the privacy page.
 - Release builds are signed with Apple Developer ID.
 - Release builds are notarized for standard macOS installation flow.
 - SnapView works with files you open locally. It is designed around local browsing, review, and cleanup workflows.
 - Apple Photos access is requested only when you open Apple Photos features, and Photos items stay in explicit browse/import/add/favorite workflows.
-- The distinct DMG and Mac App Store distribution channels share the privacy-and-permissions page structure but use different initial drafts: DMG starts Analytics/diagnostics ON and Mac App Store starts both OFF. Automatic collection remains off until Apply; skip or close saves OFF/OFF, and Settings keeps separate withdrawal toggles. After an unexpected termination, the next launch offers send-once, always-send, or don't-send before any incomplete privacy onboarding. Send-once explicitly sends only that report and leaves automatic diagnostics off; always-send enables diagnostics without implicitly enabling Analytics. Neither service receives photos, file names, paths, photo metadata, location, account, or purchase information; SnapView does not use advertising tracking, ad personalization, IDFV collection, or a user ID.
+- Users without a recorded privacy decision can enable anonymized crash and app-usage data together at launch or Skip with both disabled. Each setting remains independently changeable later. If SnapView retained an unexpected-termination report, its existing send-once, always-send, or don't-send alert appears first. Photos, file contents, and personally identifying information are not sent.
 
 ## Notes
 
+- SnapView 2.6.3 adds a localized two-choice launch prompt for users without a recorded privacy decision. Agree enables anonymized crash and app-usage data together; Skip leaves both disabled.
 - ZIP browsing can be slower than normal folders because archive contents must be read before display.
 - ZIP items are not normal filesystem files, so some save/interoperability features are limited there.
 - Animated `gif` and `webp` play in Main View only. Other views currently show a still first frame.
 - Finder interoperability is centered on color labels.
-- Lightroom interoperability is centered on XMP sidecars for rating, Pick, and Reject, while large-folder refresh protects first display and immediate previous/next navigation.
-- RAW+JPG pairing supports common RAW extensions, uppercase extensions, standalone RAW files, and mixed RAW+HEIC+JPG sets.
+- XMP interoperability reads compact and element-form RDF, treats Adobe `Rating=-1` as Reject, and keeps SnapView Pick/Reject separate from Adobe `Label`, while large-folder refresh protects first display and immediate previous/next navigation.
+- RAW+JPG pairing supports 3FR, DNG, CR3, RW2, ARW, DXO, and other common RAW extensions plus unambiguous case/canonical-Unicode stem variants while keeping folded-name collisions separate. XMP companion lookup supports canonical, extension-case, and image-double-extension names and rejects ambiguous folded matches.
 - Interrupted local deletes can be restored after relaunch when the same folder is opened and the user approves recovery; an occupied original path is never overwritten.
 - Some formats depend on the decoder support available in the running macOS version.
 - Supporter Pass is optional support, not a feature lock.
@@ -163,9 +171,11 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 
 실사용 사진 선별 작업에 맞춘 macOS용 고속 이미지 뷰어입니다.
 
-현재 버전: `v2.6.2`
+현재 버전: `v2.6.3`
 
-2.6.2 후보는 큰 로컬 정적 이미지의 백그라운드 준비량을 제한하고, 대형 JPG 썸네일이 Rust에서 원본 전체로 먼저 디코드되지 않도록 처리합니다.
+2.6.3은 가로·세로 Filmstrip을 오래 탐색할 때 유지되는 메모리를 줄이고 수천 장 폴더의 후반부 반응성을 개선했으며, 썸네일 캐시·ZIP·Apple Photos·RAW+JPG·XMP 정리 경로를 보강했습니다.
+
+이번 릴리즈에서는 앱 아이콘 재실행 문제를 개선하고 DMG와 Mac App Store의 기본 아이콘을 맞췄습니다. Pro Layout 정보 스트립은 그대로 유지하면서 compact 정보 오버레이에 `I` 토글과 연동되는 인덱스를 추가했습니다.
 
 언어: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
 
@@ -178,7 +188,7 @@ Mac App Store: [App Store에서 SnapView 보기](https://apps.apple.com/us/app/s
 ## 다운로드
 
 - 최신 릴리즈: [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)
-- 설치 파일: 최신 릴리즈 페이지에서 `SnapView-2.6.2.dmg`를 다운로드해 설치합니다
+- 설치 파일: 최신 릴리즈 페이지에 표시된 버전의 `SnapView-X.Y.Z.dmg`를 다운로드해 설치합니다
 - Homebrew: `brew tap youngchangjo/snapview` 후 `brew install --cask snapview` (Homebrew가 요구하면 먼저 `brew trust youngchangjo/snapview`)
 - 공식 사이트: [snapview.snapworkslab.com](https://snapview.snapworkslab.com)
 
@@ -193,6 +203,9 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 핵심은 간단합니다. 가장 시간이 많이 드는 1차 선별은 SnapView에서 빠르게 끝내고, 그 결과를 Lightroom이나 Finder에서 그대로 이어서 쓰는 것입니다.
 
 - 폴더와 ZIP 이미지를 빠르게 탐색
+- App Store ZIP 해제는 크기 상한과 취소 경계를 지키며, 취소된 Apple Photos 프리뷰·원본 작업은 진행 중 요청과 임시 리소스를 정리합니다.
+- 썸네일 디스크 캐시는 이미 시작한 작업을 마친 뒤 닫고, 여러 작업 핸들의 조회와 정리를 충돌 없이 조정합니다.
+- 처음 읽는 원본 크기 확인과 JPEG/Finder 메타데이터 쓰기는 탐색 UI 밖의 백그라운드 경로에서 처리
 - Apple Photos의 Library, Favorites, Videos, Screenshots, 앨범을 SnapView 안에서 탐색하고, Photos 모드에서는 사진 앱과 같은 좋아요 하트로 선별
 - 현재 이미지 표시를 먼저 처리하고, 무거운 분석과 캐시 작업은 탐색 중 백그라운드로 분리
 - 지원되는 HDR 사진의 기본 표시와 작은 HDR 배지. `HDR` 영역으로 HDR/SDR 표시를 전환하고, SDR은 원본 품질 표시로 돌아가며, 펼치기 버튼으로 자세한 정보 확인
@@ -202,10 +215,11 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 - 동일 파일 정리를 위한 Duplicate 워크스페이스
 - 열린 폴더나 ZIP을 검은 독서 화면으로 전환하는 만화책 보기
 - `Q/W/E/R/T + Tab` 기준 탐색: Grid, Main, 가로 Filmstrip, 세로 Filmstrip, Navigator, 프로 레이아웃 뷰를 분리
+- 가로·세로 Filmstrip 썸네일 작업은 실제 보이는 영역으로 제한하고, 화면 밖 이미지 상태는 탐색하거나 모드를 나갈 때 해제
 - 빠른 정리 프리셋과 Batch Actions로 반복 복사/이동/내보내기 작업 정리. SnapView 2.0에서는 보이는 빠른 정리 프리셋과 Batch Actions 레시피를 각각 3개까지 제공하고, 빠른 정리 자동 규칙은 Pick과 별점 5만 노출
 - `Command-P`로 macOS 기본 인쇄 패널에서 현재 이미지, 선택 이미지, 현재 폴더, 콘택트 시트를 인쇄하거나 PDF로 저장
 - 별점, Pick, Reject, Finder 태그 중심의 키보드 선별
-- 기존 sidecar의 다른 메타데이터를 보존하는 Lightroom 스타일 XMP 연동으로 별점, Pick, Reject 결과를 그대로 이어가기
+- compact 속성형과 element형을 함께 읽는 XMP 연동으로 별점과 Adobe 컬러 라벨을 이어가고, SnapView Pick/Reject는 Adobe `Label`과 분리해 저장하면서 기존 sidecar 메타데이터 보존
 - Finder 태그 연동으로 macOS 파일/폴더 정리 단계까지 상태 유지
 - 속도 우선 / 보통 / 화질 최우선 디코딩 모드로 작업 성격에 맞게 조절
 
@@ -216,7 +230,7 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 3. 로컬 파일은 별점, Pick, Reject, 컬러 라벨로 선별하고, Apple Photos 항목은 좋아요 하트로 표시합니다.
 4. 반복 정리가 필요하면 빠른 정리 프리셋이나 Batch Actions를 실행합니다.
 5. 애매한 컷은 Quick Check 또는 Compare로 판단합니다.
-6. 별점/Pick/Reject 결과는 Lightroom에서, 컬러 라벨은 Finder에서 그대로 이어서 활용합니다.
+6. XMP 별점과 호환되는 Adobe 라벨은 Lightroom 또는 Capture One에서 이어 쓰고, SnapView Pick/Reject는 Adobe의 컬렉션 라벨 필드와 분리해 유지합니다.
 7. 출력이나 공유용 PDF가 필요하면 `Command-P`로 현재 이미지, 선택 이미지, 콘택트 시트를 인쇄하거나 PDF로 저장합니다.
 8. 마지막에 Duplicate 모드로 정확한 중복 파일을 정리합니다.
 
@@ -257,7 +271,7 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 ## 설치 방법
 
 1. [GitHub Releases](https://github.com/youngchangjo/SnapView/releases/latest)에서 최신 DMG를 다운로드합니다.
-2. `SnapView-2.6.2.dmg`를 엽니다.
+2. 다운로드한 버전의 `SnapView-X.Y.Z.dmg`를 엽니다.
 3. `SnapView.app`을 `Applications`로 드래그합니다.
 4. `Applications`에서 SnapView를 실행합니다.
 
@@ -271,17 +285,19 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 - 릴리즈 빌드는 notarization을 거쳐 일반적인 macOS 설치 흐름을 따릅니다.
 - SnapView는 사용자가 연 로컬 파일을 기준으로 탐색, 검토, 정리하는 워크플로우를 중심으로 동작합니다.
 - Apple Photos 권한은 Apple Photos 기능을 열 때만 요청하며, Photos 항목은 명시적인 탐색/가져오기/추가/좋아요 흐름 안에서만 처리합니다.
-- DMG와 Mac App Store는 서로 다른 배포 채널이며 개인정보 및 권한 화면 구조를 공유합니다. Mac App Store 초기 초안: Analytics OFF / 진단 자동 전송 OFF. DMG 초기 초안: Analytics ON / 진단 자동 전송 ON. 자동 수집은 선택 적용 전 Firebase로 원격 전송하지 않고, 건너뛰기 또는 창 닫기는 OFF/OFF로 저장합니다. 두 채널 모두 설정에서 Analytics와 진단 자동 전송을 별도로 끌 수 있습니다. 예상치 못한 종료 뒤에는 개인정보 선택이 끝나지 않았더라도 다음 실행에서 먼저 이번만 보내기, 항상 자동 전송, 보내지 않기를 선택할 수 있습니다. 이번만 보내기는 해당 보고서만 전송하고 자동 전송 설정을 켜지 않으며, 항상 자동 전송은 Analytics를 임의로 켜지 않고 진단만 켭니다. 원격 진단이 OFF여도 로컬 비정상 종료 상태는 유지합니다. 사진, 파일명, 경로, EXIF, GPS, 계정·결제 정보는 전송하지 않습니다.
+- DMG와 Mac App Store는 동일한 opt-in 개인정보 기본값과 저장 동작을 사용합니다. 선택 기록이 없으면 두 항목 모두 꺼져 있고, 실행 직후 선택은 시작하기 개인정보 화면의 체크 상태에 그대로 반영됩니다.
+- 개인정보 선택 기록이 없는 사용자는 실행 직후 익명화된 비정상 종료·앱 사용 데이터를 함께 켜거나 `건너뛰기`로 둘 다 끌 수 있습니다. 두 항목은 이후 설정에서 각각 변경할 수 있습니다. 보류 중인 비정상 종료 보고서가 있으면 기존의 이번만 보내기·항상 자동 전송·보내지 않기 알림을 먼저 표시합니다. 사진이나 파일 내용 등 개인을 식별할 수 있는 정보는 전송하지 않습니다.
 
 ## 참고 사항
 
+- SnapView 2.6.3은 개인정보 선택 기록이 없는 사용자에게 두 가지 선택의 실행 직후 동의 화면을 표시합니다. 동의하면 익명화된 비정상 종료·앱 사용 데이터를 함께 활성화하고, `건너뛰기`는 둘 다 끈 상태로 저장합니다.
 - ZIP 탐색은 일반 폴더보다 구조적으로 느릴 수 있습니다.
 - ZIP 내부 항목은 실제 파일이 아니므로 일부 저장/연동 기능이 제한됩니다.
 - animated `gif` / `webp`는 Main View에서만 재생되고, 다른 뷰에서는 첫 프레임 정지 이미지로 표시됩니다.
 - Finder 연동은 컬러 라벨 중심입니다.
-- Lightroom 연동은 XMP sidecar 기반 별점/Pick/Reject 중심이며, 대용량 폴더에서는 첫 표시와 즉시 전/후 탐색을 먼저 보호합니다.
+- XMP 연동은 compact 속성형과 element형 RDF를 모두 읽고 Adobe `Rating=-1`을 Reject로 해석하며, SnapView Pick/Reject는 Adobe `Label`과 분리합니다. 대용량 폴더에서는 첫 표시와 즉시 전/후 탐색을 먼저 보호합니다.
 - 중단된 로컬 삭제는 다음 실행에서 같은 폴더를 열었을 때 사용자 확인 후 복구할 수 있으며, 원래 위치의 기존 파일은 덮어쓰지 않습니다.
-- RAW+JPG 페어링은 주요 RAW 확장자, 대문자 확장자, 단독 RAW 파일, RAW+HEIC+JPG 묶음을 지원합니다.
+- RAW+JPG 페어링은 3FR, DNG, CR3, RW2, ARW, DXO 등 주요 RAW 확장자와 case/canonical-Unicode stem 차이를 지원하되 folded 이름 충돌은 분리합니다. XMP companion은 canonical·확장자 case·이미지 이중 확장자 이름을 지원하고 모호한 folded match는 선택하지 않습니다.
 - 일부 포맷은 실행 중인 macOS 버전의 디코더 지원 범위에 따라 달라질 수 있습니다.
 - 앱 UI 언어는 한국어, 영어, 일본어, 중국어 간체, 중국어 번체, 스페인어, 프랑스어, 독일어, 포르투갈어(브라질), 이탈리아어, 네덜란드어, 터키어, 폴란드어, 스웨덴어입니다.
 - App Store 메타데이터는 인도네시아어, 말레이어, 태국어, 베트남어, 덴마크어, 노르웨이어, 핀란드어, 체코어, 헝가리어, 루마니아어, 그리스어도 포함합니다.
