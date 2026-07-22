@@ -70,7 +70,38 @@
             <!-- English Content -->
             <div data-lang="en">
                 <h1>SnapView Release Notes</h1>
-                <h2 id="v2-6-1">v2.6.1 (Current) - 2026-07-14</h2>
+                <h2 id="v2-6-3">v2.6.3 (Current) - 2026-07-22</h2>
+                <h3>Improvements</h3>
+                <ul>
+                <li>Horizontal and vertical Filmstrip now release offscreen thumbnails and pending work more promptly, reducing memory retained during long browsing sessions.</li>
+                <li>Filmstrip stays more responsive during long browsing sessions in folders with thousands of photos.</li>
+                <li>Thumbnail-cache shutdown and cleanup are better coordinated, while cancelled ZIP and Apple Photos operations now release in-flight requests and temporary resources.</li>
+                <li>RAW+JPG and XMP association is more consistent across filename case or Unicode differences, original copy, and delete flows.</li>
+                <li>The compact Info Overlay now includes the current image index. The <code>I</code> key shows or hides the file information and index together, while the existing Pro Layout Info Strip index remains unchanged.</li>
+                <li>Users without a saved decision can choose after launch whether to share anonymized crash and app-improvement data. DMG and Mac App Store use the same opt-in default, Skip keeps both disabled, and the saved choice is reflected when the privacy page is opened later.</li>
+                </ul>
+                <h3>Fixes</h3>
+                <ul>
+                <li>Removed the light-mode titlebar separator, made saved Supporter app-icon choices survive relaunch, and aligned the default DMG and Mac App Store icons.</li>
+                </ul>
+
+                <h2 id="v2-6-2">v2.6.2 - 2026-07-18</h2>
+                <h3>Improvements</h3>
+                <ul>
+                <li>Grid View now opens the visible surface first while large-folder filtering and sorting continue in the background.</li>
+                <li>External and slow storage, including non-network external drives, use a conservative thumbnail lane. Thunderbolt storage keeps the local fast path, and constrained storage is limited to two thumbnail requests at a time.</li>
+                <li>Reduced interruptions to first display and rapid navigation when browsing folders with many photos.</li>
+                <li>Reduced memory spikes from high-resolution JPG and other large local images by limiting off-screen original preparation and using a size-bounded thumbnail path for large sources.</li>
+                <li>Pick/Reject, ratings, and color labels now use a serial writer so they remain reliable when you keep browsing, close a window, or quit soon after making a selection.</li>
+                <li>Original copy waits for pending selection and XMP updates, then runs in the background and includes the matching <code>.xmp</code> sidecar when available.</li>
+                </ul>
+                <h3>Fixes</h3>
+                <ul>
+                <li>Fixed a delayed metadata refresh that could restore an older selection state after a recent change.</li>
+                <li>Fixed original copy sometimes starting before the latest XMP update had finished.</li>
+                </ul>
+
+                <h2 id="v2-6-1">v2.6.1 - 2026-07-14</h2>
                 <h3>Improvements</h3>
                 <ul>
                 <li>Preserved unrelated Lightroom, Capture One, and custom metadata when updating XMP ratings, flags, color labels, or artist values.</li>
