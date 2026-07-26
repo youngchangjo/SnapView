@@ -1,6 +1,30 @@
 # SnapView Release Notes
 
-## v2.6.3 (Current) - 2026-07-22
+## v2.6.4 (Current) - 2026-07-26
+
+Language: [🇺🇸 English](#english-264) | [🇰🇷 한국어](#korean-264)
+
+<a id="english-264"></a>
+
+### English
+
+SnapView 2.6.4 is a focused stability update for photo deletion and the Main View right-click menu.
+
+#### Fixes
+- Fixed an issue that could cause moving photos to the Trash to fail in some situations.
+- Improved the Main View right-click menu so hover selection and submenus remain stable while moving the pointer. Existing menu commands and keyboard shortcuts are unchanged.
+
+<a id="korean-264"></a>
+
+### 한국어
+
+SnapView 2.6.4는 사진 삭제와 Main View 우클릭 메뉴의 안정성을 개선한 핫픽스입니다.
+
+#### 수정된 문제
+- 일부 환경에서 사진을 휴지통으로 이동하지 못하고 삭제가 실패하던 문제를 수정했습니다.
+- Main View 우클릭 메뉴에서 마우스를 움직일 때 선택 표시가 풀리거나 하위 메뉴가 깜빡이던 문제를 수정했습니다. 기존 메뉴 기능과 키보드 단축키는 그대로 유지됩니다.
+
+## v2.6.3 (Previous) - 2026-07-22
 
 Language: [🇺🇸 English](#english-263) | [🇰🇷 한국어](#korean-263)
 

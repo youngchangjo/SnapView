@@ -8,11 +8,11 @@
 
 Fast macOS image viewer for real photo culling work.
 
-Current Version: `v2.6.3`
+Current Version: `v2.6.4`
 
-SnapView 2.6.3 reduces memory retained during long Filmstrip sessions, improves responsiveness in folders with thousands of photos, and strengthens thumbnail-cache, ZIP, Apple Photos, RAW+JPG, and XMP cleanup paths.
+SnapView 2.6.4 fixes photo deletion failures in some situations and stabilizes hover selection and submenus in the Main View right-click menu. Existing menu commands and keyboard shortcuts are unchanged.
 
-This release also restores saved app-icon choices after relaunch, aligns the default DMG and Mac App Store icons, and adds an `I`-linked image index to the compact Info Overlay without changing the Pro Layout Info Strip.
+Release status: the signed and notarized universal 2.6.4 DMG is the current public GitHub/Sparkle release. App Store version 2.6.4 build 26400 is submitted and `WAITING_FOR_REVIEW`, with automatic release after approval; the currently downloadable App Store version remains 2.6.3 until approval. This hotfix does not include v2.7 performance work.
 
 Language: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
 
@@ -171,11 +171,11 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 
 실사용 사진 선별 작업에 맞춘 macOS용 고속 이미지 뷰어입니다.
 
-현재 버전: `v2.6.3`
+현재 버전: `v2.6.4`
 
-2.6.3은 가로·세로 Filmstrip을 오래 탐색할 때 유지되는 메모리를 줄이고 수천 장 폴더의 후반부 반응성을 개선했으며, 썸네일 캐시·ZIP·Apple Photos·RAW+JPG·XMP 정리 경로를 보강했습니다.
+2.6.4는 일부 환경에서 사진 삭제가 실패하던 문제를 수정하고, Main View 우클릭 메뉴의 선택 표시와 하위 메뉴가 마우스 이동 중에도 안정적으로 유지되도록 개선한 핫픽스입니다. 기존 메뉴 기능과 키보드 단축키는 그대로 유지됩니다.
 
-이번 릴리즈에서는 앱 아이콘 재실행 문제를 개선하고 DMG와 Mac App Store의 기본 아이콘을 맞췄습니다. Pro Layout 정보 스트립은 그대로 유지하면서 compact 정보 오버레이에 `I` 토글과 연동되는 인덱스를 추가했습니다.
+배포 상태: 서명·공증된 universal 2.6.4 DMG가 현재 GitHub/Sparkle 공개 버전입니다. App Store 2.6.4 build 26400은 심사 제출되어 `WAITING_FOR_REVIEW`이며 승인 후 자동 출시됩니다. 승인 전까지 다운로드 가능한 App Store 버전은 2.6.3입니다. 이 핫픽스에는 2.7 성능 작업이 포함되지 않습니다.
 
 언어: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
 
