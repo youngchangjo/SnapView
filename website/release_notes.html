@@ -70,7 +70,33 @@
             <!-- English Content -->
             <div data-lang="en">
                 <h1>SnapView Release Notes</h1>
-                <h2 id="v2-6-3">v2.6.3 (Current) - 2026-07-22</h2>
+                <h2 id="v2-7-0">v2.7.0 (Current) - 2026-08-04</h2>
+                <h3>Improvements</h3>
+                <ul>
+                <li>Rapid navigation through large RAW and high-resolution images now keeps previews clearer and returns to original quality more reliably once navigation settles.</li>
+                <li>Improved memory management for long browsing sessions across Grid, Filmstrip, Compare, animated images, print previews, and image analysis.</li>
+                <li>Revisiting folders now loads thumbnails more consistently, and visible thumbnails stay protected during cleanup.</li>
+                <li>Improved Apple Photos browsing stability when changing photos or views quickly.</li>
+                <li>Slideshow controls now fade away during playback when idle and reappear immediately with mouse or keyboard activity. The close button hides controls without ending the slideshow.</li>
+                <li>Small originals now continue to fill the slideshow screen when <code>Scale Small Images to Fit</code> is enabled, instead of shrinking after a preview-to-original transition.</li>
+                </ul>
+                <h3>Fixes</h3>
+                <ul>
+                <li>Fixed an issue that could prevent photos opened directly from an SD card or other removable volume from moving to the Trash in the Mac App Store version.</li>
+                <li>Confirmation-based deletion and direct <code>Delete</code>/<code>Backspace</code> deletion now use the same Trash behavior. Read-only or locked storage is left unchanged when deletion is not permitted.</li>
+                <li>Simplified deletion to macOS Trash and Undo during the current session. SnapView no longer shows delete recovery prompts on the next launch.</li>
+                <li>Fixed rating clear from the physical <code>₩</code> key when macOS is using an English input source on ISO Korean keyboards.</li>
+                <li>Improved the Main View right-click menu so hover selection and submenus remain stable while moving the pointer. Existing menu commands and keyboard shortcuts are unchanged.</li>
+                </ul>
+
+                <h2 id="v2-6-4">v2.6.4 - 2026-07-26</h2>
+                <h3>Fixes</h3>
+                <ul>
+                <li>Fixed an issue that could cause moving photos to the Trash to fail in some situations.</li>
+                <li>Improved the Main View right-click menu so hover selection and submenus remain stable while moving the pointer. Existing menu commands and keyboard shortcuts are unchanged.</li>
+                </ul>
+
+                <h2 id="v2-6-3">v2.6.3 - 2026-07-22</h2>
                 <h3>Improvements</h3>
                 <ul>
                 <li>Horizontal and vertical Filmstrip now release offscreen thumbnails and pending work more promptly, reducing memory retained during long browsing sessions.</li>
