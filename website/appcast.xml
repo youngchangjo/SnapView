@@ -9,7 +9,7 @@
     <language>en</language>
     <item>
       <title>Version 2.7.0</title>
-      <pubDate>Wed, 05 Aug 2026 06:13:51 +0000</pubDate>
+      <pubDate>Wed, 05 Aug 2026 06:39:39 +0000</pubDate>
       <sparkle:version>27000</sparkle:version>
       <sparkle:shortVersionString>2.7.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
@@ -21,8 +21,8 @@
         url="https://github.com/youngchangjo/SnapView/releases/download/v2.7.0/SnapView.dmg"
         sparkle:version="27000"
         sparkle:shortVersionString="2.7.0"
-        sparkle:edSignature="Qjgw9AVHwCASORwFStn4SgRcH/21zBXqfNHbHTAoIeoDxyyLMGyOBRF1v7z6iX+Fvj9D75dNl/5ndqD3/uXqBw=="
-        length="51837938"
+        sparkle:edSignature="gmbtW+52fmzhtKOAwz5gj7mm1AU1y4Lbm2HahLd4ASYB2KB5F0gVz0OJZ+1Hr/Mge3GWG68pvjm6IQMFNpDxAg=="
+        length="51823275"
         type="application/octet-stream" />
     </item>
   </channel>
