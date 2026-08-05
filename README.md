@@ -10,15 +10,7 @@ Fast macOS image viewer for real photo culling work.
 
 Current Version: `v2.7.0`
 
-SnapView 2.7.0 improves fast photo review, long browsing sessions, and photo deletion from SD cards and other removable storage. Slideshow controls fade away during playback when idle and reappear immediately with mouse or keyboard activity, small originals keep filling the slideshow screen when `Scale Small Images to Fit` is enabled, and deletion is simplified to macOS Trash plus Undo during the current session without next-launch recovery prompts.
-
-Release status: the signed and notarized universal 2.7.0 DMG is the current public GitHub/Sparkle release. App Store version 2.7.0 build 27001 is submitted and `WAITING_FOR_REVIEW`, with automatic release after approval; the currently downloadable App Store version remains 2.6.4 until approval.
-
-SnapView 2.6.4 fixes photo deletion failures in some situations and stabilizes hover selection and submenus in the Main View right-click menu. Existing menu commands and keyboard shortcuts are unchanged.
-
-SnapView 2.6.3 reduces memory retained during long Filmstrip sessions, improves responsiveness in folders with thousands of photos, and strengthens thumbnail-cache, ZIP, Apple Photos, RAW+JPG, and XMP cleanup paths.
-
-The 2.6.3 release also restores saved app-icon choices after relaunch, aligns the default DMG and Mac App Store icons, and adds an `I`-linked image index to the compact Info Overlay without changing the Pro Layout Info Strip.
+SnapView 2.7.0 improves fast photo review, long browsing sessions, and photo deletion from SD cards and other removable storage. See the release notes for the full history.
 
 Language: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
 
@@ -179,15 +171,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 
 현재 버전: `v2.7.0`
 
-SnapView 2.7.0은 빠른 사진 탐색, 장시간 사용, SD 카드와 외장 저장장치에서의 사진 삭제 안정성을 개선한 릴리즈입니다. 슬라이드쇼 재생 중 조작이 없으면 컨트롤이 자연스럽게 사라지고, `작은 이미지를 화면에 맞게 확대`가 켜진 경우 작은 원본도 슬라이드쇼 화면에 맞춰 유지되며, 삭제는 다음 실행 복구 알림 없이 macOS 휴지통과 현재 실행 중 되돌리기로 단순화했습니다.
-
-릴리즈 상태: 서명·공증된 universal 2.7.0 DMG가 현재 공개 GitHub/Sparkle 릴리즈입니다. App Store 버전 2.7.0 build 27001은 심사 제출(`WAITING_FOR_REVIEW`) 상태이며 승인 후 자동 출시 예정입니다. 승인 전까지 App Store에서 받을 수 있는 버전은 2.6.4입니다.
-
-2.6.4는 오래된 복구 기록 때문에 사진 삭제가 실패할 수 있던 문제를 수정하고 Main View 우클릭 메뉴의 hover 선택과 하위 메뉴를 안정화한 hotfix입니다. 기존 명령과 키보드 단축키는 그대로 유지됩니다.
-
-2.6.3은 가로·세로 Filmstrip을 오래 탐색할 때 유지되는 메모리를 줄이고 수천 장 폴더의 후반부 반응성을 개선했으며, 썸네일 캐시·ZIP·Apple Photos·RAW+JPG·XMP 정리 경로를 보강했습니다.
-
-2.6.3 릴리즈에서는 앱 아이콘 재실행 문제를 개선하고 DMG와 Mac App Store의 기본 아이콘을 맞췄습니다. Pro Layout 정보 스트립은 그대로 유지하면서 compact 정보 오버레이에 `I` 토글과 연동되는 인덱스를 추가했습니다.
+SnapView 2.7.0은 빠른 사진 탐색, 장시간 사용, SD 카드와 외장 저장장치에서의 사진 삭제 안정성을 개선한 릴리즈입니다. 자세한 변경 이력은 릴리즈 노트를 참고하세요.
 
 언어: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
 
