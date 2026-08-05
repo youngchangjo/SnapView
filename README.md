@@ -146,7 +146,6 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 
 ## Notes
 
-- SnapView 2.6.3 adds a localized two-choice launch prompt for users without a recorded privacy decision. Agree enables anonymized crash and app-usage data together; Skip leaves both disabled.
 - ZIP browsing can be slower than normal folders because archive contents must be read before display.
 - ZIP items are not normal filesystem files, so some save/interoperability features are limited there.
 - Animated `gif` and `webp` play in Main View only. Other views currently show a still first frame.
@@ -286,7 +285,6 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 
 ## 참고 사항
 
-- SnapView 2.6.3은 개인정보 선택 기록이 없는 사용자에게 두 가지 선택의 실행 직후 동의 화면을 표시합니다. 동의하면 익명화된 비정상 종료·앱 사용 데이터를 함께 활성화하고, `건너뛰기`는 둘 다 끈 상태로 저장합니다.
 - ZIP 탐색은 일반 폴더보다 구조적으로 느릴 수 있습니다.
 - ZIP 내부 항목은 실제 파일이 아니므로 일부 저장/연동 기능이 제한됩니다.
 - animated `gif` / `webp`는 Main View에서만 재생되고, 다른 뷰에서는 첫 프레임 정지 이미지로 표시됩니다.
