@@ -1,6 +1,50 @@
 # SnapView Release Notes
 
-## v2.6.4 (Current) - 2026-07-26
+## v2.7.0 (Current) - 2026-08-04
+
+SnapView 2.7.0 improves fast photo review, long browsing sessions, and photo deletion from SD cards and other removable storage.
+
+Language: [🇺🇸 English](#english-270) | [🇰🇷 한국어](#korean-270)
+
+<a id="english-270"></a>
+
+### English
+
+#### Improvements
+- Rapid navigation through large RAW and high-resolution images now keeps previews clearer and returns to original quality more reliably once navigation settles.
+- Improved memory management for long browsing sessions across Grid, Filmstrip, Compare, animated images, print previews, and image analysis.
+- Revisiting folders now loads thumbnails more consistently, and visible thumbnails stay protected during cleanup.
+- Improved Apple Photos browsing stability when changing photos or views quickly.
+- Slideshow controls now fade away during playback when idle and reappear immediately with mouse or keyboard activity. The close button hides controls without ending the slideshow.
+- Small originals now continue to fill the slideshow screen when `Scale Small Images to Fit` is enabled, instead of shrinking after a preview-to-original transition.
+
+#### Fixes
+- Fixed an issue that could prevent photos opened directly from an SD card or other removable volume from moving to the Trash in the Mac App Store version.
+- Confirmation-based deletion and direct `Delete`/`Backspace` deletion now use the same Trash behavior. Read-only or locked storage is left unchanged when deletion is not permitted.
+- Simplified deletion to macOS Trash and Undo during the current session. SnapView no longer shows delete recovery prompts on the next launch.
+- Fixed rating clear from the physical `₩` key when macOS is using an English input source on ISO Korean keyboards.
+- Improved the Main View right-click menu so hover selection and submenus remain stable while moving the pointer. Existing menu commands and keyboard shortcuts are unchanged.
+
+<a id="korean-270"></a>
+
+### 한국어
+
+#### 개선된 점
+- 큰 RAW와 고해상도 사진을 빠르게 넘길 때 프리뷰가 더 선명하게 유지되고, 탐색이 멈추면 원본 화질로 더 안정적으로 전환됩니다.
+- Grid, Filmstrip, Compare, 애니메이션 이미지, 인쇄 미리보기, 이미지 분석을 오래 사용할 때의 메모리 관리를 개선했습니다.
+- 폴더를 다시 탐색할 때 썸네일 로딩이 더 일관되고, 정리 중에도 화면에 보이는 썸네일이 유지됩니다.
+- Apple Photos에서 사진이나 보기 모드를 빠르게 바꿀 때 탐색 안정성을 개선했습니다.
+- 슬라이드쇼 재생 중 조작이 없으면 컨트롤이 자연스럽게 사라지고, 마우스나 키보드를 움직이면 즉시 다시 나타납니다. 닫기 버튼은 슬라이드쇼를 종료하지 않고 컨트롤만 숨깁니다.
+- `작은 이미지를 화면에 맞게 확대`가 켜진 경우, 작은 원본도 프리뷰에서 원본으로 바뀔 때 작아지지 않고 슬라이드쇼 화면에 맞춰 유지됩니다.
+
+#### 수정된 문제
+- Mac App Store 버전에서 SD 카드나 외장 저장장치에서 직접 연 사진을 휴지통으로 이동하지 못할 수 있던 문제를 수정했습니다.
+- 삭제 확인 창을 통한 삭제와 `Delete`/`Backspace`를 이용한 바로 삭제가 동일한 휴지통 이동 방식으로 동작합니다. 저장장치가 읽기 전용이거나 잠겨 있어 삭제할 수 없을 때는 파일을 변경하지 않습니다.
+- 삭제 흐름을 macOS 휴지통과 현재 실행 중 되돌리기로 단순화했습니다. 다음 실행 시 삭제 복구 알림을 표시하지 않습니다.
+- ISO 한국어 키보드에서 영문 입력 소스를 사용할 때도 물리 `₩` 키로 별점을 취소할 수 있도록 수정했습니다.
+- 메인 화면에서 마우스를 이동할 때 컨텍스트 메뉴의 선택 상태와 하위 메뉴가 불안정해질 수 있던 문제를 수정했습니다. 기존 메뉴 항목과 키보드 단축키는 그대로입니다.
+
+## v2.6.4 (Released/Previous) - 2026-07-26
 
 Language: [🇺🇸 English](#english-264) | [🇰🇷 한국어](#korean-264)
 
@@ -24,7 +68,7 @@ SnapView 2.6.4는 사진 삭제와 Main View 우클릭 메뉴의 안정성을 �
 - 일부 환경에서 사진을 휴지통으로 이동하지 못하고 삭제가 실패하던 문제를 수정했습니다.
 - Main View 우클릭 메뉴에서 마우스를 움직일 때 선택 표시가 풀리거나 하위 메뉴가 깜빡이던 문제를 수정했습니다. 기존 메뉴 기능과 키보드 단축키는 그대로 유지됩니다.
 
-## v2.6.3 (Previous) - 2026-07-22
+## v2.6.3 (Released/Previous) - 2026-07-22
 
 Language: [🇺🇸 English](#english-263) | [🇰🇷 한국어](#korean-263)
 

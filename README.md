@@ -8,11 +8,17 @@
 
 Fast macOS image viewer for real photo culling work.
 
-Current Version: `v2.6.4`
+Current Version: `v2.7.0`
+
+SnapView 2.7.0 improves fast photo review, long browsing sessions, and photo deletion from SD cards and other removable storage. Slideshow controls fade away during playback when idle and reappear immediately with mouse or keyboard activity, small originals keep filling the slideshow screen when `Scale Small Images to Fit` is enabled, and deletion is simplified to macOS Trash plus Undo during the current session without next-launch recovery prompts.
+
+Release status: the signed and notarized universal 2.7.0 DMG is the current public GitHub/Sparkle release. App Store version 2.7.0 build 27001 is submitted and `WAITING_FOR_REVIEW`, with automatic release after approval; the currently downloadable App Store version remains 2.6.4 until approval.
 
 SnapView 2.6.4 fixes photo deletion failures in some situations and stabilizes hover selection and submenus in the Main View right-click menu. Existing menu commands and keyboard shortcuts are unchanged.
 
-Release status: the signed and notarized universal 2.6.4 DMG is the current public GitHub/Sparkle release. App Store version 2.6.4 build 26400 is submitted and `WAITING_FOR_REVIEW`, with automatic release after approval; the currently downloadable App Store version remains 2.6.3 until approval. This hotfix does not include v2.7 performance work.
+SnapView 2.6.3 reduces memory retained during long Filmstrip sessions, improves responsiveness in folders with thousands of photos, and strengthens thumbnail-cache, ZIP, Apple Photos, RAW+JPG, and XMP cleanup paths.
+
+The 2.6.3 release also restores saved app-icon choices after relaunch, aligns the default DMG and Mac App Store icons, and adds an `I`-linked image index to the compact Info Overlay without changing the Pro Layout Info Strip.
 
 Language: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
 
@@ -155,7 +161,7 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 - Finder interoperability is centered on color labels.
 - XMP interoperability reads compact and element-form RDF, treats Adobe `Rating=-1` as Reject, and keeps SnapView Pick/Reject separate from Adobe `Label`, while large-folder refresh protects first display and immediate previous/next navigation.
 - RAW+JPG pairing supports 3FR, DNG, CR3, RW2, ARW, DXO, and other common RAW extensions plus unambiguous case/canonical-Unicode stem variants while keeping folded-name collisions separate. XMP companion lookup supports canonical, extension-case, and image-double-extension names and rejects ambiguous folded matches.
-- Interrupted local deletes can be restored after relaunch when the same folder is opened and the user approves recovery; an occupied original path is never overwritten.
+- Local deletes move files to macOS Trash and can be undone during the current app session. SnapView does not maintain a next-launch delete recovery mode.
 - Some formats depend on the decoder support available in the running macOS version.
 - Supporter Pass is optional support, not a feature lock.
 - App UI languages: Korean, English, Japanese, Simplified Chinese, Traditional Chinese, Spanish, French, German, Portuguese (Brazil), Italian, Dutch, Turkish, Polish, Swedish.
@@ -171,11 +177,17 @@ The key idea is simple: do the fastest first-pass cull in SnapView, then carry t
 
 실사용 사진 선별 작업에 맞춘 macOS용 고속 이미지 뷰어입니다.
 
-현재 버전: `v2.6.4`
+현재 버전: `v2.7.0`
 
-2.6.4는 일부 환경에서 사진 삭제가 실패하던 문제를 수정하고, Main View 우클릭 메뉴의 선택 표시와 하위 메뉴가 마우스 이동 중에도 안정적으로 유지되도록 개선한 핫픽스입니다. 기존 메뉴 기능과 키보드 단축키는 그대로 유지됩니다.
+SnapView 2.7.0은 빠른 사진 탐색, 장시간 사용, SD 카드와 외장 저장장치에서의 사진 삭제 안정성을 개선한 릴리즈입니다. 슬라이드쇼 재생 중 조작이 없으면 컨트롤이 자연스럽게 사라지고, `작은 이미지를 화면에 맞게 확대`가 켜진 경우 작은 원본도 슬라이드쇼 화면에 맞춰 유지되며, 삭제는 다음 실행 복구 알림 없이 macOS 휴지통과 현재 실행 중 되돌리기로 단순화했습니다.
 
-배포 상태: 서명·공증된 universal 2.6.4 DMG가 현재 GitHub/Sparkle 공개 버전입니다. App Store 2.6.4 build 26400은 심사 제출되어 `WAITING_FOR_REVIEW`이며 승인 후 자동 출시됩니다. 승인 전까지 다운로드 가능한 App Store 버전은 2.6.3입니다. 이 핫픽스에는 2.7 성능 작업이 포함되지 않습니다.
+릴리즈 상태: 서명·공증된 universal 2.7.0 DMG가 현재 공개 GitHub/Sparkle 릴리즈입니다. App Store 버전 2.7.0 build 27001은 심사 제출(`WAITING_FOR_REVIEW`) 상태이며 승인 후 자동 출시 예정입니다. 승인 전까지 App Store에서 받을 수 있는 버전은 2.6.4입니다.
+
+2.6.4는 오래된 복구 기록 때문에 사진 삭제가 실패할 수 있던 문제를 수정하고 Main View 우클릭 메뉴의 hover 선택과 하위 메뉴를 안정화한 hotfix입니다. 기존 명령과 키보드 단축키는 그대로 유지됩니다.
+
+2.6.3은 가로·세로 Filmstrip을 오래 탐색할 때 유지되는 메모리를 줄이고 수천 장 폴더의 후반부 반응성을 개선했으며, 썸네일 캐시·ZIP·Apple Photos·RAW+JPG·XMP 정리 경로를 보강했습니다.
+
+2.6.3 릴리즈에서는 앱 아이콘 재실행 문제를 개선하고 DMG와 Mac App Store의 기본 아이콘을 맞췄습니다. Pro Layout 정보 스트립은 그대로 유지하면서 compact 정보 오버레이에 `I` 토글과 연동되는 인덱스를 추가했습니다.
 
 언어: [🇺🇸 English](#english) | [🇰🇷 한국어](#korean)
 
@@ -296,7 +308,7 @@ SnapView는 사진을 가져온 뒤 실제로 하는 작업, 즉 빠르게 넘�
 - animated `gif` / `webp`는 Main View에서만 재생되고, 다른 뷰에서는 첫 프레임 정지 이미지로 표시됩니다.
 - Finder 연동은 컬러 라벨 중심입니다.
 - XMP 연동은 compact 속성형과 element형 RDF를 모두 읽고 Adobe `Rating=-1`을 Reject로 해석하며, SnapView Pick/Reject는 Adobe `Label`과 분리합니다. 대용량 폴더에서는 첫 표시와 즉시 전/후 탐색을 먼저 보호합니다.
-- 중단된 로컬 삭제는 다음 실행에서 같은 폴더를 열었을 때 사용자 확인 후 복구할 수 있으며, 원래 위치의 기존 파일은 덮어쓰지 않습니다.
+- 로컬 삭제는 macOS 휴지통으로 이동하며 현재 앱 실행 중에는 되돌릴 수 있습니다. 다음 실행 삭제 복구 모드는 사용하지 않습니다.
 - RAW+JPG 페어링은 3FR, DNG, CR3, RW2, ARW, DXO 등 주요 RAW 확장자와 case/canonical-Unicode stem 차이를 지원하되 folded 이름 충돌은 분리합니다. XMP companion은 canonical·확장자 case·이미지 이중 확장자 이름을 지원하고 모호한 folded match는 선택하지 않습니다.
 - 일부 포맷은 실행 중인 macOS 버전의 디코더 지원 범위에 따라 달라질 수 있습니다.
 - 앱 UI 언어는 한국어, 영어, 일본어, 중국어 간체, 중국어 번체, 스페인어, 프랑스어, 독일어, 포르투갈어(브라질), 이탈리아어, 네덜란드어, 터키어, 폴란드어, 스웨덴어입니다.
