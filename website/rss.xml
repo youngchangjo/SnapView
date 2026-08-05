@@ -5,7 +5,7 @@
     <link>https://snapview.snapworkslab.com/</link>
     <description>Product updates, release notes, and support information for SnapView, a fast Mac photo viewer for RAW files and image review.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 10 Jun 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 05 Aug 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://snapview.snapworkslab.com/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SnapView Download Options</title>
@@ -22,11 +22,11 @@
       <description>Explore SnapView features for RAW browsing, ZIP review, Pro Layout View, Quick Organize, Batch Actions, Map Overlay, and Quick Check.</description>
     </item>
     <item>
-      <title>SnapView v1.8.0 Release Notes</title>
+      <title>SnapView v2.7.0 Release Notes</title>
       <link>https://snapview.snapworkslab.com/release_notes</link>
-      <guid isPermaLink="true">https://snapview.snapworkslab.com/release_notes#v1-8-0</guid>
-      <pubDate>Wed, 20 May 2026 00:00:00 +0900</pubDate>
-      <description>See the latest SnapView v1.8.0 filtered selection, RAW+JPG pairing, video playback, rotation display, Filmstrip scrolling, and viewer UI updates.</description>
+      <guid isPermaLink="true">https://snapview.snapworkslab.com/release_notes#v2-7-0</guid>
+      <pubDate>Wed, 05 Aug 2026 00:00:00 +0900</pubDate>
+      <description>SnapView v2.7.0 improves fast photo review, long browsing sessions, SD card deletion reliability, slideshow controls, and small-original slideshow fitting.</description>
     </item>
     <item>
       <title>SnapView User Manual</title>
