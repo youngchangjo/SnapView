@@ -1,6 +1,20 @@
 # SnapView Release Notes
 
-## v2.7.0 (Current) - 2026-08-04
+## v2.7.1 (Current) - 2026-08-09
+
+### English
+
+- SnapView 2.7.1 is the final DMG release. No new DMG versions will be distributed after this release.
+- Installed copies of 2.7.1 will remain usable, but the DMG version will receive no feature updates or bug fixes.
+- SnapView 3.0 and later versions, including all future updates, will be available only through the Mac App Store. We will keep improving SnapView with the goal of making it the best image viewer for Mac.
+
+### 한국어
+
+- SnapView 2.7.1은 마지막 DMG 릴리즈입니다. 이번 버전을 끝으로 새로운 DMG 버전은 더 이상 배포하지 않습니다.
+- 설치된 2.7.1은 계속 사용할 수 있지만, DMG 버전에는 더 이상 기능 업데이트와 버그 수정이 제공되지 않습니다.
+- SnapView 3.0부터 최신 버전과 향후 업데이트는 Mac App Store에서만 제공합니다. SnapView는 최고의 Mac 이미지 뷰어가 될 수 있도록 꾸준히 개선해 나가겠습니다.
+
+## v2.7.0 (Released/Previous) - 2026-08-04
 
 SnapView 2.7.0 improves fast photo review, long browsing sessions, and photo deletion from SD cards and other removable storage.
 
