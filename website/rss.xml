@@ -5,14 +5,14 @@
     <link>https://snapview.snapworkslab.com/</link>
     <description>Product updates, release notes, and support information for SnapView, a fast Mac photo viewer for RAW files and image review.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 05 Aug 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 09 Aug 2026 17:45:12 +0900</lastBuildDate>
     <atom:link href="https://snapview.snapworkslab.com/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SnapView Download Options</title>
       <link>https://snapview.snapworkslab.com/download/</link>
       <guid isPermaLink="true">https://snapview.snapworkslab.com/download/</guid>
       <pubDate>Wed, 10 Jun 2026 00:00:00 +0900</pubDate>
-      <description>Choose between the Mac App Store stable channel and the direct SnapView DMG download for Mac.</description>
+      <description>Get SnapView 3.0 and future updates from the Mac App Store, or download the final SnapView 2.7.1 DMG release.</description>
     </item>
     <item>
       <title>SnapView Features</title>
@@ -22,11 +22,11 @@
       <description>Explore SnapView features for RAW browsing, ZIP review, Pro Layout View, Quick Organize, Batch Actions, Map Overlay, and Quick Check.</description>
     </item>
     <item>
-      <title>SnapView v2.7.0 Release Notes</title>
+      <title>SnapView v2.7.1 Distribution Update</title>
       <link>https://snapview.snapworkslab.com/release_notes</link>
-      <guid isPermaLink="true">https://snapview.snapworkslab.com/release_notes#v2-7-0</guid>
-      <pubDate>Wed, 05 Aug 2026 00:00:00 +0900</pubDate>
-      <description>SnapView v2.7.0 improves fast photo review, long browsing sessions, SD card deletion reliability, slideshow controls, and small-original slideshow fitting.</description>
+      <guid isPermaLink="true">https://snapview.snapworkslab.com/release_notes#v2-7-1</guid>
+      <pubDate>Sun, 09 Aug 2026 17:45:12 +0900</pubDate>
+      <description>SnapView 2.7.1 is the final DMG release. SnapView 3.0 and all future updates will be available through the Mac App Store.</description>
     </item>
     <item>
       <title>SnapView User Manual</title>
@@ -40,7 +40,7 @@
       <link>https://snapview.snapworkslab.com/support/</link>
       <guid isPermaLink="true">https://snapview.snapworkslab.com/support/</guid>
       <pubDate>Thu, 30 Apr 2026 00:00:00 +0900</pubDate>
-      <description>Get help with SnapView for Mac, compare DMG and Mac App Store versions, and contact SnapWorks Lab for support.</description>
+      <description>Get SnapView support and learn about the final DMG 2.7.1 release and the move to Mac App Store distribution starting with SnapView 3.0.</description>
     </item>
   </channel>
 </rss>
