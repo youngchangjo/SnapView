@@ -1,3 +1,5 @@
+
+
 <a id="english"></a>
 
 <p align="center">
@@ -16,7 +18,7 @@ Language: [English](#english) | [한국어](#korean)
 
 To manage distribution and updates more reliably and provide them consistently, SnapView will unify distribution through the Mac App Store starting with SnapView 3.0.
 
-SnapView 2.7.1 is the final DMG release. No new DMG versions will be distributed after 2.7.1. Installed copies of 2.7.1 will remain usable, but they will not receive feature updates or bug fixes.
+SnapView 2.7.1 (signed and notarized) is the final DMG release. No new DMG versions will be distributed after 2.7.1. Installed copies of 2.7.1 will remain usable, but they will not receive feature updates or bug fixes.
 
 Starting with SnapView 3.0, the latest version and all future updates will be available only through the Mac App Store. We will keep improving SnapView with the goal of making it the best image viewer for Mac.
 
