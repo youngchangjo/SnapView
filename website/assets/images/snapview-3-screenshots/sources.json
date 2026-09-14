@@ -1,0 +1,34 @@
+[
+  {
+    "file": "edit-studio.png",
+    "source": "SCR-20260913-qnuq.png",
+    "sha256": "06c7047dce303053246fc9649cdfb6c3b0d28912d9a8a23b2d88042a660152ef",
+    "width": 2382,
+    "height": 1606,
+    "transform": "none; original PNG bytes copied"
+  },
+  {
+    "file": "ai-cull.png",
+    "source": "SCR-20260913-qosl.png",
+    "sha256": "10f453ed867dcf848052f43c13741abe54adbae3aa6d30533823692265f7ffdf",
+    "width": 2382,
+    "height": 1606,
+    "transform": "none; original PNG bytes copied"
+  },
+  {
+    "file": "ai-upscaling.png",
+    "source": "SCR-20260913-qohn.png",
+    "sha256": "8bd2044d0fde8f7862594a3256febddb7045e8e27a62f46273c2edd715dfe94c",
+    "width": 2382,
+    "height": 1606,
+    "transform": "none; original PNG bytes copied"
+  },
+  {
+    "file": "edit-history.png",
+    "source": "SCR-20260913-qqen.png",
+    "sha256": "4eed2c5ced262b133e69239e10e781c61cb77a691de1704dc74011f85296f819",
+    "width": 2382,
+    "height": 1606,
+    "transform": "none; original PNG bytes copied"
+  }
+]

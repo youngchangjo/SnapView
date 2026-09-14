@@ -5,21 +5,42 @@
     <link>https://snapview.snapworkslab.com/</link>
     <description>Product updates, release notes, and support information for SnapView, a fast Mac photo viewer for RAW files and image review.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 09 Aug 2026 17:45:12 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 14 Sep 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://snapview.snapworkslab.com/rss.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>SnapView Download Options</title>
-      <link>https://snapview.snapworkslab.com/download/</link>
-      <guid isPermaLink="true">https://snapview.snapworkslab.com/download/</guid>
-      <pubDate>Wed, 10 Jun 2026 00:00:00 +0900</pubDate>
-      <description>Get SnapView 3.0 and future updates from the Mac App Store, or download the final SnapView 2.7.1 DMG release.</description>
+      <title>SnapView 3.0.1 — September 14, 2026</title>
+      <link>https://snapview.snapworkslab.com/release_notes.html#v3-0-1</link>
+      <guid isPermaLink="true">https://snapview.snapworkslab.com/release_notes.html#v3-0-1</guid>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 +0900</pubDate>
+      <description>SnapView 3.0.1 fixes Creative Suite navigation, watermark input and placement, Auto Cull review, Save and Save Copy, and compact Edit History.</description>
     </item>
     <item>
-      <title>SnapView Features</title>
+      <title>SnapView 3.0.0 Released on the Mac App Store</title>
+      <link>https://snapview.snapworkslab.com/release_notes.html#v3-0-0</link>
+      <guid isPermaLink="true">https://snapview.snapworkslab.com/release_notes.html#v3-0-0</guid>
+      <pubDate>Sun, 13 Sep 2026 00:00:00 +0900</pubDate>
+      <description>SnapView 3.0.0 is available on the Mac App Store with Creative Suite Preview, viewer AI enlargement, settings backups, improved navigation, and broader interface translations. Saving edited or AI copies and applying culling decisions require Supporter Pass.</description>
+    </item>
+    <item>
+      <title>SnapView v2.7.2 Release Notes</title>
+      <link>https://snapview.snapworkslab.com/release_notes.html#v2-7-2</link>
+      <guid isPermaLink="true">https://snapview.snapworkslab.com/release_notes.html#v2-7-2</guid>
+      <pubDate>Fri, 14 Aug 2026 00:00:00 +0900</pubDate>
+      <description>SnapView 2.7.2 was a Mac App Store hotfix for macOS 14 launch compatibility and printing.</description>
+    </item>
+    <item>
+      <title>Get SnapView on the Mac App Store</title>
+      <link>https://snapview.snapworkslab.com/download/</link>
+      <guid isPermaLink="true">https://snapview.snapworkslab.com/download/</guid>
+      <pubDate>Sun, 30 Aug 2026 00:00:00 +0900</pubDate>
+      <description>Starting with SnapView 3.0, the Mac App Store is the only distribution channel.</description>
+    </item>
+    <item>
+      <title>SnapView 3.0 Features</title>
       <link>https://snapview.snapworkslab.com/features/</link>
       <guid isPermaLink="true">https://snapview.snapworkslab.com/features/</guid>
-      <pubDate>Wed, 10 Jun 2026 00:00:00 +0900</pubDate>
-      <description>Explore SnapView features for RAW browsing, ZIP review, Pro Layout View, Quick Organize, Batch Actions, Map Overlay, and Quick Check.</description>
+      <pubDate>Sun, 30 Aug 2026 00:00:00 +0900</pubDate>
+      <description>Explore photo editing, AI-powered first-pass culling, Creative Suite Preview, and the fast RAW, ZIP, folder, and Apple Photos viewer workflow.</description>
     </item>
     <item>
       <title>SnapView v2.7.1 Distribution Update</title>

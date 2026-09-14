@@ -234,11 +234,17 @@ if (
 ) {
   fail('website/index.html', 'broad worldwide social-proof claim remains');
 }
-if (!homepage.includes('Korean Mac App Store listing showed 55 ratings and a 5.0 rating')) {
-  fail('website/index.html', 'English scoped social proof missing');
+const reviewLink = 'https://apps.apple.com/kr/app/6762974261?see-all=reviews&amp;platform=mac';
+for (const label of ['website/index.html', ...pages.map(page => page.file)]) {
+  const html = read(label);
+  if (!html.includes(reviewLink)) fail(label, 'missing current Korean App Store reviews link');
+  if (/55 ratings|55개 평가|5\.0 rating|5\.0 평점/.test(html)) fail(label, 'retired fixed rating claim remains');
 }
-if (!homepageLocale.includes('2026년 7월 현재 한국 Mac App Store 등록 페이지 기준: 55개 평가, 5.0 평점.')) {
-  fail('website/locales/home.ko.json', 'Korean scoped social proof missing');
+if (!homepageLocale.includes('최신 평점과 실제 사용자 리뷰를 한국 Mac App Store에서 확인하세요.')) {
+  fail('website/locales/home.ko.json', 'Korean live-review copy missing');
+}
+if (/55 ratings|55개 평가|5\.0 rating|5\.0 평점/.test(llms + homepageLocale)) {
+  fail('website', 'retired rating claim remains in crawler or locale text');
 }
 
 if (failures.length > 0) {

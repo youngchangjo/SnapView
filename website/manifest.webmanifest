@@ -1,7 +1,7 @@
 {
   "name": "SnapView",
   "short_name": "SnapView",
-  "description": "Fast Mac image viewer for hobby photographers.",
+  "description": "Fast Mac photo review, culling and editing.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -10,7 +10,7 @@
   "icons": [
     {
       "src": "/icon-192.png",
-      "sizes": "192x192",
+      "sizes": "256x256",
       "type": "image/png"
     },
     {

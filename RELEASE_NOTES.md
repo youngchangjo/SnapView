@@ -1,6 +1,170 @@
 # SnapView Release Notes
 
-## v2.7.1 (Current) - 2026-08-09
+## v3.0.1 — 2026-09-14
+
+Language: [🇺🇸 English](#english-301) | [🇰🇷 한국어](#korean-301)
+
+<a id="english-301"></a>
+
+### English
+
+#### Improvements
+
+- Supporter Pass Save and Save Copy now offer the current photo or all edited photos. Original overwrites require confirmation of filenames and photo count.
+- Enlarged the watermark lock button's click area and set new layers to 100% opacity.
+- Compacted Edit History and kept its header and restore controls visible. History steps and saved versions can be selected by clicking anywhere in the row.
+- Added confirmation before switching from Auto Cull to Edit and resetting culling results.
+
+#### Fixes
+
+- Fixed Creative Suite becoming unresponsive after arrow-key or thumbnail navigation and the AI Upscaling tool not opening. Only the current photo keeps its selection outline.
+- Fixed missing watermark characters, including S and X, and text fields losing focus during typing.
+- Fixed watermarks stopping short of the frame edge, disappearing behind the frame, or rotating in the opposite direction to the guide.
+- Fixed missing review candidates after Auto Cull completes.
+- Completed AI results appear in save menus immediately, and photo dimensions and file size refresh after saving the original.
+- Fixed the bottom of Edit History being obscured when using either Filmstrip layout.
+
+<a id="korean-301"></a>
+
+### 한국어
+
+#### 개선된 점
+
+- Supporter Pass의 저장·사본 저장을 현재 사진과 편집한 사진 전체로 구분했습니다. 원본 덮어쓰기는 파일명과 장수를 확인한 뒤 진행합니다.
+- 워터마크 잠금 버튼의 클릭 영역을 넓히고 새 레이어의 불투명도 기본값을 100%로 맞췄습니다.
+- 편집 기록의 행 높이와 여백을 줄이고 제목·복원 버튼이 계속 보이도록 했습니다. 기록과 비교본은 박스 전체를 눌러 선택할 수 있습니다.
+- 자동 선별에서 Edit로 전환하기 전에 선별 결과 초기화를 확인하도록 했습니다.
+
+#### 수정된 문제
+
+- Creative Suite에서 방향키나 썸네일로 사진을 바꾼 뒤 조작이 멈추거나 AI 업스케일링 도구가 열리지 않던 문제를 수정했습니다. 선택 테두리는 현재 사진에만 표시합니다.
+- 워터마크 입력 중 S·X 등 일부 글자가 빠지거나 입력창의 선택이 풀리던 문제를 수정했습니다.
+- 워터마크가 프레임 끝까지 이동하지 못하거나 프레임에 가려지던 문제, 회전 가이드와 반대로 표시되던 문제를 수정했습니다.
+- 자동 선별 완료 후 검토할 사진이 후보 목록에 나타나지 않던 문제를 수정했습니다.
+- AI 결과가 완료되면 저장 메뉴에 바로 반영하고, 원본 저장 후 사진 크기와 용량 표시가 갱신되도록 수정했습니다.
+- 가로·세로 필름스트립을 켜면 편집 기록 목록 아래가 가려지던 문제를 수정했습니다.
+
+## v3.0.0
+
+Language: [🇺🇸 English](#english-300) | [🇰🇷 한국어](#korean-300)
+
+<a id="english-300"></a>
+
+### English
+
+#### What's New
+
+- SnapView 3.0 introduces Creative Suite Preview, connecting photo review, culling, and editing in one workspace.
+- Edit includes Light, Color, Tone Curve, Film, Crop, and Watermark & Frame tools, with per-photo drafts that stay with you as you browse.
+- Added Auto Enhance that considers scene brightness and color intent, plus direct crop and rotation controls with automatic straightening suggestions.
+- Bundled QuickSRNet Large x2 as the recommended on-device AI upscaler and the default for new settings on Apple silicon; existing Off and non-AI choices are preserved.
+- Try Film and Frame choices temporarily or apply them as a single undoable step.
+- Recipe Timeline keeps meaningful edit steps and named A/B snapshots and can restore an earlier state.
+- Scene Sync copies Light, Color, Tone Curve, and Film adjustments to matching photos while preserving originals and each photo’s crop.
+- Reuse editing recipes in Batch Actions and save recipe sidecars or rendered copies while preserving source images.
+- Focus Lens inspects results at 100% or 200%, and Face Lock Compare aligns a selected face across two to four photos.
+- Cull organizes Pick and Reject candidates in one analysis pass without automatically changing source files.
+- Drop Finder files or folders into the Apple Photos viewing area and choose to open them in SnapView or add them to Photos, including supported images in subfolders.
+- Back up settings to a file, compare saved versions, and selectively restore with Supporter Pass; undoing a restore remains included.
+- Start with a folder, Apple Photos, a sample image, or a settings backup, with an optional one-click consent choice. Viewing-settings review and Supporter benefits now have separate onboarding steps, with six benefit cards and improved small-window layout.
+
+#### Improvements
+
+- Expanded translations across all 14 supported interface languages, including Creative Suite menus, Apple Photos categories, batch summaries, settings search, and restore comparisons.
+- Improved Light/Dark readability for editing and upscale controls, with better layout for long translated labels.
+- Creative Suite remembers the AI model, scale, and comparison layout, with a dedicated Settings tab and simpler titlebar controls.
+- Watermarks support multiple Text, Logo, and EXIF layers, with sharper text previews on small images.
+- Storage and Apple Photos can be collapsed, filtered, and resized in the Navigator, starting at equal heights and remembering the adjusted split.
+- Compacted Navigator controls and panel borders; filters fold in short windows to keep sources visible, then restore when space returns.
+- The Select Tray matches the surrounding bars, remembers being hidden, and can be restored from the Info Strip; the name entry is now Artist Name.
+- Toggle viewer upscaling and save a PNG copy from its optional button; completed results stay applied while zooming, with status explained in tooltips.
+- Upscale controls hide when the original has enough resolution; an optional Apple Photos badge identifies the current source.
+- High-precision and HDR photos can use an SDR editing preview while the source remains unchanged.
+- Updated 3.0 icons, matched visible sizes, removed the extra gray Dock tile, and improved icon selection restoration.
+- Improved keyboard shortcuts, zoom/reset, and VoiceOver operation in Compare and photo selection.
+
+#### Details
+
+- Creative Suite preview lets you try edits and review culling suggestions. Saving edits or recipes and applying culling decisions require Supporter Pass.
+- Viewer AI preview is included; saving an AI result requires Supporter Pass. Original and non-AI copies remain included, with contextual purchase guidance that returns to the current work.
+- Founding offers switch to the regular lifetime Supporter Pass on October 2, 2026 (Korea time). Existing Founding benefits and badges stay with their owners.
+- Main, Grid, Filmstrip, Compare, Quick Check, slideshow, folder, ZIP, and Apple Photos browsing, and existing keyboard workflows remain available as before.
+- SnapView is a Universal Mac App Store-only app for Apple silicon and Intel Macs and requires macOS 14 or later.
+
+#### Stability And Performance
+
+- Reduced repeated work during continuous arrow-key navigation in folders, including filename, toolbar, and file-action updates.
+- Kept the current zoom and position when a preview changes to the original image, without a full-view fade.
+- Fixed AI Save Copy failures when saving to a newly selected location, while preserving the source image.
+- Kept existing viewing preferences unchanged during quick start and consent updates; canceling a settings restore preserves the previous undo history.
+- Improved large-folder indexing and RAW+JPG pairing, with clearer progress and more consistent file ordering.
+- Reduced unnecessary companion RAW reads and made capture-date sorting safer when folders change during metadata loading.
+- Reused thumbnails within the selected memory budget across previous/next navigation, Grid, and both Filmstrip orientations, for folders and Apple Photos.
+- Prioritized visible thumbnails and fixed missing first-page and revisited items in Grid and both Filmstrip orientations, with more reliable disk-cache reuse and cancellation.
+- Improved first-image and prepared-original presentation in Apple Photos, keeping previews visible until the original is applied. Fixed stale waiting indicators and returning to a previously opened storage folder.
+- Improved memory management and thumbnail cancellation while browsing high-resolution JPEG and RAW files, and prevented older photo or edit results from replacing the current screen.
+- Added macOS Sonoma startup safeguards and handled invalid EXIF shutter values that could cause a crash.
+- Reduced delays when stopping slideshows in large folders, and improved stability in rapid navigation, Compare, and image analysis.
+
+<a id="korean-300"></a>
+
+### 한국어
+
+#### 새로운 점
+
+- SnapView 3.0은 사진 검토, 선별, 편집을 하나의 흐름으로 연결하는 Creative Suite Preview를 선보입니다.
+- Edit에서 빛, 색상, Tone Curve, Film, 자르기, Watermark & Frame을 사용하고 사진별 편집 초안을 유지할 수 있습니다.
+- 장면의 밝기와 색상을 고려하는 자동 보정과 직접 조작하는 자르기·회전, 자동 수평 보정 제안을 추가했습니다.
+- Apple Silicon용 추천 AI 업스케일 모델 QuickSRNet Large x2를 앱에 포함하고 새 설정의 기본값으로 적용했으며, 기존 사용 안 함·비AI 선택은 유지합니다.
+- Film과 Frame 후보를 잠시 미리보거나 한 번의 실행 취소 단위로 적용할 수 있습니다.
+- Recipe Timeline에서 편집 단계와 이름 있는 A/B 스냅샷을 보관하고 이전 상태를 복원할 수 있습니다.
+- Scene Sync로 같은 장면의 사진에 Light, Color, Tone Curve, Film 보정을 복사하면서 원본과 사진별 자르기를 유지할 수 있습니다.
+- 편집 레시피를 Batch Actions에서 재사용하고 원본을 유지한 채 레시피 파일이나 편집한 사본을 저장할 수 있습니다.
+- Focus Lens로 결과를 100%·200%로 확인하고 Face Lock Compare로 2–4장의 사진에서 선택한 얼굴 위치를 맞춰 비교할 수 있습니다.
+- Cull은 한 번의 분석으로 Pick과 Reject 후보를 정리하며 원본 파일을 자동으로 변경하지 않습니다.
+- Apple Photos 보기 영역에 Finder 파일이나 폴더를 놓으면 SnapView에서 열기와 Photos 저장을 선택할 수 있으며, 하위 폴더의 사진도 함께 가져옵니다.
+- 설정을 파일로 백업하고 저장된 버전을 비교하며 Supporter Pass로 선택 복원할 수 있습니다. 복원 전 설정으로 되돌리기는 기본으로 제공합니다.
+- 폴더·Apple Photos·샘플 이미지·설정 백업으로 시작할 수 있게 하고, 선택 동의 항목을 한 번에 동의하는 버튼을 추가했습니다. 보기 설정 확인과 Supporter 혜택 안내 단계를 나누고, 6개 혜택 카드와 작은 창의 배치를 개선했습니다.
+
+#### 개선된 점
+
+- Creative Suite 메뉴, Apple Photos 분류, 일괄 작업 요약, 설정 검색, 복원 비교를 포함해 14개 지원 언어의 번역을 보완했습니다.
+- 편집·업스케일 도구의 라이트/다크 가독성과 긴 번역 문구의 배치를 개선했습니다.
+- Creative Suite의 AI 모델·배율·비교 보기를 기억하고 전용 설정 탭과 타이틀바 도구 배치를 정리했습니다.
+- 워터마크에 텍스트·로고·EXIF 레이어를 여러 개 배치할 수 있게 하고 작은 사진의 글자 미리보기 품질을 개선했습니다.
+- 네비게이터의 저장장치와 Apple Photos를 각각 접거나 골라 표시하고, 기본 50:50인 높이를 구분선으로 조절해 기억할 수 있게 했습니다.
+- 네비게이터의 조작부·여백·테두리를 정리하고 작은 창에서는 필터를 접어 소스를 표시하며, 공간이 생기면 이전 상태로 복원합니다.
+- 셀렉트레이 배경을 주변 바와 맞추고 접기·정보 스트립에서 다시 펼치기와 숨김 기억을 추가했으며, 이름 입력 명칭을 작가명으로 정리했습니다.
+- 뷰어 업스케일을 켜고 끄거나 선택형 버튼으로 PNG 사본을 저장할 수 있으며, 완료된 결과는 확대·축소 중 유지하고 상태는 툴팁으로 안내합니다.
+- 원본 해상도가 충분하면 업스케일 조작부를 숨기고, 선택형 Apple Photos 배지로 현재 사진의 출처를 확인할 수 있습니다.
+- HDR·고정밀 사진을 원본을 유지한 채 SDR 편집 미리보기로 작업할 수 있게 했습니다.
+- 3.0 아이콘을 새롭게 추가하고 표시 크기·회색 Dock 배경 겹침·아이콘 선택값 복원을 개선했습니다.
+- Compare와 사진 선별의 키보드 단축키, 확대·초기화, VoiceOver 조작을 개선했습니다.
+
+#### 세부 내용
+
+- Creative Suite Preview에서 편집과 선별 제안을 미리 확인할 수 있습니다. 편집 사본·레시피 저장과 선별 결정 적용에는 Supporter Pass가 필요합니다.
+- 뷰어 AI 미리보기는 기본이며 AI 결과 저장은 Supporter Pass로 제공합니다. 원본·비AI 사본 저장은 기본으로 유지하고, 구매 안내 후 진행 중인 작업으로 돌아갈 수 있게 했습니다.
+- 2026년 10월 2일 한국 시각부터 일반 평생 Supporter Pass로 전환됩니다. 기존 Founding 구매자의 혜택과 배지는 유지됩니다.
+- Main, Grid, Filmstrip, Compare, Quick Check, 슬라이드쇼, 폴더·ZIP·Apple Photos 탐색과 기존 단축키 흐름은 그대로 유지합니다.
+- SnapView는 Apple silicon과 Intel Mac을 지원하는 Universal Mac App Store 전용 앱이며 macOS 14 이상이 필요합니다.
+
+#### 안정성 및 성능
+
+- 일반 폴더에서 방향키로 사진을 연속 탐색할 때 파일명·도구 모음·파일 메뉴를 반복 갱신하는 부담을 줄였습니다.
+- 프리뷰에서 원본으로 전환할 때 확대 위치를 유지하고 화면 전체가 흐려졌다 나타나는 효과를 제거했습니다.
+- 새로 선택한 저장 위치에 AI 업스케일 사본을 저장하지 못할 수 있던 문제를 수정하고 원본을 유지합니다.
+- 빠른 시작·동의 갱신에서 기존 보기 설정을 유지하고, 설정 복원을 취소해도 이전 되돌리기 기록이 유지되도록 수정했습니다.
+- 대용량 폴더 인덱싱과 RAW+JPG 묶음 처리를 개선하고, 진행 상태와 파일 정렬을 더 일관되게 표시합니다.
+- 함께 있는 RAW 파일의 불필요한 읽기를 줄이고, 메타데이터를 읽는 중 폴더를 바꿔도 촬영일 정렬이 뒤섞이지 않도록 보완했습니다.
+- 일반 폴더와 Apple Photos에서 이전·다음, Grid·가로/세로 Filmstrip 전환 시 설정된 메모리 범위 안의 썸네일을 재사용하도록 개선했습니다.
+- 보이는 썸네일을 우선 준비하고 Grid·가로/세로 Filmstrip의 첫 페이지·재방문 누락을 수정했으며, 디스크 캐시 재사용과 작업 취소를 개선했습니다.
+- Apple Photos 첫 사진과 준비된 원본을 화면에 적용하는 흐름을 개선하고, 원본 적용 전까지 프리뷰를 유지합니다. 대기 표시 잔류와 이전 저장장치 폴더로 돌아갈 때의 이미지 표시도 개선했습니다.
+- 고해상도 JPEG·RAW 탐색의 메모리 관리와 썸네일 작업 취소를 개선하고, 이전 사진이나 편집 결과가 현재 화면을 바꾸지 않도록 했습니다.
+- macOS Sonoma 실행 직후 종료에 대응하는 안전 처리를 추가하고, 잘못된 EXIF 셔터 값으로 앱이 종료될 수 있던 문제를 수정했습니다.
+- 대용량 폴더에서 슬라이드쇼를 멈출 때의 지연을 줄이고 빠른 탐색·Compare·이미지 분석의 안정성을 개선했습니다.
+
+## v2.7.1 - 2026-08-09
 
 ### English
 
@@ -14,7 +178,7 @@
 - 설치된 2.7.1은 계속 사용할 수 있지만, DMG 버전에는 더 이상 기능 업데이트와 버그 수정이 제공되지 않습니다.
 - SnapView 3.0부터 최신 버전과 향후 업데이트는 Mac App Store에서만 제공합니다. SnapView는 최고의 Mac 이미지 뷰어가 될 수 있도록 꾸준히 개선해 나가겠습니다.
 
-## v2.7.0 (Released/Previous) - 2026-08-04
+## v2.7.0 - 2026-08-04
 
 SnapView 2.7.0 improves fast photo review, long browsing sessions, and photo deletion from SD cards and other removable storage.
 
@@ -58,7 +222,7 @@ Language: [🇺🇸 English](#english-270) | [🇰🇷 한국어](#korean-270)
 - ISO 한국어 키보드에서 영문 입력 소스를 사용할 때도 물리 `₩` 키로 별점을 취소할 수 있도록 수정했습니다.
 - 메인 화면에서 마우스를 이동할 때 컨텍스트 메뉴의 선택 상태와 하위 메뉴가 불안정해질 수 있던 문제를 수정했습니다. 기존 메뉴 항목과 키보드 단축키는 그대로입니다.
 
-## v2.6.4 (Released/Previous) - 2026-07-26
+## v2.6.4 - 2026-07-26
 
 Language: [🇺🇸 English](#english-264) | [🇰🇷 한국어](#korean-264)
 
@@ -82,7 +246,7 @@ SnapView 2.6.4는 사진 삭제와 Main View 우클릭 메뉴의 안정성을 �
 - 일부 환경에서 사진을 휴지통으로 이동하지 못하고 삭제가 실패하던 문제를 수정했습니다.
 - Main View 우클릭 메뉴에서 마우스를 움직일 때 선택 표시가 풀리거나 하위 메뉴가 깜빡이던 문제를 수정했습니다. 기존 메뉴 기능과 키보드 단축키는 그대로 유지됩니다.
 
-## v2.6.3 (Released/Previous) - 2026-07-22
+## v2.6.3 - 2026-07-22
 
 Language: [🇺🇸 English](#english-263) | [🇰🇷 한국어](#korean-263)
 

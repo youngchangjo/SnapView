@@ -4,15 +4,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SnapView Release Notes | Fast Mac Image Viewer for Hobby Photographers</title>
+    <title>SnapView Release Notes | 3.0.1 &amp; Version History</title>
     <meta name="description"
-        content="See what changed in SnapView, including new features, fixes, and workflow improvements for Mac photo review.">
+        content="SnapView 3.0.1 release notes for September 14, 2026: Creative Suite navigation, watermarks, saving, Edit History, with earlier updates listed separately.">
     <link rel="canonical" href="https://snapview.snapworkslab.com/release_notes">
     <meta name="theme-color" content="#050507">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="SnapView Release Notes | Fast Mac Image Viewer for Hobby Photographers">
+    <meta property="og:title" content="SnapView Release Notes | 3.0.1 &amp; Version History">
     <meta property="og:description"
-        content="See what changed in SnapView, including new features, fixes, and workflow improvements for Mac photo review.">
+        content="SnapView 3.0.1 — September 14, 2026. Creative Suite, watermark, saving, and Edit History fixes, with the full version history.">
     <meta property="og:url" content="https://snapview.snapworkslab.com/release_notes">
     <meta property="og:site_name" content="SnapView">
     <meta property="og:image" content="https://snapview.snapworkslab.com/assets/images/snapview-icon.png">
@@ -22,9 +22,9 @@
     <meta property="og:image:height" content="1024">
     <meta property="og:image:alt" content="SnapView app icon">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="SnapView Release Notes | Fast Mac Image Viewer for Hobby Photographers">
+    <meta name="twitter:title" content="SnapView Release Notes | 3.0.1 &amp; Version History">
     <meta name="twitter:description"
-        content="See what changed in SnapView, including new features, fixes, and workflow improvements for Mac photo review.">
+        content="SnapView 3.0.1 — September 14, 2026. Creative Suite, watermark, saving, and Edit History fixes, with the full version history.">
     <meta name="twitter:image" content="https://snapview.snapworkslab.com/assets/images/snapview-icon.png">
     <meta name="twitter:image:alt" content="SnapView app icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,7 +39,7 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/manifest.webmanifest">
     <link rel="alternate" type="application/rss+xml" title="SnapView Updates" href="https://snapview.snapworkslab.com/rss.xml">
-    <link rel="stylesheet" href="styles.css?v=supportpass-20260701-6">
+    <link rel="stylesheet" href="styles.css?v=3.0-preview-20260830">
 </head>
 
 <body>
@@ -65,13 +65,94 @@
 
         <section class="manual-container manual-content">
             <!-- Korean Content loads on demand to keep English as the primary crawlable language. -->
-            <div data-lang="ko" data-lang-src="locales/release-notes.ko.html" hidden></div>
+            <div data-lang="ko" data-lang-src="locales/release-notes.ko.html?v=20260913-301" hidden></div>
 
             <!-- English Content -->
             <div data-lang="en">
                 <h1>SnapView Release Notes</h1>
-                <h2 id="v2-7-1">v2.7.1 (Current) - 2026-08-09</h2>
-                <h3>Distribution Update</h3>
+                <h2 id="v3-0-1">v3.0.1 — 2026-09-14</h2>
+                <h3>Improvements</h3>
+                <ul>
+                <li>Supporter Pass Save and Save Copy now offer the current photo or all edited photos. Original overwrites require confirmation of filenames and photo count.</li>
+                <li>Enlarged the watermark lock button&#x27;s click area and set new layers to 100% opacity.</li>
+                <li>Compacted Edit History and kept its header and restore controls visible. History steps and saved versions can be selected by clicking anywhere in the row.</li>
+                <li>Added confirmation before switching from Auto Cull to Edit and resetting culling results.</li>
+                </ul>
+
+                <h3>Fixes</h3>
+                <ul>
+                <li>Fixed Creative Suite becoming unresponsive after arrow-key or thumbnail navigation and the AI Upscaling tool not opening. Only the current photo keeps its selection outline.</li>
+                <li>Fixed missing watermark characters, including S and X, and text fields losing focus during typing.</li>
+                <li>Fixed watermarks stopping short of the frame edge, disappearing behind the frame, or rotating in the opposite direction to the guide.</li>
+                <li>Fixed missing review candidates after Auto Cull completes.</li>
+                <li>Completed AI results appear in save menus immediately, and photo dimensions and file size refresh after saving the original.</li>
+                <li>Fixed the bottom of Edit History being obscured when using either Filmstrip layout.</li>
+                </ul>
+
+                <h2 id="v3-0-0">v3.0.0</h2>
+                <h3>What&#x27;s New</h3>
+                <ul>
+                <li>SnapView 3.0 introduces Creative Suite Preview, connecting photo review, culling, and editing in one workspace.</li>
+                <li>Edit includes Light, Color, Tone Curve, Film, Crop, and Watermark &amp; Frame tools, with per-photo drafts that stay with you as you browse.</li>
+                <li>Added Auto Enhance that considers scene brightness and color intent, plus direct crop and rotation controls with automatic straightening suggestions.</li>
+                <li>Bundled QuickSRNet Large x2 as the recommended on-device AI upscaler and the default for new settings on Apple silicon; existing Off and non-AI choices are preserved.</li>
+                <li>Try Film and Frame choices temporarily or apply them as a single undoable step.</li>
+                <li>Recipe Timeline keeps meaningful edit steps and named A/B snapshots and can restore an earlier state.</li>
+                <li>Scene Sync copies Light, Color, Tone Curve, and Film adjustments to matching photos while preserving originals and each photo’s crop.</li>
+                <li>Reuse editing recipes in Batch Actions and save recipe sidecars or rendered copies while preserving source images.</li>
+                <li>Focus Lens inspects results at 100% or 200%, and Face Lock Compare aligns a selected face across two to four photos.</li>
+                <li>Cull organizes Pick and Reject candidates in one analysis pass without automatically changing source files.</li>
+                <li>Drop Finder files or folders into the Apple Photos viewing area and choose to open them in SnapView or add them to Photos, including supported images in subfolders.</li>
+                <li>Back up settings to a file, compare saved versions, and selectively restore with Supporter Pass; undoing a restore remains included.</li>
+                <li>Start with a folder, Apple Photos, a sample image, or a settings backup, with an optional one-click consent choice. Viewing-settings review and Supporter benefits now have separate onboarding steps, with six benefit cards and improved small-window layout.</li>
+                </ul>
+                <h3>Improvements</h3>
+                <ul>
+                <li>Expanded translations across all 14 supported interface languages, including Creative Suite menus, Apple Photos categories, batch summaries, settings search, and restore comparisons.</li>
+                <li>Improved Light/Dark readability for editing and upscale controls, with better layout for long translated labels.</li>
+                <li>Creative Suite remembers the AI model, scale, and comparison layout, with a dedicated Settings tab and simpler titlebar controls.</li>
+                <li>Watermarks support multiple Text, Logo, and EXIF layers, with sharper text previews on small images.</li>
+                <li>Storage and Apple Photos can be collapsed, filtered, and resized in the Navigator, starting at equal heights and remembering the adjusted split.</li>
+                <li>Compacted Navigator controls and panel borders; filters fold in short windows to keep sources visible, then restore when space returns.</li>
+                <li>The Select Tray matches the surrounding bars, remembers being hidden, and can be restored from the Info Strip; the name entry is now Artist Name.</li>
+                <li>Toggle viewer upscaling and save a PNG copy from its optional button; completed results stay applied while zooming, with status explained in tooltips.</li>
+                <li>Upscale controls hide when the original has enough resolution; an optional Apple Photos badge identifies the current source.</li>
+                <li>High-precision and HDR photos can use an SDR editing preview while the source remains unchanged.</li>
+                <li>Updated 3.0 icons, matched visible sizes, removed the extra gray Dock tile, and improved icon selection restoration.</li>
+                <li>Improved keyboard shortcuts, zoom/reset, and VoiceOver operation in Compare and photo selection.</li>
+                </ul>
+                <h3>Details</h3>
+                <ul>
+                <li>Creative Suite preview lets you try edits and review culling suggestions. Saving edits or recipes and applying culling decisions require Supporter Pass.</li>
+                <li>Viewer AI preview is included; saving an AI result requires Supporter Pass. Original and non-AI copies remain included, with contextual purchase guidance that returns to the current work.</li>
+                <li>Founding offers switch to the regular lifetime Supporter Pass on October 2, 2026 (Korea time). Existing Founding benefits and badges stay with their owners.</li>
+                <li>Main, Grid, Filmstrip, Compare, Quick Check, slideshow, folder, ZIP, and Apple Photos browsing, and existing keyboard workflows remain available as before.</li>
+                <li>SnapView is a Universal Mac App Store-only app for Apple silicon and Intel Macs and requires macOS 14 or later.</li>
+                </ul>
+                <h3>Stability And Performance</h3>
+                <ul>
+                <li>Reduced repeated work during continuous arrow-key navigation in folders, including filename, toolbar, and file-action updates.</li>
+                <li>Kept the current zoom and position when a preview changes to the original image, without a full-view fade.</li>
+                <li>Fixed AI Save Copy failures when saving to a newly selected location, while preserving the source image.</li>
+                <li>Kept existing viewing preferences unchanged during quick start and consent updates; canceling a settings restore preserves the previous undo history.</li>
+                <li>Improved large-folder indexing and RAW+JPG pairing, with clearer progress and more consistent file ordering.</li>
+                <li>Reduced unnecessary companion RAW reads and made capture-date sorting safer when folders change during metadata loading.</li>
+                <li>Reused thumbnails within the selected memory budget across previous/next navigation, Grid, and both Filmstrip orientations, for folders and Apple Photos.</li>
+                <li>Prioritized visible thumbnails and fixed missing first-page and revisited items in Grid and both Filmstrip orientations, with more reliable disk-cache reuse and cancellation.</li>
+                <li>Improved first-image and prepared-original presentation in Apple Photos, keeping previews visible until the original is applied. Fixed stale waiting indicators and returning to a previously opened storage folder.</li>
+                <li>Improved memory management and thumbnail cancellation while browsing high-resolution JPEG and RAW files, and prevented older photo or edit results from replacing the current screen.</li>
+                <li>Added macOS Sonoma startup safeguards and handled invalid EXIF shutter values that could cause a crash.</li>
+                <li>Reduced delays when stopping slideshows in large folders, and improved stability in rapid navigation, Compare, and image analysis.</li>
+                </ul>
+                <h2 id="v2-7-2">v2.7.2 - 2026-08-14</h2>
+                <p>SnapView 2.7.2 is a Mac App Store-only hotfix.</p>
+                <h3>Fixes</h3>
+                <ul>
+                <li>Fixed an issue that could prevent the app from launching on macOS 14.</li>
+                <li>Fixed printing in the Mac App Store version.</li>
+                </ul>
+
+                <h2 id="v2-7-1">v2.7.1 - 2026-08-09</h2>
                 <ul>
                 <li>SnapView 2.7.1 is the final DMG release. No new DMG versions will be distributed after this release.</li>
                 <li>Installed copies of 2.7.1 will remain usable, but the DMG version will receive no feature updates or bug fixes.</li>

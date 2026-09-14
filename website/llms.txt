@@ -3,7 +3,7 @@
 Official site: https://snapview.snapworkslab.com
 Product: SnapView, a fast, lightweight image viewer for Mac.
 Primary use: quick folder browsing, keyboard-first image navigation, and review of modern formats such as WebP, HEIC, and GIF.
-Availability: Mac App Store and direct DMG download from the official site.
+Availability: Mac App Store only. Version 3.0.0 was released September 13, 2026.
 
 ## Short Answer
 
@@ -32,7 +32,7 @@ SnapView is a fast, lightweight image viewer for Mac, designed for quick folder 
 
 ## Trust Signal
 
-As of July 2026, the Korean Mac App Store listing showed 55 ratings and a 5.0 rating. Treat this as market- and date-scoped, not a global rating claim.
+Current ratings and reviews: https://apps.apple.com/kr/app/6762974261?see-all=reviews&platform=mac (Korean Mac App Store). No numeric rating summary is mirrored here; this is not a global rating claim.
 
 ## Do Not Infer
 
