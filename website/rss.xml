@@ -5,8 +5,15 @@
     <link>https://snapview.snapworkslab.com/</link>
     <description>Product updates, release notes, and support information for SnapView, a fast Mac photo viewer for RAW files and image review.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 14 Sep 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2026 00:48:41 +0900</lastBuildDate>
     <atom:link href="https://snapview.snapworkslab.com/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SnapView 3.0.2 — September 23, 2026</title>
+      <link>https://snapview.snapworkslab.com/release_notes.html#v3-0-2</link>
+      <guid isPermaLink="true">https://snapview.snapworkslab.com/release_notes.html#v3-0-2</guid>
+      <pubDate>Wed, 23 Sep 2026 00:48:41 +0900</pubDate>
+      <description>Supporter Pass adds original photo metadata editing, including capture time, map-based location, descriptions, and camera information. Folder access is remembered, and skipped or unrelated drives no longer prompt repeatedly.</description>
+    </item>
     <item>
       <title>SnapView 3.0.1 — September 14, 2026</title>
       <link>https://snapview.snapworkslab.com/release_notes.html#v3-0-1</link>
@@ -18,7 +25,7 @@
       <title>SnapView 3.0.0 Released on the Mac App Store</title>
       <link>https://snapview.snapworkslab.com/release_notes.html#v3-0-0</link>
       <guid isPermaLink="true">https://snapview.snapworkslab.com/release_notes.html#v3-0-0</guid>
-      <pubDate>Sun, 13 Sep 2026 00:00:00 +0900</pubDate>
+      <pubDate>Sat, 12 Sep 2026 03:13:48 +0900</pubDate>
       <description>SnapView 3.0.0 is available on the Mac App Store with Creative Suite Preview, viewer AI enlargement, settings backups, improved navigation, and broader interface translations. Saving edited or AI copies and applying culling decisions require Supporter Pass.</description>
     </item>
     <item>

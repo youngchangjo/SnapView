@@ -1,5 +1,41 @@
 # SnapView Release Notes
 
+## v3.0.2 — 2026-09-23
+
+Language: [🇺🇸 English](#english-302) | [🇰🇷 한국어](#korean-302)
+
+<a id="english-302"></a>
+
+### English
+
+#### Improvements
+
+- Added original photo metadata editing. Use Edit in Quick Check to update capture time, location, descriptions, and camera or lens information directly in the original file with Supporter Pass.
+- Edit photo information in HIF, HEIC, JPEG, PNG, WebP, TIFF, and supported RAW files. Editable fields vary by file format.
+- Choose a location on the map, enter capture time manually, or adjust time zones and camera clock offsets. Review changes before saving and undo them afterward.
+- Grant access to the disks you choose from the start screen, onboarding, or Settings.
+
+#### Fixes
+
+- Improved access reuse for previously allowed folders and their subfolders.
+- Stopped repeated permission prompts for skipped disks and network drives unrelated to the current photo.
+
+<a id="korean-302"></a>
+
+### 한국어
+
+#### 개선된 점
+
+- 원본 사진 정보 편집 기능을 추가했습니다. 퀵체크의 Edit 버튼에서 촬영 시각, 위치, 설명, 카메라·렌즈 정보를 수정할 수 있습니다. Supporter Pass로 제공합니다.
+- HIF·HEIC·JPEG·PNG·WebP·TIFF 및 지원되는 RAW 파일의 사진 정보를 수정할 수 있습니다. 수정 가능한 항목은 파일 형식에 따라 다릅니다.
+- 지도에서 촬영 위치를 선택하고, 촬영 시각을 직접 입력하거나 시간대·카메라 시계 오차를 보정할 수 있습니다. 저장 전 변경 사항을 확인하고 저장 후 되돌릴 수 있습니다.
+- 시작 화면, 온보딩, 설정에서 원하는 디스크의 접근 권한을 미리 허용할 수 있습니다.
+
+#### 수정된 문제
+
+- 이미 허용한 폴더와 하위 폴더에서 권한을 반복 요청하던 문제를 개선했습니다.
+- 건너뛴 디스크나 현재 사진과 관계없는 네트워크 드라이브의 권한을 반복 요청하지 않도록 수정했습니다.
+
 ## v3.0.1 — 2026-09-14
 
 Language: [🇺🇸 English](#english-301) | [🇰🇷 한국어](#korean-301)
@@ -44,7 +80,7 @@ Language: [🇺🇸 English](#english-301) | [🇰🇷 한국어](#korean-301)
 - AI 결과가 완료되면 저장 메뉴에 바로 반영하고, 원본 저장 후 사진 크기와 용량 표시가 갱신되도록 수정했습니다.
 - 가로·세로 필름스트립을 켜면 편집 기록 목록 아래가 가려지던 문제를 수정했습니다.
 
-## v3.0.0
+## v3.0.0 — 2026-09-12
 
 Language: [🇺🇸 English](#english-300) | [🇰🇷 한국어](#korean-300)
 

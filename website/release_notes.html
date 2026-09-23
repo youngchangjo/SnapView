@@ -4,15 +4,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SnapView Release Notes | 3.0.1 &amp; Version History</title>
+    <title>SnapView Release Notes | 3.0.2 &amp; Version History</title>
     <meta name="description"
-        content="SnapView 3.0.1 release notes for September 14, 2026: Creative Suite navigation, watermarks, saving, Edit History, with earlier updates listed separately.">
+        content="SnapView 3.0.2 release notes for September 23, 2026: original photo metadata editing, capture time and location changes, and fewer repeated disk access prompts.">
     <link rel="canonical" href="https://snapview.snapworkslab.com/release_notes">
     <meta name="theme-color" content="#050507">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="SnapView Release Notes | 3.0.1 &amp; Version History">
+    <meta property="og:title" content="SnapView Release Notes | 3.0.2 &amp; Version History">
     <meta property="og:description"
-        content="SnapView 3.0.1 — September 14, 2026. Creative Suite, watermark, saving, and Edit History fixes, with the full version history.">
+        content="SnapView 3.0.2 — September 23, 2026. Edit original photo information and reuse folder access, with earlier updates listed separately.">
     <meta property="og:url" content="https://snapview.snapworkslab.com/release_notes">
     <meta property="og:site_name" content="SnapView">
     <meta property="og:image" content="https://snapview.snapworkslab.com/assets/images/snapview-icon.png">
@@ -22,9 +22,9 @@
     <meta property="og:image:height" content="1024">
     <meta property="og:image:alt" content="SnapView app icon">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="SnapView Release Notes | 3.0.1 &amp; Version History">
+    <meta name="twitter:title" content="SnapView Release Notes | 3.0.2 &amp; Version History">
     <meta name="twitter:description"
-        content="SnapView 3.0.1 — September 14, 2026. Creative Suite, watermark, saving, and Edit History fixes, with the full version history.">
+        content="SnapView 3.0.2 — September 23, 2026. Edit original photo information and reuse folder access, with earlier updates listed separately.">
     <meta name="twitter:image" content="https://snapview.snapworkslab.com/assets/images/snapview-icon.png">
     <meta name="twitter:image:alt" content="SnapView app icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,12 +32,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Syne:wght@600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="icon" href="/favicon.ico?v=3.0.2" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3.0.2">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3.0.2">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=3.0.2">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3.0.2">
+    <link rel="manifest" href="/manifest.webmanifest?v=3.0.2">
     <link rel="alternate" type="application/rss+xml" title="SnapView Updates" href="https://snapview.snapworkslab.com/rss.xml">
     <link rel="stylesheet" href="styles.css?v=3.0-preview-20260830">
 </head>
@@ -65,11 +65,26 @@
 
         <section class="manual-container manual-content">
             <!-- Korean Content loads on demand to keep English as the primary crawlable language. -->
-            <div data-lang="ko" data-lang-src="locales/release-notes.ko.html?v=20260913-301" hidden></div>
+            <div data-lang="ko" data-lang-src="locales/release-notes.ko.html?v=20260923-302" hidden></div>
 
             <!-- English Content -->
             <div data-lang="en">
                 <h1>SnapView Release Notes</h1>
+                <h2 id="v3-0-2">v3.0.2 — 2026-09-23</h2>
+                <h3>Improvements</h3>
+                <ul>
+                <li>Added original photo metadata editing. Use Edit in Quick Check to update capture time, location, descriptions, and camera or lens information directly in the original file with Supporter Pass.</li>
+                <li>Edit photo information in HIF, HEIC, JPEG, PNG, WebP, TIFF, and supported RAW files. Editable fields vary by file format.</li>
+                <li>Choose a location on the map, enter capture time manually, or adjust time zones and camera clock offsets. Review changes before saving and undo them afterward.</li>
+                <li>Grant access to the disks you choose from the start screen, onboarding, or Settings.</li>
+                </ul>
+
+                <h3>Fixes</h3>
+                <ul>
+                <li>Improved access reuse for previously allowed folders and their subfolders.</li>
+                <li>Stopped repeated permission prompts for skipped disks and network drives unrelated to the current photo.</li>
+                </ul>
+
                 <h2 id="v3-0-1">v3.0.1 — 2026-09-14</h2>
                 <h3>Improvements</h3>
                 <ul>
@@ -89,7 +104,7 @@
                 <li>Fixed the bottom of Edit History being obscured when using either Filmstrip layout.</li>
                 </ul>
 
-                <h2 id="v3-0-0">v3.0.0</h2>
+                <h2 id="v3-0-0">v3.0.0 — 2026-09-12</h2>
                 <h3>What&#x27;s New</h3>
                 <ul>
                 <li>SnapView 3.0 introduces Creative Suite Preview, connecting photo review, culling, and editing in one workspace.</li>

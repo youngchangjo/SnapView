@@ -4,8 +4,8 @@
 
 Fast macOS image viewer for reviewing, culling, and refining photos.
 
-- Latest update: `3.0.1` — September 14, 2026
-- [3.0.1 release notes](RELEASE_NOTES.md#v301--2026-09-14): Creative Suite, watermark, saving, and Edit History fixes.
+- Latest update: `3.0.2` — September 23, 2026
+- [3.0.2 release notes](RELEASE_NOTES.md#v302--2026-09-23): Original photo information editing and fewer repeated folder access prompts.
 - Available through the **Mac App Store only**
 - Universal app for Apple silicon and Intel Macs
 - Requires macOS `14.0` or later
@@ -51,8 +51,8 @@ The App Store build is sandboxed. SnapView accesses files and folders selected b
 
 사진을 빠르게 확인하고 선별하며 편집하는 macOS 이미지 뷰어입니다.
 
-- 최신 업데이트: `3.0.1` — 2026년 9월 14일
-- [3.0.1 릴리즈노트](RELEASE_NOTES.md#v301--2026-09-14) — Creative Suite, 워터마크, 저장, 편집 기록 수정.
+- 최신 업데이트: `3.0.2` — 2026년 9월 23일
+- [3.0.2 릴리즈노트](RELEASE_NOTES.md#v302--2026-09-23) — 원본 사진 정보 편집 추가 및 반복되는 폴더 권한 요청 개선.
 - **Mac App Store 전용**
 - Apple Silicon과 Intel Mac을 지원하는 Universal 앱
 - macOS `14.0` 이상 필요
