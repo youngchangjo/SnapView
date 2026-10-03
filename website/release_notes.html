@@ -4,15 +4,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SnapView Release Notes | 3.1.0 &amp; Version History</title>
+    <title>SnapView Release Notes | 3.2 Preview &amp; Version History</title>
     <meta name="description"
-        content="SnapView 3.1.0 release notes for October 1, 2026: on-device Quick Check analysis, culling suggestions, text summaries in photos, and faster Grid and external SSD browsing.">
+        content="Preview the upcoming SnapView 3.2 update: AI-origin badges, photo editing tools, faster browsing, and printing fixes. Includes the full version history.">
     <link rel="canonical" href="https://snapview.snapworkslab.com/release_notes">
     <meta name="theme-color" content="#050507">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="SnapView Release Notes | 3.1.0 &amp; Version History">
+    <meta property="og:title" content="SnapView Release Notes | 3.2 Preview &amp; Version History">
     <meta property="og:description"
-        content="SnapView 3.1.0 — October 1, 2026. On-device Quick Check analysis, culling suggestions, and faster browsing, with earlier updates listed separately.">
+        content="SnapView 3.2 is in App Store review. See new editing tools, AI-origin badges, browsing improvements, and printing fixes.">
     <meta property="og:url" content="https://snapview.snapworkslab.com/release_notes">
     <meta property="og:site_name" content="SnapView">
     <meta property="og:image" content="https://snapview.snapworkslab.com/assets/images/snapview-icon.png">
@@ -22,9 +22,9 @@
     <meta property="og:image:height" content="1024">
     <meta property="og:image:alt" content="SnapView app icon">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="SnapView Release Notes | 3.1.0 &amp; Version History">
+    <meta name="twitter:title" content="SnapView Release Notes | 3.2 Preview &amp; Version History">
     <meta name="twitter:description"
-        content="SnapView 3.1.0 — October 1, 2026. On-device Quick Check analysis, culling suggestions, and faster browsing, with earlier updates listed separately.">
+        content="SnapView 3.2 is in App Store review. See new editing tools, AI-origin badges, browsing improvements, and printing fixes.">
     <meta name="twitter:image" content="https://snapview.snapworkslab.com/assets/images/snapview-icon.png">
     <meta name="twitter:image:alt" content="SnapView app icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,11 +65,43 @@
 
         <section class="manual-container manual-content">
             <!-- Korean Content loads on demand to keep English as the primary crawlable language. -->
-            <div data-lang="ko" data-lang-src="locales/release-notes.ko.html?v=20261001-310" hidden></div>
+            <div data-lang="ko" data-lang-src="locales/release-notes.ko.html?v=20261003-320" hidden></div>
 
             <!-- English Content -->
             <div data-lang="en">
                 <h1>SnapView Release Notes</h1>
+                <h2 id="v3-2-0">v3.2.0 — Coming soon</h2>
+                <p>Submitted for App Store review. The update will be available after approval.</p>
+                <h3>New Features</h3>
+                <ul>
+                <li>SnapView recognizes AI-generated photos and displays a badge. It uses Content Credentials (C2PA) and generator records in the file to show AI generation or editing information.</li>
+                <li>Added Levels, Vignette, Grain, and Color Grading to Edit.</li>
+                <li>Adjust RAW exposure, white balance, and noise directly in Edit, and correct lens chromatic aberration.</li>
+                <li>Added an overlay that shows clipped highlights and shadows on the photo.</li>
+                <li>Edit Apple Photos items and save the result to Photos as a new photo.</li>
+                <li>Copy the current edit to the photos selected in the filmstrip, and import Lightroom settings from XMP.</li>
+                </ul>
+                <h3>Improvements</h3>
+                <ul>
+                <li>Save copies as JPEG, HEIC, 16-bit TIFF, or PNG in sRGB or Display P3. HDR photos can be saved with their HDR intact.</li>
+                <li>Detail 100% and Focus Lens now show full-resolution pixels, so you see exactly what will be saved.</li>
+                <li>Widened the Exposure, Straighten, and Blacks ranges.</li>
+                <li>Switching views with Q, W, E, and R or entering Creative Suite now carries the photo smoothly to its new place. Choose Fast switching in Settings if you prefer.</li>
+                <li>Holding an arrow key through high-resolution and RAW bursts no longer skips photos.</li>
+                <li>Improved speed when you first open photos and while you browse.</li>
+                </ul>
+                <h3>Fixes</h3>
+                <ul>
+                <li>Fixed Edit continuing to edit the previous photo after another photo was opened.</li>
+                <li>Fixed the Highlights, Texture, Clarity, Noise, and Dehaze sliders not working as named. Previously saved edits look the same.</li>
+                <li>Fixed skipped photos when holding an arrow key through medium- and low-resolution photos, and slowdowns during long sessions.</li>
+                <li>Fixed printing in the Mac App Store version and upside-down print previews.</li>
+                <li>Fixed a brief black screen when switching views.</li>
+                <li>Fixed the current photo not appearing selected when you enter Grid.</li>
+                <li>Fixed edit previews redrawing when you switch layouts with W, E, and R in Creative Suite.</li>
+                </ul>
+                <p>Try the new editing tools right away in preview; saving edits requires Supporter Pass. AI-origin badges and speed improvements are included with Basic. Saving with HDR intact requires macOS 15 or later.</p>
+
                 <h2 id="v3-1-0">v3.1.0 — 2026-10-01</h2>
                 <h3>Improvements</h3>
                 <ul>
@@ -79,7 +111,6 @@
                 <li>Summarize text in a photo or ask questions about it, with the source text and its location in the photo shown alongside the answer.</li>
                 <li>Check whether photos share the same scene and lighting before copying adjustments to them.</li>
                 <li>Compare a new development of supported RAW photos and save it as a full-size copy.</li>
-                <li>Photos with recorded AI generation or editing information now show a badge.</li>
                 <li>AI upscale is ready to use right away, and larger photos can be upscaled when your Mac has enough memory.</li>
                 <li>Thumbnails appear faster when you enter Grid, and photos on external SSDs load faster.</li>
                 <li>When you pause in the main view, nearby photos are prepared in advance so the next photo appears sooner.</li>
@@ -94,7 +125,7 @@
                 <li>Fixed external SSDs being treated as slow storage, which delayed thumbnails.</li>
                 <li>Fixed the order of photos taken within the same second.</li>
                 </ul>
-                <p>New AI analysis and recommendations, text summaries and questions, and RAW development comparison require Supporter Pass. AI-origin badges and speed improvements are included with Basic. AI features that analyze photos require macOS 27 and a Mac that supports Apple Intelligence.</p>
+                <p>New AI analysis and recommendations, text summaries and questions, and RAW development comparison require Supporter Pass. Speed improvements are included with Basic. AI features that analyze photos require macOS 27 and a Mac that supports Apple Intelligence.</p>
 
                 <h2 id="v3-0-2">v3.0.2 — 2026-09-23</h2>
                 <h3>Improvements</h3>
