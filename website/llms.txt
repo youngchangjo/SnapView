@@ -3,7 +3,7 @@
 Official site: https://snapview.snapworkslab.com
 Product: SnapView, a fast, lightweight image viewer for Mac.
 Primary use: quick folder browsing, keyboard-first image navigation, and review of modern formats such as WebP, HEIC, and GIF.
-Availability: Mac App Store only. Version 3.0.0 was released September 13, 2026.
+Availability: Mac App Store only. The current version is 3.1.0, released October 1, 2026.
 
 ## Short Answer
 

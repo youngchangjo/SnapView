@@ -5,8 +5,15 @@
     <link>https://snapview.snapworkslab.com/</link>
     <description>Product updates, release notes, and support information for SnapView, a fast Mac photo viewer for RAW files and image review.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 23 Sep 2026 00:48:41 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 15:17:40 +0900</lastBuildDate>
     <atom:link href="https://snapview.snapworkslab.com/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SnapView 3.1.0 — October 1, 2026</title>
+      <link>https://snapview.snapworkslab.com/release_notes.html#v3-1-0</link>
+      <guid isPermaLink="true">https://snapview.snapworkslab.com/release_notes.html#v3-1-0</guid>
+      <pubDate>Thu, 01 Oct 2026 15:17:40 +0900</pubDate>
+      <description>Quick Check analyzes focus, exposure, closed eyes, and framing on your Mac, Compare &amp; Select and Auto Cull suggest candidates, and Grid and external SSD browsing are faster. AI analysis features require Supporter Pass, macOS 27, and a Mac that supports Apple Intelligence.</description>
+    </item>
     <item>
       <title>SnapView 3.0.2 — September 23, 2026</title>
       <link>https://snapview.snapworkslab.com/release_notes.html#v3-0-2</link>

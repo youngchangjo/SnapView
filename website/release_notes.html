@@ -4,15 +4,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SnapView Release Notes | 3.0.2 &amp; Version History</title>
+    <title>SnapView Release Notes | 3.1.0 &amp; Version History</title>
     <meta name="description"
-        content="SnapView 3.0.2 release notes for September 23, 2026: original photo metadata editing, capture time and location changes, and fewer repeated disk access prompts.">
+        content="SnapView 3.1.0 release notes for October 1, 2026: on-device Quick Check analysis, culling suggestions, text summaries in photos, and faster Grid and external SSD browsing.">
     <link rel="canonical" href="https://snapview.snapworkslab.com/release_notes">
     <meta name="theme-color" content="#050507">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="SnapView Release Notes | 3.0.2 &amp; Version History">
+    <meta property="og:title" content="SnapView Release Notes | 3.1.0 &amp; Version History">
     <meta property="og:description"
-        content="SnapView 3.0.2 — September 23, 2026. Edit original photo information and reuse folder access, with earlier updates listed separately.">
+        content="SnapView 3.1.0 — October 1, 2026. On-device Quick Check analysis, culling suggestions, and faster browsing, with earlier updates listed separately.">
     <meta property="og:url" content="https://snapview.snapworkslab.com/release_notes">
     <meta property="og:site_name" content="SnapView">
     <meta property="og:image" content="https://snapview.snapworkslab.com/assets/images/snapview-icon.png">
@@ -22,9 +22,9 @@
     <meta property="og:image:height" content="1024">
     <meta property="og:image:alt" content="SnapView app icon">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="SnapView Release Notes | 3.0.2 &amp; Version History">
+    <meta name="twitter:title" content="SnapView Release Notes | 3.1.0 &amp; Version History">
     <meta name="twitter:description"
-        content="SnapView 3.0.2 — September 23, 2026. Edit original photo information and reuse folder access, with earlier updates listed separately.">
+        content="SnapView 3.1.0 — October 1, 2026. On-device Quick Check analysis, culling suggestions, and faster browsing, with earlier updates listed separately.">
     <meta name="twitter:image" content="https://snapview.snapworkslab.com/assets/images/snapview-icon.png">
     <meta name="twitter:image:alt" content="SnapView app icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,11 +65,37 @@
 
         <section class="manual-container manual-content">
             <!-- Korean Content loads on demand to keep English as the primary crawlable language. -->
-            <div data-lang="ko" data-lang-src="locales/release-notes.ko.html?v=20260923-302" hidden></div>
+            <div data-lang="ko" data-lang-src="locales/release-notes.ko.html?v=20261001-310" hidden></div>
 
             <!-- English Content -->
             <div data-lang="en">
                 <h1>SnapView Release Notes</h1>
+                <h2 id="v3-1-0">v3.1.0 — 2026-10-01</h2>
+                <h3>Improvements</h3>
+                <ul>
+                <li>With Quick Check on, SnapView analyzes focus, exposure, closed eyes, and framing on this Mac as you browse, and shows an AI score with a short reason. It works on photos without capture information and also detects the photo&#x27;s purpose, such as portrait, landscape, or document. Expand the card to see the full evidence.</li>
+                <li>Compare &amp; Select now recommends candidates based on the differences between the photos you are comparing. Close calls stay as joint candidates, and your selections stay unchanged until you apply a recommendation.</li>
+                <li>Auto Cull now suggests candidates and exclusions for standalone photos by measuring focus, closed eyes, and exposure. Photos that need a closer look are listed separately for review.</li>
+                <li>Summarize text in a photo or ask questions about it, with the source text and its location in the photo shown alongside the answer.</li>
+                <li>Check whether photos share the same scene and lighting before copying adjustments to them.</li>
+                <li>Compare a new development of supported RAW photos and save it as a full-size copy.</li>
+                <li>Photos with recorded AI generation or editing information now show a badge.</li>
+                <li>AI upscale is ready to use right away, and larger photos can be upscaled when your Mac has enough memory.</li>
+                <li>Thumbnails appear faster when you enter Grid, and photos on external SSDs load faster.</li>
+                <li>When you pause in the main view, nearby photos are prepared in advance so the next photo appears sooner.</li>
+                <li>Open PICT (.pct, .pict) images.</li>
+                <li>Translated new features and the EXIF editing and disk access screens that appeared in English in 12 languages other than Korean and English.</li>
+                </ul>
+
+                <h3>Fixes</h3>
+                <ul>
+                <li>Fixed the viewer staying on the previous photo when another photo was opened from Finder while SnapView was running.</li>
+                <li>Reduced CPU use while you are only viewing photos, which could make the app feel sluggish. The start screen badge and guide no longer animate continuously.</li>
+                <li>Fixed external SSDs being treated as slow storage, which delayed thumbnails.</li>
+                <li>Fixed the order of photos taken within the same second.</li>
+                </ul>
+                <p>New AI analysis and recommendations, text summaries and questions, and RAW development comparison require Supporter Pass. AI-origin badges and speed improvements are included with Basic. AI features that analyze photos require macOS 27 and a Mac that supports Apple Intelligence.</p>
+
                 <h2 id="v3-0-2">v3.0.2 — 2026-09-23</h2>
                 <h3>Improvements</h3>
                 <ul>
